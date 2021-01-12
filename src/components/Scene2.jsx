@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import MainImage from "../img/22.png";
 import SpeechBubble from "../img/speech-bubble1.png";
 import {
-  containerStyle2,
-  mainImageStyle2,
-  speechBubbleStyle2,
-  typedStyle2,
-  nextSceneButtonStyle2,
-} from "../utils/styles";
+  containerStyle,
+  mainImageStyle,
+  speechBubbleStyle,
+  typedStyle,
+  nextSceneButtonStyle,
+} from "../utils/Scene2Styles";
 
 export const Scene2 = () => {
   let mainImage = useRef(null);
@@ -44,12 +44,12 @@ export const Scene2 = () => {
   }, []);
 
   return (
-    <div style={containerStyle2}>
+    <div style={containerStyle}>
       <img
         ref={(el) => {
           mainImage = el;
         }}
-        style={mainImageStyle2}
+        style={mainImageStyle}
         src={MainImage}
         alt="me"
       />
@@ -58,13 +58,9 @@ export const Scene2 = () => {
           speechBubble = el;
         }}
       >
-        <img
-          style={speechBubbleStyle2}
-          src={SpeechBubble}
-          alt="speech-bubble"
-        />
+        <img style={speechBubbleStyle} src={SpeechBubble} alt="speech-bubble" />
         <Typed
-          style={typedStyle2}
+          style={typedStyle}
           strings={["I am looking \n for my first job \n as a developer!"]}
           typeSpeed={60}
         />
@@ -74,7 +70,7 @@ export const Scene2 = () => {
           ref={(el) => {
             nextScene = el;
           }}
-          style={nextSceneButtonStyle2}
+          style={nextSceneButtonStyle}
         >
           Click to Next!
         </button>

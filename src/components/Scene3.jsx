@@ -8,15 +8,15 @@ import Monster from "../img/Sombra.gif";
 import SpeechBubble from "../img/speech-bubble4.png";
 import SpeechBubble2 from "../img/speech-bubble1.png";
 import {
-  containerStyle3,
-  mainImageStyle3,
-  speechBubbleStyle3,
-  typed1Style3,
-  monsterStyle3,
-  speechBubble2Style3,
-  typed2Style3,
-  nextSceneButtonStyle3,
-} from "../utils/styles";
+  containerStyle,
+  mainImageStyle,
+  speechBubbleStyle,
+  typed1Style,
+  monsterStyle,
+  speechBubble2Style,
+  typed2Style,
+  nextSceneButtonStyle,
+} from "../utils/Scene3Styles";
 
 export const Scene3 = () => {
   let mainImage = useRef(null);
@@ -61,13 +61,13 @@ export const Scene3 = () => {
   }, []);
 
   return (
-    <div style={containerStyle3}>
+    <div style={containerStyle}>
       <div>
         <img
           ref={(el) => {
             mainImage = el;
           }}
-          style={mainImageStyle3}
+          style={mainImageStyle}
           src={MainImage}
           alt="me"
         />
@@ -76,12 +76,12 @@ export const Scene3 = () => {
             speechBubble = el;
           }}
         >
-          <img src={SpeechBubble} style={speechBubbleStyle3} alt="speech bubble" />
-          <Typed
-            style={typed1Style3}
-            strings={[""]}
-            typeSpeed={60}
+          <img
+            src={SpeechBubble}
+            style={speechBubbleStyle}
+            alt="speech bubble"
           />
+          <Typed style={typed1Style} strings={[""]} typeSpeed={60} />
         </div>
       </div>
       <div>
@@ -90,7 +90,7 @@ export const Scene3 = () => {
             monster = el;
           }}
           src={Monster}
-          style={monsterStyle3}
+          style={monsterStyle}
           alt="monster"
         />
         <div
@@ -100,14 +100,10 @@ export const Scene3 = () => {
         >
           <img
             src={SpeechBubble2}
-            style={speechBubble2Style3}
+            style={speechBubble2Style}
             alt="speech bubble"
           />
-          <Typed
-            style={typed2Style3}
-            strings={[""]}
-            typeSpeed={60}
-          />
+          <Typed style={typed2Style} strings={[""]} typeSpeed={60} />
         </div>
       </div>
       <Link to="/">
@@ -115,7 +111,7 @@ export const Scene3 = () => {
           ref={(el) => {
             nextScene = el;
           }}
-          style={nextSceneButtonStyle3}
+          style={nextSceneButtonStyle}
         >
           Click to Next!
         </button>

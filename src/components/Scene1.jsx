@@ -7,12 +7,12 @@ import MainImage from "../img/23.png";
 import SpeechBubble from "../img/speech-bubble1.png";
 import Sound from "../img/ding.wav";
 import {
-  containerStyle1,
-  mainImageStyle1,
-  speechBubbleStyle1,
-  typedStyle1,
-  nextSceneButtonStyle1,
-} from "../utils/styles";
+  containerStyle,
+  mainImageStyle,
+  speechBubbleStyle,
+  typedStyle,
+  nextSceneButtonStyle,
+} from "../utils/Scene1Styles";
 import "../css/main.css";
 
 export const Scene1 = () => {
@@ -52,12 +52,12 @@ export const Scene1 = () => {
   };
 
   return (
-    <div style={containerStyle1}>
+    <div style={containerStyle}>
       <img
         ref={(el) => {
           mainImage = el;
         }}
-        style={mainImageStyle1}
+        style={mainImageStyle}
         src={MainImage}
         alt="me"
       />
@@ -67,13 +67,9 @@ export const Scene1 = () => {
         }}
         onClick={start}
       >
-        <img
-          style={speechBubbleStyle1}
-          src={SpeechBubble}
-          alt="speech bubble"
-        />
+        <img style={speechBubbleStyle} src={SpeechBubble} alt="speech bubble" />
         <Typed
-          style={typedStyle1}
+          style={typedStyle}
           strings={["Hi! My name is Martín \n I am a \n Full Stack Developer"]}
           typeSpeed={60}
         />
@@ -83,7 +79,7 @@ export const Scene1 = () => {
           ref={(el) => {
             nextScene = el;
           }}
-          style={nextSceneButtonStyle1}
+          style={nextSceneButtonStyle}
         >
           Click to Next!
         </button>
