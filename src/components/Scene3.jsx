@@ -79,7 +79,7 @@ export const Scene3 = () => {
           <img src={SpeechBubble} style={speechBubbleStyle3} alt="speech bubble" />
           <Typed
             style={typed1Style3}
-            strings={["AHHH!! \n la concha de la lora \n quien sos?"]}
+            strings={[""]}
             typeSpeed={60}
           />
         </div>
@@ -105,7 +105,7 @@ export const Scene3 = () => {
           />
           <Typed
             style={typed2Style3}
-            strings={["eva duarte de perón"]}
+            strings={[""]}
             typeSpeed={60}
           />
         </div>
