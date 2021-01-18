@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
 import { Scene3 } from "./components/Scene3";
+import { SceneUnnumbered } from "./components/SceneUnnumbered";
 import { NavBar } from "./components/NavBar";
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/scene3">
             <Scene3 />
+          </Route>
+          <Route exact path="/sceneUnnumbered">
+            <SceneUnnumbered />
           </Route>
         </Switch>
       </div>

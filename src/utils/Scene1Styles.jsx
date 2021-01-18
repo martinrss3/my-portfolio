@@ -1,4 +1,4 @@
-import Background from "../img/main-bg.jpg";
+import Background from "../images/backgrounds/scene1-background.jpg";
 
 export const containerStyle = {
   backgroundImage: `url(${Background})`,
@@ -37,7 +37,7 @@ export const typedStyle = {
   fontSize: 24,
   fontWeight: "bold",
   top: 120,
-  right: 120,
+  right: 150,
   fontFamily: "SequentialistBB, cursive",
   whiteSpace: "pre",
   textAlign: "center",
@@ -57,10 +57,12 @@ export const nextSceneButtonStyle = {
   backgroundSize: "25px, 100%",
   border: "0.4rem solid #000",
   position: "absolute",
-  display: "inlineFlex",
+  display: "inline",
   bottom: 0,
   right: 0,
   cursor: "pointer",
   marginRight: 15,
-  opacity: 0,
+  margin: 10,
+  float: "left",
+  width: 150,
 };
