@@ -3,20 +3,22 @@ import Typed from "react-typed";
 import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import { Link } from "react-router-dom";
-import MainImage from "../img/22.png";
-import SpeechBubble from "../img/speech-bubble1.png";
+import MainImage from "../images/me/22.png";
+import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import {
   containerStyle,
   mainImageStyle,
   speechBubbleStyle,
   typedStyle,
   nextSceneButtonStyle,
+  backSceneButtonStyle,
 } from "../utils/Scene2Styles";
 
 export const Scene2 = () => {
   let mainImage = useRef(null);
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
+  let backScene = useRef(null);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -27,7 +29,7 @@ export const Scene2 = () => {
     });
 
     TweenMax.fromTo(
-      [speechBubble, nextScene],
+      [speechBubble, nextScene, backScene],
       1,
       {
         delay: 2,
@@ -65,16 +67,28 @@ export const Scene2 = () => {
           typeSpeed={60}
         />
       </div>
-      <Link to="/scene3">
-        <button
-          ref={(el) => {
-            nextScene = el;
-          }}
-          style={nextSceneButtonStyle}
-        >
-          Click to Next!
-        </button>
-      </Link>
+      <div>
+        <Link to="/">
+          <button
+            ref={(el) => {
+              backScene = el;
+            }}
+            style={backSceneButtonStyle}
+          >
+            Back!
+          </button>
+        </Link>
+        <Link to="/scene3">
+          <button
+            ref={(el) => {
+              nextScene = el;
+            }}
+            style={nextSceneButtonStyle}
+          >
+            Next!
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import Background from "../images/backgrounds/scene3-backgroud.jpg";
+import Background from "../images/backgrounds/vs-background.jpg";
 
 export const containerStyle = {
   backgroundImage: `url(${Background})`,
@@ -7,38 +7,55 @@ export const containerStyle = {
   backgroundSize: "cover",
   width: "100vw",
   height: "100vh",
-  display: "block",
 };
 
 export const mainImageStyle = {
   position: "absolute",
-  opacity: 0,
-  top: 0,
-  right: 0,
   bottom: 0,
-  left: 0,
-  maxWidth: "100vw",
-  maxHeight: "100vh",
-  margin: "0 auto",
+  width: "50%",
+  left: 180,
 };
 
 export const speechBubbleStyle = {
-  zIndex: 1,
   position: "absolute",
-  width: "40%",
+  width: "35%",
   top: 50,
-  right: 0,
-  WebkitTransform: "scaleX(-1)",
+  left: 50,
 };
 
-export const typedStyle = {
-  zIndex: 100,
+export const typed1Style = {
   position: "absolute",
-  fontSize: 24,
+  fontSize: 25,
   fontWeight: "bold",
-  top: 120,
-  right: 150,
   fontFamily: "SequentialistBB, cursive",
+  top: 119,
+  left: 155,
+  transform: "rotate(-15deg)",
+  whiteSpace: "pre",
+  textAlign: "center",
+};
+
+export const monsterStyle = {
+  position: "absolute",
+  top: -80,
+  right: -80,
+  width: "38%",
+};
+
+export const speechBubble2Style = {
+  position: "absolute",
+  width: "35%",
+  top: 0,
+  right: 300,
+};
+
+export const typed2Style = {
+  position: "absolute",
+  fontSize: 25,
+  fontWeight: "bold",
+  fontFamily: "SequentialistBB, cursive",
+  top: 80,
+  right: 420,
   whiteSpace: "pre",
   textAlign: "center",
 };

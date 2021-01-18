@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
-import MainImage from "../img/23.png";
-import SpeechBubble from "../img/speech-bubble1.png";
-import Sound from "../img/ding.wav";
+import MainImage from "../images/me/23.png";
+import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import {
   containerStyle,
   mainImageStyle,
@@ -45,12 +44,6 @@ export const Scene1 = () => {
     tl.to(mainImage, 0, { x: 700 });
   }, []);
 
-  let audio = new Audio(Sound);
-
-  const start = () => {
-    audio.play();
-  };
-
   return (
     <div style={containerStyle}>
       <img
@@ -65,7 +58,6 @@ export const Scene1 = () => {
         ref={(el) => {
           speechBubble = el;
         }}
-        onClick={start}
       >
         <img style={speechBubbleStyle} src={SpeechBubble} alt="speech bubble" />
         <Typed
@@ -81,7 +73,7 @@ export const Scene1 = () => {
           }}
           style={nextSceneButtonStyle}
         >
-          Click to Next!
+          Next!
         </button>
       </Link>
     </div>
