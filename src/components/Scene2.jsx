@@ -75,7 +75,7 @@ export const Scene2 = () => {
             }}
             style={backSceneButtonStyle}
           >
-            Back!
+            Back
           </button>
         </Link>
         <Link to="/scene3">
@@ -85,7 +85,7 @@ export const Scene2 = () => {
             }}
             style={nextSceneButtonStyle}
           >
-            Next!
+            Next
           </button>
         </Link>
       </div>

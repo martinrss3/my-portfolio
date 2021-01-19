@@ -62,7 +62,7 @@ export const Scene1 = () => {
         <img style={speechBubbleStyle} src={SpeechBubble} alt="speech bubble" />
         <Typed
           style={typedStyle}
-          strings={["Hi! My name is Martín \n I am a \n Full Stack Developer"]}
+          strings={["Hi! My name is Martín \n and I am a \n Full Stack Developer"]}
           typeSpeed={60}
         />
       </div>
@@ -73,7 +73,7 @@ export const Scene1 = () => {
           }}
           style={nextSceneButtonStyle}
         >
-          Next!
+          Next
         </button>
       </Link>
     </div>

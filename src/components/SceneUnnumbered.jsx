@@ -3,7 +3,7 @@ import Typed from "react-typed";
 import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import { Link } from "react-router-dom";
-import MainImage from "../images/me/5.png";
+import MainImage from "../images/me/05.png";
 import Monster from "../images/badGuy/12.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble4.png";
 import SpeechBubble2 from "../images/speechBubbles/speech-bubble1.png";
@@ -115,7 +115,7 @@ export const SceneUnnumbered = () => {
           }}
           style={backSceneButtonStyle}
         >
-          Back!
+          Back
         </button>
       </Link>
       <Link to="/">
@@ -125,7 +125,7 @@ export const SceneUnnumbered = () => {
           }}
           style={nextSceneButtonStyle}
         >
-          Next!
+          Next
         </button>
       </Link>
     </div>
