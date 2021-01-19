@@ -1,4 +1,4 @@
-import Background from "../images/backgrounds/scene3-backgroud.jpg";
+import Background from "../images/backgrounds/scene3-background.jpg";
 
 export const containerStyle = {
   backgroundImage: `url(${Background})`,

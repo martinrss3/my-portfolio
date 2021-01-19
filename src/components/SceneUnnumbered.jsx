@@ -115,7 +115,7 @@ export const SceneUnnumbered = () => {
           }}
           style={backSceneButtonStyle}
         >
-          Back!
+          Back
         </button>
       </Link>
       <Link to="/">
@@ -125,7 +125,7 @@ export const SceneUnnumbered = () => {
           }}
           style={nextSceneButtonStyle}
         >
-          Next!
+          Next
         </button>
       </Link>
     </div>
