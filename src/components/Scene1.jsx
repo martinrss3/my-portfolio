@@ -5,14 +5,7 @@ import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import MainImage from "../images/me/23.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
-import {
-  containerStyle,
-  mainImageStyle,
-  speechBubbleStyle,
-  typedStyle,
-  nextSceneButtonStyle,
-} from "../utils/Scene1Styles";
-import "../css/main.css";
+import "../css/scene1.css";
 
 export const Scene1 = () => {
   let mainImage = useRef(null);
@@ -45,12 +38,12 @@ export const Scene1 = () => {
   }, []);
 
   return (
-    <div style={containerStyle}>
+    <div className="container-scene-one">
       <img
         ref={(el) => {
           mainImage = el;
         }}
-        style={mainImageStyle}
+        className="main-image-scene-one"
         src={MainImage}
         alt="me"
       />
@@ -59,10 +52,12 @@ export const Scene1 = () => {
           speechBubble = el;
         }}
       >
-        <img style={speechBubbleStyle} src={SpeechBubble} alt="speech bubble" />
+        <img className="speech-bubble-scene-one" src={SpeechBubble} alt="speech bubble" />
         <Typed
-          style={typedStyle}
-          strings={["Hi! My name is Martín \n and I am a \n Full Stack Developer"]}
+          className="typed-scene-one"
+          strings={[
+            "Hi! My name is Martín \n and I am a \n Full Stack Developer",
+          ]}
           typeSpeed={60}
         />
       </div>
@@ -71,7 +66,7 @@ export const Scene1 = () => {
           ref={(el) => {
             nextScene = el;
           }}
-          style={nextSceneButtonStyle}
+          className="next-scene-one"
         >
           Next
         </button>

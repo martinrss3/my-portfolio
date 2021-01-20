@@ -7,17 +7,7 @@ import MainImage from "../images/me/05.png";
 import Monster from "../images/badGuy/12.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble4.png";
 import SpeechBubble2 from "../images/speechBubbles/speech-bubble1.png";
-import {
-  containerStyle,
-  mainImageStyle,
-  speechBubbleStyle,
-  typed1Style,
-  monsterStyle,
-  speechBubble2Style,
-  typed2Style,
-  nextSceneButtonStyle,
-  backSceneButtonStyle,
-} from "../utils/SceneUnnumberedStyles";
+import "../css/scene-unnumbered.css";
 
 export const SceneUnnumbered = () => {
   let mainImage = useRef(null);
@@ -63,13 +53,13 @@ export const SceneUnnumbered = () => {
   }, []);
 
   return (
-    <div style={containerStyle}>
+    <div className="container-scene-unnumbered">
       <div>
         <img
           ref={(el) => {
             mainImage = el;
           }}
-          style={mainImageStyle}
+          className="martin-scene-unnumbered"
           src={MainImage}
           alt="me"
         />
@@ -80,10 +70,14 @@ export const SceneUnnumbered = () => {
         >
           <img
             src={SpeechBubble}
-            style={speechBubbleStyle}
+            className="speech-bubble1-scene-unnumbered"
             alt="speech bubble"
           />
-          <Typed style={typed1Style} strings={["wait hmm.. \n who are you?"]} typeSpeed={60} />
+          <Typed
+            className="typed1-scene-unnumbered"
+            strings={["wait hmm.. \n who are you?"]}
+            typeSpeed={60}
+          />
         </div>
       </div>
       <div>
@@ -92,7 +86,7 @@ export const SceneUnnumbered = () => {
             monster = el;
           }}
           src={Monster}
-          style={monsterStyle}
+          className="monster-scene-unnumbered"
           alt="monster"
         />
         <div
@@ -102,10 +96,14 @@ export const SceneUnnumbered = () => {
         >
           <img
             src={SpeechBubble2}
-            style={speechBubble2Style}
+            className="speech-bubble2-scene-unnumbered"
             alt="speech bubble"
           />
-          <Typed style={typed2Style} strings={["I am a creature \n of the night"]} typeSpeed={60} />
+          <Typed
+            className="typed2-scene-unnumbered"
+            strings={["I am a creature \n of the night"]}
+            typeSpeed={60}
+          />
         </div>
       </div>
       <Link to="/scene3">
@@ -113,7 +111,7 @@ export const SceneUnnumbered = () => {
           ref={(el) => {
             backScene = el;
           }}
-          style={backSceneButtonStyle}
+          className="back-scene-unnumbered"
         >
           Back
         </button>
@@ -123,7 +121,7 @@ export const SceneUnnumbered = () => {
           ref={(el) => {
             nextScene = el;
           }}
-          style={nextSceneButtonStyle}
+          className="next-scene-unnumbered"
         >
           Next
         </button>

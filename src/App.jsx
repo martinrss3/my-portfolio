@@ -6,6 +6,7 @@ import { Scene2 } from "./components/Scene2";
 import { Scene3 } from "./components/Scene3";
 import { SceneUnnumbered } from "./components/SceneUnnumbered";
 import { NavBar } from "./components/NavBar";
+import "../src/css/main.css";
 
 function App() {
   let app = useRef(null);

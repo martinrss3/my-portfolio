@@ -5,14 +5,7 @@ import { TweenMax, Power3, TimelineLite } from "gsap";
 import { Link } from "react-router-dom";
 import MainImage from "../images/me/22.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
-import {
-  containerStyle,
-  mainImageStyle,
-  speechBubbleStyle,
-  typedStyle,
-  nextSceneButtonStyle,
-  backSceneButtonStyle,
-} from "../utils/Scene2Styles";
+import "../css/scene2.css";
 
 export const Scene2 = () => {
   let mainImage = useRef(null);
@@ -46,12 +39,12 @@ export const Scene2 = () => {
   }, []);
 
   return (
-    <div style={containerStyle}>
+    <div className="container-scene-two">
       <img
         ref={(el) => {
           mainImage = el;
         }}
-        style={mainImageStyle}
+        className="main-image-scene-two"
         src={MainImage}
         alt="me"
       />
@@ -60,9 +53,13 @@ export const Scene2 = () => {
           speechBubble = el;
         }}
       >
-        <img style={speechBubbleStyle} src={SpeechBubble} alt="speech-bubble" />
+        <img
+          className="speech-bubble-scene-two"
+          src={SpeechBubble}
+          alt="speech-bubble"
+        />
         <Typed
-          style={typedStyle}
+          className="typed-scene-two"
           strings={["I am looking \n for my first job \n as a developer!"]}
           typeSpeed={60}
         />
@@ -73,7 +70,7 @@ export const Scene2 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            style={backSceneButtonStyle}
+            className="back-scene-two"
           >
             Back
           </button>
@@ -83,7 +80,7 @@ export const Scene2 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            style={nextSceneButtonStyle}
+            className="next-scene-two"
           >
             Next
           </button>
