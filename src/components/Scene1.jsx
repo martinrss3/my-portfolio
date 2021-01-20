@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
-import MainImage from "../images/me/23.png";
+import MainImage from "../images/me/01.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import "../css/scene1.css";
 
