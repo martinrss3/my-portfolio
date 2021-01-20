@@ -1,0 +1,63 @@
+.container-scene-one {
+  background-image: url("../images/backgrounds/scene1-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.main-image-scene-one {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.speech-bubble-scene-one {
+  z-index: 1;
+  position: absolute;
+  width: 40%;
+  top: 50px;
+  right: 0;
+  -webkit-transform: scaleX(-1);
+}
+
+.typed-scene-one {
+  z-index: 100;
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  top: 120px;
+  right: 150px;
+  font-family: SequentialistBB, cursive;
+  white-space: pre;
+  text-align: center;
+}
+
+.next-scene-one {
+  margin: 2rem 2rem;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: Dekko, cursive;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 25px, 100%;
+  border: 0.4rem solid #000;
+  position: absolute;
+  display: inline;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  float: left;
+}
