@@ -118,7 +118,7 @@
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 599px) {
   .navbar {
     top: 0;
     width: 5rem;
