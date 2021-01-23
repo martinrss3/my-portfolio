@@ -1,5 +1,5 @@
 .container-scene-one {
-  background-image: url("../images/backgrounds/scene1-background.jpg");
+  background: url("../images/backgrounds/scene1-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +59,9 @@
   right: 0;
   cursor: pointer;
   width: 150px;
-  animation: blinker 1s linear infinite;
+  box-shadow: 3px 3px 5px rgb(27, 27, 27);
+  /* animation: blinker 1s linear infinite; */
+  
 }
 
 @keyframes blinker {
@@ -69,7 +71,7 @@
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   .container-scene-one {
     background-position: right;
     max-width: 600px;
@@ -83,16 +85,15 @@
   }
 
   .speech-bubble-scene-one {
-    width: 215px;
+    width: 60%;
     left: 40%;
     top: 15%;
   }
 
   .typed-scene-one {
-    width: 53%;
     font-size: 2.8vw;
     top: 16%;
-    left: 42.7%;
+    left: 46%;
   }
 
   .next-scene-one {
