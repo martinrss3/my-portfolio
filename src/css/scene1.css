@@ -5,7 +5,6 @@
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  display: block;
 }
 
 .main-image-scene-one {
@@ -23,7 +22,6 @@
   -webkit-transform: scaleX(-1);
   position: absolute;
   width: 50%;
-  height: auto;
   top: 3vw;
   left: 50%;
 }
@@ -32,13 +30,14 @@
   z-index: 100;
   position: absolute;
   width: 50%;
-  top: 9vw;
+  top: 8vw;
   left: 50%;
   font-size: 2.5vw;
   font-weight: bold;
-  font-family: SequentialistBB, cursive;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
   white-space: pre;
   text-align: center;
+  padding: 20px;
 }
 
 .next-scene-one {
@@ -55,40 +54,45 @@
     #fff;
   background-size: 25px, 100%;
   border: 0.4rem solid #000;
-  position: absolute;
-  display: inline;
+  position: fixed;
   bottom: 0;
   right: 0;
   cursor: pointer;
-  float: left;
   width: 150px;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Mobile Styles */
 @media only screen and (max-width: 600px) {
   .container-scene-one {
     background-position: right;
+    max-width: 600px;
+    margin: auto;
   }
 
   .main-image-scene-one {
-    max-width: 400px;
-    left: 30px;
+    max-height: 560px;
+    margin: auto;
+    bottom: 80px;
   }
 
   .speech-bubble-scene-one {
-    top: 70vw;
+    width: 215px;
     left: 40%;
-    width: 60%;
-    height: auto;
+    top: 15%;
   }
-  
+
   .typed-scene-one {
-    max-width: 250px;
-    max-height: 100vh;
-    width: 100%;
-    font-size: 13px;
-    top: 120px;
-    left: 160px;
+    width: 53%;
+    font-size: 2.8vw;
+    top: 16%;
+    left: 42.7%;
   }
 
   .next-scene-one {

@@ -52,14 +52,20 @@ export const Scene1 = () => {
           speechBubble = el;
         }}
       >
-        <img className="speech-bubble-scene-one" src={SpeechBubble} alt="speech bubble" />
-        <Typed
-          className="typed-scene-one"
-          strings={[
-            "Hi! My name is Martín \n and I am a \n Full Stack Developer",
-          ]}
-          typeSpeed={60}
+        <img
+          className="speech-bubble-scene-one"
+          src={SpeechBubble}
+          alt="speech bubble"
         />
+        <div>
+          <Typed
+            className="typed-scene-one"
+            strings={[
+              "Hi! My name is Martín \n and I am a \n Full Stack Developer...",
+            ]}
+            typeSpeed={60}
+          />
+        </div>
       </div>
       <Link to="/scene2">
         <button
