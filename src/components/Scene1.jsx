@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
+import Delay from "react-delay";
 import MainImage from "../images/me/01.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
+import HandClick from "../images/hand-click.gif";
 import "../css/scene1.css";
 
 export const Scene1 = () => {
@@ -58,13 +60,24 @@ export const Scene1 = () => {
           alt="speech bubble"
         />
         <div>
-          <Typed
-            className="typed-scene-one"
-            strings={[
-              "Hi! My name is Martín \n and I am a \n Full Stack Developer...",
-            ]}
-            typeSpeed={60}
-          />
+          <Delay wait={1500}>
+            <Typed
+              className="typed-scene-one"
+              strings={[
+                "Hi! My name is Martín \n and I am a \n Full Stack Developer...",
+              ]}
+              typeSpeed={60}
+            />
+          </Delay>
+        </div>
+        <div>
+          <Delay wait={6500}>
+            <img
+              className="hand-click-scene-one"
+              src={HandClick}
+              alt="hand click"
+            />
+          </Delay>
         </div>
       </div>
       <Link to="/scene2">
