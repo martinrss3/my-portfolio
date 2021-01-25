@@ -24,6 +24,7 @@
   width: 50%;
   top: 3vw;
   left: 50%;
+  cursor: pointer;
 }
 
 .typed-scene-one {
@@ -38,6 +39,7 @@
   white-space: pre;
   text-align: center;
   padding: 20px;
+  cursor: pointer;
 }
 
 .hand-click-scene-one {
@@ -47,6 +49,7 @@
   top: 10vw;
   left: 80%;
   transform: rotate(-30deg);
+  cursor: pointer;
 }
 
 .next-scene-one {
@@ -68,7 +71,7 @@
   right: 0;
   cursor: pointer;
   width: 150px;
-  box-shadow: 3px 3px 5px rgb(27, 27, 27);  
+  box-shadow: 3px 3px 5px rgb(27, 27, 27);
 }
 
 /* Mobile Styles */
