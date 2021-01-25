@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Typed from "react-typed";
 import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import Delay from "react-delay";
@@ -13,6 +12,12 @@ export const Scene1 = () => {
   let mainImage = useRef(null);
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
+
+  const firstSpeech =
+    "Hi! My name is Martín \n and I am a \n Full Stack Developer...";
+  const secondSpeech = "I am looking \n for my first job \n as a developer!";
+
+  const [typed, setTyped] = useState([firstSpeech]);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -57,24 +62,20 @@ export const Scene1 = () => {
         <img
           className="speech-bubble-scene-one"
           src={SpeechBubble}
+          onClick={() => setTyped(secondSpeech)}
           alt="speech bubble"
         />
         <div>
-          <Delay wait={1500}>
-            <Typed
-              className="typed-scene-one"
-              strings={[
-                "Hi! My name is Martín \n and I am a \n Full Stack Developer...",
-              ]}
-              typeSpeed={60}
-            />
-          </Delay>
+          <p className="typed-scene-one" onClick={() => setTyped(secondSpeech)}>
+            {typed}
+          </p>
         </div>
         <div>
-          <Delay wait={6500}>
+          <Delay wait={2800}>
             <img
               className="hand-click-scene-one"
               src={HandClick}
+              onClick={() => setTyped(secondSpeech)}
               alt="hand click"
             />
           </Delay>
