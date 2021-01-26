@@ -1,17 +1,24 @@
-import React, { useRef, useEffect } from "react";
-import Typed from "react-typed";
-import "react-typed/dist/animatedCursor.css";
-import { TweenMax, Power3, TimelineLite } from "gsap";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { TweenMax, Power3, TimelineLite } from "gsap";
+import Delay from "react-delay";
 import MainImage from "../images/me/22.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
+import HandClick from "../images/hand-click.gif";
 import "../css/scene2.css";
 
 export const Scene2 = () => {
   let mainImage = useRef(null);
   let speechBubble = useRef(null);
+  let cv = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
+
+  const firstSpeech = "You can check \n my CV down here...";
+  const secondSpeech = "I am looking \n for my first job \n as a developer!";
+
+  const [typed, setTyped] = useState([firstSpeech]);
+  const [showHandClick, setShowHandClick] = useState(false);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -22,7 +29,7 @@ export const Scene2 = () => {
     });
 
     TweenMax.fromTo(
-      [speechBubble, nextScene, backScene],
+      [speechBubble, cv, nextScene, backScene],
       1,
       {
         delay: 2,
@@ -56,13 +63,51 @@ export const Scene2 = () => {
         <img
           className="speech-bubble-scene-two"
           src={SpeechBubble}
+          onClick={() => {
+            setTyped(secondSpeech);
+            setShowHandClick(!showHandClick);
+          }}
           alt="speech-bubble"
         />
-        <Typed
-          className="typed-scene-two"
-          strings={["I am looking \n for my first job \n as a developer!"]}
-          typeSpeed={60}
-        />
+        <div>
+          <p
+            className="typed-scene-two"
+            onClick={() => {
+              setTyped(secondSpeech);
+              setShowHandClick(!showHandClick);
+            }}
+          >
+            {typed}
+          </p>
+        </div>
+        <div>
+          <Delay wait={2500}>
+            <img
+              className={
+                showHandClick
+                  ? "hand-click-scene-two-hide"
+                  : "hand-click-scene-two"
+              }
+              src={HandClick}
+              onClick={() => {
+                setTyped(secondSpeech);
+                setShowHandClick(!showHandClick);
+              }}
+              alt="hand click"
+            />
+          </Delay>
+        </div>
+      </div>
+      <div>
+        <button
+          ref={(el) => {
+            cv = el;
+          }}
+          className="cv-scene-two"
+          onClick={() => window.open("http://google.com.ar", "_blank")}
+        >
+          View my CV
+        </button>
       </div>
       <div>
         <Link to="/">

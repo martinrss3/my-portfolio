@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import Delay from "react-delay";
 import MainImage from "../images/me/01.png";
@@ -18,6 +17,7 @@ export const Scene1 = () => {
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
   const [typed, setTyped] = useState([firstSpeech]);
+  const [showHandClick, setShowHandClick] = useState(false);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -62,35 +62,53 @@ export const Scene1 = () => {
         <img
           className="speech-bubble-scene-one"
           src={SpeechBubble}
-          onClick={() => setTyped(secondSpeech)}
+          onClick={() => {
+            setTyped(secondSpeech);
+            setShowHandClick(!showHandClick);
+          }}
           alt="speech bubble"
         />
         <div>
-          <p className="typed-scene-one" onClick={() => setTyped(secondSpeech)}>
+          <p
+            className="typed-scene-one"
+            onClick={() => {
+              setTyped(secondSpeech);
+              setShowHandClick(!showHandClick);
+            }}
+          >
             {typed}
           </p>
         </div>
         <div>
-          <Delay wait={2800}>
+          <Delay wait={2500}>
             <img
-              className="hand-click-scene-one"
+              className={
+                showHandClick
+                  ? "hand-click-scene-one-hide"
+                  : "hand-click-scene-one"
+              }
               src={HandClick}
-              onClick={() => setTyped(secondSpeech)}
+              onClick={() => {
+                setTyped(secondSpeech);
+                setShowHandClick(!showHandClick);
+              }}
               alt="hand click"
             />
           </Delay>
         </div>
       </div>
-      <Link to="/scene2">
-        <button
-          ref={(el) => {
-            nextScene = el;
-          }}
-          className="next-scene-one"
-        >
-          Next
-        </button>
-      </Link>
+      <div>
+        <Link to="/scene2">
+          <button
+            ref={(el) => {
+              nextScene = el;
+            }}
+            className="next-scene-one"
+          >
+            Next
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
