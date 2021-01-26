@@ -52,6 +52,10 @@
   cursor: pointer;
 }
 
+.hand-click-scene-one-hide {
+  display: none;
+}
+
 .next-scene-one {
   margin: 2rem 2rem;
   padding: 0.2rem 1.25rem;
