@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { TweenMax } from "gsap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { NavBar } from "./components/NavBar";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
+import { ErrorCv } from "./components/ErrorCv";
 import { Scene3 } from "./components/Scene3";
 import { SceneUnnumbered } from "./components/SceneUnnumbered";
-import { NavBar } from "./components/NavBar";
+
 import "../src/css/main.css";
 
 function App() {
@@ -31,6 +33,9 @@ function App() {
           </Route>
           <Route exact path="/sceneUnnumbered">
             <SceneUnnumbered />
+          </Route>
+          <Route exact patch="/error-cv">
+            <ErrorCv />
           </Route>
         </Switch>
       </div>

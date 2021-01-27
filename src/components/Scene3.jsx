@@ -1,7 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Typed from "react-typed";
-import "react-typed/dist/animatedCursor.css";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import MainImage from "../images/badGuy/04.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
@@ -12,6 +10,8 @@ export const Scene3 = () => {
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
+
+  const firstSpeech = "Are you looking \n for this...?";
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -58,11 +58,7 @@ export const Scene3 = () => {
           src={SpeechBubble}
           alt="speech bubble"
         />
-        <Typed
-          className="typed-scene-three"
-          strings={["not too fast... \n you won't get anything"]}
-          typeSpeed={60}
-        />
+        <p className="typed-scene-three">{firstSpeech}</p>
       </div>
       <div>
         <Link to="/scene2">
