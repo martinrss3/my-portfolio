@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import Delay from "react-delay";
-import MainImage from "../images/me/22.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import HandClick from "../images/hand-click.gif";
 import "../css/scene2.css";
@@ -15,10 +14,12 @@ export const Scene2 = () => {
   let backScene = useRef(null);
 
   const firstSpeech = "You can check \n my CV down here...";
-  const secondSpeech = "I am looking \n for my first job \n as a developer!";
+  const secondSpeech = "Wow sorry... \n Where could it be my CV?";
 
   const [typed, setTyped] = useState([firstSpeech]);
   const [showHandClick, setShowHandClick] = useState(false);
+  const [changeMainImage, setChangeMainImage] = useState(false);
+  const [showCvButton, setShowCvButton] = useState(false);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -51,8 +52,11 @@ export const Scene2 = () => {
         ref={(el) => {
           mainImage = el;
         }}
-        className="main-image-scene-two"
-        src={MainImage}
+        className={
+          changeMainImage
+            ? "main-image-scene-two-changed"
+            : "main-image-scene-two"
+        }
         alt="me"
       />
       <div
@@ -63,51 +67,49 @@ export const Scene2 = () => {
         <img
           className="speech-bubble-scene-two"
           src={SpeechBubble}
-          onClick={() => {
-            setTyped(secondSpeech);
-            setShowHandClick(!showHandClick);
-          }}
           alt="speech-bubble"
         />
         <div>
-          <p
-            className="typed-scene-two"
-            onClick={() => {
-              setTyped(secondSpeech);
-              setShowHandClick(!showHandClick);
-            }}
-          >
-            {typed}
-          </p>
+          <p className="typed-scene-two">{typed}</p>
         </div>
         <div>
-          <Delay wait={2500}>
-            <img
-              className={
-                showHandClick
-                  ? "hand-click-scene-two-hide"
-                  : "hand-click-scene-two"
-              }
-              src={HandClick}
-              onClick={() => {
-                setTyped(secondSpeech);
-                setShowHandClick(!showHandClick);
-              }}
-              alt="hand click"
-            />
-          </Delay>
+          <Link to="error-cv" target="_blank">
+            <Delay wait={2000}>
+              <img
+                className={
+                  showHandClick
+                    ? "hand-click-scene-two-hide"
+                    : "hand-click-scene-two"
+                }
+                src={HandClick}
+                onClick={() => {
+                  setTyped(secondSpeech);
+                  setShowHandClick(!showHandClick);
+                  setChangeMainImage(!changeMainImage);
+                  setShowCvButton(!showCvButton);
+                }}
+                alt="hand click"
+              />
+            </Delay>
+          </Link>
         </div>
       </div>
       <div>
-        <button
-          ref={(el) => {
-            cv = el;
-          }}
-          className="cv-scene-two"
-          onClick={() => window.open("http://google.com.ar", "_blank")}
-        >
-          View my CV
-        </button>
+        <Link to="error-cv" target="_blank">
+          <button
+            ref={(el) => {
+              cv = el;
+            }}
+            className={showCvButton ? "cv-scene-two-hide" : "cv-scene-two"}
+            onClick={() => {
+              setChangeMainImage(!changeMainImage);
+              setShowHandClick(!showHandClick);
+              setShowCvButton(!showCvButton);
+            }}
+          >
+            View my CV
+          </button>
+        </Link>
       </div>
       <div>
         <Link to="/">

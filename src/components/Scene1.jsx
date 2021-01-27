@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import Delay from "react-delay";
-import MainImage from "../images/me/01.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import HandClick from "../images/hand-click.gif";
 import "../css/scene1.css";
@@ -18,6 +17,7 @@ export const Scene1 = () => {
 
   const [typed, setTyped] = useState([firstSpeech]);
   const [showHandClick, setShowHandClick] = useState(false);
+  const [changeMainImage, setChangeMainImage] = useState(false);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -50,8 +50,11 @@ export const Scene1 = () => {
         ref={(el) => {
           mainImage = el;
         }}
-        className="main-image-scene-one"
-        src={MainImage}
+        className={
+          changeMainImage
+            ? "main-image-scene-one-changed"
+            : "main-image-scene-one"
+        }
         alt="me"
       />
       <div
@@ -65,6 +68,7 @@ export const Scene1 = () => {
           onClick={() => {
             setTyped(secondSpeech);
             setShowHandClick(!showHandClick);
+            setChangeMainImage(!changeMainImage);
           }}
           alt="speech bubble"
         />
@@ -74,6 +78,7 @@ export const Scene1 = () => {
             onClick={() => {
               setTyped(secondSpeech);
               setShowHandClick(!showHandClick);
+              setChangeMainImage(!changeMainImage);
             }}
           >
             {typed}
@@ -91,6 +96,7 @@ export const Scene1 = () => {
               onClick={() => {
                 setTyped(secondSpeech);
                 setShowHandClick(!showHandClick);
+                setChangeMainImage(!changeMainImage);
               }}
               alt="hand click"
             />
