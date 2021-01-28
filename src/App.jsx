@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
-import { ErrorCv } from "./components/ErrorCv";
 import { Scene3 } from "./components/Scene3";
+import { Scene4 } from "./components/Scene4";
+import { ErrorCv } from "./components/ErrorCv";
 import { SceneUnnumbered } from "./components/SceneUnnumbered";
 
 import "../src/css/main.css";
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route exact path="/scene3">
             <Scene3 />
+          </Route>
+          <Route exact path="/scene4">
+            <Scene4 />
           </Route>
           <Route exact path="/sceneUnnumbered">
             <SceneUnnumbered />
