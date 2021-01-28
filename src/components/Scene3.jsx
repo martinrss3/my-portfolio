@@ -71,7 +71,7 @@ export const Scene3 = () => {
             Back
           </button>
         </Link>
-        <Link to="/sceneUnnumbered">
+        <Link to="/scene4">
           <button
             ref={(el) => {
               nextScene = el;
