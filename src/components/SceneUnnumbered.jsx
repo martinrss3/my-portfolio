@@ -106,7 +106,7 @@ export const SceneUnnumbered = () => {
           />
         </div>
       </div>
-      <Link to="/scene3">
+      <Link to="/scene4">
         <button
           ref={(el) => {
             backScene = el;

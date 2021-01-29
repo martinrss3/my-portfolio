@@ -1,13 +1,34 @@
 .container-scene-three {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 27px;
+  padding-left: 105px;
+}
+
+.background-scene-three {
   background-image: url("../images/backgrounds/scene3-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+
+.background-scene-three-changed {
+  background-image: url("../images/backgrounds/scene3.1-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .main-image-scene-three {
+  content: url("../images/badGuy/21.png");
   position: absolute;
   opacity: 0;
   top: 0;
@@ -15,29 +36,75 @@
   bottom: 0;
   left: 0;
   max-width: 100vw;
+  max-height: 97vh;
+  margin: 0 auto;
+}
+
+.main-image-scene-three-changed {
+  content: url("../images/badGuy/04.png");
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   max-height: 100vh;
   margin: 0 auto;
+  clip-path: polygon(0 0, 100% 0, 100% 97.5%, 0 97.5%);
 }
 
 .speech-bubble-scene-three {
   z-index: 1;
-  position: absolute;
-  width: 40%;
-  top: 50px;
-  right: 0;
   -webkit-transform: scaleX(-1);
+  position: absolute;
+  width: 50%;
+  top: 3vw;
+  left: 50%;
 }
 
-.typed-scene-three {
-  z-index: 100;
+.typed-scene-three::before {
+  content: "hahahahaaa \A surprised..? \A what if i tell you \A that I am here to...";
+  z-index: 2;
   position: absolute;
-  font-size: 24px;
+  width: 40%;
+  top: 6vw;
+  left: 54%;
+  font-size: 2.7vw;
   font-weight: bold;
-  top: 10vw;
-  right: 13%;
-  font-family: SequentialistBB, cursive;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre-wrap;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px 4px red;
+}
+
+.typed-scene-three-changed::before {
+  content: "BREAK YOUR CODE!";
+  z-index: 2;
+  position: absolute;
+  width: 40%;
+  top: 11vw;
+  left: 55%;
+  font-size: 3.5vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
   white-space: pre;
   text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px 4px red;
+}
+
+.hand-click-scene-three {
+  z-index: 3;
+  position: absolute;
+  width: 10%;
+  top: 10vw;
+  left: 80%;
+  transform: rotate(-30deg);
+  cursor: pointer;
+}
+
+.hand-click-scene-three-hide {
+  display: none;
 }
 
 .next-scene-three {
