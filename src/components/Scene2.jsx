@@ -14,7 +14,7 @@ export const Scene2 = () => {
   let backScene = useRef(null);
 
   const firstSpeech = "You can check \n my CV down here...";
-  const secondSpeech = "Wow sorry... \n Where could it be my CV?";
+  const secondSpeech = "Wow sorry... \n what happened \n with my CV..?";
 
   const [typed, setTyped] = useState([firstSpeech]);
   const [showHandClick, setShowHandClick] = useState(false);
