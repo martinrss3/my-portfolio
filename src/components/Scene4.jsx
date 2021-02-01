@@ -4,23 +4,24 @@ import { Link } from "react-router-dom";
 import Background1 from "../images/backgrounds/scene4-background.jpg";
 import Background2 from "../images/backgrounds/scene4.1-background.jpg";
 import MainImage from "../images/me/05.png";
-import MainImage2 from "../images/badGuy/12.png";
+import MainImage2 from "../images/badGuy/22.png";
 import SpeechBubble from "../images/speechBubbles/speech-bubble4.png";
 import SpeechBubble2 from "../images/speechBubbles/speech-bubble1.png";
 import "../css/scene4.css";
 
 export const Scene4 = () => {
-  let mainImage = useRef(null);
+  let mainImage1 = useRef(null);
+  let mainImage2 = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "WOW! \n who are you..? \n I need my CV";
-  const secondSpeech = "bla bla bla";
+  const firstSpeech = "What?! \n who are you..?";
+  const secondSpeech = "Just watch...";
 
   useEffect(() => {
-    TweenMax.staggerTo(mainImage, 0.9, {
+    TweenMax.staggerTo([mainImage1, mainImage2], 0.9, {
       opacity: 1,
-      x: -100,
+      x: 0,
       ease: Power3.easeInOut,
       delay: 0.3,
     });
@@ -39,7 +40,8 @@ export const Scene4 = () => {
     );
 
     let tl = new TimelineLite();
-    tl.to(mainImage, 0, { x: 700 });
+    tl.to(mainImage1, 0, { x: -700 });
+    tl.to(mainImage2, 0, { x: 700 });
   }, []);
 
   return (
@@ -52,6 +54,9 @@ export const Scene4 = () => {
         />
         <div>
           <img
+            ref={(el) => {
+              mainImage2 = el;
+            }}
             className="main-image2-scene-four"
             src={MainImage2}
             alt="bad guy"
@@ -75,7 +80,7 @@ export const Scene4 = () => {
         <div>
           <img
             ref={(el) => {
-              mainImage = el;
+              mainImage1 = el;
             }}
             className="main-image-scene-four"
             src={MainImage}

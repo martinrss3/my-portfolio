@@ -1,0 +1,96 @@
+.container-scene5 {
+  background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+  background-repeat: repeat-x repeat-y;
+  background-position: bottom;
+  background-sizxe: cover;
+  animation: animate 15s linear infinite;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left 0px top 10px;
+  }
+  40% {
+    background-position: left 800px top 10px;
+  }
+}
+
+.main-image-scene5 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: 100%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.frame {
+  position: absolute;
+  top: 30%;
+  left: 80px;
+  width: 40%;
+  height: 40%;
+  background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+  background-repeat: repeat-x repeat-y;
+  background-position: bottom;
+  background-sizxe: cover;
+  animation: animate1 15s linear infinite;
+  border: 15px solid black;
+}
+
+@keyframes animate1 {
+  0% {
+    background-position: right 0px top 10px;
+  }
+  40% {
+    background-position: right 800px top 10px;
+  }
+}
+
+.main-image2-scene5 {
+  transform: rotateY(180deg);
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+}
+
+.speech-bubble-scene5 {
+  z-index: 1;
+  transform: rotate(25deg);
+  position: absolute;
+  left: 5%;
+  top: 0;
+  width: 40%;
+}
+
+.typed-scene5 {
+  z-index: 2;
+  position: absolute;
+  width: 50%;
+  top: 5vw;
+  left: 3%;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
+  padding: 20px;
+  transform: rotate(13deg);
+}
