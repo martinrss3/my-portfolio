@@ -33,7 +33,7 @@
   z-index: 1;
   -webkit-transform: scaleX(-1);
   position: absolute;
-  width: 50%;
+  max-width: 50%;
   top: 3vw;
   left: 50%;
   cursor: pointer;
