@@ -78,6 +78,7 @@
   left: 5%;
   top: 0;
   width: 40%;
+  opacity: 0;
 }
 
 .typed-scene5 {
@@ -93,4 +94,5 @@
   text-align: center;
   padding: 20px;
   transform: rotate(13deg);
+  opacity: 0;
 }
