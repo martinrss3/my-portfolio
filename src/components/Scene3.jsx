@@ -43,94 +43,90 @@ export const Scene3 = () => {
   }, []);
 
   return (
-    <div className="container-scene-three">
-      <div
+    <div
+      className={
+        changeBackground ? "container-scene3-changed" : "container-scene3"
+      }
+    >
+      <img
+        ref={(el) => {
+          mainImage = el;
+        }}
         className={
-          changeBackground
-            ? "background-scene-three-changed"
-            : "background-scene-three"
+          changeMainImage
+            ? "main-image-scene-three-changed"
+            : "main-image-scene-three"
         }
+        alt="me"
+      />
+      <div
+        ref={(el) => {
+          speechBubble = el;
+        }}
       >
         <img
-          ref={(el) => {
-            mainImage = el;
+          className="speech-bubble-scene-three"
+          onClick={() => {
+            setChangeText(!changeText);
+            setShowHandClick(!showHandClick);
+            setChangeMainImage(!changeMainImage);
+            setChangeBackground(!changeBackground);
           }}
-          className={
-            changeMainImage
-              ? "main-image-scene-three-changed"
-              : "main-image-scene-three"
-          }
-          alt="me"
+          src={SpeechBubble}
+          alt="speech bubble"
         />
-        <div
-          ref={(el) => {
-            speechBubble = el;
+        <p
+          className={
+            changeText ? "typed-scene-three-changed" : "typed-scene-three"
+          }
+          onClick={() => {
+            setChangeText(!changeText);
+            setShowHandClick(!showHandClick);
+            setChangeMainImage(!changeMainImage);
+            setChangeBackground(!changeBackground);
           }}
-        >
+        ></p>
+      </div>
+      <div>
+        <Delay wait={2500}>
           <img
-            className="speech-bubble-scene-three"
-            onClick={() => {
-              setChangeText(!changeText);
-              setShowHandClick(!showHandClick);
-              setChangeMainImage(!changeMainImage);
-              setChangeBackground(!changeBackground);
-            }}
-            src={SpeechBubble}
-            alt="speech bubble"
-          />
-          <p
             className={
-              changeText ? "typed-scene-three-changed" : "typed-scene-three"
+              showHandClick
+                ? "hand-click-scene-three-hide"
+                : "hand-click-scene-three"
             }
+            src={HandClick}
             onClick={() => {
               setChangeText(!changeText);
               setShowHandClick(!showHandClick);
               setChangeMainImage(!changeMainImage);
               setChangeBackground(!changeBackground);
             }}
-          ></p>
-        </div>
-        <div>
-          <Delay wait={2500}>
-            <img
-              className={
-                showHandClick
-                  ? "hand-click-scene-three-hide"
-                  : "hand-click-scene-three"
-              }
-              src={HandClick}
-              onClick={() => {
-                setChangeText(!changeText);
-                setShowHandClick(!showHandClick);
-                setChangeMainImage(!changeMainImage);
-                setChangeBackground(!changeBackground);
-              }}
-              alt="hand click"
-            />
-          </Delay>
-        </div>
-        <div>
-          <Link to="/scene2">
-            <button
-              ref={(el) => {
-                backScene = el;
-              }}
-              className="back-scene-three"
-            >
-              Back
-            </button>
-          </Link>
-          <Link to="/scene4">
-            <button
-              ref={(el) => {
-                nextScene = el;
-              }}
-              className="next-scene-three"
-            >
-              Next
-            </button>
-          </Link>
-        </div>
+            alt="hand click"
+          />
+        </Delay>
+      </div>
+      <div>
+        <Link to="/scene2">
+          <button
+            ref={(el) => {
+              backScene = el;
+            }}
+            className="back-scene-three"
+          >
+            Back
+          </button>
+        </Link>
+        <Link to="/scene4">
+          <button
+            ref={(el) => {
+              nextScene = el;
+            }}
+            className="next-scene-three"
+          >
+            Next
+          </button>
+        </Link>
       </div>
     </div>
   );

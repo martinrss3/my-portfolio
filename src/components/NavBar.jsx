@@ -19,10 +19,6 @@ export const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-        rel="stylesheet"
-      />
       <ul className="navbar-nav">
         <li className="logo">
           <a href="#home" className="nav-link">

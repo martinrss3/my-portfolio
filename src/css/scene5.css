@@ -1,8 +1,8 @@
 .container-scene5 {
   background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
-  background-repeat: repeat-x repeat-y;
+  background-repeat: repeat;
   background-position: bottom;
-  background-sizxe: cover;
+  background-size: cover;
   animation: animate 15s linear infinite;
   width: 100vw;
   height: 100vh;
@@ -44,13 +44,12 @@
 .frame {
   position: absolute;
   top: 30%;
-  left: 80px;
+  left: 90px;
   width: 40%;
   height: 40%;
   background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
-  background-repeat: repeat-x repeat-y;
+  background-repeat: repeat;
   background-position: bottom;
-  background-sizxe: cover;
   animation: animate1 15s linear infinite;
   border: 15px solid black;
 }

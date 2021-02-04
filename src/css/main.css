@@ -11,12 +11,11 @@
 
 :root {
   font-size: 16px;
-  font-family: "Open Sans";
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
+  --text-primary: #ffffff;
+  --text-secondary: #07c917;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --transition-speed: 600ms;
+  --transition-speed: 300ms;
 }
 
 * {

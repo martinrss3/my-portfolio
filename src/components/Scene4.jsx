@@ -53,7 +53,7 @@ export const Scene4 = () => {
   }, []);
 
   return (
-    <div className="container-scene-four">
+    <div className="container-scene4">
       <div>
         <img
           className="background1-scene-four"
