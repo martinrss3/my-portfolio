@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 .navbar {
   z-index: 10000;
   position: fixed;
-  background-color: var(--bg-primary);
-  transition: width 600ms ease;
+  transition: width 300ms ease;
   overflow: clip;
+  border: 4px solid black;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    rgb(88, 88, 88);
+  background-size: 25px, 100%;
+  font-family: 'Bangers', cursive;
+  box-shadow: 6px 0 2px rgba(0, 0, 0, 0.350);
+}
+
+.navbar::before {
+  content: "";
+  border: 2px solid black;
+  display: block;
+  width: 98%;
+  height: 97%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+  border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
 }
 
 .navbar-nav {
@@ -26,13 +46,13 @@
   height: 5rem;
   color: var(--text-primary);
   text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
+  filter: opacity(0.7);
+  transition: var(--transiti99on-speed);
 }
 
 .nav-link:hover {
   filter: grayscale(0%) opacity(1);
-  background: var(--bg-secondary);
+  background: rgba(0, 0, 0, 0.555);;
   color: var(--text-secondary);
 }
 
@@ -48,7 +68,7 @@
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: #07c917;
 }
 
 .fa-secondary {
@@ -66,8 +86,8 @@
   margin-bottom: 1rem;
   text-align: center;
   color: var(--text-secondary);
-  background: var(--bg-secondary);
-  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.475);
+  font-size: 2rem;
   letter-spacing: 0.3ch;
   width: 100%;
 }
@@ -82,6 +102,7 @@
   position: absolute;
   left: -999px;
   transition: var(--transition-speed);
+  margin-left: 3rem;
 }
 
 .navbar:hover .logo svg {
@@ -136,41 +157,4 @@
   .navbar:hover .logo-text {
     left: 0px;
   }
-}
-
-.dark {
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-}
-
-.light {
-  --text-primary: #1f1f1f;
-  --text-secondary: #000000;
-  --bg-primary: #ffffff;
-  --bg-secondary: #e4e4e4;
-}
-
-.solar {
-  --text-primary: #576e75;
-  --text-secondary: #35535c;
-  --bg-primary: #fdf6e3;
-  --bg-secondary: #f5e5b8;
-}
-
-.theme-icon {
-  display: none;
-}
-
-.dark #darkIcon {
-  display: block;
-}
-
-.light #lightIcon {
-  display: block;
-}
-
-.solar #solarIcon {
-  display: block;
 }

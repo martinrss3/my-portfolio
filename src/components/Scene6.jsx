@@ -10,7 +10,7 @@ export const Scene6 = () => {
       style={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: "black",
+        backgroundColor: "white",
       }}
     >
       <Terminal
@@ -41,7 +41,7 @@ export const Scene6 = () => {
       <img
         className="main-image-scene6"
         src={MainImage}
-        style={{ position: "absolute", bottom: 0, right: "-100px" }}
+        style={{ position: "absolute", bottom: 0, right: "-90px" }}
         alt="me glitched"
       />
       {/* <img
