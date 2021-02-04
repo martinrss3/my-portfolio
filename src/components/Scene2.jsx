@@ -73,43 +73,39 @@ export const Scene2 = () => {
           <p className="typed-scene-two">{typed}</p>
         </div>
         <div>
-          <Link to="error-cv" target="_blank">
-            <Delay wait={2000}>
-              <img
-                className={
-                  showHandClick
-                    ? "hand-click-scene-two-hide"
-                    : "hand-click-scene-two"
-                }
-                src={HandClick}
-                onClick={() => {
-                  setTyped(secondSpeech);
-                  setShowHandClick(!showHandClick);
-                  setChangeMainImage(!changeMainImage);
-                  setShowCvButton(!showCvButton);
-                }}
-                alt="hand click"
-              />
-            </Delay>
-          </Link>
+          <Delay wait={2000}>
+            <img
+              className={
+                showHandClick
+                  ? "hand-click-scene-two-hide"
+                  : "hand-click-scene-two"
+              }
+              src={HandClick}
+              onClick={() => {
+                setTyped(secondSpeech);
+                setShowHandClick(!showHandClick);
+                setChangeMainImage(!changeMainImage);
+                setShowCvButton(!showCvButton);
+              }}
+              alt="hand click"
+            />
+          </Delay>
         </div>
       </div>
       <div>
-        <Link to="error-cv" target="_blank">
-          <button
-            ref={(el) => {
-              cv = el;
-            }}
-            className={showCvButton ? "cv-scene-two-hide" : "cv-scene-two"}
-            onClick={() => {
-              setChangeMainImage(!changeMainImage);
-              setShowHandClick(!showHandClick);
-              setShowCvButton(!showCvButton);
-            }}
-          >
-            View my CV
-          </button>
-        </Link>
+        <button
+          ref={(el) => {
+            cv = el;
+          }}
+          className={showCvButton ? "cv-scene-two-hide" : "cv-scene-two"}
+          onClick={() => {
+            setChangeMainImage(!changeMainImage);
+            setShowHandClick(!showHandClick);
+            setShowCvButton(!showCvButton);
+          }}
+        >
+          View my CV
+        </button>
       </div>
       <div>
         <Link to="/">

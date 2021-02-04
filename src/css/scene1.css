@@ -32,6 +32,7 @@
 .speech-bubble-scene-one {
   z-index: 1;
   -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
   position: absolute;
   max-width: 50%;
   top: 3vw;

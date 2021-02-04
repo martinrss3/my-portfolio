@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
+// import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import HandClick from "../images/hand-click.gif";
@@ -15,7 +16,7 @@ export const Scene1 = () => {
     "Hi! My name is Martín \n and I am a \n Full Stack Developer...";
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
-  const [typed, setTyped] = useState([firstSpeech]);
+  const [typed, setTyped] = useState(firstSpeech);
   const [showHandClick, setShowHandClick] = useState(false);
   const [changeMainImage, setChangeMainImage] = useState(false);
 
@@ -84,6 +85,13 @@ export const Scene1 = () => {
             {typed}
           </p>
         </div>
+        {/* <div className="typed-scene-one">
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString(typed).start();
+            }}
+          />
+        </div> */}
         <div>
           <Delay wait={2500}>
             <img

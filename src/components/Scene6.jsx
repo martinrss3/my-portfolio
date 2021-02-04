@@ -10,7 +10,7 @@ export const Scene6 = () => {
       style={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: "white",
+        backgroundColor: "black",
       }}
     >
       <Terminal
@@ -27,7 +27,7 @@ export const Scene6 = () => {
         }}
         commands={{
           "fix-this-page": () => "/scene7",
-          // showmsg: "hola",
+          showmsg: "hola",
           popup: () => alert("Terminal in React"),
         }}
         descriptions={{
@@ -39,6 +39,7 @@ export const Scene6 = () => {
         msg="You can write anything here. Type help."
       />
       <img
+        className="main-image-scene6"
         src={MainImage}
         style={{ position: "absolute", bottom: 0, right: "-100px" }}
         alt="me glitched"

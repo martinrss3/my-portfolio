@@ -5,3 +5,7 @@
   width: 50%;
   transform: rotate(-15deg);
 }
+
+.main-image-scene6 {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
