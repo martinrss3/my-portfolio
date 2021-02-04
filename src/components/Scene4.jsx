@@ -12,6 +12,10 @@ import "../css/scene4.css";
 export const Scene4 = () => {
   let mainImage1 = useRef(null);
   let mainImage2 = useRef(null);
+  let speechBubble = useRef(null);
+  let speechBubble2 = useRef(null);
+  let speech1 = useRef(null);
+  let speech2 = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
@@ -19,12 +23,16 @@ export const Scene4 = () => {
   const secondSpeech = "Just watch...";
 
   useEffect(() => {
-    TweenMax.staggerTo([mainImage1, mainImage2], 0.9, {
-      opacity: 1,
-      x: 0,
-      ease: Power3.easeInOut,
-      delay: 0.3,
-    });
+    TweenMax.staggerTo(
+      [mainImage1, mainImage2, speechBubble, speechBubble2, speech1, speech2],
+      0.9,
+      {
+        opacity: 1,
+        x: 0,
+        ease: Power3.easeInOut,
+        delay: 0.3,
+      }
+    );
 
     TweenMax.fromTo(
       [nextScene, backScene],
@@ -40,8 +48,8 @@ export const Scene4 = () => {
     );
 
     let tl = new TimelineLite();
-    tl.to(mainImage1, 0, { x: -700 });
-    tl.to(mainImage2, 0, { x: 700 });
+    tl.to([mainImage1, speechBubble, speech1], 0, { x: -700 });
+    tl.to([mainImage2, speechBubble2, speech2], 0, { x: 700 });
   }, []);
 
   return (
@@ -62,13 +70,24 @@ export const Scene4 = () => {
             alt="bad guy"
           />
         </div>
-        <div>
+        <div
+          ref={(el) => {
+            speechBubble2 = el;
+          }}
+        >
           <img
             src={SpeechBubble2}
             className="speech-bubble2-scene-four"
             alt="speech bubble"
           />
-          <p className="typed2-scene-four">{secondSpeech}</p>
+          <p
+            ref={(el) => {
+              speech2 = el;
+            }}
+            className="typed2-scene-four"
+          >
+            {secondSpeech}
+          </p>
         </div>
       </div>
       <div>
@@ -89,11 +108,21 @@ export const Scene4 = () => {
         </div>
         <div>
           <img
+            ref={(el) => {
+              speechBubble = el;
+            }}
             src={SpeechBubble}
             className="speech-bubble1-scene-four"
             alt="speech bubble"
           />
-          <p className="typed-scene-four">{firstSpeech}</p>
+          <p
+            ref={(el) => {
+              speech1 = el;
+            }}
+            className="typed-scene-four"
+          >
+            {firstSpeech}
+          </p>
         </div>
       </div>
       <div>

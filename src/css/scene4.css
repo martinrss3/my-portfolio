@@ -65,12 +65,12 @@
   position: absolute;
   width: 40%;
   top: 8vw;
-  left: 5%;
+  left: 6%;
 }
 
 .speech-bubble2-scene-four {
   z-index: 1;
-  position: absolute;
+  position: relative;
   width: 40%;
   top: 0;
   left: 40%;

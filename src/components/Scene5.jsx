@@ -18,7 +18,7 @@ export const Scene5 = () => {
       opacity: 1,
       x: 0,
       ease: Power3.easeInOut,
-      delay: 3,
+      delay: 6,
     });
 
     TweenMax.fromTo(

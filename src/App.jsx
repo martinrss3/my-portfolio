@@ -10,8 +10,6 @@ import { Scene5 } from "./components/Scene5";
 import { Scene6 } from "./components/Scene6";
 import { Scene7 } from "./components/Scene7";
 import { Scene8 } from "./components/Scene8";
-import { ErrorCv } from "./components/ErrorCv";
-import { SceneUnnumbered } from "./components/SceneUnnumbered";
 
 import "../src/css/main.css";
 
@@ -50,12 +48,6 @@ function App() {
           </Route>
           <Route exact path="/scene8">
             <Scene8 />
-          </Route>
-          <Route exact path="/sceneUnnumbered">
-            <SceneUnnumbered />
-          </Route>
-          <Route exact patch="/error-cv">
-            <ErrorCv />
           </Route>
         </Switch>
       </div>
