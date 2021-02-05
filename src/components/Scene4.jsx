@@ -19,7 +19,7 @@ export const Scene4 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "What?! \n who are you..?";
+  const firstSpeech = "WTF";
   const secondSpeech = "Just watch...";
 
   useEffect(() => {
