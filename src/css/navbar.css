@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@font-face {
+  font-family: "Back-Issues";
+  src: url("../utils/back-issues-bb.regular.ttf") format("truetype")
+}
 
 .navbar {
   z-index: 10000;
@@ -9,8 +12,8 @@
   background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
     rgb(88, 88, 88);
   background-size: 25px, 100%;
-  font-family: 'Bangers', cursive;
-  box-shadow: 6px 0 2px rgba(0, 0, 0, 0.350);
+  font-family: "Back-Issues", sans-serif;
+  box-shadow: 6px 0 2px rgba(0, 0, 0, 0.35);
 }
 
 .navbar::before {
@@ -52,7 +55,7 @@
 
 .nav-link:hover {
   filter: grayscale(0%) opacity(1);
-  background: rgba(0, 0, 0, 0.555);;
+  background: rgba(0, 0, 0, 0.555);
   color: var(--text-secondary);
 }
 

@@ -99,8 +99,8 @@ export const Scene2 = () => {
           }}
           className={showCvButton ? "cv-scene-two-hide" : "cv-scene-two"}
           onClick={() => {
-            setChangeMainImage(!changeMainImage);
             setShowHandClick(!showHandClick);
+            setChangeMainImage(!changeMainImage);
             setShowCvButton(!showCvButton);
           }}
         >

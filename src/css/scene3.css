@@ -50,7 +50,7 @@
 }
 
 .typed-scene-three::before {
-  content: "hahahahaaa \A surprised..? \A what if i tell you \A that I am here to...";
+  content: "hahahahaaa \A surprised..? \A what if i tell you \A I am here to...";
   z-index: 2;
   position: absolute;
   width: 40%;
