@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
+import ReactHowler from "react-howler";
 import Delay from "react-delay";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import HandClick from "../images/hand-click.gif";
+import BreakClassicMachine from "../audio/break-classic-machine.mp3";
 import "../css/scene3.css";
 
 export const Scene3 = () => {
@@ -48,6 +50,7 @@ export const Scene3 = () => {
         changeBackground ? "container-scene3-changed" : "container-scene3"
       }
     >
+      <ReactHowler src={BreakClassicMachine} playing={true} loop={true} />
       <img
         ref={(el) => {
           mainImage = el;

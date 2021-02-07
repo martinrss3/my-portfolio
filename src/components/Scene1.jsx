@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
+import ReactHowler from "react-howler";
 // import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
 import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import HandClick from "../images/hand-click.gif";
+import Bouncy from "../audio/bouncy.mp3";
 import "../css/scene1.css";
 
 export const Scene1 = () => {
@@ -47,6 +49,9 @@ export const Scene1 = () => {
 
   return (
     <div className="container-scene-one">
+      <div style={{ position: "absolute", right: 0 }}>
+        <ReactHowler src={Bouncy} playing={true} loop={true} />
+      </div>
       <img
         ref={(el) => {
           mainImage = el;

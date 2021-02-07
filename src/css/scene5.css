@@ -51,7 +51,8 @@
   background-repeat: repeat;
   background-position: bottom;
   animation: animate1 15s linear infinite;
-  border: 15px solid black;
+  border: 8px solid black;
+  box-shadow: 6px 7px 2px rgba(0, 0, 0, 0.658);
 }
 
 @keyframes animate1 {
