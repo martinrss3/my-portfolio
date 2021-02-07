@@ -24,7 +24,7 @@ export const Scene7 = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container-scene7">
       <div>
         <img className="main-img-scene7" src={MainImage} alt="bad guy" />
       </div>

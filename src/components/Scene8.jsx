@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax } from "gsap";
-import MainImage from "../images/me/17.png";
 import "../css/scene8.css";
 
 export const Scene8 = () => {
@@ -24,9 +23,9 @@ export const Scene8 = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container-scene8">
       <div>
-        <img className="main-img-scene8" src={MainImage} alt="me" />
+        <img className="main-image-scene8" alt="me" />
       </div>
       <div>
         <Link to="/scene7">
