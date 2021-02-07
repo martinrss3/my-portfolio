@@ -2,10 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import ReactHowler from "react-howler";
-// import Typewriter from "typewriter-effect";
+import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
-import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
-import HandClick from "../images/hand-click.gif";
 import Bouncy from "../audio/bouncy.mp3";
 import "../css/scene1.css";
 
@@ -18,8 +16,6 @@ export const Scene1 = () => {
     "Hi! My name is Martín \n and I am a \n Full Stack Developer...";
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
-  const [typed, setTyped] = useState(firstSpeech);
-  const [showHandClick, setShowHandClick] = useState(false);
   const [changeMainImage, setChangeMainImage] = useState(false);
 
   useEffect(() => {
@@ -48,7 +44,7 @@ export const Scene1 = () => {
   }, []);
 
   return (
-    <div className="container-scene-one">
+    <div className="container-scene1">
       <div style={{ position: "absolute", right: 0 }}>
         <ReactHowler src={Bouncy} playing={true} loop={true} />
       </div>
@@ -57,9 +53,7 @@ export const Scene1 = () => {
           mainImage = el;
         }}
         className={
-          changeMainImage
-            ? "main-image-scene-one-changed"
-            : "main-image-scene-one"
+          changeMainImage ? "main-image-scene1-changed" : "main-image-scene1"
         }
         alt="me"
       />
@@ -68,53 +62,27 @@ export const Scene1 = () => {
           speechBubble = el;
         }}
       >
-        <img
-          className="speech-bubble-scene-one"
-          src={SpeechBubble}
-          onClick={() => {
-            setTyped(secondSpeech);
-            setShowHandClick(!showHandClick);
-            setChangeMainImage(!changeMainImage);
-          }}
-          alt="speech bubble"
-        />
-        <div>
-          <p
-            className="typed-scene-one"
-            onClick={() => {
-              setTyped(secondSpeech);
-              setShowHandClick(!showHandClick);
-              setChangeMainImage(!changeMainImage);
-            }}
-          >
-            {typed}
-          </p>
-        </div>
-        {/* <div className="typed-scene-one">
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter.typeString(typed).start();
-            }}
-          />
-        </div> */}
-        <div>
-          <Delay wait={2500}>
-            <img
-              className={
-                showHandClick
-                  ? "hand-click-scene-one-hide"
-                  : "hand-click-scene-one"
-              }
-              src={HandClick}
-              onClick={() => {
-                setTyped(secondSpeech);
-                setShowHandClick(!showHandClick);
-                setChangeMainImage(!changeMainImage);
+        <img className="speech-bubble-scene1" alt="speech bubble" />
+        <Delay wait={1200}>
+          <div className="typed-scene1">
+            <Typewriter
+              options={{
+                strings: [firstSpeech],
+                autoStart: true,
+                delay: 50,
+                deleteSpeed: 10,
+                pauseFor: 3000,
               }}
-              alt="hand click"
+              onInit={(typewriter) => {
+                typewriter
+                  .callFunction(() => {
+                    setChangeMainImage(!changeMainImage);
+                  })
+                  .typeString(secondSpeech);
+              }}
             />
-          </Delay>
-        </div>
+          </div>
+        </Delay>
       </div>
       <div>
         <Link to="/scene2">
@@ -122,7 +90,7 @@ export const Scene1 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className="next-scene-one"
+            className="next-scene1"
           >
             Next
           </button>
