@@ -1,4 +1,4 @@
-.container-scene-one {
+.container-scene1 {
   background-image: url("../images/backgrounds/scene1-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-.main-image-scene-one {
+.main-image-scene1 {
   content: url("../images/me/01.png");
   position: absolute;
   opacity: 0;
@@ -18,7 +18,7 @@
   margin: 0 auto;
 }
 
-.main-image-scene-one-changed {
+.main-image-scene1-changed {
   content: url("../images/me/24.png");
   position: absolute;
   opacity: 0;
@@ -27,9 +27,23 @@
   left: 0;
   max-height: 100vh;
   margin: 0 auto;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
-.speech-bubble-scene-one {
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.speech-bubble-scene1 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
   z-index: 1;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
@@ -37,10 +51,9 @@
   max-width: 50%;
   top: 3vw;
   left: 50%;
-  cursor: pointer;
 }
 
-.typed-scene-one {
+.typed-scene1 {
   z-index: 2;
   position: absolute;
   width: 50%;
@@ -52,24 +65,9 @@
   white-space: pre;
   text-align: center;
   padding: 20px;
-  cursor: pointer;
 }
 
-.hand-click-scene-one {
-  z-index: 3;
-  position: absolute;
-  width: 10%;
-  top: 10vw;
-  left: 80%;
-  transform: rotate(-30deg);
-  cursor: pointer;
-}
-
-.hand-click-scene-one-hide {
-  display: none;
-}
-
-.next-scene-one {
+.next-scene1 {
   margin: 2rem 2rem;
   padding: 0.2rem 1.25rem;
   text-align: center;
@@ -93,37 +91,31 @@
 
 /* Mobile Styles */
 @media only screen and (max-width: 599px) {
-  .container-scene-one {
+  .container-scene1 {
     background-position: right;
     max-width: 600px;
     margin: auto;
   }
 
-  .main-image-scene-one {
+  .main-image-scene1 {
     max-height: 560px;
     margin: auto;
     bottom: 80px;
   }
 
-  .speech-bubble-scene-one {
+  .speech-bubble-scene1 {
     width: 60%;
     left: 40%;
     top: 15%;
   }
 
-  .typed-scene-one {
+  .typed-scene1 {
     font-size: 2.8vw;
     top: 16%;
     left: 46%;
   }
 
-  .hand-click-scene-one {
-    width: 20%;
-    top: 15%;
-    left: 70%;
-  }
-
-  .next-scene-one {
+  .next-scene1 {
     margin: 6rem 1rem;
     width: 100px;
     height: 50px;
