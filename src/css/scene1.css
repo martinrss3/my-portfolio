@@ -89,6 +89,12 @@
   box-shadow: 3px 3px 5px rgb(27, 27, 27);
 }
 
+
+
+.next-scene1-changed {
+  display: none;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 599px) {
   .container-scene1 {

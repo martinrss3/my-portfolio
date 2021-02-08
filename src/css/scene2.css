@@ -35,7 +35,8 @@
   transform: rotateY(180deg);
 }
 
-.speech-bubble-scene-two {
+.speech-bubble-scene2 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
   z-index: 1;
   -webkit-transform: scaleX(-1);
   position: absolute;
