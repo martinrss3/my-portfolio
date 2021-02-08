@@ -17,6 +17,7 @@ export const Scene1 = () => {
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
   const [changeMainImage, setChangeMainImage] = useState(false);
+  const [nextButton, setNextButton] = useState(false);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -78,7 +79,10 @@ export const Scene1 = () => {
                   .callFunction(() => {
                     setChangeMainImage(!changeMainImage);
                   })
-                  .typeString(secondSpeech);
+                  .typeString(secondSpeech)
+                  .callFunction(() => {
+                    setNextButton(!nextButton);
+                  });
               }}
             />
           </div>
@@ -90,7 +94,7 @@ export const Scene1 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className="next-scene1"
+            className={nextButton ? "next-scene1" : "next-scene1-changed"}
           >
             Next
           </button>

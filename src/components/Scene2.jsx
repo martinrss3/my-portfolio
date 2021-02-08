@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import ReactHowler from "react-howler";
 import Delay from "react-delay";
-import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
 import HandClick from "../images/hand-click.gif";
 import BreakBooty from "../audio/break-booty.mp3";
 import "../css/scene2.css";
@@ -68,8 +67,7 @@ export const Scene2 = () => {
         }}
       >
         <img
-          className="speech-bubble-scene-two"
-          src={SpeechBubble}
+          className="speech-bubble-scene2"
           alt="speech-bubble"
         />
         <div>
