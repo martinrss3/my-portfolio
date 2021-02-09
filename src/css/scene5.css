@@ -18,6 +18,7 @@
 }
 
 .main-image-scene5 {
+  content: url("../images/badGuy/08.png");
   position: absolute;
   right: 0;
   bottom: 0;
@@ -39,6 +40,37 @@
   100% {
     opacity: 1;
   }
+}
+
+.speech-bubble-scene5 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
+  position: absolute;
+  top: 0;
+  right: 30%;
+}
+
+.speech-bubble-scene5-changed {
+  display: none;
+}
+
+.text-scene5 {
+  z-index: 2;
+  position: absolute;
+  width: 50%;
+  top: 8.5vw;
+  left: 17%;
+  font-size: 3.2vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
+  padding: 20px;
+  transform: rotate(-15deg);
+  text-shadow: 2px 2px 4px red;
+}
+
+.text-scene5-changed {
+  display: none;
 }
 
 .frame {
@@ -65,34 +97,33 @@
 }
 
 .main-image2-scene5 {
+  content: url("../images/me/26.png");
   transform: rotateY(180deg);
   position: absolute;
   bottom: 0;
   width: 60%;
 }
 
-.speech-bubble-scene5 {
-  z-index: 1;
-  transform: rotate(25deg);
+.speech-bubble2-scene5 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
+  z-index: 2;
+  transform: rotateY(180deg);
   position: absolute;
-  left: 5%;
-  top: 0;
-  width: 40%;
-  opacity: 0;
+  left: 15%;
+  top: 7vw;
+  width: 50%;
 }
 
-.typed-scene5 {
+.text2-scene5 {
   z-index: 2;
   position: absolute;
   width: 50%;
-  top: 5vw;
-  left: 3%;
-  font-size: 2vw;
+  top: 11.5vw;
+  left: 15%;
+  font-size: 2.3vw;
   font-weight: bold;
   font-family: SequentialistBB, cursive, Helvetica, sans-serif;
   white-space: pre;
   text-align: center;
   padding: 20px;
-  transform: rotate(13deg);
-  opacity: 0;
 }

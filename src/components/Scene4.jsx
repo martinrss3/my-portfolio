@@ -1,38 +1,28 @@
-import React, { useEffect, useRef } from "react";
-import { TweenMax, Power3, TimelineLite } from "gsap";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Background1 from "../images/backgrounds/scene4-background.jpg";
-import Background2 from "../images/backgrounds/scene4.1-background.jpg";
-import MainImage from "../images/me/05.png";
-import MainImage2 from "../images/badGuy/22.png";
-import SpeechBubble from "../images/speechBubbles/speech-bubble4.png";
-import SpeechBubble2 from "../images/speechBubbles/speech-bubble1.png";
+import { TweenMax, Power3, TimelineLite } from "gsap";
+import Typewriter from "typewriter-effect";
+import Delay from "react-delay";
 import "../css/scene4.css";
 
 export const Scene4 = () => {
   let mainImage1 = useRef(null);
   let mainImage2 = useRef(null);
-  let speechBubble = useRef(null);
-  let speechBubble2 = useRef(null);
-  let speech1 = useRef(null);
-  let speech2 = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "WTF";
+  const firstSpeech = "WTF who are you?!";
   const secondSpeech = "Just watch...";
 
+  const [buttons, setButtons] = useState(false);
+
   useEffect(() => {
-    TweenMax.staggerTo(
-      [mainImage1, mainImage2, speechBubble, speechBubble2, speech1, speech2],
-      0.9,
-      {
-        opacity: 1,
-        x: 0,
-        ease: Power3.easeInOut,
-        delay: 0.3,
-      }
-    );
+    TweenMax.staggerTo([mainImage1, mainImage2], 0.9, {
+      opacity: 1,
+      x: 0,
+      ease: Power3.easeInOut,
+      delay: 0.3,
+    });
 
     TweenMax.fromTo(
       [nextScene, backScene],
@@ -48,81 +38,77 @@ export const Scene4 = () => {
     );
 
     let tl = new TimelineLite();
-    tl.to([mainImage1, speechBubble, speech1], 0, { x: -700 });
-    tl.to([mainImage2, speechBubble2, speech2], 0, { x: 700 });
+    tl.to([mainImage1], 0, { x: -700 });
+    tl.to([mainImage2], 0, { x: 700 });
   }, []);
 
   return (
     <div className="container-scene4">
       <div>
-        <img
-          className="background1-scene-four"
-          src={Background1}
-          alt="background one"
-        />
-        <div>
-          <img
-            ref={(el) => {
-              mainImage2 = el;
-            }}
-            className="main-image2-scene-four"
-            src={MainImage2}
-            alt="bad guy"
-          />
-        </div>
-        <div
-          ref={(el) => {
-            speechBubble2 = el;
-          }}
-        >
-          <img
-            src={SpeechBubble2}
-            className="speech-bubble2-scene-four"
-            alt="speech bubble"
-          />
-          <p
-            ref={(el) => {
-              speech2 = el;
-            }}
-            className="typed2-scene-four"
-          >
-            {secondSpeech}
-          </p>
-        </div>
-      </div>
-      <div>
-        <img
-          className="background2-scene-four"
-          src={Background2}
-          alt="background two"
-        />
+        <img className="background1-scene4" alt="background one" />
         <div>
           <img
             ref={(el) => {
               mainImage1 = el;
             }}
-            className="main-image-scene-four"
-            src={MainImage}
+            className="main-image-scene4"
             alt="me"
           />
         </div>
         <div>
+          <Delay wait={2000}>
+            <img className="speech-bubble1-scene4" alt="speech bubble" />
+          </Delay>
+          <div>
+            <Delay wait={2000}>
+              <div className="text-scene4">
+                <Typewriter
+                  options={{
+                    strings: [firstSpeech],
+                    autoStart: true,
+                    delay: 50,
+                    deleteSpeed: 10,
+                    pauseFor: 100000,
+                  }}
+                />
+              </div>
+            </Delay>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img className="background2-scene4" alt="background two" />
+        <div>
           <img
             ref={(el) => {
-              speechBubble = el;
+              mainImage2 = el;
             }}
-            src={SpeechBubble}
-            className="speech-bubble1-scene-four"
-            alt="speech bubble"
+            className="main-image2-scene4"
+            alt="bad guy"
           />
-          <p
-            ref={(el) => {
-              speech1 = el;
-            }}
-            className="typed-scene-four"
-          >
-            {firstSpeech}
-          </p>
+        </div>
+        <div>
+          <Delay wait={3500}>
+            <img className="speech-bubble2-scene4" alt="speech bubble" />
+
+            <div>
+              <div className="text2-scene4">
+                <Typewriter
+                  options={{
+                    cursor: "",
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString(secondSpeech)
+                      .callFunction(() => {
+                        setButtons(!buttons);
+                      })
+                      .start();
+                  }}
+                />
+              </div>
+            </div>
+          </Delay>
         </div>
       </div>
       <div>
@@ -131,7 +117,7 @@ export const Scene4 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className="back-scene-two"
+            className={buttons ? "back-scene3" : "back-scene3-changed"}
           >
             Back
           </button>
@@ -141,7 +127,7 @@ export const Scene4 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className="next-scene-two"
+            className={buttons ? "next-scene3" : "next-scene3-changed"}
           >
             Next
           </button>

@@ -2,25 +2,27 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import ReactHowler from "react-howler";
+import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
-import SpeechBubble from "../images/speechBubbles/speech-bubble1.png";
-import HandClick from "../images/hand-click.gif";
 import BreakClassicMachine from "../audio/break-classic-machine.mp3";
 import "../css/scene3.css";
 
 export const Scene3 = () => {
-  let mainImage = useRef(null);
+  let mainImg = useRef(null);
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const [showHandClick, setShowHandClick] = useState(false);
-  const [changeBackground, setChangeBackground] = useState(false);
-  const [changeMainImage, setChangeMainImage] = useState(false);
-  const [changeText, setChangeText] = useState(false);
+  const firstSpeech =
+    "hahahahaaa \n surprised..? \n what if i tell you \n I am here to...";
+  const secondSpeech = `<p class="text-scene3-changed">BREAK YOUR CODE!</p>`;
+
+  const [background, setBackground] = useState(false);
+  const [mainImage, setMainImage] = useState(false);
+  const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
-    TweenMax.staggerTo(mainImage, 0.9, {
+    TweenMax.staggerTo(mainImg, 0.9, {
       opacity: 1,
       x: -100,
       ease: Power3.easeInOut,
@@ -41,24 +43,20 @@ export const Scene3 = () => {
     );
 
     let tl = new TimelineLite();
-    tl.to(mainImage, 0, { x: 700 });
+    tl.to(mainImg, 0, { x: 700 });
   }, []);
 
   return (
     <div
-      className={
-        changeBackground ? "container-scene3-changed" : "container-scene3"
-      }
+      className={background ? "container-scene3-changed" : "container-scene3"}
     >
-      <ReactHowler src={BreakClassicMachine} playing={true} loop={true} />
+      <ReactHowler src={BreakClassicMachine} playing={false} loop={true} />
       <img
         ref={(el) => {
-          mainImage = el;
+          mainImg = el;
         }}
         className={
-          changeMainImage
-            ? "main-image-scene-three-changed"
-            : "main-image-scene-three"
+          mainImage ? "main-image-scene3-changed" : "main-image-scene3"
         }
         alt="me"
       />
@@ -67,47 +65,33 @@ export const Scene3 = () => {
           speechBubble = el;
         }}
       >
-        <img
-          className="speech-bubble-scene-three"
-          onClick={() => {
-            setChangeText(!changeText);
-            setShowHandClick(!showHandClick);
-            setChangeMainImage(!changeMainImage);
-            setChangeBackground(!changeBackground);
-          }}
-          src={SpeechBubble}
-          alt="speech bubble"
-        />
-        <p
-          className={
-            changeText ? "typed-scene-three-changed" : "typed-scene-three"
-          }
-          onClick={() => {
-            setChangeText(!changeText);
-            setShowHandClick(!showHandClick);
-            setChangeMainImage(!changeMainImage);
-            setChangeBackground(!changeBackground);
-          }}
-        ></p>
-      </div>
-      <div>
-        <Delay wait={2500}>
-          <img
-            className={
-              showHandClick
-                ? "hand-click-scene-three-hide"
-                : "hand-click-scene-three"
-            }
-            src={HandClick}
-            onClick={() => {
-              setChangeText(!changeText);
-              setShowHandClick(!showHandClick);
-              setChangeMainImage(!changeMainImage);
-              setChangeBackground(!changeBackground);
-            }}
-            alt="hand click"
-          />
-        </Delay>
+        <img className="speech-bubble-scene3" alt="speech bubble" />
+        <div>
+          <Delay wait={1200}>
+            <div className="text-scene3">
+              <Typewriter
+                options={{
+                  strings: [firstSpeech],
+                  autoStart: true,
+                  delay: 50,
+                  deleteSpeed: 10,
+                  pauseFor: 3000,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .callFunction(() => {
+                      setMainImage(!mainImage);
+                      setBackground(!background);
+                    })
+                    .typeString(secondSpeech)
+                    .callFunction(() => {
+                      setButtons(!buttons);
+                    });
+                }}
+              />
+            </div>
+          </Delay>
+        </div>
       </div>
       <div>
         <Link to="/scene2">
@@ -115,7 +99,7 @@ export const Scene3 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className="back-scene-three"
+            className={buttons ? "back-scene3" : "back-scene3-changed"}
           >
             Back
           </button>
@@ -125,7 +109,7 @@ export const Scene3 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className="next-scene-three"
+            className={buttons ? "next-scene3" : "next-scene3-changed"}
           >
             Next
           </button>

@@ -1,4 +1,4 @@
-.container-scene-two {
+.container-scene2 {
   background-image: url("../images/backgrounds/scene2-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-.main-image-scene-two {
+.main-image-scene2 {
   content: url("../images/me/22.png");
   position: absolute;
   opacity: 0;
@@ -21,7 +21,7 @@
   transform: rotateY(180deg);
 }
 
-.main-image-scene-two-changed {
+.main-image-scene2-changed {
   content: url("../images/me/03.png");
   position: absolute;
   opacity: 0;
@@ -45,7 +45,7 @@
   left: 50%;
 }
 
-.typed-scene-two {
+.typed-scene2 {
   z-index: 2;
   position: absolute;
   width: 50%;
@@ -59,93 +59,7 @@
   padding: 20px;
 }
 
-.hand-click-scene-two {
-  z-index: 3;
-  position: absolute;
-  width: 10%;
-  top: 45%;
-  left: 78%;
-  transform: rotate(-30deg);
-  cursor: pointer;
-}
-
-.hand-click-scene-two-hide {
-  display: none;
-}
-
-.cv-scene-two {
-  width: 20%;
-  margin: 2rem 2rem;
-  padding: 0.2rem 1.25rem;
-  text-align: center;
-  font-family: Dekko, cursive;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 2.5vw;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
-  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
-    rgb(255, 127, 22);
-  background-size: 25px, 100%;
-  border: 0.4rem solid #000;
-  position: absolute;
-  right: 5%;
-  bottom: 35%;
-  cursor: pointer;
-  box-shadow: 3px 3px 5px rgb(27, 27, 27);
-  border-radius: 20px;
-  outline: none;
-}
-
-.cv-scene-two-hide {
-  width: 20%;
-  margin: 2rem 2rem;
-  padding: 0.2rem 1.25rem;
-  text-align: center;
-  font-family: Dekko, cursive;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 2.5vw;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
-  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
-    rgb(255, 127, 22);
-  background-size: 25px, 100%;
-  border: 0.4rem solid #000;
-  position: absolute;
-  right: 5%;
-  bottom: 35%;
-  cursor: pointer;
-  box-shadow: 3px 3px 5px rgb(27, 27, 27);
-  border-radius: 20px;
-  outline: none;
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-.next-scene-two {
+.next-scene2 {
   margin: 2rem 2rem;
   padding: 0.2rem 1.25rem;
   text-align: center;
@@ -167,7 +81,11 @@
   box-shadow: 3px 3px 5px rgb(27, 27, 27);
 }
 
-.back-scene-two {
+.next-scene2-changed {
+  display: none;
+}
+
+.back-scene2 {
   margin: 2rem 13rem;
   padding: 0.2rem 1.25rem;
   text-align: center;
@@ -189,40 +107,38 @@
   box-shadow: 3px 3px 5px rgb(27, 27, 27);
 }
 
+.back-scene2-changed {
+  display: none;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 599px) {
-  .container-scene-two {
+  .container-scene2 {
     background-position: right;
     max-width: 600px;
     margin: auto;
   }
 
-  .main-image-scene-two {
+  .main-image-scene2 {
     max-height: 510px;
     max-width: 150%;
     margin: auto;
     bottom: 80px;
   }
 
-  .speech-bubble-scene-two {
+  .speech-bubble-scene2 {
     width: 60%;
     left: 40%;
     top: 15%;
   }
 
-  .typed-scene-two {
+  .typed-scene2 {
     font-size: 2.8vw;
     top: 16%;
     left: 46%;
   }
 
-  .hand-click-scene-two {
-    width: 20%;
-    top: 15%;
-    left: 70%;
-  }
-
-  .next-scene-two {
+  .next-scene2 {
     margin-right: 2rem;
     width: 100px;
     height: 50px;
@@ -231,7 +147,7 @@
     bottom: 4rem;
   }
 
-  .back-scene-two {
+  .back-scene2 {
     margin-left: 2rem;
     width: 100px;
     height: 50px;
