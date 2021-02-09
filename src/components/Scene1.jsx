@@ -12,8 +12,7 @@ export const Scene1 = () => {
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
 
-  const firstSpeech =
-    "Hi! My name is Martín \n and I am a \n Full Stack Developer...";
+  const firstSpeech = `Hi! My name is <el style="text-shadow: 2px 2px 2px teal;">Martín</el> \n and I am a \n Full Stack Developer...`;
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
   const [changeMainImage, setChangeMainImage] = useState(false);
@@ -46,9 +45,7 @@ export const Scene1 = () => {
 
   return (
     <div className="container-scene1">
-      <div style={{ position: "absolute", right: 0 }}>
-        <ReactHowler src={Bouncy} playing={true} loop={true} />
-      </div>
+      <ReactHowler src={Bouncy} playing={false} loop={true} />
       <img
         ref={(el) => {
           mainImage = el;

@@ -7,7 +7,9 @@
   left: 0;
 }
 
-.background1-scene-four {
+.background1-scene4 {
+  z-index: 0;
+  background-image: url("../images/backgrounds/scene4-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,7 +21,9 @@
   clip-path: polygon(0 0, 100% 0%, 100% 55%, 0 40%);
 }
 
-.background2-scene-four {
+.background2-scene4 {
+  z-index: 1;
+  background-image: url("../images/backgrounds/scene4.1-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +35,9 @@
   clip-path: polygon(0 43%, 100% 58%, 100% 100%, 0 100%);
 }
 
-.main-image-scene-four {
+.main-image-scene4 {
+  content: url("../images/me/05.png");
+  z-index: 2;
   position: absolute;
   opacity: 0;
   right: 450px;
@@ -43,7 +49,8 @@
   max-width: 100%;
 }
 
-.main-image2-scene-four {
+.main-image2-scene4 {
+  content: url("../images/badGuy/22.png");
   position: absolute;
   opacity: 0;
   right: 0;
@@ -56,7 +63,8 @@
   transform: rotateY(180deg);
 }
 
-.speech-bubble1-scene-four {
+.speech-bubble1-scene4 {
+  content: url("../images/speechBubbles/speech-bubble4.png");
   z-index: 1;
   position: absolute;
   width: 40%;
@@ -64,7 +72,8 @@
   left: 6%;
 }
 
-.speech-bubble2-scene-four {
+.speech-bubble2-scene4 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
   z-index: 1;
   position: relative;
   width: 40%;
@@ -72,27 +81,28 @@
   left: 40%;
 }
 
-.typed-scene-four {
+.text-scene4 {
   z-index: 2;
   position: absolute;
   width: 50%;
-  top: 13vw;
-  left: 1%;
+  top: 14vw;
+  left: 2%;
   font-size: 2.5vw;
   font-weight: bold;
   font-family: SequentialistBB, cursive, Helvetica, sans-serif;
   white-space: pre;
   text-align: center;
   padding: 20px;
+  transform: rotate(-10deg);
 }
 
-.typed2-scene-four {
+.text2-scene4 {
   z-index: 2;
   position: absolute;
   width: 50%;
-  top: 6vw;
+  top: 5vw;
   left: 35%;
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   font-weight: bold;
   font-family: SequentialistBB, cursive, Helvetica, sans-serif;
   white-space: pre;

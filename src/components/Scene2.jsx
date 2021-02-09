@@ -2,25 +2,22 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 import ReactHowler from "react-howler";
+import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
-import HandClick from "../images/hand-click.gif";
 import BreakBooty from "../audio/break-booty.mp3";
 import "../css/scene2.css";
 
 export const Scene2 = () => {
   let mainImage = useRef(null);
   let speechBubble = useRef(null);
-  let cv = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
   const firstSpeech = "You can check \n my CV down here...";
   const secondSpeech = "Wow sorry... \n what happened \n with my CV..?";
 
-  const [typed, setTyped] = useState([firstSpeech]);
-  const [showHandClick, setShowHandClick] = useState(false);
   const [changeMainImage, setChangeMainImage] = useState(false);
-  const [showCvButton, setShowCvButton] = useState(false);
+  const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
     TweenMax.staggerTo(mainImage, 0.9, {
@@ -31,7 +28,7 @@ export const Scene2 = () => {
     });
 
     TweenMax.fromTo(
-      [speechBubble, cv, nextScene, backScene],
+      [speechBubble, nextScene, backScene],
       1,
       {
         delay: 2,
@@ -48,16 +45,14 @@ export const Scene2 = () => {
   }, []);
 
   return (
-    <div className="container-scene-two">
-      <ReactHowler src={BreakBooty} playing={true} loop={true} />
+    <div className="container-scene2">
+      <ReactHowler src={BreakBooty} playing={false} loop={true} />
       <img
         ref={(el) => {
           mainImage = el;
         }}
         className={
-          changeMainImage
-            ? "main-image-scene-two-changed"
-            : "main-image-scene-two"
+          changeMainImage ? "main-image-scene2-changed" : "main-image-scene2"
         }
         alt="me"
       />
@@ -66,47 +61,32 @@ export const Scene2 = () => {
           speechBubble = el;
         }}
       >
-        <img
-          className="speech-bubble-scene2"
-          alt="speech-bubble"
-        />
+        <img className="speech-bubble-scene2" alt="speech-bubble" />
         <div>
-          <p className="typed-scene-two">{typed}</p>
-        </div>
-        <div>
-          <Delay wait={2000}>
-            <img
-              className={
-                showHandClick
-                  ? "hand-click-scene-two-hide"
-                  : "hand-click-scene-two"
-              }
-              src={HandClick}
-              onClick={() => {
-                setTyped(secondSpeech);
-                setShowHandClick(!showHandClick);
-                setChangeMainImage(!changeMainImage);
-                setShowCvButton(!showCvButton);
-              }}
-              alt="hand click"
-            />
+          <Delay wait={1200}>
+            <div className="typed-scene2">
+              <Typewriter
+                options={{
+                  strings: [firstSpeech],
+                  autoStart: true,
+                  delay: 50,
+                  deleteSpeed: 10,
+                  pauseFor: 3000,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .callFunction(() => {
+                      setChangeMainImage(!changeMainImage);
+                    })
+                    .typeString(secondSpeech)
+                    .callFunction(() => {
+                      setButtons(!buttons);
+                    });
+                }}
+              />
+            </div>
           </Delay>
         </div>
-      </div>
-      <div>
-        <button
-          ref={(el) => {
-            cv = el;
-          }}
-          className={showCvButton ? "cv-scene-two-hide" : "cv-scene-two"}
-          onClick={() => {
-            setShowHandClick(!showHandClick);
-            setChangeMainImage(!changeMainImage);
-            setShowCvButton(!showCvButton);
-          }}
-        >
-          View my CV
-        </button>
       </div>
       <div>
         <Link to="/">
@@ -114,7 +94,7 @@ export const Scene2 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className="back-scene-two"
+            className={buttons ? "back-scene2" : "back-scene2-changed"}
           >
             Back
           </button>
@@ -124,7 +104,7 @@ export const Scene2 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className="next-scene-two"
+            className={buttons ? "next-scene2" : "next-scene2-changed"}
           >
             Next
           </button>
