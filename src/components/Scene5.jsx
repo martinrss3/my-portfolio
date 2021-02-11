@@ -7,24 +7,39 @@ import "../css/scene5.css";
 
 export const Scene5 = () => {
   let mainImage = useRef(null);
+  let speechBubble1 = useRef(null);
+  let speechBubble2 = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
   const firstSpeech = "this will be too easy..";
   const secondSpeech =
-    "this guy \n is breaking my code... \n We must to stop him!";
+    "this guy \n is breaking my code... \n We must stop him!";
 
   const [speechBubble, setSpeechBubble] = useState(false);
   const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
-    // TweenMax.staggerTo(mainImage, 0.9, {
-    //   opacity: 1,
-    //   x: 0,
-    //   ease: Power3.easeInOut,
-    //   delay: 6,
-    // });
+    TweenMax.staggerTo([mainImage, speechBubble2], 0.9, {
+      opacity: 1,
+      x: 0,
+      ease: Power3.easeInOut,
+      delay: 7,
+    });
+
+    TweenMax.fromTo(
+      speechBubble1,
+      1,
+      {
+        delay: 3,
+        opacity: 0,
+      },
+      {
+        delay: 1.9,
+        opacity: 1,
+      }
+    );
 
     TweenMax.fromTo(
       [nextScene, backScene],
@@ -39,8 +54,8 @@ export const Scene5 = () => {
       }
     );
 
-    // let tl = new TimelineLite();
-    // tl.to(mainImage, 0, { x: -600 });
+    let tl = new TimelineLite();
+    tl.to([mainImage, speechBubble2], 0, { x: -1000 });
   }, []);
 
   return (
@@ -49,16 +64,17 @@ export const Scene5 = () => {
         <img className="main-image-scene5" alt="bad guy" />
       </div>
       <div>
-        <Delay wait={3000}>
-          <img
-            className={
-              speechBubble
-                ? "speech-bubble-scene5-changed"
-                : "speech-bubble-scene5"
-            }
-            alt="speech bubble"
-          />
-        </Delay>
+        <img
+          className={
+            speechBubble
+              ? "speech-bubble-scene5-changed"
+              : "speech-bubble-scene5"
+          }
+          ref={(el) => {
+            speechBubble1 = el;
+          }}
+          alt="speech bubble"
+        />
         <div>
           <Delay wait={3000}>
             <div className={text ? "text-scene5-changed" : "text-scene5"}>
@@ -69,7 +85,7 @@ export const Scene5 = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(firstSpeech)
-                    .pauseFor(800)
+                    .pauseFor(2000)
                     .start()
                     .callFunction(() => {
                       setSpeechBubble(!speechBubble);
@@ -82,17 +98,24 @@ export const Scene5 = () => {
         </div>
       </div>
 
-      <Delay wait={6000}>
-        <div className="frame">
-          <img className="main-image2-scene5" alt="me" />
-        </div>
-      </Delay>
+      <div
+        className="frame"
+        ref={(el) => {
+          mainImage = el;
+        }}
+      >
+        <img className="main-image2-scene5" alt="me" />
+      </div>
       <div>
-        <Delay wait={6000}>
-          <img className="speech-bubble2-scene5" alt="speech bubble" />
-        </Delay>
+        <img
+          className="speech-bubble2-scene5"
+          ref={(el) => {
+            speechBubble2 = el;
+          }}
+          alt="speech bubble"
+        />
         <div>
-          <Delay wait={6000}>
+          <Delay wait={8000}>
             <div className="text2-scene5">
               <Typewriter
                 options={{

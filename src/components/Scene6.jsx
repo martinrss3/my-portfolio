@@ -1,22 +1,16 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Terminal from "terminal-in-react";
+import Typewriter from "typewriter-effect";
 import MainImage from "../images/me/glitch-02.gif";
-// import SpeechBubble from "../images/speechBubbles/glitch-bubble.gif";
 import "../css/scene6.css";
 
 export const Scene6 = () => {
   let history = useHistory();
 
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        backgroundColor: "white",
-      }}
-    >
-      <Terminal
+    <div>
+      {/* <Terminal
         color="green"
         backgroundColor="black"
         barColor="black"
@@ -29,30 +23,28 @@ export const Scene6 = () => {
           top: "10%",
         }}
         commands={{
-          "fix-this-page": () => {
-            history.push('/scene7');
+          "fix-code": () => {
+            history.push("/scene7");
           },
-          showmsg: "hola",
+          // showmsg: "hola",
           popup: () => alert("Terminal in React"),
         }}
         descriptions={{
-          "fix-this-page": "type this command to fix the page",
-          showmsg: "shows a message",
+          "fix-code": "type this command to fix all!",
+          // showmsg: "shows a message",
           alert: "alert",
           popup: "alert",
         }}
-        msg="You can write anything here. Type help."
+        commandPassThrough={(cmd) =>
+          `Command "${cmd}": is not working. Type "help" for available commands.`
+        }
+        msg="Hello! You are here because everything blew up. This is a terminal where you can type anything freely. Use it to fix all right now! Start typing 'help'."
       />
       <img
         className="main-image-scene6"
         src={MainImage}
         style={{ position: "absolute", bottom: 0, right: "-90px" }}
         alt="me glitched"
-      />
-      {/* <img
-        className="speech-bubble-scene6"
-        src={SpeechBubble}
-        alt="speech bubble"
       /> */}
     </div>
   );
