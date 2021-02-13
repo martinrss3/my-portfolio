@@ -1,5 +1,5 @@
 .container-scene3 {
-  background-image: url("../images/backgrounds/scene3-background.jpg");
+  background-image: url("../images/backgrounds/bg-scene3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,7 +8,7 @@
 }
 
 .container-scene3-changed {
-  background-image: url("../images/backgrounds/scene3.1-background.jpg");
+  background-image: url("../images/backgrounds/bg-scene3a.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,7 +33,6 @@
   opacity: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   max-height: 100vh;
   margin: 0 auto;
 }
@@ -47,6 +46,17 @@
   width: 50%;
   top: 3vw;
   left: 50%;
+}
+
+.speech-bubble-scene3-changed {
+  content: url("../images/speechBubbles/speech-bubble6.png");
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 10%;
 }
 
 .text-scene3 {
@@ -68,8 +78,9 @@
   z-index: 2;
   position: fixed;
   top: 11vw;
-  right: 12vw;
+  left: 20vw;
   font-size: 3.2vw;
+  transform: rotate(-10deg);
 }
 
 .next-scene3 {

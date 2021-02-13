@@ -9,7 +9,7 @@
 
 .background1-scene4 {
   z-index: 0;
-  background-image: url("../images/backgrounds/scene4-background.jpg");
+  background-image: url("../images/backgrounds/bg-scene4.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,7 +23,7 @@
 
 .background2-scene4 {
   z-index: 1;
-  background-image: url("../images/backgrounds/scene4.1-background.jpg");
+  background-image: url("../images/backgrounds/bg-scene4a.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

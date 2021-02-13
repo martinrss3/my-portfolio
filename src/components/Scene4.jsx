@@ -45,7 +45,7 @@ export const Scene4 = () => {
   return (
     <div className="container-scene4">
       <div>
-        <img className="background1-scene4" alt="background one" />
+        <div className="background1-scene4" />
         <div>
           <img
             ref={(el) => {
@@ -77,7 +77,7 @@ export const Scene4 = () => {
         </div>
       </div>
       <div>
-        <img className="background2-scene4" alt="background two" />
+        <div className="background2-scene4" />
         <div>
           <img
             ref={(el) => {
