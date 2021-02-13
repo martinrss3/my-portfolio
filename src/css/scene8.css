@@ -1,5 +1,5 @@
 .container-scene8 {
-  background-image: url("../images/backgrounds/scene1-background.jpg");
+  background-image: url("../images/backgrounds/bg-scene8.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,9 +10,25 @@
 .main-image-scene8 {
   content: url("../images/me/16.png");
   position: absolute;
+  opacity: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 80px;
   max-height: 100vh;
   margin: 0 auto;
+}
+
+.typed-scene8 {
+  z-index: 2;
+  position: absolute;
+  width: 50%;
+  top: 8vw;
+  left: 50%;
+  font-size: 3vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px 4px red;
 }

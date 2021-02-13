@@ -19,6 +19,7 @@ export const Scene3 = () => {
 
   const [background, setBackground] = useState(false);
   const [mainImage, setMainImage] = useState(false);
+  const [speechBubbles, setSpeechBubbles] = useState(false);
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
@@ -65,7 +66,14 @@ export const Scene3 = () => {
           speechBubble = el;
         }}
       >
-        <img className="speech-bubble-scene3" alt="speech bubble" />
+        <img
+          className={
+            speechBubbles
+              ? "speech-bubble-scene3-changed"
+              : "speech-bubble-scene3"
+          }
+          alt="speech bubble"
+        />
         <div>
           <Delay wait={1200}>
             <div className="text-scene3">
@@ -80,8 +88,9 @@ export const Scene3 = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .callFunction(() => {
-                      setMainImage(!mainImage);
                       setBackground(!background);
+                      setMainImage(!mainImage);
+                      setSpeechBubbles(!speechBubbles);
                     })
                     .typeString(secondSpeech)
                     .callFunction(() => {

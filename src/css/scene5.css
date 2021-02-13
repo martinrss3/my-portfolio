@@ -1,5 +1,5 @@
 .container-scene5 {
-  background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+  background-image: url("../images/backgrounds/bg-scene5.jpg");
   background-repeat: repeat;
   background-position: bottom;
   background-size: cover;
@@ -79,7 +79,7 @@
   left: 90px;
   width: 40%;
   height: 40%;
-  background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+  background-image: url("../images/backgrounds/bg-scene5.jpg");
   background-repeat: repeat;
   background-position: bottom;
   animation: animate1 15s linear infinite;
