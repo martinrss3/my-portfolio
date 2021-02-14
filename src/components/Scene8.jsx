@@ -11,7 +11,7 @@ export const Scene8 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "Thanks for \n helping me...";
+  const firstSpeech = "Thanks for \n helping me..!!";
 
   const [buttons, setButtons] = useState(false);
 
@@ -60,6 +60,9 @@ export const Scene8 = () => {
         <Delay wait={1200}>
           <div className="typed-scene8">
             <Typewriter
+              options={{
+                delay: 75,
+              }}
               onInit={(typewriter) => {
                 typewriter
                   .typeString(firstSpeech)
@@ -78,7 +81,7 @@ export const Scene8 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className={buttons ? "back-scene2" : "back-scene2-changed"}
+            className={buttons ? "back-scene" : "back-scene-changed"}
           >
             Back
           </button>
@@ -88,7 +91,7 @@ export const Scene8 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className={buttons ? "next-scene2" : "next-scene2-changed"}
+            className={buttons ? "next-scene" : "next-scene-changed"}
           >
             Next
           </button>

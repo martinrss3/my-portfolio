@@ -76,7 +76,7 @@ export const Scene5 = () => {
           alt="speech bubble"
         />
         <div>
-          <Delay wait={3000}>
+          <Delay wait={2300}>
             <div className={text ? "text-scene5-changed" : "text-scene5"}>
               <Typewriter
                 options={{
@@ -85,8 +85,8 @@ export const Scene5 = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(firstSpeech)
-                    .pauseFor(2000)
                     .start()
+                    .pauseFor(3000)
                     .callFunction(() => {
                       setSpeechBubble(!speechBubble);
                       setText(!text);
@@ -140,7 +140,7 @@ export const Scene5 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className={buttons ? "back-scene3" : "back-scene3-changed"}
+            className={buttons ? "back-scene" : "back-scene-changed"}
           >
             Back
           </button>
@@ -150,7 +150,7 @@ export const Scene5 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className={buttons ? "next-scene3" : "next-scene3-changed"}
+            className={buttons ? "next-scene" : "next-scene-changed"}
           >
             Next
           </button>

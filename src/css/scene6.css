@@ -1,9 +1,71 @@
 .container-scene6 {
-  background-color: black;
   width: 100vw;
   height: 100vh;
 }
 
 .main-image-scene6 {
+  z-index: 1;
+  content: url("../images/me/glitch-02.gif");
+  position: absolute;
+  bottom: 0;
+  right: -90px;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.main-image-scene6-changed {
+  z-index: 1;
+  content: url("../images/me/glitch-01.gif");
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.speech-bubble-scene6 {
+  content: url("../images/speechBubbles/glitch-bubble.gif");
+  z-index: 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  width: 50%;
+  bottom: 11vw;
+  right: 8%;
+  clip-path: polygon(0 0, 85% 0, 85% 74%, 0 74%);
+}
+
+.speech-bubble-scene6-changed {
+  content: url("../images/speechBubbles/glitch-bubble.gif");
+  z-index: 0;
+  position: absolute;
+  width: 55%;
+  bottom: 12vw;
+  right: 0%;
+  clip-path: polygon(0 0, 85% 0, 85% 74%, 0 74%);
+}
+
+.typed-scene6 {
+  z-index: 1;
+  position: absolute;
+  width: 50%;
+  bottom: 30vw;
+  right: 5%;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
+}
+
+.typed-scene6-changed {
+  z-index: 1;
+  position: fixed;
+  bottom: 32vw;
+  right: 25%;
+  font-size: 1.7vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
 }

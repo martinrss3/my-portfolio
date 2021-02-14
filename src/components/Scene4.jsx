@@ -11,7 +11,7 @@ export const Scene4 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "WTF who are you?!";
+  const firstSpeech = "Who are you?!";
   const secondSpeech = "Just watch...";
 
   const [buttons, setButtons] = useState(false);
@@ -56,19 +56,18 @@ export const Scene4 = () => {
           />
         </div>
         <div>
-          <Delay wait={2000}>
+          <Delay wait={1200}>
             <img className="speech-bubble1-scene4" alt="speech bubble" />
           </Delay>
           <div>
-            <Delay wait={2000}>
+            <Delay wait={1200}>
               <div className="text-scene4">
                 <Typewriter
                   options={{
-                    strings: [firstSpeech],
-                    autoStart: true,
                     delay: 50,
-                    deleteSpeed: 10,
-                    pauseFor: 100000,
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter.typeString(firstSpeech).start();
                   }}
                 />
               </div>
@@ -88,14 +87,13 @@ export const Scene4 = () => {
           />
         </div>
         <div>
-          <Delay wait={3500}>
+          <Delay wait={3000}>
             <img className="speech-bubble2-scene4" alt="speech bubble" />
-
             <div>
               <div className="text2-scene4">
                 <Typewriter
                   options={{
-                    cursor: "",
+                    delay: 50,
                   }}
                   onInit={(typewriter) => {
                     typewriter
@@ -117,7 +115,7 @@ export const Scene4 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className={buttons ? "back-scene3" : "back-scene3-changed"}
+            className={buttons ? "back-scene" : "back-scene-changed"}
           >
             Back
           </button>
@@ -127,7 +125,7 @@ export const Scene4 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className={buttons ? "next-scene3" : "next-scene3-changed"}
+            className={buttons ? "next-scene" : "next-scene-changed"}
           >
             Next
           </button>
