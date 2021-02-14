@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Terminal from "terminal-in-react";
 import Typewriter from "typewriter-effect";
-import MainImage from "../images/me/glitch-02.gif";
+import Delay from "react-delay";
 import "../css/scene6.css";
 
 export const Scene6 = () => {
   let history = useHistory();
 
+  const firstSpeech = `Please type "help"`;
+  const secondSpeech = "Search for \n a command \n to fix this mess";
+
+  const [mainImage, setMainImage] = useState(false);
+  const [speechBubbles, setSpeechBubbles] = useState(false);
+  const [text, setText] = useState(false);
+
   return (
-    <div>
-      {/* <Terminal
+    <div className="container-scene6">
+      <Terminal
         color="green"
         backgroundColor="black"
         barColor="black"
@@ -27,7 +34,7 @@ export const Scene6 = () => {
             history.push("/scene7");
           },
           // showmsg: "hola",
-          popup: () => alert("Terminal in React"),
+          popup: () => alert("Talleres de Córdoba is the best soccer team in the world!"),
         }}
         descriptions={{
           "fix-code": "type this command to fix all!",
@@ -40,12 +47,45 @@ export const Scene6 = () => {
         }
         msg="Hello! You are here because everything blew up. This is a terminal where you can type anything freely. Use it to fix all right now! Start typing 'help'."
       />
-      <img
-        className="main-image-scene6"
-        src={MainImage}
-        style={{ position: "absolute", bottom: 0, right: "-90px" }}
-        alt="me glitched"
-      /> */}
+      <Delay wait={10000}>
+        <div>
+          <img
+            className={
+              mainImage ? "main-image-scene6-changed" : "main-image-scene6"
+            }
+            alt="glitched me"
+          />
+          <div>
+            <img
+              className={
+                speechBubbles
+                  ? "speech-bubble-scene6-changed"
+                  : "speech-bubble-scene6"
+              }
+              alt="speech bubble"
+            />
+            <div className={text ? "typed-scene6-changed" : "typed-scene6"}>
+              <Typewriter
+                options={{
+                  strings: [firstSpeech],
+                  autoStart: true,
+                  delay: 100,
+                  pauseFor: 1000,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .callFunction(() => {
+                      setMainImage(!mainImage);
+                      setSpeechBubbles(!speechBubbles);
+                      setText(!text);
+                    })
+                    .typeString(secondSpeech);
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </Delay>
     </div>
   );
 };

@@ -91,7 +91,7 @@ export const Scene1 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className={nextButton ? "next-scene1" : "next-scene1-changed"}
+            className={nextButton ? "next-scene" : "next-scene-changed"}
           >
             Next
           </button>

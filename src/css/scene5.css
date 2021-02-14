@@ -3,7 +3,7 @@
   background-repeat: repeat;
   background-position: bottom;
   background-size: cover;
-  animation: animate 15s linear infinite;
+  /* animation: animate 15s linear infinite; */
   width: 100vw;
   height: 100vh;
 }
@@ -30,7 +30,7 @@
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 2.5s;
+  animation-duration: 1s;
 }
 
 @keyframes fadeInOpacity {

@@ -13,10 +13,15 @@ export const Scene2 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "You can check \n my CV down here...";
-  const secondSpeech = "Wow sorry... \n what happened \n with my CV..?";
+  const firstSpeech = "I love \n computers \n and music";
+  const secondSpeech =
+    "You can check my CV \n and contact me \n in the menu section";
+  const thirdSpeech = "Hey you! \n You will never get \n the job...";
+  const fourthSpeech = "Who said that..?";
 
   const [changeMainImage, setChangeMainImage] = useState(false);
+  const [speechBubbles, setSpeechBubbles] = useState(false);
+  const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
@@ -61,27 +66,43 @@ export const Scene2 = () => {
           speechBubble = el;
         }}
       >
-        <img className="speech-bubble-scene2" alt="speech-bubble" />
+        <img
+          className={
+            speechBubbles
+              ? "speech-bubble-scene2-changed"
+              : "speech-bubble-scene2"
+          }
+          alt="speech-bubble"
+        />
         <div>
           <Delay wait={1200}>
-            <div className="typed-scene2">
+            <div className={text ? "typed-scene2-changed" : "typed-scene2"}>
               <Typewriter
                 options={{
-                  strings: [firstSpeech],
+                  strings: [firstSpeech, secondSpeech],
                   autoStart: true,
                   delay: 50,
                   deleteSpeed: 10,
-                  pauseFor: 800,
+                  pauseFor: 1200,
                 }}
                 onInit={(typewriter) => {
                   typewriter
                     .callFunction(() => {
+                      setSpeechBubbles(!speechBubbles);
+                      setText(!text);
+                    })
+                    .typeString(thirdSpeech)
+                    .callFunction(() => {
                       setChangeMainImage(!changeMainImage);
                     })
-                    .typeString(secondSpeech)
+                    .pauseFor(700)
+                    .deleteChars(50)
                     .callFunction(() => {
+                      setSpeechBubbles(speechBubbles);
+                      setText(text);
                       setButtons(!buttons);
-                    });
+                    })
+                    .pasteString(fourthSpeech);
                 }}
               />
             </div>
@@ -94,7 +115,7 @@ export const Scene2 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className={buttons ? "back-scene2" : "back-scene2-changed"}
+            className={buttons ? "back-scene" : "back-scene-changed"}
           >
             Back
           </button>
@@ -104,7 +125,7 @@ export const Scene2 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className={buttons ? "next-scene2" : "next-scene2-changed"}
+            className={buttons ? "next-scene" : "next-scene-changed"}
           >
             Next
           </button>

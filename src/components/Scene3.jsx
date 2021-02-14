@@ -15,11 +15,12 @@ export const Scene3 = () => {
 
   const firstSpeech =
     "hahahahaaa \n surprised..? \n what if i tell you \n I am here to...";
-  const secondSpeech = `<p class="text-scene3-changed">BREAK YOUR CODE!</p>`;
+  const secondSpeech = "BREAK YOUR CODE!";
 
   const [background, setBackground] = useState(false);
   const [mainImage, setMainImage] = useState(false);
   const [speechBubbles, setSpeechBubbles] = useState(false);
+  const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
@@ -76,7 +77,7 @@ export const Scene3 = () => {
         />
         <div>
           <Delay wait={1200}>
-            <div className="text-scene3">
+            <div className={text ? "text-scene3-changed" : "text-scene3"}>
               <Typewriter
                 options={{
                   strings: [firstSpeech],
@@ -91,6 +92,7 @@ export const Scene3 = () => {
                       setBackground(!background);
                       setMainImage(!mainImage);
                       setSpeechBubbles(!speechBubbles);
+                      setText(!text);
                     })
                     .typeString(secondSpeech)
                     .callFunction(() => {
@@ -108,7 +110,7 @@ export const Scene3 = () => {
             ref={(el) => {
               backScene = el;
             }}
-            className={buttons ? "back-scene3" : "back-scene3-changed"}
+            className={buttons ? "back-scene" : "back-scene-changed"}
           >
             Back
           </button>
@@ -118,7 +120,7 @@ export const Scene3 = () => {
             ref={(el) => {
               nextScene = el;
             }}
-            className={buttons ? "next-scene3" : "next-scene3-changed"}
+            className={buttons ? "next-scene" : "next-scene-changed"}
           >
             Next
           </button>
