@@ -10,4 +10,3 @@ Preview:
 <img width="70%" src="./src/demo/demo1.png">
 <img width="70%" src="./src/demo/demo2.png">
 <img width="70%" src="./src/demo/demo3.png">
-<img width="70%" src="./src/demo/demo4.png">
