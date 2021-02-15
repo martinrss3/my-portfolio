@@ -9,7 +9,6 @@ export const Scene8 = () => {
   let mainImage = useRef(null);
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
-  let backScene = useRef(null);
 
   const firstSpeech = "Thanks for \n helping me..!!";
 
@@ -24,7 +23,7 @@ export const Scene8 = () => {
     });
 
     TweenMax.fromTo(
-      [speechBubble, nextScene, backScene],
+      [speechBubble, nextScene],
       1,
       {
         delay: 2,
@@ -76,24 +75,14 @@ export const Scene8 = () => {
         </Delay>
       </div>
       <div>
-        <Link to="/scene7">
-          <button
-            ref={(el) => {
-              backScene = el;
-            }}
-            className={buttons ? "back-scene" : "back-scene-changed"}
-          >
-            Back
-          </button>
-        </Link>
         <Link to="/">
           <button
             ref={(el) => {
               nextScene = el;
             }}
-            className={buttons ? "next-scene" : "next-scene-changed"}
+            className={buttons ? "next-scene8" : "next-scene8-changed"}
           >
-            Next
+            The End
           </button>
         </Link>
       </div>

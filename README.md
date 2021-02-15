@@ -7,6 +7,7 @@ This is a work in progress, I make commits every day!
 
 Preview:
 
-<img width="70%" src="./src/utils/demo1.png">
-<img width="70%" src="./src/utils/demo2.png">
-<img width="70%" src="./src/utils/demo3.png">
+<img width="70%" src="./src/demo/demo1.png">
+<img width="70%" src="./src/demo/demo2.png">
+<img width="70%" src="./src/demo/demo3.png">
+<img width="70%" src="./src/demo/demo4.png">
