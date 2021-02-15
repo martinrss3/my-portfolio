@@ -25,18 +25,18 @@ export const Scene5 = () => {
       opacity: 1,
       x: 0,
       ease: Power3.easeInOut,
-      delay: 7,
+      delay: 5,
     });
 
     TweenMax.fromTo(
       speechBubble1,
       1,
       {
-        delay: 3,
+        delay: 1,
         opacity: 0,
       },
       {
-        delay: 1.9,
+        delay: 1,
         opacity: 1,
       }
     );
@@ -76,7 +76,7 @@ export const Scene5 = () => {
           alt="speech bubble"
         />
         <div>
-          <Delay wait={2300}>
+          <Delay wait={1400}>
             <div className={text ? "text-scene5-changed" : "text-scene5"}>
               <Typewriter
                 options={{
@@ -86,7 +86,7 @@ export const Scene5 = () => {
                   typewriter
                     .typeString(firstSpeech)
                     .start()
-                    .pauseFor(3000)
+                    .pauseFor(1800)
                     .callFunction(() => {
                       setSpeechBubble(!speechBubble);
                       setText(!text);
@@ -115,7 +115,7 @@ export const Scene5 = () => {
           alt="speech bubble"
         />
         <div>
-          <Delay wait={8000}>
+          <Delay wait={5700}>
             <div className="text2-scene5">
               <Typewriter
                 options={{
