@@ -16,6 +16,8 @@ export const Scene1 = () => {
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
   const [changeMainImage, setChangeMainImage] = useState(false);
+  const [speechBubbles, setSpeechBubbles] = useState(false);
+  const [text, setText] = useState(false);
   const [nextButton, setNextButton] = useState(false);
 
   useEffect(() => {
@@ -60,9 +62,16 @@ export const Scene1 = () => {
           speechBubble = el;
         }}
       >
-        <img className="speech-bubble-scene1" alt="speech bubble" />
+        <img
+          className={
+            speechBubbles
+              ? "speech-bubble-scene1-changed"
+              : "speech-bubble-scene1"
+          }
+          alt="speech bubble"
+        />
         <Delay wait={1200}>
-          <div className="typed-scene1">
+          <div className={text ? "typed-scene1-changed" : "typed-scene1"}>
             <Typewriter
               options={{
                 strings: [firstSpeech],
@@ -75,6 +84,8 @@ export const Scene1 = () => {
                 typewriter
                   .callFunction(() => {
                     setChangeMainImage(!changeMainImage);
+                    setSpeechBubbles(!speechBubbles);
+                    setText(!text);
                   })
                   .typeString(secondSpeech)
                   .callFunction(() => {

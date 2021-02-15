@@ -5,17 +5,35 @@
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 
 .main-img-scene7 {
   content: url("../images/badGuy/26.png");
   position: absolute;
-  opacity: 0;
   right: 0;
   bottom: 0;
   left: 0;
   max-height: 100vh;
   margin: 0 auto;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+.speech-bubble-scene7 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  max-width: 50%;
+  top: 3vw;
+  left: 50%;
 }
 
 .typed-scene7 {

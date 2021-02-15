@@ -92,17 +92,19 @@ export const Scene2 = () => {
                       setText(!text);
                     })
                     .typeString(thirdSpeech)
+                    .pauseFor(3000)
                     .callFunction(() => {
                       setChangeMainImage(!changeMainImage);
                     })
-                    .pauseFor(700)
                     .deleteChars(50)
                     .callFunction(() => {
                       setSpeechBubbles(speechBubbles);
                       setText(text);
-                      setButtons(!buttons);
                     })
-                    .pasteString(fourthSpeech);
+                    .typeString(fourthSpeech)
+                    .callFunction(() => {
+                      setButtons(!buttons);
+                    });
                 }}
               />
             </div>

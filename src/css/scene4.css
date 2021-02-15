@@ -19,6 +19,10 @@
   height: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 55%, 0 40%);
   clip-path: polygon(0 0, 100% 0%, 100% 55%, 0 40%);
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
 .background2-scene4 {
@@ -33,6 +37,10 @@
   height: 100%;
   -webkit-clip-path: polygon(0 43%, 100% 58%, 100% 100%, 0 100%);
   clip-path: polygon(0 43%, 100% 58%, 100% 100%, 0 100%);
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
 .main-image-scene4 {
@@ -70,6 +78,10 @@
   width: 40%;
   top: 8vw;
   left: 6%;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
 .speech-bubble2-scene4 {
@@ -79,6 +91,10 @@
   width: 40%;
   top: 0;
   left: 40%;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
 .text-scene4 {
@@ -94,6 +110,10 @@
   text-align: center;
   padding: 20px;
   transform: rotate(-10deg);
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
 .text2-scene4 {
@@ -110,4 +130,8 @@
   padding: 20px;
   text-shadow: 2px 2px 4px red;
   transform: rotate(3deg);
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
