@@ -78,7 +78,7 @@ export const Scene6 = () => {
           msg="Hello! You are here because everything blew up. This is a terminal where you can type anything freely. Use it to fix all right now! Start typing 'help'."
         />
       </Delay>
-      <Delay wait={17000}>
+      <Delay wait={20000}>
         <div>
           <img
             className={
@@ -86,34 +86,24 @@ export const Scene6 = () => {
             }
             alt="glitched me"
           />
-          <div>
-            {/* <img
-              className={
-                speechBubbles
-                  ? "speech-bubble-scene6-changed"
-                  : "speech-bubble-scene6"
-              }
-              alt="speech bubble"
-            /> */}
-            <div className={text ? "typed-scene6-changed" : "typed-scene6"}>
-              <Typewriter
-                options={{
-                  strings: [firstSpeech],
-                  autoStart: true,
-                  delay: 100,
-                  pauseFor: 1000,
-                }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .callFunction(() => {
-                      setMainImage(!mainImage);
-                      setSpeechBubbles(!speechBubbles);
-                      setText(!text);
-                    })
-                    .typeString(secondSpeech);
-                }}
-              />
-            </div>
+          <div className={text ? "typed-scene6-changed" : "typed-scene6"}>
+            <Typewriter
+              options={{
+                strings: [firstSpeech],
+                autoStart: true,
+                delay: 100,
+                pauseFor: 5000,
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .callFunction(() => {
+                    setMainImage(!mainImage);
+                    setSpeechBubbles(!speechBubbles);
+                    setText(!text);
+                  })
+                  .typeString(secondSpeech);
+              }}
+            />
           </div>
         </div>
       </Delay>

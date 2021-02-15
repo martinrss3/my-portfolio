@@ -17,7 +17,7 @@ export const Scene2 = () => {
   const secondSpeech =
     "You can check my CV \n and contact me \n in the menu section";
   const thirdSpeech = "Hey you! \n You will never get \n the job...";
-  const fourthSpeech = "Who said that..?";
+  const fourthSpeech = "\n Who said that..?";
 
   const [changeMainImage, setChangeMainImage] = useState(false);
   const [speechBubbles, setSpeechBubbles] = useState(false);
@@ -82,8 +82,8 @@ export const Scene2 = () => {
                   strings: [firstSpeech, secondSpeech],
                   autoStart: true,
                   delay: 50,
-                  deleteSpeed: 10,
-                  pauseFor: 1200,
+                  deleteSpeed: 25,
+                  pauseFor: 2000,
                 }}
                 onInit={(typewriter) => {
                   typewriter

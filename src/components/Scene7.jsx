@@ -7,7 +7,6 @@ import "../css/scene7.css";
 
 export const Scene7 = () => {
   let nextScene = useRef(null);
-  let backScene = useRef(null);
 
   const firstSpeech = "I was so close..!!";
 
@@ -15,7 +14,7 @@ export const Scene7 = () => {
 
   useEffect(() => {
     TweenMax.fromTo(
-      [nextScene, backScene],
+      nextScene,
       1,
       {
         delay: 2,
@@ -56,16 +55,6 @@ export const Scene7 = () => {
         </div>
       </Delay>
       <div>
-        <Link to="/scene6">
-          <button
-            ref={(el) => {
-              backScene = el;
-            }}
-            className={buttons ? "back-scene" : "back-scene-changed"}
-          >
-            Back
-          </button>
-        </Link>
         <Link to="/scene8">
           <button
             ref={(el) => {
