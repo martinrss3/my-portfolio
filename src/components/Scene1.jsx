@@ -78,7 +78,7 @@ export const Scene1 = () => {
                 autoStart: true,
                 delay: 50,
                 deleteSpeed: 10,
-                pauseFor: 800,
+                pauseFor: 1500,
               }}
               onInit={(typewriter) => {
                 typewriter

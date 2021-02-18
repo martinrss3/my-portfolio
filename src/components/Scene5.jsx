@@ -119,7 +119,7 @@ export const Scene5 = () => {
             <div className="text2-scene5">
               <Typewriter
                 options={{
-                  delay: 75,
+                  delay: 50,
                 }}
                 onInit={(typewriter) => {
                   typewriter

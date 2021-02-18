@@ -8,11 +8,6 @@
   font-style: normal;
   font-weight: 400;
 }
-@font-face {
-  font-family: "Hack";
-  src: url("//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css")
-    format("truetype");
-}
 
 :root {
   font-size: 16px;

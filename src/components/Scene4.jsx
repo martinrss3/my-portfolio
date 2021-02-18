@@ -11,7 +11,7 @@ export const Scene4 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "Who are you?!";
+  const firstSpeech = "What are you saying?!";
   const secondSpeech = "Just watch...";
 
   const [buttons, setButtons] = useState(false);
