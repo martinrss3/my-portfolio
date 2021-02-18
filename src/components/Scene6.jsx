@@ -1,28 +1,136 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import Terminal from "terminal-in-react";
 import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
+import styled from "styled-components";
+import { format } from "date-fns";
 import "../css/scene6.css";
+
+import mainImage from "../images/me/glitch-02.gif";
 
 export const Scene6 = () => {
   let history = useHistory();
 
-  const firstSpeech = `Please type "help"`;
-  const secondSpeech = "Search for \n a command \n to fix this mess";
+  const Container = styled.div`
+    div,
+    pre {
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      font-size: 20px;
+      line-height: 20px;
+      color: green;
+      font-family: monospace !important;
+      text-shadow: 0px 0px 1px rgba(0, 255, 0, 0.9),
+        -2px 0px 2px rgba(255, 0, 0, 1), 2px 0px 2px rgba(0, 0, 255, 1);
+      animation: onOff 3s linear;
+      -webkit-animation: onOff 0.1s ease 3;
 
-  const [mainImage, setMainImage] = useState(false);
-  const [speechBubbles, setSpeechBubbles] = useState(false);
-  const [text, setText] = useState(false);
+      @-webkit-keyframes onOff {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes onOff {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    input,
+    input:focus {
+      margin: 0px 0px 0px 12px;
+      font-size: 20px;
+      line-height: 20px;
+      outline: none;
+      color: green;
+      font-family: monospace !important;
+      text-shadow: 0px 0px 1px rgba(0, 255, 0, 0.9),
+        -2px 0px 2px rgba(255, 0, 0, 0.5), 2px 0px 2px rgba(0, 0, 255, 0.8);
+    }
+  `;
+
+  const msg = `
+=========================================
+=       ===============        ==========
+=  ====  ==============  ================
+=  ====  =  =   =======  =======  =  =  =
+=  ====  =    =  ======      ======  =  =
+=  ====  =  ===========  =======  ==   ==
+=  ====  =  =====  ====  =======  =  =  =
+=       ==  =====  ====  =======  =  =  =
+=========================================
+
+
+It is ${format(new Date(), "MMMM dd, yyyy")}
+
+Logged in user: martin
+
+Hello! I am the Dr. Fix! 
+Fix is my name, Fix is what I do best!
+
+You can always type 'help' to get started.
+
+`;
+
+  const commands = {
+    contact: (e) => (
+      <React.Fragment>
+        <br />
+        Martín Russo
+        <br />
+        +54 351 7642827
+        <br />
+        martinrusso1@gmail.com
+        <br />
+        Córdoba Capital, Argentina
+        <br />
+        <br />
+        <br />
+        <div style={{ background: "green", display: "inline-flex" }}>
+          <img
+            src={mainImage}
+            style={{
+              width: "150px",
+              height: "auto",
+              mixBlendMode: "multiply",
+              imageRendering: "pixelated",
+              filter: "blur(0.5px)",
+            }}
+            alt="ve vo"
+          />
+        </div>
+      </React.Fragment>
+    ),
+    "fix-code": () => {
+      history.push("/scene7");
+    },
+    info: () =>
+      alert("Talleres de Córdoba is the best soccer team in the world!"),
+  };
+
+  const descriptions = {
+    contact: "Get contact info",
+    "fix-code": "type this command when a stranger hacks your web!",
+    info: "Get random phrases",
+  };
 
   return (
     <div className="container-scene6">
-      <Delay wait={2000}>
+      <Delay wait={3000}>
         <div className="typewriter-container">
           <Typewriter
             options={{
-              delay: 100,
-              cursor: "_",
+              delay: 50,
+              cursor: "",
             }}
             onInit={(typewriter) => {
               typewriter
@@ -38,73 +146,36 @@ export const Scene6 = () => {
                 .pauseFor(2000)
                 .deleteChars(20)
                 .changeDeleteSpeed(2)
-                .start();
+                .typeString(
+                  '<span style="color: green; font-weight: bold; font-size: 1em;">Initializing Dr. Fix!</span>'
+                )
+                .pauseFor(2000)
+                .deleteChars(20)
+                .changeDeleteSpeed(2)
+                .start()
+                .deleteAll();
             }}
           />
         </div>
       </Delay>
-      <Delay wait={15000}>
-        <Terminal
-          color="green"
-          backgroundColor="black"
-          barColor="black"
-          style={{
-            fontWeight: "bold",
-            fontSize: "1em",
-            position: "fixed",
-            width: "100%",
-            height: "60%",
-            top: "10%",
-          }}
-          commands={{
-            "fix-code": () => {
-              history.push("/scene7");
-            },
-            // showmsg: "hola",
-            info: () =>
-              alert(
-                "Talleres de Córdoba is the best soccer team in the world!"
-              ),
-          }}
-          descriptions={{
-            "fix-code": "type this command to fix all!",
-            // showmsg: "shows a message",
-            alert: "alert",
-            info: "alert",
-          }}
-          commandPassThrough={(cmd) =>
-            `Command "${cmd}": is not working. Type "help" for available commands.`
-          }
-          msg="Hello! You are here because everything blew up. This is a terminal where you can type anything freely. Use it to fix all right now! Start typing 'help'."
-        />
-      </Delay>
-      <Delay wait={20000}>
-        <div>
-          <img
-            className={
-              mainImage ? "main-image-scene6-changed" : "main-image-scene6"
-            }
-            alt="glitched me"
-          />
-          <div className={text ? "typed-scene6-changed" : "typed-scene6"}>
-            <Typewriter
-              options={{
-                strings: [firstSpeech],
-                autoStart: true,
-                delay: 100,
-                pauseFor: 5000,
+      <Delay wait={19000}>
+        <div className="terminal-style">
+          <Container>
+            <Terminal
+              backgroundColor="#0a0a0a"
+              startState="maximised"
+              promptSymbol=">"
+              style={{
+                width: "100vw",
+                height: "100vw",
               }}
-              onInit={(typewriter) => {
-                typewriter
-                  .callFunction(() => {
-                    setMainImage(!mainImage);
-                    setSpeechBubbles(!speechBubbles);
-                    setText(!text);
-                  })
-                  .typeString(secondSpeech);
-              }}
+              allowTabs={false}
+              hideTopBar
+              msg={msg}
+              commands={commands}
+              descriptions={descriptions}
             />
-          </div>
+          </Container>
         </div>
       </Delay>
     </div>

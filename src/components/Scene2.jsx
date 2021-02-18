@@ -13,13 +13,14 @@ export const Scene2 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "I love \n computers \n and music";
+  const firstSpeech = "I love \n programming \n and make music";
   const secondSpeech =
     "You can check my CV \n and contact me \n in the menu section";
   const thirdSpeech = "Hey you! \n You will never get \n the job...";
-  const fourthSpeech = "\n Who said that..?";
+  const fourthSpeech = "\n What..?";
 
   const [changeMainImage, setChangeMainImage] = useState(false);
+  const [image2, setImage2] = useState(false);
   const [speechBubbles, setSpeechBubbles] = useState(false);
   const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
@@ -56,11 +57,12 @@ export const Scene2 = () => {
         ref={(el) => {
           mainImage = el;
         }}
-        className={
-          changeMainImage ? "main-image-scene2-changed" : "main-image-scene2"
-        }
+        className={changeMainImage ? "main-image-scene2-changed" : "main-image-scene2"}
         alt="me"
       />
+      <div>
+        <img className={image2 ? "img2" : "img2-changed"} alt="img2" />
+      </div>
       <div
         ref={(el) => {
           speechBubble = el;
@@ -82,22 +84,24 @@ export const Scene2 = () => {
                   strings: [firstSpeech, secondSpeech],
                   autoStart: true,
                   delay: 50,
-                  deleteSpeed: 25,
+                  deleteSpeed: 10,
                   pauseFor: 2000,
                 }}
                 onInit={(typewriter) => {
                   typewriter
                     .callFunction(() => {
                       setSpeechBubbles(!speechBubbles);
+                      setImage2(!image2);
                       setText(!text);
                     })
                     .typeString(thirdSpeech)
-                    .pauseFor(3000)
+                    .pauseFor(2500)
                     .callFunction(() => {
                       setChangeMainImage(!changeMainImage);
                     })
-                    .deleteChars(50)
+                    .deleteChars(45)
                     .callFunction(() => {
+                      setImage2(image2);
                       setSpeechBubbles(speechBubbles);
                       setText(text);
                     })
