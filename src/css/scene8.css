@@ -18,11 +18,58 @@
   margin: 0 auto;
 }
 
+.change-main-image-scene8 {
+  display: none;
+}
+
+.main-image2-scene8 {
+  content: url("../images/me/15.png");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 80px;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.change-main-image2-scene8 {
+  display: none;
+}
+
+.main-image3-scene8 {
+  content: url("../images/me/09.png");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 80px;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.change-main-image3-scene8 {
+  display: none;
+}
+
+.speech-bubble-scene8 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  max-width: 50%;
+  top: 3vw;
+  left: 50%;
+}
+
+.change-speech-bubble-scene8 {
+  display: none;
+}
+
 .typed-scene8 {
   z-index: 2;
   position: absolute;
   width: 50%;
-  top: 8vw;
+  top: 6vw;
   left: 50%;
   font-size: 3vw;
   font-weight: bold;
@@ -56,4 +103,8 @@
   -webkit-animation: bounce 0.3s infinite alternate;
   -moz-animation: bounce 0.3s infinite alternate;
   animation: bounce 0.3s infinite alternate;
+}
+
+.next-scene8-changed {
+  display: none;
 }

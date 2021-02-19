@@ -10,8 +10,11 @@ export const Scene8 = () => {
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
 
-  const firstSpeech = "Thanks for \n helping me..!!";
+  const firstSpeech = "Yeahh!!! \n Thanks for \n helping me..!!";
 
+  const [image, setImage] = useState(false);
+  const [image2, setImage2] = useState(false);
+  const [image3, setImage3] = useState(false);
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
@@ -46,7 +49,23 @@ export const Scene8 = () => {
           ref={(el) => {
             mainImage = el;
           }}
-          className="main-image-scene8"
+          className={image ? "change-main-image-scene8" : "main-image-scene8"}
+          alt="me"
+        />
+      </div>
+      <div>
+        <img
+          className={
+            image2 ? "main-image2-scene8" : "change-main-image2-scene8"
+          }
+          alt="me"
+        />
+      </div>
+      <div>
+        <img
+          className={
+            image3 ? "main-image3-scene8" : "change-main-image3-scene8"
+          }
           alt="me"
         />
       </div>
@@ -55,16 +74,33 @@ export const Scene8 = () => {
           speechBubble = el;
         }}
       >
-        <img className="speech-bubble-scene1" alt="speech bubble" />
+        <div>
+          <img className="speech-bubble-scene1" alt="speech bubble" />
+        </div>
         <Delay wait={1200}>
           <div className="typed-scene8">
             <Typewriter
               options={{
-                delay: 75,
+                delay: 50,
+                deleteSpeed: 10,
               }}
               onInit={(typewriter) => {
                 typewriter
                   .typeString(firstSpeech)
+                  .pauseFor(2000)
+                  .deleteChars(42)
+                  .callFunction(() => {
+                    setImage(!image);
+                    setImage2(!image2);
+                  })
+                  .typeString("Luckily \n I had \n a backup...")
+                  .pauseFor(2000)
+                  .deleteChars(30)
+                  .callFunction(() => {
+                    setImage2(image2);
+                    setImage3(!image3);
+                  })
+                  .typeString("Anyway... \n you can keep \n browsing my web")
                   .callFunction(() => {
                     setButtons(!buttons);
                   })
@@ -82,7 +118,7 @@ export const Scene8 = () => {
             }}
             className={buttons ? "next-scene8" : "next-scene8-changed"}
           >
-            The End
+            About Me
           </button>
         </Link>
       </div>

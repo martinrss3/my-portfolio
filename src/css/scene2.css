@@ -50,7 +50,7 @@
   overflow: visible;
   max-width: 50%;
   opacity: 1;
-  animation: fade 7s linear;
+  animation: fade 7s forwards;
 }
 
 @keyframes fade {
@@ -86,7 +86,7 @@
   bottom: 300px;
   right: -5%;
   transform: rotateY(180deg) rotateZ(20deg);
-  animation: fade 7s linear;
+  animation: fade 7s forwards;
 }
 
 .typed-scene2 {
@@ -116,7 +116,7 @@
   text-align: center;
   text-shadow: 2px 2px 4px red;
   transform: rotate(-13deg);
-  animation: fade 7s linear;
+  animation: fade 7s forwards;
 }
 
 /* Mobile Styles */
