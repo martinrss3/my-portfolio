@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { TweenMax } from "gsap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
+import { Contact } from "./components/Contact";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
 import { Scene3 } from "./components/Scene3";
@@ -21,37 +22,40 @@ function App() {
   }, []);
 
   return (
-      <Router>
-        <div className="app" ref={(el) => (app = el)}>
-          <NavBar />
-          <Switch>
-            <Route exact path="/">
-              <Scene1 />
-            </Route>
-            <Route exact path="/scene2">
-              <Scene2 />
-            </Route>
-            <Route exact path="/scene3">
-              <Scene3 />
-            </Route>
-            <Route exact path="/scene4">
-              <Scene4 />
-            </Route>
-            <Route exact path="/scene5">
-              <Scene5 />
-            </Route>
-            <Route exact path="/scene6">
-              <Scene6 />
-            </Route>
-            <Route exact path="/scene7">
-              <Scene7 />
-            </Route>
-            <Route exact path="/scene8">
-              <Scene8 />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+    <Router>
+      <div className="app" ref={(el) => (app = el)}>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <Scene1 />
+          </Route>
+          <Route exact path="/scene2">
+            <Scene2 />
+          </Route>
+          <Route exact path="/scene3">
+            <Scene3 />
+          </Route>
+          <Route exact path="/scene4">
+            <Scene4 />
+          </Route>
+          <Route exact path="/scene5">
+            <Scene5 />
+          </Route>
+          <Route exact path="/scene6">
+            <Scene6 />
+          </Route>
+          <Route exact path="/scene7">
+            <Scene7 />
+          </Route>
+          <Route exact path="/scene8">
+            <Scene8 />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

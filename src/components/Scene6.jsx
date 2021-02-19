@@ -74,7 +74,7 @@ It is ${format(new Date(), "MMMM dd, yyyy")}
 
 Logged in user: martin
 
-Hello! I am the Dr. Fix! 
+Hello! I am Dr. Fix! 
 Fix is my name, Fix is what I do best!
 
 You can always type 'help' to get started.
@@ -130,6 +130,7 @@ You can always type 'help' to get started.
           <Typewriter
             options={{
               delay: 50,
+              deleteSpeed: 10,
               cursor: "",
             }}
             onInit={(typewriter) => {
@@ -138,27 +139,29 @@ You can always type 'help' to get started.
                   '<span style="color: green; font-weight: bold; font-size: 1em;">SYSTEM ERROR</span>'
                 )
                 .pauseFor(3000)
-                .deleteChars(15)
-                .changeDeleteSpeed(2)
+                .deleteChars(13)
+                .typeString(
+                  '<span style="color: green; font-weight: bold; font-size: 1em;">YOU HAVE BEEN HACKED</span>'
+                )
+                .pauseFor(3000)
+                .deleteChars(22)
                 .typeString(
                   '<span style="color: green; font-weight: bold; font-size: 1em;">Opening Terminal...</span>'
                 )
                 .pauseFor(2000)
                 .deleteChars(20)
-                .changeDeleteSpeed(2)
                 .typeString(
                   '<span style="color: green; font-weight: bold; font-size: 1em;">Initializing Dr. Fix!</span>'
                 )
                 .pauseFor(2000)
-                .deleteChars(20)
-                .changeDeleteSpeed(2)
+                .deleteChars(23)
                 .start()
                 .deleteAll();
             }}
           />
         </div>
       </Delay>
-      <Delay wait={19000}>
+      <Delay wait={21000}>
         <div className="terminal-style">
           <Container>
             <Terminal
