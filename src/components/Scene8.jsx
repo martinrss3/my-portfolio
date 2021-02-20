@@ -111,7 +111,7 @@ export const Scene8 = () => {
         </Delay>
       </div>
       <div>
-        <Link to="/">
+        <Link to="/about">
           <button
             ref={(el) => {
               nextScene = el;

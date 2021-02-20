@@ -1,0 +1,18 @@
+.container-about {
+  width: 100vw;
+  height: 100vh;
+  background-color: tomato;
+  /* animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s; */
+}
+
+.text-wrapper {
+  max-width: 60%;
+  font-family: monospace;
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 10% auto;
+}
