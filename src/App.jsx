@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { TweenMax } from "gsap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
+import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
@@ -49,6 +50,9 @@ function App() {
           </Route>
           <Route exact path="/scene8">
             <Scene8 />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
           <Route exact path="/contact">
             <Contact />

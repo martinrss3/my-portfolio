@@ -23,25 +23,25 @@ export const Scene6 = () => {
       font-family: monospace !important;
       text-shadow: 0px 0px 1px rgba(0, 255, 0, 0.9),
         -2px 0px 2px rgba(255, 0, 0, 1), 2px 0px 2px rgba(0, 0, 255, 1);
-      animation: onOff 3s linear;
-      -webkit-animation: onOff 0.1s ease 3;
+      animation: holahola 0.1s ease 3;
+      -webkit-animation: holahola 0.1s ease 3;
+    }
 
-      @-webkit-keyframes onOff {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
+    @-webkit-keyframes holahola {
+      0% {
+        opacity: 0;
       }
+      100% {
+        opacity: 1;
+      }
+    }
 
-      @keyframes onOff {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
+    @keyframes holahola {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
       }
     }
 

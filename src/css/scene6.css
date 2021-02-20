@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: #0a0a0a;
-  -webkit-animation: fadeinout 1.5s forwards;
+  -webkit-animation: fadeinout 3s forwards;
   animation: fadeinout 3s forwards;
   opacity: 1;
 }
