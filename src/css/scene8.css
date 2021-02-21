@@ -1,0 +1,110 @@
+.container-scene8 {
+  background-image: url("../images/backgrounds/bg-scene8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-image-scene8 {
+  content: url("../images/me/16.png");
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+  left: 80px;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.change-main-image-scene8 {
+  display: none;
+}
+
+.main-image2-scene8 {
+  content: url("../images/me/15.png");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 80px;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.change-main-image2-scene8 {
+  display: none;
+}
+
+.main-image3-scene8 {
+  content: url("../images/me/09.png");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 80px;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.change-main-image3-scene8 {
+  display: none;
+}
+
+.speech-bubble-scene8 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  max-width: 50%;
+  top: 3vw;
+  left: 50%;
+}
+
+.change-speech-bubble-scene8 {
+  display: none;
+}
+
+.typed-scene8 {
+  z-index: 2;
+  position: absolute;
+  width: 50%;
+  top: 6vw;
+  left: 50%;
+  font-size: 3vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
+  padding: 20px;
+}
+
+.next-scene8 {
+  z-index: 3;
+  margin: 2rem 2rem;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: Dekko, cursive;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 25px, 100%;
+  border: 0.4rem solid #000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  width: 17%;
+  box-shadow: 3px 3px 5px rgb(27, 27, 27);
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 0.3s infinite alternate;
+}
+
+.next-scene8-changed {
+  display: none;
+}

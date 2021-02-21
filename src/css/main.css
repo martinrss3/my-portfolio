@@ -11,34 +11,89 @@
 
 :root {
   font-size: 16px;
-  font-family: "Open Sans";
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
+  --text-primary: #ffffff;
+  --text-secondary: #07c917;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --transition-speed: 600ms;
+  --transition-speed: 300ms;
 }
 
-body {
-  color: black;
-  background-color: white;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
 }
 
-body::-webkit-scrollbar {
-  width: 0.25rem;
+.next-scene {
+  z-index: 3;
+  margin: 2rem 2rem;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: Dekko, cursive;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 25px, 100%;
+  border: 0.4rem solid #000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  width: 150px;
+  box-shadow: 3px 3px 5px rgb(27, 27, 27);
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 0.3s infinite alternate;
 }
 
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.1);
+  }
+}
+@-moz-keyframes bounce {
+  to {
+    -moz-transform: scale(1.1);
+  }
+}
+@keyframes bounce {
+  to {
+    transform: scale(1.1);
+  }
 }
 
-body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+.next-scene-changed {
+  display: none;
 }
 
-main {
-  margin-left: 5rem;
-  padding: 1rem;
+.back-scene {
+  z-index: 3;
+  margin: 2rem 13rem;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: Dekko, cursive;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 25px, 100%;
+  border: 0.4rem solid #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  width: 150px;
+  box-shadow: 3px 3px 5px rgb(27, 27, 27);
+}
+
+.back-scene-changed {
+  display: none;
 }

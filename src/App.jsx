@@ -1,10 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import { TweenMax } from "gsap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { NavBar } from "./components/NavBar";
+import { About } from "./components/About";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
 import { Scene3 } from "./components/Scene3";
-import { NavBar } from "./components/NavBar";
+import { Scene4 } from "./components/Scene4";
+import { Scene5 } from "./components/Scene5";
+import { Scene6 } from "./components/Scene6";
+import { Scene7 } from "./components/Scene7";
+import { Scene8 } from "./components/Scene8";
+
+import "../src/css/main.css";
 
 function App() {
   let app = useRef(null);
@@ -26,6 +34,24 @@ function App() {
           </Route>
           <Route exact path="/scene3">
             <Scene3 />
+          </Route>
+          <Route exact path="/scene4">
+            <Scene4 />
+          </Route>
+          <Route exact path="/scene5">
+            <Scene5 />
+          </Route>
+          <Route exact path="/scene6">
+            <Scene6 />
+          </Route>
+          <Route exact path="/scene7">
+            <Scene7 />
+          </Route>
+          <Route exact path="/scene8">
+            <Scene8 />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
         </Switch>
       </div>

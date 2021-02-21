@@ -1,0 +1,110 @@
+.container-scene3 {
+  background-image: url("../images/backgrounds/bg-scene3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.container-scene3-changed {
+  background-image: url("../images/backgrounds/bg-scene3a.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.main-image-scene3 {
+  content: url("../images/badGuy/21.png");
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.main-image-scene3-changed {
+  content: url("../images/badGuy/04.png");
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100vh;
+  margin: 0 auto;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+
+.speech-bubble-scene3 {
+  content: url("../images/speechBubbles/speech-bubble1.png");
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  width: 50%;
+  top: 3vw;
+  left: 50%;
+}
+
+.speech-bubble-scene3-changed {
+  content: url("../images/speechBubbles/speech-bubble6.png");
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 10%;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+
+.text-scene3 {
+  z-index: 2;
+  position: fixed;
+  width: 50%;
+  top: 5vw;
+  left: 50%;
+  font-size: 2.5vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px 4px red;
+}
+
+.text-scene3-changed {
+  z-index: 2;
+  position: fixed;
+  width: 50%;
+  top: 11vw;
+  left: 7vw;
+  font-size: 3.2vw;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
+  transform: rotate(-10deg);
+  text-shadow: 2px 2px 4px red;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
