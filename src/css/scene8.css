@@ -25,9 +25,8 @@
 .main-image2-scene8 {
   content: url("../images/me/15.png");
   position: absolute;
-  right: 0;
   bottom: 0;
-  left: 80px;
+  left: 75px;
   max-height: 100vh;
   margin: 0 auto;
 }
@@ -39,9 +38,8 @@
 .main-image3-scene8 {
   content: url("../images/me/09.png");
   position: absolute;
-  right: 0;
   bottom: 0;
-  left: 80px;
+  left: 30px;
   max-height: 100vh;
   margin: 0 auto;
 }
@@ -50,7 +48,7 @@
   display: none;
 }
 
-.speech-bubble-scene8 {
+.bubble-scene8 {
   content: url("../images/speechBubbles/speech-bubble1.png");
   z-index: 1;
   -webkit-transform: scaleX(-1);
@@ -61,11 +59,11 @@
   left: 50%;
 }
 
-.change-speech-bubble-scene8 {
+.change-bubble-scene8 {
   display: none;
 }
 
-.typed-scene8 {
+.text-scene8 {
   z-index: 2;
   position: absolute;
   width: 50%;
@@ -77,6 +75,14 @@
   white-space: pre;
   text-align: center;
   padding: 20px;
+}
+
+.change-text-scene8 {
+  display: none;
+}
+
+#id {
+  color: red;
 }
 
 .next-scene8 {

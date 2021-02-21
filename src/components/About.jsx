@@ -9,6 +9,7 @@ import cloud1 from "../images/parallax/cloud1.png";
 import cloud2 from "../images/parallax/cloud2.png";
 import star from "../images/parallax/star.png";
 import me from "../images/me/25.png";
+import grass from "../images/parallax/grass.png";
 
 export const About = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -62,6 +63,14 @@ export const About = () => {
       y: -1300,
       scale: 1,
     });
+
+    gsap.to("#grass", {
+      scrollTrigger: {
+        scrub: true,
+      },
+      y: 0,
+      scale: 1.2
+    });
   }, []);
 
   function sendEmail(e) {
@@ -88,6 +97,7 @@ export const About = () => {
         <img src={cloud2} id="cloud2" alt="cloud" />
         <img src={star} id="star" alt="star" />
         <img src={me} id="me" alt="me" />
+        <img src={grass} id="grass" alt="grass" />
       </section>
       <div className="sec">
         <div className="content">

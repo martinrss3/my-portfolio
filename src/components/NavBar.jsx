@@ -26,7 +26,7 @@ export const NavBar = () => {
       <ul className="navbar-nav">
         <li className="logo">
           <a href="/" className="nav-link">
-            <span className="link-text logo-text">Menu</span>
+            <span className="link-text logo-text">Home</span>
             <svg
               aria-hidden="true"
               focusable="false"
