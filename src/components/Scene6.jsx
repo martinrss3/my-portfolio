@@ -170,7 +170,7 @@ You can always type 'help' to get started.
               promptSymbol=">"
               style={{
                 width: "100vw",
-                height: "100vw",
+                height: "100vh",
               }}
               allowTabs={false}
               hideTopBar
