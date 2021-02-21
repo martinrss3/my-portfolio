@@ -118,7 +118,7 @@ export const NavBar = () => {
         </li>
 
         <li className="nav-item">
-          <a href="/contact" className="nav-link">
+          <a href="/about" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
