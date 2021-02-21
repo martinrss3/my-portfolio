@@ -10,7 +10,7 @@ export const Scene8 = () => {
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
 
-  const firstSpeech = "Yeahh!!! \n Thanks for \n helping me..!!";
+  const firstSpeech = `Yeahh!!! \n Thanks for \n helping me..!!`;
 
   const [image, setImage] = useState(false);
   const [image2, setImage2] = useState(false);
@@ -45,21 +45,25 @@ export const Scene8 = () => {
   return (
     <div className="container-scene8">
       <div>
-        <img
-          ref={(el) => {
-            mainImage = el;
-          }}
-          className={image ? "change-main-image-scene8" : "main-image-scene8"}
-          alt="me"
-        />
+        <div>
+          <img
+            ref={(el) => {
+              mainImage = el;
+            }}
+            className={image ? "change-main-image-scene8" : "main-image-scene8"}
+            alt="me"
+          />
+        </div>
       </div>
       <div>
-        <img
-          className={
-            image2 ? "main-image2-scene8" : "change-main-image2-scene8"
-          }
-          alt="me"
-        />
+        <div>
+          <img
+            className={
+              image2 ? "main-image2-scene8" : "change-main-image2-scene8"
+            }
+            alt="me"
+          />
+        </div>
       </div>
       <div>
         <img
@@ -74,11 +78,11 @@ export const Scene8 = () => {
           speechBubble = el;
         }}
       >
-        <div>
-          <img className="speech-bubble-scene1" alt="speech bubble" />
-        </div>
+        <img className="bubble-scene8" alt="speech bubble" />
+      </div>
+      <div>
         <Delay wait={1200}>
-          <div className="typed-scene8">
+          <div className="text-scene8">
             <Typewriter
               options={{
                 delay: 50,
