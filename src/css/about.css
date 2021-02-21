@@ -77,11 +77,11 @@ h2 {
   max-width: 800px;
   z-index: 0;
 }
-#star{
+#star {
   z-index: 0;
   position: absolute;
   right: -500px;
-  top: -100px;;
+  top: -100px;
   max-width: 250px;
   transform: scale(1);
 }
@@ -141,7 +141,7 @@ body.menu-active .container2 {
 
 .group {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 input {
@@ -181,7 +181,7 @@ label {
 /* active state */
 input:focus ~ label,
 input:valid ~ label {
-  top: -10px;
+  top: -25px;
   font-size: 12px;
   color: #b1b1b1;
   opacity: 1;
@@ -233,12 +233,14 @@ input:focus ~ .highlight {
   }
 }
 
-a.send-btn {
+.send-btn {
   color: #b1b1b1;
   transition: 0.2s ease;
+  border: none;
 }
 
-a.send-btn:hover {
+.send-btn:hover {
   color: #fafafa;
   cursor: pointer;
+  border: none;
 }

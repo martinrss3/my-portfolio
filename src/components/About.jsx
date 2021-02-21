@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "emailjs-com";
 import "../css/about.css";
 import bg from "../images/parallax/99.jpg";
 import moon from "../images/parallax/moon.png";
@@ -27,6 +28,7 @@ export const About = () => {
       },
       x: -400,
     });
+
     gsap.to("#cloud2", {
       scrollTrigger: {
         scrub: true,
@@ -62,6 +64,21 @@ export const About = () => {
     });
   }, []);
 
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
   return (
     <div className="container">
       <section>
@@ -74,7 +91,7 @@ export const About = () => {
       </section>
       <div className="sec">
         <div className="content">
-          <h2>My name is Martin Russo and i'm hungry right now.</h2>
+          <h2>My name is Martin Russo and i'm hungry.</h2>
           <p>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -116,24 +133,24 @@ export const About = () => {
           </div>
           <div className="panel panel-right">
             <div className="panel-content">
-              <div className="form">
+              <form className="form" onSubmit={sendEmail}>
                 <div className="group">
-                  <input type="text" required />
+                  <input type="text" name="field1" required />
                   <span className="highlight"></span>
                   <label>Leave me a comment</label>
                 </div>
                 <div className="group">
-                  <input type="text" required />
+                  <input type="text" name="field2" required />
                   <span className="highlight"></span>
                   <label>Your name</label>
                 </div>
                 <div className="group">
-                  <input type="text" required />
+                  <input type="text" name="field3" required />
                   <span className="highlight"></span>
                   <label>Your email</label>
                 </div>
-                <a className="send-btn">Send</a>
-              </div>
+                <input className="send-btn" type="submit" value="Send" />
+              </form>
             </div>
           </div>
         </div>
