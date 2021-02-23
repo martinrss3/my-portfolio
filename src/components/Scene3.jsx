@@ -14,7 +14,7 @@ export const Scene3 = () => {
   let backScene = useRef(null);
 
   const firstSpeech =
-    "hahahaha \n i told you, \n you will never \n get the job \n because i will...";
+    "hahahaha \n you will never \n get the job \n because i will...";
   const secondSpeech = "BREAK YOUR CODE!";
 
   const [background, setBackground] = useState(false);

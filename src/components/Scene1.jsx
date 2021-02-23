@@ -8,20 +8,20 @@ import Bouncy from "../audio/bouncy.mp3";
 import "../css/scene1.css";
 
 export const Scene1 = () => {
-  let mainImage = useRef(null);
-  let speechBubble = useRef(null);
-  let nextScene = useRef(null);
+  let imageRef = useRef(null);
+  let speechBubbleRef = useRef(null);
+  let nextSceneRef = useRef(null);
 
-  const firstSpeech = `Hi! My name is <el style="text-shadow: 2px 2px 2px #FF5F1F;">Martín</el> \n and I am a \n Full Stack Developer...`;
+  const firstSpeech = `Hi! My name is <el>Martín</el> \n and I am a \n Full Stack Developer...`;
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
-  const [changeMainImage, setChangeMainImage] = useState(false);
-  const [speechBubbles, setSpeechBubbles] = useState(false);
+  const [mainImage, setMainImage] = useState(false);
+  const [speechBubble, setSpeechBubble] = useState(false);
   const [text, setText] = useState(false);
   const [nextButton, setNextButton] = useState(false);
 
   useEffect(() => {
-    TweenMax.staggerTo(mainImage, 0.9, {
+    TweenMax.staggerTo(imageRef, 0.9, {
       opacity: 1,
       x: -100,
       ease: Power3.easeInOut,
@@ -29,7 +29,7 @@ export const Scene1 = () => {
     });
 
     TweenMax.fromTo(
-      [speechBubble, nextScene],
+      [speechBubbleRef, nextSceneRef],
       1,
       {
         delay: 2,
@@ -42,67 +42,71 @@ export const Scene1 = () => {
     );
 
     let tl = new TimelineLite();
-    tl.to(mainImage, 0, { x: 700 });
+    tl.to(imageRef, 0, { x: 700 });
   }, []);
 
   return (
-    <div className="container-scene1">
+    <div className="wrapper">
       <ReactHowler src={Bouncy} playing={false} loop={true} />
-      <img
-        ref={(el) => {
-          mainImage = el;
-        }}
-        className={
-          changeMainImage ? "main-image-scene1-changed" : "main-image-scene1"
-        }
-        alt="me"
-      />
-      <div
-        ref={(el) => {
-          speechBubble = el;
-        }}
-      >
-        <img
-          className={
-            speechBubbles
-              ? "speech-bubble-scene1-changed"
-              : "speech-bubble-scene1"
-          }
-          alt="speech bubble"
-        />
-        <Delay wait={1200}>
-          <div className={text ? "typed-scene1-changed" : "typed-scene1"}>
-            <Typewriter
-              options={{
-                strings: [firstSpeech],
-                autoStart: true,
-                delay: 50,
-                deleteSpeed: 10,
-                pauseFor: 1500,
-              }}
-              onInit={(typewriter) => {
-                typewriter
-                  .callFunction(() => {
-                    setChangeMainImage(!changeMainImage);
-                    setSpeechBubbles(!speechBubbles);
-                    setText(!text);
-                  })
-                  .typeString(secondSpeech)
-                  .callFunction(() => {
-                    setNextButton(!nextButton);
-                  });
-              }}
-            />
-          </div>
-        </Delay>
+
+      <div className="columns">
+        <div className="col col-1">
+          <img
+            ref={(el) => {
+              imageRef = el;
+            }}
+            className={mainImage ? "change-main-image" : "main-image"}
+            alt="me"
+          />
+        </div>
       </div>
-      <div>
+
+      <div className="columns">
+        <div className="col col-2">
+          <img
+            ref={(el) => {
+              speechBubbleRef = el;
+            }}
+            className={speechBubble ? "change-speech-bubble" : "speech-bubble"}
+            alt="speech bubble"
+          />
+        </div>
+        <div className="col col-2">
+          <Delay wait={1200}>
+            <div className={text ? "toogle-text-scene1 col-2" : "text-scene1"}>
+              <Typewriter
+                options={{
+                  strings: [firstSpeech],
+                  autoStart: true,
+                  delay: 50,
+                  deleteSpeed: 10,
+                  pauseFor: 1500,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .callFunction(() => {
+                      setMainImage(!mainImage);
+                      setSpeechBubble(!speechBubble);
+                      setText(!text);
+                    })
+                    .typeString(secondSpeech)
+                    .callFunction(() => {
+                      setNextButton(!nextButton);
+                    });
+                }}
+              />
+            </div>
+          </Delay>
+        </div>
+      </div>
+
+      <div className="buttons">
         <Link to="/scene2">
           <button
             ref={(el) => {
-              nextScene = el;
+              nextSceneRef = el;
             }}
-            className={nextButton ? "next-scene" : "next-scene-changed"}
+            className={nextButton ? "next-scene" : "change-next-scene"}
           >
             Next
           </button>

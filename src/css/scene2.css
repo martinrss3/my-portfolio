@@ -11,7 +11,7 @@
   animation-duration: 0.3s;
 }
 
-.main-image-scene2 {
+.image-scene2 {
   content: url("../images/me/22.png");
   position: absolute;
   opacity: 0;
@@ -25,7 +25,7 @@
   transform: rotateY(180deg);
 }
 
-.main-image-scene2-changed {
+.change-image-scene2 {
   content: url("../images/me/03.png");
   position: absolute;
   opacity: 0;
@@ -39,11 +39,10 @@
   transform: rotateY(180deg);
 }
 
-.img2 {
+.image2-scene2 {
   content: url("../images/badGuy/25.png");
   z-index: 10;
   position: absolute;
-  right: -75px;
   bottom: 0;
   max-height: 50vh;
   margin: 0 auto;
@@ -57,13 +56,17 @@
   0%,
   100% {
     opacity: 0;
+    right: -400px;
   }
-  50% {
+  25%,
+  50%,
+  75% {
     opacity: 1;
+    right: 0;
   }
 }
 
-.img2-changed {
+.change-image2-scene8 {
   display: none;
 }
 
@@ -89,13 +92,13 @@
   animation: fade 7s forwards;
 }
 
-.typed-scene2 {
+.text-scene2 {
   z-index: 2;
   position: absolute;
   width: 50%;
   top: 8vw;
   left: 50%;
-  font-size: 2.5vw;
+  font-size: 2.7vw;
   font-weight: bold;
   font-family: SequentialistBB, cursive, Helvetica, sans-serif;
   white-space: pre;
@@ -103,12 +106,12 @@
   padding: 20px;
 }
 
-.typed-scene2-changed {
+.change-text-scene2 {
   z-index: 2;
   position: absolute;
-  width: 50%;
+  width: 60%;
   bottom: 38vw;
-  right: -7%;
+  left: 47%;
   font-size: 2.5vw;
   font-weight: bold;
   font-family: SequentialistBB, cursive, Helvetica, sans-serif;
@@ -116,7 +119,21 @@
   text-align: center;
   text-shadow: 2px 2px 4px red;
   transform: rotate(-13deg);
-  animation: fade 7s forwards;
+  opacity: 0;
+  animation: fadeText 4s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeText {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  50%,
+  75% {
+    opacity: 1;
+  }
 }
 
 /* Mobile Styles */

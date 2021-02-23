@@ -8,15 +8,14 @@ import BreakBooty from "../audio/break-booty.mp3";
 import "../css/scene2.css";
 
 export const Scene2 = () => {
-  let mainImage = useRef(null);
+  let imageRef = useRef(null);
   let speechBubble = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "I love \n programming \n and make music";
-  const secondSpeech =
-    "You can check my CV \n and contact me \n in the menu section";
-  const thirdSpeech = "Hey you! \n You will never get \n the job...";
+  const firstSpeech = "I love \n coding \n and make music";
+  const secondSpeech = "You can contact me \n in the menu section";
+  const thirdSpeech = "Hey you! \n You will never \n get the job...";
   const fourthSpeech = "\n What..?";
 
   const [changeMainImage, setChangeMainImage] = useState(false);
@@ -26,7 +25,7 @@ export const Scene2 = () => {
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
-    TweenMax.staggerTo(mainImage, 0.9, {
+    TweenMax.staggerTo(imageRef, 0.9, {
       opacity: 1,
       x: -100,
       ease: Power3.easeInOut,
@@ -47,7 +46,7 @@ export const Scene2 = () => {
     );
 
     let tl = new TimelineLite();
-    tl.to(mainImage, 0, { x: 700 });
+    tl.to(imageRef, 0, { x: 700 });
   }, []);
 
   return (
@@ -55,13 +54,16 @@ export const Scene2 = () => {
       <ReactHowler src={BreakBooty} playing={false} loop={true} />
       <img
         ref={(el) => {
-          mainImage = el;
+          imageRef = el;
         }}
-        className={changeMainImage ? "main-image-scene2-changed" : "main-image-scene2"}
+        className={changeMainImage ? "change-image-scene2" : "image-scene2"}
         alt="me"
       />
       <div>
-        <img className={image2 ? "img2" : "img2-changed"} alt="img2" />
+        <img
+          className={image2 ? "image2-scene2" : "change-image2-scene2"}
+          alt="bad guy"
+        />
       </div>
       <div
         ref={(el) => {
@@ -78,7 +80,7 @@ export const Scene2 = () => {
         />
         <div>
           <Delay wait={1200}>
-            <div className={text ? "typed-scene2-changed" : "typed-scene2"}>
+            <div className={text ? "change-text-scene2" : "text-scene2"}>
               <Typewriter
                 options={{
                   strings: [firstSpeech, secondSpeech],

@@ -12,9 +12,9 @@ export const Scene5 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "this will be too easy..";
+  const firstSpeech = "this will be very easy...";
   const secondSpeech =
-    "this guy \n is breaking my code... \n We must stop him!";
+    "this guy \n is trying to \n break the code... \n We must stop him!";
 
   const [speechBubble, setSpeechBubble] = useState(false);
   const [text, setText] = useState(false);
@@ -80,7 +80,7 @@ export const Scene5 = () => {
             <div className={text ? "text-scene5-changed" : "text-scene5"}>
               <Typewriter
                 options={{
-                  delay: 75,
+                  delay: 70,
                 }}
                 onInit={(typewriter) => {
                   typewriter

@@ -1,4 +1,4 @@
-.container-scene1 {
+.wrapper {
   background-image: url("../images/backgrounds/bg-scene1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -11,25 +11,27 @@
   animation-duration: 0.3s;
 }
 
-.main-image-scene1 {
+.main-image {
   content: url("../images/me/01.png");
+  max-width: 100%;
+  max-height: 100vh;
   position: absolute;
   opacity: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  max-height: 100vh;
   margin: 0 auto;
 }
 
-.main-image-scene1-changed {
+.change-main-image {
   content: url("../images/me/24.png");
+  max-width: 100%;
+  max-height: 100vh;
   position: absolute;
   opacity: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  max-height: 100vh;
   margin: 0 auto;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
@@ -46,58 +48,65 @@
   }
 }
 
-.speech-bubble-scene1 {
+.speech-bubble {
   content: url("../images/speechBubbles/speech-bubble1.png");
   z-index: 1;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   position: absolute;
-  max-width: 50%;
-  top: 3vw;
-  left: 50%;
+  max-width: 50vw;
+  max-height: 50vh;
+  top: 0;
+  left: 48%;
 }
 
-.speech-bubble-scene1-changed {
+.change-speech-bubble {
   content: url("../images/speechBubbles/speech-bubble1.png");
   z-index: 1;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  max-width: 100%;
+  max-height: 100vh;
   position: absolute;
-  max-width: 50%;
-  top: 3vw;
-  left: 50%;
+  top: 0;
+  left: 48%;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.3s;
 }
 
-.typed-scene1 {
-  z-index: 2;
-  position: absolute;
-  width: 50%;
-  top: 8vw;
-  left: 50%;
-  font-size: 2.5vw;
-  font-weight: bold;
-  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
-  white-space: pre;
-  text-align: center;
-  padding: 20px;
+el {
+  color: #ff723a;
+  text-shadow: 2px 2px 2px black;
 }
 
-.typed-scene1-changed {
+.text-scene1 {
   z-index: 2;
+  max-width: 50%;
+  max-height: 50%;
   position: absolute;
-  width: 50%;
-  top: 8vw;
-  left: 50%;
-  font-size: 2.5vw;
+  top: 8%;
+  left: 60%;
+  font-size: calc(1.5vw + 1.5vh);
   font-weight: bold;
   font-family: SequentialistBB, cursive, Helvetica, sans-serif;
   white-space: pre;
   text-align: center;
-  padding: 20px;
+}
+
+.toogle-text-scene1 {
+  z-index: 2;
+  max-width: 50%;
+  max-height: 50%;
+  position: absolute;
+  top: 10%;
+  left: 63%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  white-space: pre;
+  text-align: center;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
