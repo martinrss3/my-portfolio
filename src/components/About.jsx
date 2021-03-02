@@ -89,7 +89,7 @@ export const About = () => {
   }
 
   return (
-    <div className="container">
+    <div className="wrapper">
       <section>
         <img src={bg} id="bg" alt="bg" />
         <img src={moon} id="moon" alt="moon" />
