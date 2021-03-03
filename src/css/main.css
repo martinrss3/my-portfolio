@@ -34,7 +34,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .next-scene {
