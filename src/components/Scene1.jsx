@@ -9,14 +9,12 @@ import "../css/scene1.css";
 
 export const Scene1 = () => {
   let imageRef = useRef(null);
-  let speechBubbleRef = useRef(null);
   let nextSceneRef = useRef(null);
 
-  const firstSpeech = `Hi! My name is <el>Martín</el> \n and I am a \n Full Stack Developer...`;
+  const firstSpeech = `Hi! \n My name is <el>Martín</el> \n and I am a \n Full Stack \n Developer...`;
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
   const [mainImage, setMainImage] = useState(false);
-  const [speechBubble, setSpeechBubble] = useState(false);
   const [text, setText] = useState(false);
   const [nextButton, setNextButton] = useState(false);
 
@@ -29,7 +27,7 @@ export const Scene1 = () => {
     });
 
     TweenMax.fromTo(
-      [speechBubbleRef, nextSceneRef],
+      nextSceneRef,
       1,
       {
         delay: 2,
@@ -55,50 +53,34 @@ export const Scene1 = () => {
             imageRef = el;
           }}
           className={mainImage ? "change-main-image" : "main-image"}
-          // className="main-image"
           alt="me"
         />
       </div>
 
-      <div className="speech-container">
-        <img
-          ref={(el) => {
-            speechBubbleRef = el;
-          }}
-          className={speechBubble ? "change-speech-bubble" : "speech-bubble"}
-          // className="speech-bubble"
-          alt="speech bubble"
-        />
-
-        <Delay wait={1200}>
-          <div
-            className={text ? "toogle-text-scene1" : "text-scene1"}
-            // className="text-scene1"
-          >
-            <Typewriter
-              options={{
-                strings: [firstSpeech],
-                autoStart: true,
-                delay: 50,
-                deleteSpeed: 10,
-                pauseFor: 1500,
-              }}
-              onInit={(typewriter) => {
-                typewriter
-                  .callFunction(() => {
-                    setMainImage(!mainImage);
-                    setSpeechBubble(!speechBubble);
-                    setText(!text);
-                  })
-                  .typeString(secondSpeech)
-                  .callFunction(() => {
-                    setNextButton(!nextButton);
-                  });
-              }}
-            />
-          </div>
-        </Delay>
-      </div>
+      <Delay wait={1200}>
+        <div className={text ? "toogle-text-scene1" : "text-scene1"}>
+          <Typewriter
+            options={{
+              strings: [firstSpeech],
+              autoStart: true,
+              delay: 50,
+              deleteSpeed: 10,
+              pauseFor: 1500,
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .callFunction(() => {
+                  setMainImage(!mainImage);
+                  setText(!text);
+                })
+                .typeString(secondSpeech)
+                .callFunction(() => {
+                  setNextButton(!nextButton);
+                });
+            }}
+          />
+        </div>
+      </Delay>
 
       <div>
         <Link to="/scene2">
