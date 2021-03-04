@@ -217,18 +217,18 @@ el {
     font-size: 4vh;
     width: 65vw;
     height: 55vh;
-    padding-top: 50px;
+    padding-top: 40px;
     right: -5vw;
-    top: 10px;
+    top: 5px;
   }
 
   .toogle-text-scene1 {
     font-size: 4vh;
     width: 65vw;
     height: 55vh;
-    padding-top: 80px;
+    padding-top: 70px;
     right: -5vw;
-    top: 10px;
+    top: 5px;
   }
 }
 
@@ -294,7 +294,7 @@ el {
   .main-image {
     bottom: 70px;
   }
-  
+
   .change-main-image {
     bottom: 70px;
   }
@@ -305,7 +305,7 @@ el {
     height: 250px;
     padding-top: 30px;
     right: -9vw;
-    top: 50px
+    top: 50px;
   }
 
   .toogle-text-scene1 {
@@ -314,7 +314,7 @@ el {
     height: 250px;
     padding-top: 50px;
     right: -9vw;
-    top: 50px
+    top: 50px;
   }
 }
 
