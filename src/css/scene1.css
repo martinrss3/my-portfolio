@@ -320,20 +320,89 @@ el {
 
 /* iPhone 6+, 7+, 8+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  .text-scene1 {
+    width: 320px;
+  }
+
+  .toogle-text-scene1 {
+    width: 320px;
+  }
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  .main-image {
+    bottom: 80px;
+  }
+
+  .change-main-image {
+    bottom: 80px;
+  }
+
+  .text-scene1 {
+    width: 350px;
+    height: 320px;
+    right: -10vw;
+    top: 50px;
+    padding-top: 50px;
+    font-size: 20px;
+  }
+
+  .toogle-text-scene1 {
+    width: 350px;
+    height: 320px;
+    right: -10vw;
+    top: 50px;
+    padding-top: 70px;
+    font-size: 20px;
+  }
 }
 
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .text-scene1 {
+    top: 0;
+    width: 350px;
+    height: 250px;
+    right: 100px;
+    padding-top: 20px;
+    font-size: 19px;
+  }
+
+  .toogle-text-scene1 {
+    top: 0;
+    width: 350px;
+    height: 250px;
+    right: 100px;
+    padding-top: 35px;
+    font-size: 19px;
+  }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .main-image {
+    bottom: 80px;
+  }
+
+  .change-main-image {
+    bottom: 80px;
+  }
+
+  .text-scene1 {
+    width: 350px;
+    height: 250px;
+    top: 150px;
+    right: -10vw;
+    font-size: 19px;
+    padding-top: 15px;
+  }
+
+  .toogle-text-scene1 {
+    width: 350px;
+    height: 250px;
+    top: 150px;
+    right: -10vw;
+    font-size: 19px;
+  }
 }
 
 /* iPhone XS Max, XR ----------- */
@@ -342,7 +411,31 @@ el {
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .main-image {
+    bottom: 80px;
+  }
+
+  .change-main-image {
+    bottom: 80px;
+  }
+
+  .text-scene1 {
+    width: 370px;
+    height: 290px;
+    top: 150px;
+    right: -10vw;
+    font-size: 21px;
+    padding-top: 30px;
+  }
+
+  .toogle-text-scene1 {
+    width: 370px;
+    height: 290px;
+    top: 150px;
+    right: -10vw;
+    font-size: 21px;
+    padding-top: 53px;
+  }
 }
 
 /* Samsung Galaxy S3 ----------- */
@@ -351,16 +444,44 @@ el {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  .text-scene1 {
+    width: 320px;
+    top: 70px;
+    right: -15vw;
+    padding-top: 20px;
+  }
+
+  .toogle-text-scene1 {
+    width: 320px;
+    top: 70px;
+    right: -15vw;
+    padding-top: 35px;
+  }
 }
 
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .text-scene1 {
+    right: 5vw;
+  }
+
+  .toogle-text-scene1 {
+    right: 5vw;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .text-scene1 {
+    width: 320px;
+    top: 60px;
+    padding-top: 20px;
+  }
+
+  .toogle-text-scene1 {
+    width: 320px;
+    top: 60px;
+    padding-top: 35px;
+  }
 }
 
 /* Samsung Galaxy S5 ----------- */
@@ -369,5 +490,29 @@ el {
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .main-image {
+    bottom: 80px;
+  }
+
+  .change-main-image {
+    bottom: 80px;
+  }
+
+  .text-scene1 {
+    width: 370px;
+    height: 290px;
+    top: 0;
+    right: -10vw;
+    font-size: 21px;
+    padding-top: 30px;
+  }
+
+  .toogle-text-scene1 {
+    width: 370px;
+    height: 290px;
+    top: 0;
+    right: -10vw;
+    font-size: 21px;
+    padding-top: 53px;
+  }
 }
