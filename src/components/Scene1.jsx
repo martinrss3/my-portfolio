@@ -44,7 +44,7 @@ export const Scene1 = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container bg-scene1">
       <ReactHowler src={Bouncy} playing={false} loop={true} />
 
       <div>
@@ -52,13 +52,17 @@ export const Scene1 = () => {
           ref={(el) => {
             imageRef = el;
           }}
-          className={mainImage ? "change-main-image" : "main-image"}
+          className={
+            mainImage
+              ? "toggle-main-image img-scene1-chg"
+              : "main-image img-scene1"
+          }
           alt="me"
         />
       </div>
 
       <Delay wait={1200}>
-        <div className={text ? "toogle-text-scene1" : "text-scene1"}>
+        <div className={text ? "toggle-text txt-scene1-chg" : "text txt-scene1"}>
           <Typewriter
             options={{
               strings: [firstSpeech],
@@ -88,7 +92,7 @@ export const Scene1 = () => {
             ref={(el) => {
               nextSceneRef = el;
             }}
-            className={nextButton ? "next-scene" : "change-next-scene"}
+            className={nextButton ? "next-scene" : "toggle-next-scene"}
           >
             Next
           </button>

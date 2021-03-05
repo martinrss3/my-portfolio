@@ -1,41 +1,14 @@
-.container-scene2 {
+.bg-scene2 {
   background-image: url("../images/backgrounds/bg-scene2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
 }
 
-.image-scene2 {
+.img-scene2 {
   content: url("../images/me/22.png");
-  position: absolute;
-  opacity: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-height: 100vh;
-  margin: 0 auto;
-  overflow: visible;
-  max-width: 100%;
   transform: rotateY(180deg);
 }
 
-.change-image-scene2 {
+.img-scene2-chg {
   content: url("../images/me/03.png");
-  position: absolute;
-  opacity: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-height: 100vh;
-  margin: 0 auto;
-  overflow: visible;
-  max-width: 100%;
   transform: rotateY(180deg);
 }
 
@@ -70,58 +43,16 @@
   display: none;
 }
 
-.speech-bubble-scene2 {
-  content: url("../images/speechBubbles/speech-bubble1.png");
-  z-index: 1;
-  transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  position: absolute;
-  width: 50%;
-  top: 3vw;
-  left: 50%;
+.txt-scene2 {
+  background-image: url("../images/speechBubbles/speech-bubble1.png");
 }
 
-.speech-bubble-scene2-changed {
-  content: url("../images/speechBubbles/speech-bubble4.png");
-  z-index: 1;
+.txt-scene2-chg {
+  background-image: url("../images/speechBubbles/speech-bubble4.png");
   position: absolute;
   width: 40%;
   bottom: 300px;
   right: -5%;
-  transform: rotateY(180deg) rotateZ(20deg);
-  animation: fade 7s forwards;
-}
-
-.text-scene2 {
-  z-index: 2;
-  position: absolute;
-  width: 50%;
-  top: 8vw;
-  left: 50%;
-  font-size: 2.7vw;
-  font-weight: bold;
-  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
-  white-space: pre;
-  text-align: center;
-  padding: 20px;
-}
-
-.change-text-scene2 {
-  z-index: 2;
-  position: absolute;
-  width: 60%;
-  bottom: 38vw;
-  left: 47%;
-  font-size: 2.5vw;
-  font-weight: bold;
-  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
-  white-space: pre;
-  text-align: center;
-  text-shadow: 2px 2px 4px red;
-  transform: rotate(-13deg);
-  opacity: 0;
-  animation: fadeText 4s forwards;
-  animation-delay: 1.5s;
 }
 
 @keyframes fadeText {
@@ -133,52 +64,5 @@
   50%,
   75% {
     opacity: 1;
-  }
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 599px) {
-  .container-scene2 {
-    background-position: right;
-    max-width: 600px;
-    margin: auto;
-  }
-
-  .main-image-scene2 {
-    max-height: 510px;
-    max-width: 150%;
-    margin: auto;
-    bottom: 80px;
-  }
-
-  .speech-bubble-scene2 {
-    width: 60%;
-    left: 40%;
-    top: 15%;
-  }
-
-  .typed-scene2 {
-    font-size: 2.8vw;
-    top: 16%;
-    left: 46%;
-  }
-
-  .next-scene2 {
-    margin-right: 2rem;
-    width: 100px;
-    height: 50px;
-    font-size: 1.7rem;
-    padding: 0rem 0rem;
-    bottom: 4rem;
-  }
-
-  .back-scene2 {
-    margin-left: 2rem;
-    width: 100px;
-    height: 50px;
-    font-size: 1.7rem;
-    padding: 0rem 0rem;
-    left: 0;
-    bottom: 4rem;
   }
 }
