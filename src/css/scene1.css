@@ -1,7 +1,6 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/backgrounds/bg-scene1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,8 +10,11 @@
   animation-duration: 0.3s;
 }
 
+.bg-scene1 {
+  background-image: url("../images/backgrounds/bg-scene1.jpg");
+}
+
 .main-image {
-  content: url("../images/me/01.png");
   max-width: 100%;
   max-height: 100vh;
   position: fixed;
@@ -23,8 +25,11 @@
   margin: 0 auto;
 }
 
-.change-main-image {
-  content: url("../images/me/24.png");
+.img-scene1 {
+  content: url("../images/me/01.png");
+}
+
+.toggle-main-image {
   max-width: 100%;
   max-height: 100vh;
   position: fixed;
@@ -37,6 +42,10 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.3s;
+}
+
+.img-scene1-chg {
+  content: url("../images/me/24.png");
 }
 
 @keyframes fadeInOpacity {
@@ -53,8 +62,7 @@ el {
   text-shadow: 2px 2px 2px black;
 }
 
-.text-scene1 {
-  background-image: url("../images/speechBubbles/speech-bubble1.png");
+.text {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -70,8 +78,11 @@ el {
   right: 15vw;
 }
 
-.toogle-text-scene1 {
+.txt-scene1 {
   background-image: url("../images/speechBubbles/speech-bubble1.png");
+}
+
+.toggle-text {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -87,17 +98,21 @@ el {
   right: 15vw;
 }
 
+.txt-scene1-chg {
+  background-image: url("../images/speechBubbles/speech-bubble1.png");
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .main-image {
     bottom: 50px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     font-size: 16px;
     width: 270px;
     height: 220px;
@@ -105,7 +120,7 @@ el {
     right: -20vw;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 16px;
     width: 270px;
     height: 220px;
@@ -120,16 +135,16 @@ el {
     bottom: 0;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 0;
   }
 
-  .text-scene1 {
+  .text {
     top: -15px;
     right: 5vw;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     top: -15px;
     right: 5vw;
   }
@@ -141,11 +156,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     font-size: 16px;
     width: 270px;
     height: 220px;
@@ -153,7 +168,7 @@ el {
     right: -10vw;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 16px;
     width: 270px;
     height: 220px;
@@ -164,7 +179,7 @@ el {
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .text-scene1 {
+  .text {
     font-size: 25px;
     width: 500px;
     height: 350px;
@@ -173,7 +188,7 @@ el {
     top: 10px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 25px;
     width: 500px;
     height: 350px;
@@ -185,11 +200,11 @@ el {
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .text-scene1 {
+  .text {
     right: 30px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     right: 30px;
   }
 }
@@ -212,7 +227,7 @@ el {
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
-  .text-scene1 {
+  .text {
     font-size: 28px;
     width: 520px;
     height: 380px;
@@ -221,7 +236,7 @@ el {
     top: 5px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 28px;
     width: 520px;
     height: 380px;
@@ -233,20 +248,20 @@ el {
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
-  .toogle-text-scene1 {
+  .toggle-text {
     padding-top: 85px;
   }
 }
 
 @media only screen and (min-width: 1920px) and (max-device-height: 1080px) {
-  .text-scene1 {
+  .text {
     width: 700px;
     height: 500px;
     font-size: 40px;
     padding-top: 35px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 700px;
     height: 500px;
     font-size: 40px;
@@ -255,7 +270,7 @@ el {
 }
 
 @media only screen and (min-width: 3840px) and (max-device-height: 2160px) {
-  .text-scene1 {
+  .text {
     width: 1300px;
     height: 1000px;
     font-size: 70px;
@@ -263,7 +278,7 @@ el {
     top: 150px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 1300px;
     height: 1000px;
     font-size: 70px;
@@ -283,7 +298,7 @@ el {
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     font-size: 16px;
     width: 270px;
     height: 220px;
@@ -291,7 +306,7 @@ el {
     right: 10vw;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 16px;
     width: 270px;
     height: 220px;
@@ -306,7 +321,7 @@ el {
 
 /* iPhone 6, 7, 8 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     font-size: 16px;
     width: 310px;
     height: 250px;
@@ -314,7 +329,7 @@ el {
     right: 10vw;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 16px;
     width: 310px;
     height: 250px;
@@ -328,11 +343,11 @@ el {
     bottom: 70px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 70px;
   }
 
-  .text-scene1 {
+  .text {
     font-size: 16px;
     width: 310px;
     height: 250px;
@@ -341,7 +356,7 @@ el {
     top: 50px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 16px;
     width: 310px;
     height: 250px;
@@ -353,11 +368,11 @@ el {
 
 /* iPhone 6+, 7+, 8+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     width: 320px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 320px;
   }
 }
@@ -367,11 +382,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 320px;
     right: -10vw;
@@ -380,7 +395,7 @@ el {
     font-size: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 320px;
     right: -10vw;
@@ -392,7 +407,7 @@ el {
 
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  .text-scene1 {
+  .text {
     top: 0;
     width: 350px;
     height: 250px;
@@ -401,7 +416,7 @@ el {
     font-size: 19px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     top: 0;
     width: 350px;
     height: 250px;
@@ -416,11 +431,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     top: 150px;
@@ -429,7 +444,7 @@ el {
     padding-top: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     top: 150px;
@@ -448,11 +463,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 370px;
     height: 290px;
     top: 150px;
@@ -461,7 +476,7 @@ el {
     padding-top: 30px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 370px;
     height: 290px;
     top: 150px;
@@ -477,14 +492,14 @@ el {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     width: 320px;
     top: 70px;
     right: -15vw;
     padding-top: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 320px;
     top: 70px;
     right: -15vw;
@@ -494,23 +509,23 @@ el {
 
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  .text-scene1 {
+  .text {
     right: 5vw;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     right: 5vw;
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  .text-scene1 {
+  .text {
     width: 320px;
     top: 60px;
     padding-top: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 320px;
     top: 60px;
     padding-top: 35px;
@@ -527,11 +542,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 370px;
     height: 290px;
     top: 0;
@@ -540,7 +555,7 @@ el {
     padding-top: 30px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 370px;
     height: 290px;
     top: 0;
@@ -552,7 +567,7 @@ el {
 
 /* Galaxy Note 9 DPR 1 ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 846px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1) {
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     right: 15vw;
@@ -561,7 +576,7 @@ el {
     top: 2px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     right: 15vw;
@@ -576,11 +591,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 400px;
     height: 300px;
     right: -10vw;
@@ -589,7 +604,7 @@ el {
     padding-top: 30px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 400px;
     height: 300px;
     right: -10vw;
@@ -601,7 +616,7 @@ el {
 
 /* Galaxy Note 9 DPR 2 ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 846px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     right: 15vw;
@@ -610,7 +625,7 @@ el {
     top: 2px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     right: 15vw;
@@ -625,11 +640,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 400px;
     height: 300px;
     right: -10vw;
@@ -638,7 +653,7 @@ el {
     padding-top: 30px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 400px;
     height: 300px;
     right: -10vw;
@@ -650,7 +665,7 @@ el {
 
 /* Galaxy S9 DPR 4 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 740px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 4) {
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     right: 15vw;
@@ -659,7 +674,7 @@ el {
     top: 2px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     right: 15vw;
@@ -675,11 +690,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     right: -15vw;
@@ -688,7 +703,7 @@ el {
     padding-top: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     right: -15vw;
@@ -704,11 +719,11 @@ el {
     bottom: 70px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 70px;
   }
 
-  .text-scene1 {
+  .text {
     font-size: 20px;
     width: 350px;
     height: 250px;
@@ -717,7 +732,7 @@ el {
     top: 50px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     font-size: 20px;
     width: 350px;
     height: 250px;
@@ -733,11 +748,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     right: -10vw;
@@ -746,7 +761,7 @@ el {
     padding-top: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     right: -10vw;
@@ -758,7 +773,7 @@ el {
 
 /* Laptop with MDPI screen DPR 1 ----------- */
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) and (-webkit-device-pixel-ratio: 1) {
-  .text-scene1 {
+  .text {
     width: 600px;
     height: 450px;
     right: 5vw;
@@ -766,7 +781,7 @@ el {
     padding-top: 40px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 600px;
     height: 450px;
     right: 5vw;
@@ -777,7 +792,7 @@ el {
 
 /* LG Optimus L70 DPR 1 ----------- */
 @media only screen and (min-device-width: 384px) and (max-device-height: 640px) and (orientation: landscape) {
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     top: 5px;
@@ -785,7 +800,7 @@ el {
     font-size: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     top: 5px;
@@ -799,11 +814,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     top: 0px;
@@ -812,7 +827,7 @@ el {
     padding-top: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     top: 10px;
@@ -824,7 +839,7 @@ el {
 
 /* Microsoft Lumia 550 Windows Phone ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     padding-top: 15px;
@@ -832,7 +847,7 @@ el {
     right: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     padding-top: 35px;
@@ -846,11 +861,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     top: 0px;
@@ -859,7 +874,7 @@ el {
     padding-top: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     top: 10px;
@@ -871,7 +886,7 @@ el {
 
 /* Microsoft Lumia 950 Windows Phone ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 4) {
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     padding-top: 15px;
@@ -879,7 +894,7 @@ el {
     right: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     padding-top: 35px;
@@ -893,11 +908,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     top: 0px;
@@ -906,7 +921,7 @@ el {
     padding-top: 15px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     top: 10px;
@@ -918,7 +933,7 @@ el {
 
 /* Nexus 10 ----------- */
 @media only screen and (min-device-width: 800px) and (max-device-height: 1280px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     width: 650px;
     height: 550px;
     font-size: 35px;
@@ -927,7 +942,7 @@ el {
     right: 0;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 650px;
     height: 550px;
     font-size: 35px;
@@ -938,7 +953,7 @@ el {
 }
 
 @media only screen and (min-device-width: 800px) and (max-device-height: 1280px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  .text-scene1 {
+  .text {
     width: 650px;
     height: 550px;
     top: 30px;
@@ -946,7 +961,7 @@ el {
     padding-top: 70px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 650px;
     height: 550px;
     top: 80px;
@@ -961,11 +976,11 @@ el {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     top: 120px;
     width: 350px;
     height: 250px;
@@ -974,7 +989,7 @@ el {
     padding-top: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     top: 120px;
     width: 350px;
     height: 250px;
@@ -986,7 +1001,7 @@ el {
 
 /* Nexus 7 ----------- */
 @media only screen and (min-device-width: 600px) and (max-device-height: 960px) and (orientation: portrait) {
-  .text-scene1 {
+  .text {
     width: 450px;
     height: 350px;
     top: 80px;
@@ -994,7 +1009,7 @@ el {
     padding-top: 35px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 450px;
     height: 350px;
     top: 80px;
@@ -1004,7 +1019,7 @@ el {
 }
 
 @media only screen and (min-device-width: 600px) and (max-device-height: 960px) and (orientation: landscape) {
-  .text-scene1 {
+  .text {
     width: 500px;
     height: 400px;
     top: 0;
@@ -1012,7 +1027,7 @@ el {
     font-size: 25px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 500px;
     height: 350px;
     top: 0;
@@ -1021,17 +1036,17 @@ el {
   }
 }
 
-/* Piexel 2 ----------- */
+/* Pixel 2 ----------- */
 @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) {
   .main-image {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     top: 60px;
@@ -1040,7 +1055,7 @@ el {
     font-size: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     top: 60px;
@@ -1051,7 +1066,7 @@ el {
 }
 
 @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) {
-  .text-scene1 {
+  .text {
     width: 400px;
     height: 250px;
     top: 0;
@@ -1059,7 +1074,7 @@ el {
     font-size: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 400px;
     height: 250px;
     top: 0;
@@ -1068,17 +1083,17 @@ el {
   }
 }
 
-/* Piexel 2 XL ----------- */
+/* Pixel 2 XL ----------- */
 @media only screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: portrait) {
   .main-image {
     bottom: 80px;
   }
 
-  .change-main-image {
+  .toggle-main-image {
     bottom: 80px;
   }
 
-  .text-scene1 {
+  .text {
     width: 350px;
     height: 250px;
     top: 150px;
@@ -1087,7 +1102,7 @@ el {
     font-size: 20px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 350px;
     height: 250px;
     top: 150px;
@@ -1098,19 +1113,18 @@ el {
 }
 
 @media only screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: landscape) {
-  .text-scene1 {
+  .text {
     right: 10vw;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     right: 10vw;
   }
 }
 
-
 /* Laptop Screen 1 ----------- */
 @media only screen and (min-device-width: 1280px) and (max-device-height: 1024px) {
-  .text-scene1 {
+  .text {
     width: 600px;
     height: 450px;
     right: 5vw;
@@ -1118,7 +1132,7 @@ el {
     padding-top: 40px;
   }
 
-  .toogle-text-scene1 {
+  .toggle-text {
     width: 600px;
     height: 450px;
     right: 5vw;
@@ -1127,4 +1141,30 @@ el {
   }
 }
 
-/* Laptop Screen 2 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 760px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .main-image {
+    bottom: 80px;
+  }
+
+  .toggle-main-image {
+    bottom: 80px;
+  }
+
+  .text {
+    width: 350px;
+    top: 30vw;
+    right: -15vw;
+  }
+
+  .toggle-text {
+    width: 350px;
+    top: 30vw;
+    right: -15vw;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 760px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .toggle-main-image {
+    top: 0;
+  }
+}

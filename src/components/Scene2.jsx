@@ -9,7 +9,6 @@ import "../css/scene2.css";
 
 export const Scene2 = () => {
   let imageRef = useRef(null);
-  let speechBubble = useRef(null);
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
@@ -18,9 +17,9 @@ export const Scene2 = () => {
   const thirdSpeech = "Hey you! \n You will never \n get the job...";
   const fourthSpeech = "\n What..?";
 
-  const [changeMainImage, setChangeMainImage] = useState(false);
+  const [mainImage, setMainImage] = useState(false);
   const [image2, setImage2] = useState(false);
-  const [speechBubbles, setSpeechBubbles] = useState(false);
+  // const [speechBubbles, setSpeechBubbles] = useState(false);
   const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
 
@@ -33,7 +32,7 @@ export const Scene2 = () => {
     });
 
     TweenMax.fromTo(
-      [speechBubble, nextScene, backScene],
+      [nextScene, backScene],
       1,
       {
         delay: 2,
@@ -50,13 +49,15 @@ export const Scene2 = () => {
   }, []);
 
   return (
-    <div className="container-scene2">
+    <div className="container bg-scene2">
       <ReactHowler src={BreakBooty} playing={false} loop={true} />
       <img
         ref={(el) => {
           imageRef = el;
         }}
-        className={changeMainImage ? "change-image-scene2" : "image-scene2"}
+        className={
+          mainImage ? "toggle-main-image img-scene2-chg" : "main-image img-scene2"
+        }
         alt="me"
       />
       <div>
@@ -66,21 +67,25 @@ export const Scene2 = () => {
         />
       </div>
       <div
-        ref={(el) => {
-          speechBubble = el;
-        }}
+        // ref={(el) => {
+        //   speechBubble = el;
+        // }}
       >
-        <img
+        {/* <img
           className={
             speechBubbles
               ? "speech-bubble-scene2-changed"
               : "speech-bubble-scene2"
           }
           alt="speech-bubble"
-        />
+        /> */}
         <div>
           <Delay wait={1200}>
-            <div className={text ? "change-text-scene2" : "text-scene2"}>
+            <div
+              className={
+                text ? "toggle-text txt-scene2-chg" : "text txt-scene2"
+              }
+            >
               <Typewriter
                 options={{
                   strings: [firstSpeech, secondSpeech],
@@ -92,19 +97,17 @@ export const Scene2 = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .callFunction(() => {
-                      setSpeechBubbles(!speechBubbles);
                       setImage2(!image2);
                       setText(!text);
                     })
                     .typeString(thirdSpeech)
                     .pauseFor(2500)
                     .callFunction(() => {
-                      setChangeMainImage(!changeMainImage);
+                      setMainImage(!mainImage);
                     })
                     .deleteChars(45)
                     .callFunction(() => {
                       setImage2(image2);
-                      setSpeechBubbles(speechBubbles);
                       setText(text);
                     })
                     .typeString(fourthSpeech)
