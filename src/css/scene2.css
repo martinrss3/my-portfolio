@@ -45,6 +45,7 @@
 
 .txt-scene2 {
   background-image: url("../images/speechBubbles/speech-bubble1.png");
+  padding-top: 80px !important;
 }
 
 .txt-scene2-chg {
@@ -53,6 +54,7 @@
   width: 40%;
   bottom: 300px;
   right: -5%;
+  padding-top: 100px !important;
 }
 
 @keyframes fadeText {
