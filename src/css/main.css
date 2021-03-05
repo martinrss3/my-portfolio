@@ -264,3 +264,43 @@ body {
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
   /* Styles */
 }
+
+/* Galaxy Note 9 DPR 1 ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 846px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1) {
+  .next-scene {
+    bottom: 0;
+    margin-right: 20px;
+    font-size: 20px;
+    width: 100px;
+  }
+}
+
+/* Galaxy S9 DPR  ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 740px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 4) {
+  .next-scene {
+    bottom: 0;
+    margin-right: 20px;
+    font-size: 20px;
+    width: 100px;
+  }
+}
+
+/* Laptop with MDPI screeb DPR 1 ----------- */
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) and (-webkit-device-pixel-ratio: 1) {
+  .next-scene {
+    bottom: 0;
+    margin-right: 30px;
+    font-size: 30px;
+    width: 150px;
+  }
+}
+
+/* LG Optimus L70 DPR 1 ----------- */
+@media only screen and (min-device-width: 384px) and (max-device-height: 640px) and (orientation: landscape) {
+  .next-scene {
+    bottom: 0;
+    margin-right: 15px;
+    font-size: 18px;
+    width: 100px;
+  }
+}
