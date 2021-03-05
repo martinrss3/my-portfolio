@@ -85,7 +85,6 @@ el {
   position: fixed;
   padding-top: 55px;
   right: 15vw;
-  border: 5px solid indigo;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -916,3 +915,216 @@ el {
     padding-top: 35px;
   }
 }
+
+/* Nexus 10 ----------- */
+@media only screen and (min-device-width: 800px) and (max-device-height: 1280px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .text-scene1 {
+    width: 650px;
+    height: 550px;
+    font-size: 35px;
+    padding-top: 80px;
+    top: -25px;
+    right: 0;
+  }
+
+  .toogle-text-scene1 {
+    width: 650px;
+    height: 550px;
+    font-size: 35px;
+    padding-top: 115px;
+    top: -25px;
+    right: 0;
+  }
+}
+
+@media only screen and (min-device-width: 800px) and (max-device-height: 1280px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .text-scene1 {
+    width: 650px;
+    height: 550px;
+    top: 30px;
+    font-size: 35px;
+    padding-top: 70px;
+  }
+
+  .toogle-text-scene1 {
+    width: 650px;
+    height: 550px;
+    top: 80px;
+    font-size: 35px;
+    padding-top: 115px;
+  }
+}
+
+/* Nexus 5X ----------- */
+@media only screen and (min-device-width: 412px) and (max-device-height: 732px) and (orientation: portrait) {
+  .main-image {
+    bottom: 80px;
+  }
+
+  .change-main-image {
+    bottom: 80px;
+  }
+
+  .text-scene1 {
+    top: 120px;
+    width: 350px;
+    height: 250px;
+    right: -10vw;
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .toogle-text-scene1 {
+    top: 120px;
+    width: 350px;
+    height: 250px;
+    right: -10vw;
+    font-size: 20px;
+    padding-top: 35px;
+  }
+}
+
+/* Nexus 7 ----------- */
+@media only screen and (min-device-width: 600px) and (max-device-height: 960px) and (orientation: portrait) {
+  .text-scene1 {
+    width: 450px;
+    height: 350px;
+    top: 80px;
+    right: -8vw;
+    padding-top: 35px;
+  }
+
+  .toogle-text-scene1 {
+    width: 450px;
+    height: 350px;
+    top: 80px;
+    right: -8vw;
+    padding-top: 60px;
+  }
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-height: 960px) and (orientation: landscape) {
+  .text-scene1 {
+    width: 500px;
+    height: 400px;
+    top: 0;
+    padding-top: 45px;
+    font-size: 25px;
+  }
+
+  .toogle-text-scene1 {
+    width: 500px;
+    height: 350px;
+    top: 0;
+    padding-top: 55px;
+    font-size: 25px;
+  }
+}
+
+/* Piexel 2 ----------- */
+@media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) {
+  .main-image {
+    bottom: 80px;
+  }
+
+  .change-main-image {
+    bottom: 80px;
+  }
+
+  .text-scene1 {
+    width: 350px;
+    height: 250px;
+    top: 60px;
+    right: -8vw;
+    padding-top: 15px;
+    font-size: 20px;
+  }
+
+  .toogle-text-scene1 {
+    width: 350px;
+    height: 250px;
+    top: 60px;
+    right: -8vw;
+    padding-top: 35px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) {
+  .text-scene1 {
+    width: 400px;
+    height: 250px;
+    top: 0;
+    padding-top: 15px;
+    font-size: 20px;
+  }
+
+  .toogle-text-scene1 {
+    width: 400px;
+    height: 250px;
+    top: 0;
+    padding-top: 35px;
+    font-size: 20px;
+  }
+}
+
+/* Piexel 2 XL ----------- */
+@media only screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: portrait) {
+  .main-image {
+    bottom: 80px;
+  }
+
+  .change-main-image {
+    bottom: 80px;
+  }
+
+  .text-scene1 {
+    width: 350px;
+    height: 250px;
+    top: 150px;
+    right: -8vw;
+    padding-top: 15px;
+    font-size: 20px;
+  }
+
+  .toogle-text-scene1 {
+    width: 350px;
+    height: 250px;
+    top: 150px;
+    right: -8vw;
+    padding-top: 35px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: landscape) {
+  .text-scene1 {
+    right: 10vw;
+  }
+
+  .toogle-text-scene1 {
+    right: 10vw;
+  }
+}
+
+
+/* Laptop Screen 1 ----------- */
+@media only screen and (min-device-width: 1280px) and (max-device-height: 1024px) {
+  .text-scene1 {
+    width: 600px;
+    height: 450px;
+    right: 5vw;
+    font-size: 33px;
+    padding-top: 40px;
+  }
+
+  .toogle-text-scene1 {
+    width: 600px;
+    height: 450px;
+    right: 5vw;
+    font-size: 33px;
+    padding-top: 70px;
+  }
+}
+
+/* Laptop Screen 2 ----------- */
