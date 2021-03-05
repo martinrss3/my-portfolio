@@ -19,7 +19,6 @@ export const Scene2 = () => {
 
   const [mainImage, setMainImage] = useState(false);
   const [image2, setImage2] = useState(false);
-  // const [speechBubbles, setSpeechBubbles] = useState(false);
   const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
 
@@ -51,75 +50,65 @@ export const Scene2 = () => {
   return (
     <div className="container bg-scene2">
       <ReactHowler src={BreakBooty} playing={false} loop={true} />
-      <img
-        ref={(el) => {
-          imageRef = el;
-        }}
-        className={
-          mainImage ? "toggle-main-image img-scene2-chg" : "main-image img-scene2"
-        }
-        alt="me"
-      />
+
+      <div>
+        <img
+          ref={(el) => {
+            imageRef = el;
+          }}
+          className={
+            mainImage
+              ? "toggle-main-image img-scene2-chg"
+              : "main-image img-scene2"
+          }
+          alt="me"
+        />
+      </div>
+
       <div>
         <img
           className={image2 ? "image2-scene2" : "change-image2-scene2"}
           alt="bad guy"
         />
       </div>
-      <div
-        // ref={(el) => {
-        //   speechBubble = el;
-        // }}
-      >
-        {/* <img
-          className={
-            speechBubbles
-              ? "speech-bubble-scene2-changed"
-              : "speech-bubble-scene2"
-          }
-          alt="speech-bubble"
-        /> */}
-        <div>
-          <Delay wait={1200}>
-            <div
-              className={
-                text ? "toggle-text txt-scene2-chg" : "text txt-scene2"
-              }
-            >
-              <Typewriter
-                options={{
-                  strings: [firstSpeech, secondSpeech],
-                  autoStart: true,
-                  delay: 50,
-                  deleteSpeed: 10,
-                  pauseFor: 2000,
-                }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .callFunction(() => {
-                      setImage2(!image2);
-                      setText(!text);
-                    })
-                    .typeString(thirdSpeech)
-                    .pauseFor(2500)
-                    .callFunction(() => {
-                      setMainImage(!mainImage);
-                    })
-                    .deleteChars(45)
-                    .callFunction(() => {
-                      setImage2(image2);
-                      setText(text);
-                    })
-                    .typeString(fourthSpeech)
-                    .callFunction(() => {
-                      setButtons(!buttons);
-                    });
-                }}
-              />
-            </div>
-          </Delay>
+
+      <Delay wait={1200}>
+        <div
+          className={text ? "toggle-text txt-scene2-chg" : "text txt-scene2"}
+        >
+          <Typewriter
+            options={{
+              strings: [firstSpeech, secondSpeech],
+              autoStart: true,
+              delay: 50,
+              deleteSpeed: 10,
+              pauseFor: 2000,
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .callFunction(() => {
+                  setImage2(!image2);
+                  setText(!text);
+                })
+                .typeString(thirdSpeech)
+                .pauseFor(2500)
+                .callFunction(() => {
+                  setMainImage(!mainImage);
+                })
+                .deleteChars(45)
+                .callFunction(() => {
+                  setImage2(image2);
+                  setText(text);
+                })
+                .typeString(fourthSpeech)
+                .callFunction(() => {
+                  setButtons(!buttons);
+                });
+            }}
+          />
         </div>
-      </div>
+      </Delay>
+
       <div>
         <Link to="/">
           <button
