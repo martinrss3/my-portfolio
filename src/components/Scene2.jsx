@@ -18,7 +18,8 @@ export const Scene2 = () => {
   const fourthSpeech = "\n What..?";
 
   const [mainImage, setMainImage] = useState(false);
-  const [image2, setImage2] = useState(false);
+  const [mainImage2, setMainImage2] = useState(false);
+  const [mainImage3, setMainImage3] = useState(false);
   const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
 
@@ -67,8 +68,23 @@ export const Scene2 = () => {
 
       <div>
         <img
-          className={image2 ? "image2-scene2" : "change-image2-scene2"}
+          className={
+            mainImage2
+              ? "main-image img2-scene2"
+              : "toggle-main-image img2-scene2-chg"
+          }
           alt="bad guy"
+        />
+      </div>
+
+      <div>
+        <img
+          className={
+            mainImage3
+              ? "main-image img3-scene3"
+              : "toggle-main-image img3-scene3-chg"
+          }
+          alt="me"
         />
       </div>
 
@@ -87,7 +103,8 @@ export const Scene2 = () => {
             onInit={(typewriter) => {
               typewriter
                 .callFunction(() => {
-                  setImage2(!image2);
+                  setMainImage(!mainImage);
+                  setMainImage2(!mainImage2);
                   setText(!text);
                 })
                 .typeString(thirdSpeech)
@@ -97,7 +114,8 @@ export const Scene2 = () => {
                 })
                 .deleteChars(45)
                 .callFunction(() => {
-                  setImage2(image2);
+                  setMainImage2(mainImage2);
+                  setMainImage3(!mainImage3);
                   setText(text);
                 })
                 .typeString(fourthSpeech)
