@@ -16,12 +16,10 @@
 }
 
 .main-image {
-  max-width: 100%;
   max-height: 100vh;
   position: fixed;
   right: 0;
   bottom: 0;
-  left: 0;
   margin: 0 auto;
 }
 
@@ -34,7 +32,6 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  /* left: 0; */
   margin: 0 auto;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
@@ -65,43 +62,15 @@ el {
   background-repeat: no-repeat;
   background-size: contain;
   font-family: SequentialistBB, cursive, Helvetica, sans-serif;
-  font-size: 25px;
   font-weight: bold;
   text-align: center;
   white-space: pre;
-  height: 350px;
-  width: 500px;
   position: fixed;
-  padding-top: 40px;
-  right: 15vw;
-}
-
-.txt-scene1 {
-  background-image: url("../images/speechBubbles/speech-bubble1.png");
-}
-
-/* .toggle-text {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  white-space: pre;
-  height: 350px;
-  width: 500px;
-  position: fixed;
-  padding-top: 55px;
-  right: 15vw;
-} */
-
-.txt-scene1-chg {
-  background-image: url("../images/speechBubbles/speech-bubble1.png");
+  right: 0;
+  top: 0;
 }
 
 .toggle-text {
-  border: 5px solid turquoise;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -114,19 +83,37 @@ el {
   top: 0;
 }
 
+.txt-scene1 {
+  background-image: url("../images/speechBubbles/speech-bubble1.png");
+}
+
+.txt-scene1-chg {
+  background-image: url("../images/speechBubbles/speech-bubble1.png");
+}
+
 .Typewriter {
   position: relative;
   top: 70px;
-  border: 5px solid palegreen;
   text-align: center;
   font-size: 2rem;
 }
 
-/* Extra super small devices (phones, 320px and down) */
+/* Ultra Super Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 399px) {
+  .main-image {
+    left: -100px;
+    height: 90vh;
+  }
+
   .toggle-main-image {
     left: -100px;
     height: 90vh;
+  }
+
+  .text {
+    right: -10vw;
+    width: 300px;
+    height: 200px;
   }
 
   .toggle-text {
@@ -136,16 +123,27 @@ el {
   }
 
   .Typewriter {
-    top: 27px;
+    top: 30px;
     font-size: 1rem;
   }
 }
 
-/* Extra small devices (phones, 400px and down) */
+/* Super Extra small devices (phones, 400px and down) */
 @media only screen and (min-width: 400px) and (max-width: 499px) {
+  .main-image {
+    left: -150px;
+    height: 80vh;
+  }
+
   .toggle-main-image {
     left: -150px;
     height: 80vh;
+  }
+
+  .text {
+    right: -10vw;
+    width: 400px;
+    height: 300px;
   }
 
   .toggle-text {
@@ -155,15 +153,25 @@ el {
   }
 
   .Typewriter {
-    top: 45px;
+    top: 50px;
     font-size: 1.5rem;
   }
 }
 
 /* Extra small devices (phones, 500px and down) */
 @media only screen and (min-width: 500px) {
+  .main-image {
+    right: 4vw;
+  }
+
   .toggle-main-image {
     right: 4vw;
+  }
+
+  .text {
+    right: -10vw;
+    width: 400px;
+    height: 300px;
   }
 
   .toggle-text {
@@ -173,13 +181,19 @@ el {
   }
 
   .Typewriter {
-    top: 45px;
+    top: 50px;
     font-size: 1.5rem;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .text {
+    right: -5vw;
+    width: 400px;
+    height: 300px;
+  }
+
   .toggle-text {
     right: -5vw;
     width: 400px;
@@ -187,27 +201,47 @@ el {
   }
 
   .Typewriter {
-    top: 45px;
+    top: 50px;
     font-size: 1.5rem;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .text {
+    right: -5vw;
+    width: 500px;
+    height: 350px;
+  }
+
   .toggle-text {
-    right: 1vw;
+    right: -5vw;
     width: 500px;
     height: 350px;
   }
 
   .Typewriter {
-    top: 40px;
-    font-size: 2rem;
+    top: 50px;
+    font-size: 1.8rem;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .main-image {
+    left: 0;
+  }
+
+  .toggle-main-image {
+    left: 0;
+  }
+
+  .text {
+    right: 7vw;
+    width: 550px;
+    height: 350px;
+  }
+
   .toggle-text {
     right: 7vw;
     width: 550px;
@@ -215,15 +249,25 @@ el {
   }
 
   .Typewriter {
-    top: 45px;
-    font-size: 2rem;
+    top: 50px;
+    font-size: 1.8rem;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .main-image {
+    left: 0;
+  }
+
   .toggle-main-image {
     left: 0;
+  }
+
+  .text {
+    right: 8vw;
+    width: 600px;
+    height: 400px;
   }
 
   .toggle-text {
@@ -233,7 +277,7 @@ el {
   }
 
   .Typewriter {
-    top: 60px;
+    top: 65px;
     font-size: 2rem;
   }
 }

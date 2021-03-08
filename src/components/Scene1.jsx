@@ -11,7 +11,7 @@ export const Scene1 = () => {
   let imageRef = useRef(null);
   let nextSceneRef = useRef(null);
 
-  const firstSpeech = `Hi! \n My name is <el>Martín</el> \n and I am a \n Full Stack \n Developer...`;
+  const firstSpeech = `Hi! My name is <el>Martín</el> \n and I am a \n Full Stack \n Developer...`;
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
 
   const [mainImage, setMainImage] = useState(false);
