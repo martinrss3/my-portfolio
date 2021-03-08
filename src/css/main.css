@@ -33,6 +33,81 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  overflow: hidden;
+}
+
+.main-image {
+  max-height: 100vh;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.toggle-main-image {
+  max-height: 100vh;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  white-space: pre;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.toggle-text {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  white-space: pre;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.Typewriter {
+  position: relative;
+  top: 70px;
+  text-align: center;
+  font-size: 2rem;
+}
+
 .next-scene {
   z-index: 3;
   margin: 1em 1em;
@@ -106,7 +181,6 @@
   display: none;
 }
 
-
 @media only screen and (max-width: 600px) {
   .next-scene {
     bottom: 70px;
@@ -116,5 +190,189 @@
     font-size: 1.5rem;
     padding: 0;
     background-size: 20px, 100%;
+  }
+}
+
+/* Ultra Super Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 399px) {
+  .main-image {
+    left: -100px;
+    height: 90vh;
+  }
+
+  .toggle-main-image {
+    left: -100px;
+    height: 90vh;
+  }
+
+  .text {
+    right: -10vw;
+    width: 300px;
+    height: 200px;
+  }
+
+  .toggle-text {
+    right: -10vw;
+    width: 300px;
+    height: 200px;
+  }
+
+  .Typewriter {
+    top: 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Super Extra small devices (phones, 400px and down) */
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .main-image {
+    left: -150px;
+    height: 80vh;
+  }
+
+  .toggle-main-image {
+    left: -150px;
+    height: 80vh;
+  }
+
+  .text {
+    right: -10vw;
+    width: 400px;
+    height: 300px;
+  }
+
+  .toggle-text {
+    right: -10vw;
+    width: 400px;
+    height: 300px;
+  }
+
+  .Typewriter {
+    top: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (min-width: 500px) {
+  .main-image {
+    right: 4vw;
+  }
+
+  .toggle-main-image {
+    right: 4vw;
+  }
+
+  .text {
+    right: -10vw;
+    width: 400px;
+    height: 300px;
+  }
+
+  .toggle-text {
+    right: -10vw;
+    width: 400px;
+    height: 300px;
+  }
+
+  .Typewriter {
+    top: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .text {
+    right: -5vw;
+    width: 400px;
+    height: 300px;
+  }
+
+  .toggle-text {
+    right: -5vw;
+    width: 400px;
+    height: 300px;
+  }
+
+  .Typewriter {
+    top: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .text {
+    right: -5vw;
+    width: 500px;
+    height: 350px;
+  }
+
+  .toggle-text {
+    right: -5vw;
+    width: 500px;
+    height: 350px;
+  }
+
+  .Typewriter {
+    top: 50px;
+    font-size: 1.8rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main-image {
+    left: 0;
+  }
+
+  .toggle-main-image {
+    left: 0;
+  }
+
+  .text {
+    right: 7vw;
+    width: 550px;
+    height: 350px;
+  }
+
+  .toggle-text {
+    right: 7vw;
+    width: 550px;
+    height: 350px;
+  }
+
+  .Typewriter {
+    top: 50px;
+    font-size: 1.8rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main-image {
+    left: 0;
+  }
+
+  .toggle-main-image {
+    left: 0;
+  }
+
+  .text {
+    right: 8vw;
+    width: 600px;
+    height: 400px;
+  }
+
+  .toggle-text {
+    right: 8vw;
+    width: 600px;
+    height: 400px;
+  }
+
+  .Typewriter {
+    top: 65px;
+    font-size: 2rem;
   }
 }
