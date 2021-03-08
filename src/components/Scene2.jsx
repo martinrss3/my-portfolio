@@ -12,10 +12,10 @@ export const Scene2 = () => {
   let nextScene = useRef(null);
   let backScene = useRef(null);
 
-  const firstSpeech = "I love \n coding \n and make music";
-  const secondSpeech = "You can contact me \n in the menu section";
-  const thirdSpeech = "Hey you! \n You will never \n get the job...";
-  const fourthSpeech = "\n What..?";
+  const firstSpeech = `<span class="first-speech">I love \n coding \n and make music</span>`;
+  const secondSpeech = `<span class="second-speech">You can contact me \n in the menu section</span>`;
+  const thirdSpeech = `<span class="third-speech">Hey you! \n You will never \n get the job...</span>`;
+  const fourthSpeech = `<span class="fourth-speech">What..?</span>`;
 
   const [mainImage, setMainImage] = useState(false);
   const [mainImage2, setMainImage2] = useState(false);
@@ -81,8 +81,8 @@ export const Scene2 = () => {
         <img
           className={
             mainImage3
-              ? "main-image img3-scene3"
-              : "toggle-main-image img3-scene3-chg"
+              ? "main-image img3-scene2"
+              : "toggle-main-image img3-scene2-chg"
           }
           alt="me"
         />
@@ -99,6 +99,7 @@ export const Scene2 = () => {
               delay: 50,
               deleteSpeed: 10,
               pauseFor: 2000,
+              cursor: "",
             }}
             onInit={(typewriter) => {
               typewriter
