@@ -44,11 +44,6 @@
   cursor: pointer;
 }
 
-.nav-item:last-child {
-  position: absolute;
-  bottom: 0;
-}
-
 .nav-link {
   display: flex;
   align-items: center;
@@ -73,7 +68,7 @@
 .nav-link svg {
   width: 2rem;
   min-width: 2rem;
-  margin: 0 1.5rem;
+  margin: 0 1rem;
 }
 
 .fa-primary {
