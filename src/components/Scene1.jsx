@@ -62,7 +62,9 @@ export const Scene1 = () => {
       </div>
 
       <Delay wait={1200}>
-        <div className={text ? "toggle-text txt-scene1-chg" : "text txt-scene1"}>
+        <div
+          className={text ? "toggle-text txt-scene1-chg" : "text txt-scene1"}
+        >
           <Typewriter
             options={{
               strings: [firstSpeech],
