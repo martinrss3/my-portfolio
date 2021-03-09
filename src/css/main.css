@@ -85,7 +85,6 @@
   white-space: pre;
   position: fixed;
   right: 0;
-  top: 0;
 }
 
 .toggle-text {
@@ -291,6 +290,31 @@
   .txt2-scene4 {
     left: -20px;
   }
+
+  /* Scene 5 */
+  .img-scene5 {
+    max-height: 90vh;
+    bottom: 80px;
+    right: -250px;
+  }
+
+  .img2-scene5 {
+    max-height: 25vh;
+  }
+
+  .txt-scene5 {
+    bottom: 220px;
+    left: -40px;
+    width: 300px;
+    height: 200px;
+  }
+
+  .txt2-scene5 {
+    bottom: 200px;
+    left: 50px;
+    width: 300px;
+    height: 200px;
+  }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
@@ -387,6 +411,31 @@
     width: 350px;
     height: 250px;
   }
+
+  /* Scene 5 */
+  .img-scene5 {
+    max-height: 90vh;
+    bottom: 80px;
+    right: -350px;
+  }
+
+  .img2-scene5 {
+    max-height: 30vh;
+  }
+
+  .txt-scene5 {
+    bottom: 270px;
+    left: -40px;
+    width: 320px;
+    height: 220px;
+  }
+
+  .txt2-scene5 {
+    bottom: 300px;
+    left: 50px;
+    width: 360px;
+    height: 260px;
+  }
 }
 
 /* Extra small devices (phones, 500px and up) */
@@ -478,6 +527,32 @@
     width: 350px;
     height: 250px;
   }
+
+  /* Scene 5 */
+  .img-scene5 {
+    max-height: 90vh;
+    bottom: 80px;
+    right: -150px;
+  }
+
+  .img2-scene5 {
+    max-height: 40vh;
+    left: -40px;
+  }
+
+  .txt-scene5 {
+    bottom: 230px;
+    left: 0;
+    width: 420px;
+    height: 320px;
+  }
+
+  .txt2-scene5 {
+    bottom: 250px;
+    left: 125px;
+    width: 360px;
+    height: 260px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -553,6 +628,32 @@
     width: 350px;
     height: 250px;
   }
+
+  /* Scene 5 */
+  .img-scene5 {
+    max-height: 100vh;
+    bottom: 0;
+    right: -150px;
+  }
+
+  .img2-scene5 {
+    max-height: 30vh;
+    left: -40px;
+  }
+
+  .txt-scene5 {
+    bottom: 230px;
+    left: 30px;
+    width: 500px;
+    height: 400px;
+  }
+
+  .txt2-scene5 {
+    bottom: 250px;
+    left: 250px;
+    width: 400px;
+    height: 300px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -625,6 +726,32 @@
     top: 40px;
     width: 450px;
     height: 350px;
+  }
+
+  /* Scene 5 */
+  .img-scene5 {
+    max-height: 100vh;
+    bottom: 0;
+    right: -150px;
+  }
+
+  .img2-scene5 {
+    max-height: 30vh;
+    left: -40px;
+  }
+
+  .txt-scene5 {
+    bottom: 230px;
+    left: 80px;
+    width: 500px;
+    height: 400px;
+  }
+
+  .txt2-scene5 {
+    bottom: 250px;
+    left: 250px;
+    width: 400px;
+    height: 300px;
   }
 }
 
@@ -718,6 +845,32 @@
     width: 650px;
     height: 550px;
   }
+
+  /* Scene 5 */
+  .img-scene5 {
+    max-height: 100vh;
+    bottom: 0;
+    right: -600px;
+  }
+
+  .img2-scene5 {
+    max-height: 45vh;
+    left: -40px;
+  }
+
+  .txt-scene5 {
+    top: 475px;
+    left: 150px;
+    width: 600px;
+    height: 500px;
+  }
+
+  .txt2-scene5 {
+    bottom: 450px;
+    left: 375px;
+    width: 550px;
+    height: 450px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -801,6 +954,32 @@
     width: 450px;
     height: 350px;
   }
+
+  /* Scene 5 */
+  .img-scene5 {
+    max-height: 100vh;
+    bottom: 0;
+    right: -80vw;
+  }
+
+  .img2-scene5 {
+    max-height: 55vh;
+    left: -60px;
+  }
+
+  .txt-scene5 {
+    top: 20vh;
+    left: 40vw;
+    width: 600px;
+    height: 500px;
+  }
+
+  .txt2-scene5 {
+    bottom: 260px;
+    left: 350px;
+    width: 500px;
+    height: 400px;
+  }
 }
 
 /* Iphone 6/7/8 Plus Landscape */
@@ -834,29 +1013,53 @@
     height: 350px;
   }
 
-    /* Scene 4 */
-    .img-scene4 {
-      max-height: 50vh;
-      left: -220px;
-    }
-  
-    .img2-scene4 {
-      max-height: 70vh;
-      bottom: 120px;
-      left: 450px;
-    }
-  
-    .txt-scene4 {
-      top: 30vh;
-      width: 300px;
-      height: 200px;
-      left: 200px;
-    }
-  
-    .txt2-scene4 {
-      left: 300px;
-      top: 0;
-      width: 300px;
-      height: 200px;
-    }
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: -220px;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 120px;
+    left: 450px;
+  }
+
+  .txt-scene4 {
+    top: 30vh;
+    width: 300px;
+    height: 200px;
+    left: 200px;
+  }
+
+  .txt2-scene4 {
+    left: 300px;
+    top: 0;
+    width: 300px;
+    height: 200px;
+  }
+
+  /* Scene 4 */
+  .img-scene5 {
+    right: -10px;
+  }
+
+  .img2-scene5 {
+    max-height: 45vh;
+    left: -50px;
+  }
+
+  .txt-scene5 {
+    width: 350px;
+    height: 250px;
+    top: 110px;
+    left: 270px;
+  }
+
+  .txt2-scene5 {
+    top: 10px;
+    left: 170px;
+    width: 325px;
+    height: 225px;
+  }
 }

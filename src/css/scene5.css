@@ -1,96 +1,39 @@
-.container-scene5 {
+.bg-scene5 {
   background-image: url("../images/backgrounds/bg-scene5.jpg");
-  background-repeat: repeat;
-  background-position: bottom;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
 }
 
-@keyframes animate {
-  0% {
-    background-position: left 0px top 10px;
-  }
-  40% {
-    background-position: left 800px top 10px;
-  }
-}
-
-.main-image-scene5 {
+.img-scene5 {
   content: url("../images/badGuy/08.png");
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  max-height: 100%;
-  margin: 0 auto;
-  overflow: visible;
-  max-width: 100%;
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.7s;
 }
 
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.img2-scene5 {
+  content: url("../images/me/26.png");
+  transform: rotateY(180deg);
 }
 
-.speech-bubble-scene5 {
-  content: url("../images/speechBubbles/speech-bubble1.png");
-  position: absolute;
-  top: 0;
-  right: 30%;
+.txt-scene5 {
+  background-image: url("../images/speechBubbles/speech-bubble1-flip-vert.png");
 }
 
-.speech-bubble-scene5-changed {
+.txt-scene5-chg {
   display: none;
 }
 
-.text-scene5 {
-  z-index: 2;
-  position: absolute;
-  width: 50%;
-  top: 8.5vw;
-  left: 17%;
-  font-size: 3.2vw;
-  font-weight: bold;
-  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
-  white-space: pre;
-  text-align: center;
-  padding: 20px;
-  transform: rotate(-15deg);
-  text-shadow: 2px 2px 4px red;
-}
-
-.text-scene5-changed {
-  display: none;
+.txt2-scene5 {
+  background-image: url("../images/speechBubbles/speech-bubble1.png");
 }
 
 .frame {
-  position: absolute;
-  top: 30%;
-  left: 90px;
-  width: 40%;
-  height: 40%;
   background-image: url("../images/backgrounds/bg-scene5.jpg");
   background-repeat: repeat;
   background-position: bottom;
-  animation: animate1 15s linear infinite;
+  position: absolute;
   border: 8px solid black;
   box-shadow: 6px 7px 2px rgba(0, 0, 0, 0.658);
+  /* animation: animate-bg 25s linear infinite; */
 }
 
-@keyframes animate1 {
+@keyframes animate-bg {
   0% {
     background-position: right 0px top 10px;
   }
@@ -99,34 +42,161 @@
   }
 }
 
-.main-image2-scene5 {
-  content: url("../images/me/26.png");
-  transform: rotateY(180deg);
-  position: absolute;
-  bottom: 0;
-  width: 60%;
+.first-speech-scene5,
+.second-speech-scene5 {
+  position: relative;
 }
 
-.speech-bubble2-scene5 {
-  content: url("../images/speechBubbles/speech-bubble1.png");
-  z-index: 2;
-  transform: rotateY(180deg);
-  position: absolute;
-  left: 15%;
-  top: 7vw;
-  width: 50%;
+.first-speech-scene5 {
+  text-shadow: 2px 2px 6px #ff0000;
 }
 
-.text2-scene5 {
-  z-index: 2;
-  position: absolute;
-  width: 50%;
-  top: 11vw;
-  left: 15%;
-  font-size: 2.3vw;
-  font-weight: bold;
-  font-family: SequentialistBB, cursive, Helvetica, sans-serif;
-  white-space: pre;
-  text-align: center;
-  padding: 20px;
+/* Ultra Super Extra small devices (phones, 399px and down) */
+@media only screen and (max-width: 399px) {
+  .first-speech-scene5 {
+    top: 75px;
+    left: -5px;
+    font-size: 1.3rem;
+  }
+
+  .second-speech-scene5 {
+    top: -10px;
+  }
+
+  .frame {
+    width: 250px;
+    height: 150px;
+    bottom: 150px;
+  }
+}
+
+/* Super Extra small devices (phones, between 400px and 499px) */
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .first-speech-scene5 {
+    top: 70px;
+    left: -7px;
+  }
+
+  .second-speech-scene5 {
+    top: -30px;
+    font-size: 1.4rem;
+  }
+
+  .frame {
+    bottom: 200px;
+    width: 300px;
+    height: 200px;
+  }
+}
+
+/* Extra small devices (phones, 500px and up) */
+@media only screen and (min-width: 500px) {
+  .first-speech-scene5 {
+    top: 120px;
+    left: -10px;
+    font-size: 2rem;
+  }
+
+  .second-speech-scene5 {
+    top: -30px;
+    font-size: 1.4rem;
+  }
+
+  .frame {
+    width: 350px;
+    height: 250px;
+    bottom: 150px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .first-speech-scene5 {
+    top: 165px;
+    left: -10px;
+    font-size: 2.5rem;
+  }
+
+  .second-speech-scene5 {
+    top: -20px;
+    font-size: 1.4rem;
+  }
+
+  .frame {
+    width: 400px;
+    height: 300px;
+    bottom: 150px;
+    left: 90px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .second-speech-scene5 {
+    top: -30px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .first-speech-scene5 {
+    top: 210px;
+    left: -18px;
+    font-size: 3.3rem;
+  }
+
+  .second-speech-scene5 {
+    top: 15px;
+    font-size: 2rem;
+  }
+
+  .frame {
+    width: 650px;
+    height: 500px;
+    bottom: 150px;
+    left: 90px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .first-speech-scene5 {
+    top: 195px;
+    left: -20px;
+    font-size: 3rem;
+  }
+
+  .second-speech-scene5 {
+    top: -20px;
+    font-size: 1.5rem;
+  }
+
+  .frame {
+    width: 600px;
+    height: 400px;
+    bottom: 150px;
+    left: 90px;
+  }
+}
+
+/* Iphone 6/7/8 Plus Landscape */
+@media only screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+  .first-speech-scene5 {
+    top: 75px;
+    left: -10px;
+    font-size: 2rem;
+  }
+
+  .second-speech-scene5 {
+    top: -40px;
+    font-size: 1rem;
+  }
+
+  .frame {
+    width: 250px;
+    height: 150px;
+    bottom: 130px;
+    left: 90px;
+  }
 }
