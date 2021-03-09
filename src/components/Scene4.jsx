@@ -6,18 +6,18 @@ import Delay from "react-delay";
 import "../css/scene4.css";
 
 export const Scene4 = () => {
-  let mainImage1 = useRef(null);
-  let mainImage2 = useRef(null);
-  let nextScene = useRef(null);
-  let backScene = useRef(null);
+  let image1Ref = useRef(null);
+  let image2Ref = useRef(null);
+  let nextSceneRef = useRef(null);
+  let backSceneRef = useRef(null);
 
-  const firstSpeech = "What are you saying?!";
-  const secondSpeech = "Just watch...";
+  const firstSpeech = `<span class="first-speech-scene4">What are you saying?!</span>`;
+  const secondSpeech = `<span class="second-speech-scene4">Just watch...</span>`;
 
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
-    TweenMax.staggerTo([mainImage1, mainImage2], 0.9, {
+    TweenMax.staggerTo([image1Ref, image2Ref], 0.9, {
       opacity: 1,
       x: 0,
       ease: Power3.easeInOut,
@@ -25,7 +25,7 @@ export const Scene4 = () => {
     });
 
     TweenMax.fromTo(
-      [nextScene, backScene],
+      [nextSceneRef, backSceneRef],
       1,
       {
         delay: 2,
@@ -38,82 +38,70 @@ export const Scene4 = () => {
     );
 
     let tl = new TimelineLite();
-    tl.to([mainImage1], 0, { x: -700 });
-    tl.to([mainImage2], 0, { x: 700 });
+    tl.to([image1Ref], 0, { x: -700 });
+    tl.to([image2Ref], 0, { x: 700 });
   }, []);
 
   return (
-    <div className="container-scene4">
-      <div>
-        <div className="background1-scene4" />
-        <div>
-          <img
-            ref={(el) => {
-              mainImage1 = el;
+    <div className="container" style={{ backgroundColor: "black" }}>
+      <div className="bg-scene4">
+        <img
+          ref={(el) => {
+            image1Ref = el;
+          }}
+          className="main-image img-scene4"
+          alt="me"
+        />
+      </div>
+
+      <Delay wait={2000}>
+        <div className="text txt-scene4">
+          <Typewriter
+            options={{
+              delay: 50,
+              cursor: "",
             }}
-            className="main-image-scene4"
-            alt="me"
+            onInit={(typewriter) => {
+              typewriter.typeString(firstSpeech).start();
+            }}
           />
         </div>
-        <div>
-          <Delay wait={1200}>
-            <img className="speech-bubble1-scene4" alt="speech bubble" />
-          </Delay>
-          <div>
-            <Delay wait={1200}>
-              <div className="text-scene4">
-                <Typewriter
-                  options={{
-                    delay: 50,
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter.typeString(firstSpeech).start();
-                  }}
-                />
-              </div>
-            </Delay>
-          </div>
-        </div>
+      </Delay>
+
+      <div className="bg2-scene4">
+        <img
+          ref={(el) => {
+            image2Ref = el;
+          }}
+          className="main-image img2-scene4"
+          alt="bad guy"
+        />
       </div>
-      <div>
-        <div className="background2-scene4" />
-        <div>
-          <img
-            ref={(el) => {
-              mainImage2 = el;
+
+      <Delay wait={5000}>
+        <div className="text txt2-scene4">
+          <Typewriter
+            options={{
+              delay: 50,
+              cursor: "",
             }}
-            className="main-image2-scene4"
-            alt="bad guy"
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(secondSpeech)
+                .callFunction(() => {
+                  setButtons(!buttons);
+                })
+                .start();
+            }}
           />
         </div>
-        <div>
-          <Delay wait={3000}>
-            <img className="speech-bubble2-scene4" alt="speech bubble" />
-            <div>
-              <div className="text2-scene4">
-                <Typewriter
-                  options={{
-                    delay: 50,
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter
-                      .typeString(secondSpeech)
-                      .callFunction(() => {
-                        setButtons(!buttons);
-                      })
-                      .start();
-                  }}
-                />
-              </div>
-            </div>
-          </Delay>
-        </div>
-      </div>
+      </Delay>
+
       <div>
         <Link to="/scene3">
           <button
             ref={(el) => {
-              backScene = el;
+              backSceneRef = el;
             }}
             className={buttons ? "back-scene" : "back-scene-changed"}
           >
@@ -123,7 +111,7 @@ export const Scene4 = () => {
         <Link to="/scene5">
           <button
             ref={(el) => {
-              nextScene = el;
+              nextSceneRef = el;
             }}
             className={buttons ? "next-scene" : "next-scene-changed"}
           >
