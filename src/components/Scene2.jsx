@@ -9,8 +9,8 @@ import "../css/scene2.css";
 
 export const Scene2 = () => {
   let imageRef = useRef(null);
-  let nextScene = useRef(null);
-  let backScene = useRef(null);
+  let nextSceneRef = useRef(null);
+  let backSceneRef = useRef(null);
 
   const firstSpeech = `<span class="first-speech">I love \n coding \n and make music</span>`;
   const secondSpeech = `<span class="second-speech">You can contact me \n in the menu section</span>`;
@@ -32,7 +32,7 @@ export const Scene2 = () => {
     });
 
     TweenMax.fromTo(
-      [nextScene, backScene],
+      [nextSceneRef, backSceneRef],
       1,
       {
         delay: 2,
@@ -132,7 +132,7 @@ export const Scene2 = () => {
         <Link to="/">
           <button
             ref={(el) => {
-              backScene = el;
+              backSceneRef = el;
             }}
             className={buttons ? "back-scene" : "back-scene-changed"}
           >
@@ -142,7 +142,7 @@ export const Scene2 = () => {
         <Link to="/scene3">
           <button
             ref={(el) => {
-              nextScene = el;
+              nextSceneRef = el;
             }}
             className={buttons ? "next-scene" : "next-scene-changed"}
           >
