@@ -271,6 +271,26 @@
     width: 350px;
     height: 250px;
   }
+
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: -45px;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 190px;
+    left: 92px;
+  }
+
+  .txt-scene4 {
+    top: 40vh;
+  }
+
+  .txt2-scene4 {
+    left: -20px;
+  }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
@@ -342,6 +362,31 @@
     width: 450px;
     height: 350px;
   }
+
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: -20px;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 230px;
+    left: 92px;
+  }
+
+  .txt-scene4 {
+    top: 40vh;
+    width: 350px;
+    height: 250px;
+  }
+
+  .txt2-scene4 {
+    left: -40px;
+    top: 15px;
+    width: 350px;
+    height: 250px;
+  }
 }
 
 /* Extra small devices (phones, 500px and up) */
@@ -407,6 +452,32 @@
     width: 475px;
     height: 375px;
   }
+
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: -90px;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 230px;
+    left: 180px;
+  }
+
+  .txt-scene4 {
+    top: 40vh;
+    width: 350px;
+    height: 250px;
+    left: 150px;
+  }
+
+  .txt2-scene4 {
+    left: 0;
+    top: 15px;
+    width: 350px;
+    height: 250px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -456,6 +527,32 @@
     width: 550px;
     height: 450px;
   }
+
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: -40px;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 230px;
+    left: 280px;
+  }
+
+  .txt-scene4 {
+    top: 40vh;
+    width: 350px;
+    height: 250px;
+    left: 230px;
+  }
+
+  .txt2-scene4 {
+    left: 120px;
+    top: 15px;
+    width: 350px;
+    height: 250px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -502,6 +599,32 @@
     right: -70px;
     width: 550px;
     height: 450px;
+  }
+
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: -40px;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 230px;
+    left: 320px;
+  }
+
+  .txt-scene4 {
+    top: 40vh;
+    width: 450px;
+    height: 350px;
+    left: 230px;
+  }
+
+  .txt2-scene4 {
+    left: 80px;
+    top: 40px;
+    width: 450px;
+    height: 350px;
   }
 }
 
@@ -569,6 +692,32 @@
     width: 550px;
     height: 450px;
   }
+
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: 0;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 400px;
+    left: 520px;
+  }
+
+  .txt-scene4 {
+    top: 35vh;
+    width: 650px;
+    height: 550px;
+    left: 350px;
+  }
+
+  .txt2-scene4 {
+    left: 200px;
+    top: 0;
+    width: 650px;
+    height: 550px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -626,6 +775,32 @@
     width: 600px;
     height: 500px;
   }
+
+  /* Scene 4 */
+  .img-scene4 {
+    max-height: 50vh;
+    left: -500px;
+  }
+
+  .img2-scene4 {
+    max-height: 70vh;
+    bottom: 230px;
+    left: 620px;
+  }
+
+  .txt-scene4 {
+    top: 30vh;
+    width: 450px;
+    height: 350px;
+    left: 330px;
+  }
+
+  .txt2-scene4 {
+    left: 500px;
+    top: 0;
+    width: 450px;
+    height: 350px;
+  }
 }
 
 /* Iphone 6/7/8 Plus Landscape */
@@ -653,9 +828,35 @@
     width: 400px;
     height: 300px;
   }
-  
+
   .txt-scene3-chg {
     width: 450px;
     height: 350px;
   }
+
+    /* Scene 4 */
+    .img-scene4 {
+      max-height: 50vh;
+      left: -220px;
+    }
+  
+    .img2-scene4 {
+      max-height: 70vh;
+      bottom: 120px;
+      left: 450px;
+    }
+  
+    .txt-scene4 {
+      top: 30vh;
+      width: 300px;
+      height: 200px;
+      left: 200px;
+    }
+  
+    .txt2-scene4 {
+      left: 300px;
+      top: 0;
+      width: 300px;
+      height: 200px;
+    }
 }

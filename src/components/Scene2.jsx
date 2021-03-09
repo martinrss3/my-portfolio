@@ -12,10 +12,10 @@ export const Scene2 = () => {
   let nextSceneRef = useRef(null);
   let backSceneRef = useRef(null);
 
-  const firstSpeech = `<span class="first-speech">I love \n coding \n and make music</span>`;
-  const secondSpeech = `<span class="second-speech">You can contact me \n in the menu section</span>`;
-  const thirdSpeech = `<span class="third-speech">Hey you! \n You will never \n get the job...</span>`;
-  const fourthSpeech = `<span class="fourth-speech">What..?</span>`;
+  const firstSpeech = `<span class="first-speech-scene2">I love \n coding \n and make music</span>`;
+  const secondSpeech = `<span class="second-speech-scene2">You can contact me \n in the menu section</span>`;
+  const thirdSpeech = `<span class="third-speech-scene2">Hey you! \n You will never \n get the job...</span>`;
+  const fourthSpeech = `<span class="fourth-speech-scene2">What..?</span>`;
 
   const [mainImage, setMainImage] = useState(false);
   const [mainImage2, setMainImage2] = useState(false);
