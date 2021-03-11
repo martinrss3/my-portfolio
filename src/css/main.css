@@ -206,7 +206,7 @@
 @media only screen and (max-width: 399px) {
   /* Scene 1 */
   .main-image {
-    left: -100px;
+    left: -70px;
     height: 90vh;
   }
 
