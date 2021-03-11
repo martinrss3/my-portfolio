@@ -41,8 +41,9 @@ export const About = () => {
       scrollTrigger: {
         scrub: true,
       },
-      x: 1500,
-      y: 500,
+      x: 2000,
+      y: 1800,
+      rotate: 70,
       scale: 2,
     });
 
@@ -50,8 +51,8 @@ export const About = () => {
       scrollTrigger: {
         scrub: true,
       },
-      x: -3000,
-      y: 2000,
+      x: -3500,
+      y: 3000,
       scale: 0,
     });
 
@@ -69,7 +70,7 @@ export const About = () => {
         scrub: true,
       },
       y: 0,
-      scale: 1.2
+      scale: 1.2,
     });
   }, []);
 
@@ -131,38 +132,6 @@ export const About = () => {
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
-        </div>
-      </div>
-
-      <div className="container2">
-        <div className="inner">
-          <div className="panel panel-left">
-            <div className="panel-content">
-              <div className="image-background"></div>
-            </div>
-          </div>
-          <div className="panel panel-right">
-            <div className="panel-content">
-              <form className="form" onSubmit={sendEmail}>
-                <div className="group">
-                  <input type="text" name="field1" required />
-                  <span className="highlight"></span>
-                  <label>Leave me a comment</label>
-                </div>
-                <div className="group">
-                  <input type="text" name="field2" required />
-                  <span className="highlight"></span>
-                  <label>Your name</label>
-                </div>
-                <div className="group">
-                  <input type="text" name="field3" required />
-                  <span className="highlight"></span>
-                  <label>Your email</label>
-                </div>
-                <input className="send-btn" type="submit" value="Send" />
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>

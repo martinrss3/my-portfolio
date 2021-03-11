@@ -16,6 +16,7 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 section::before {
   content: "";
   position: absolute;
@@ -29,23 +30,22 @@ section::before {
 h2 {
   z-index: 1;
   text-align: center;
-  width: 100%;
-  font-size: 1em;
+  font-size: 1.7rem;
+  color: #fff;
 }
 
 .sec {
   position: relative;
-  padding: 100px;
 }
-h2 {
-  font-size: 2.5em;
-  color: #fff;
-  margin-bottom: 10px;
-}
+
 .sec p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #fff;
+  padding: 0 25px;
+  text-align: center;
+  margin-left: 80px;
 }
+
 #bg {
   position: absolute;
   top: 0;
@@ -55,42 +55,48 @@ h2 {
   object-fit: cover;
   pointer-events: none;
 }
+
 #moon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  max-width: 200%;
   z-index: 1;
+  transform: scale(1);
+  position: absolute;
+  top: -30vh;
 }
+
 #cloud1 {
   position: absolute;
   left: 0;
-  top: 220px;
+  top: 1vh;
   max-width: 800px;
   z-index: 2;
 }
+
 #cloud2 {
   position: absolute;
   right: 0;
-  top: 100px;
+  top: 1vh;
   max-width: 800px;
   z-index: 0;
 }
+
 #star {
   z-index: 0;
   position: absolute;
   right: -500px;
-  top: -100px;
+  top: -400px;
   max-width: 250px;
   transform: scale(2);
 }
+
 #me {
   position: absolute;
   top: 110%;
   z-index: 10000;
   width: 100%;
   transform: scale(0);
+  margin-left: 80px;
 }
+
 #grass {
   position: absolute;
   bottom: 0;
@@ -99,154 +105,3 @@ h2 {
   transform: scale(1);
 }
 
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
-
-.container2 {
-  width: auto;
-  height: 100%;
-  margin: 0;
-  transition: all 0.3s ease;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-}
-
-body.menu-active .container2 {
-  transform: scale(0.9);
-}
-
-.container2 .inner {
-  width: 80%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container2 .inner .panel {
-  position: relative;
-  box-sizing: border-box;
-  height: 100%;
-  width: 60%;
-  float: right;
-  transform: skew(-20deg);
-}
-
-.container2 .inner .panel .panel-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%) skew(20deg);
-}
-
-.form {
-  margin-bottom: 50px;
-}
-
-.group {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-input {
-  font-size: 13px;
-  height: 50px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 500px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #b1b1b1;
-  color: #b1b1b1;
-  background: rgba(0, 0, 0, 0);
-  opacity: 0.5;
-  transition: 0.2s ease;
-}
-
-input:focus {
-  outline: none;
-  opacity: 1;
-}
-
-label {
-  color: #b1b1b1;
-  font-size: 13px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 15px;
-  opacity: 0.5;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-/* active state */
-input:focus ~ label,
-input:valid ~ label {
-  top: -25px;
-  font-size: 12px;
-  color: #b1b1b1;
-  opacity: 1;
-}
-
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-/* active state */
-input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  -moz-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-}
-
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #b1b1b1;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #b1b1b1;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@keyframes inputHighlighter {
-  from {
-    background: #b1b1b1;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-.send-btn {
-  color: #b1b1b1;
-  transition: 0.2s ease;
-  border: none;
-}
-
-.send-btn:hover {
-  color: #fafafa;
-  cursor: pointer;
-  border: none;
-}
