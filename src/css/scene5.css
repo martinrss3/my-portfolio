@@ -30,7 +30,7 @@
   position: absolute;
   border: 8px solid black;
   box-shadow: 6px 7px 2px rgba(0, 0, 0, 0.658);
-  /* animation: animate-bg 25s linear infinite; */
+  animation: animate-bg 25s linear infinite;
 }
 
 @keyframes animate-bg {

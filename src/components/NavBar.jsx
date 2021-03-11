@@ -3,10 +3,10 @@ import { TweenMax, Power3 } from "gsap";
 import "../css/navbar.css";
 
 export const NavBar = () => {
-  let catItem = useRef(null);
-  let alienItem = useRef(null);
-  let shuttleItem = useRef(null);
-  let soundItem = useRef(null);
+  let catRef = useRef(null);
+  let alienRef = useRef(null);
+  let shuttleRef = useRef(null);
+  let soundRef = useRef(null);
 
   // const [toggleSound, setToggleSound] = useState(false);
 
@@ -14,7 +14,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     TweenMax.staggerFrom(
-      [catItem, alienItem, shuttleItem, soundItem],
+      [catRef, alienRef, shuttleRef, soundRef],
       0.8,
       { opacity: 0, x: 40, ease: Power3.easeOut },
       0.2
@@ -65,7 +65,7 @@ export const NavBar = () => {
               viewBox="0 0 512 512"
               className="svg-inline--fa fa-cat fa-w-16 fa-9x"
               ref={(el) => {
-                catItem = el;
+                catRef = el;
               }}
             >
               <g className="fa-group">
@@ -86,7 +86,7 @@ export const NavBar = () => {
         </li>
 
         <li className="nav-item">
-          <a href="#home" className="nav-link">
+          <a href="/portfolio" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -97,7 +97,7 @@ export const NavBar = () => {
               viewBox="0 0 576 512"
               className="svg-inline--fa fa-alien-monster fa-w-18 fa-9x"
               ref={(el) => {
-                alienItem = el;
+                alienRef = el;
               }}
             >
               <g className="fa-group">
@@ -118,7 +118,7 @@ export const NavBar = () => {
         </li>
 
         <li className="nav-item">
-          <a href="/about" className="nav-link">
+          <a href="/contact" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -129,7 +129,7 @@ export const NavBar = () => {
               viewBox="0 0 640 512"
               className="svg-inline--fa fa-space-shuttle fa-spin fa-w-20 fa-5x"
               ref={(el) => {
-                shuttleItem = el;
+                shuttleRef = el;
               }}
             >
               <g className="fa-group">
@@ -161,7 +161,7 @@ export const NavBar = () => {
               viewBox="0 0 18 18"
               fill="currentColor"
               ref={(el) => {
-                soundItem = el;
+                soundRef = el;
               }}
             >
               <path
