@@ -14,12 +14,13 @@ export const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    gsap.to("#bg", {
+    gsap.to("#moon", {
       scrollTrigger: {
         scrub: true,
       },
-      y: 200,
-      scale: 1.5,
+      x: 1000,
+      y: 300,
+      scale: 2,
     });
 
     gsap.to("#cloud1", {
@@ -34,16 +35,6 @@ export const About = () => {
         scrub: true,
       },
       x: 300,
-    });
-
-    gsap.to("#moon", {
-      scrollTrigger: {
-        scrub: true,
-      },
-      x: 2000,
-      y: 1800,
-      rotate: 70,
-      scale: 2,
     });
 
     gsap.to("#star", {
@@ -72,21 +63,6 @@ export const About = () => {
       scale: 1.2,
     });
   }, []);
-
-  // function sendEmail(e) {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // }
 
   return (
     <div className="wrapper">
