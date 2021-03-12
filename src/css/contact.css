@@ -1,24 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-.contact {
-  background: #2d3b36
-    url(http://andstud.io/wp-content/uploads/2014/03/blurrrr2.jpg) no-repeat
-    center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-top: 0px;
-}
-
-h1 {
-  color: #fff;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
-  padding-top: 30px;
-  font-size: 100px;
-  font-weight: 700;
-  text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 0px;
+/* .contact {
+  background: #009fff;
+  background: -webkit-linear-gradient(to right, #ec2f4b, #009fff);
+  background: linear-gradient(to right, #ec2f4b, #009fff);
 }
 
 form {
@@ -38,7 +21,7 @@ form {
 
 textarea {
   background: rgba(0, 0, 0, 0.4);
-  width: 894px;
+  width: 100%;
   height: 110px;
   border: none;
   -moz-border-radius: 10px;
@@ -51,7 +34,7 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   color: #fff;
-  padding-left: 45px;
+  padding-left: 15px;
   padding-right: 20px;
   padding-top: 12px;
   margin-bottom: 20px;
@@ -60,7 +43,7 @@ textarea {
 
 .nameinput,
 .emailinput {
-  width: 894px;
+  width: 100%;
   height: 48px;
   border: none;
   -moz-border-radius: 10px;
@@ -73,7 +56,7 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   color: #fff;
-  padding-left: 20px;
+  padding-left: 15px;
   padding-right: 20px;
   margin-bottom: 20px;
 }
@@ -84,22 +67,17 @@ input[type="submit"] {
 
 input.nameinput {
   background: rgba(0, 0, 0, 0.4);
-  padding-left: 45px;
+  padding-left: 15px;
 }
 
 input.emailinput {
   background: rgba(0, 0, 0, 0.4);
-  padding-left: 45px;
+  padding-left: 15px;
 }
 
 input.message {
   background: rgba(0, 0, 0, 0.4);
-  padding-left: 45px;
-}
-
-select.indent {
-  padding-left: 45px;
-  cursor: pointer;
+  padding-left: 15px;
 }
 
 ::-webkit-input-placeholder {
@@ -259,7 +237,7 @@ textarea:focus {
     font-size: 30px;
   }
   form {
-    width: 295px !important;
+    width: 320px !important;
   }
   #wpcf7-f156-p143-o1\20
     formwrap
@@ -282,9 +260,9 @@ textarea:focus {
     > p
     > span.wpcf7-form-control-wrap.Message
     > textarea {
-    width: 225px !important;
+    width: 260px !important;
   }
   .btn {
     width: 110px;
   }
-}
+} */
