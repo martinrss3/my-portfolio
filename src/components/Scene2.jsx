@@ -14,8 +14,9 @@ export const Scene2 = () => {
 
   const firstSpeech = `<span class="first-speech-scene2">I love \n coding \n and make music</span>`;
   const secondSpeech = `<span class="second-speech-scene2">You can contact me \n in the menu section</span>`;
-  const thirdSpeech = `<span class="third-speech-scene2">Hey you! \n You will never \n get the job...</span>`;
-  const fourthSpeech = `<span class="fourth-speech-scene2">What..?</span>`;
+  const thirdSpeech = `<span class="third-speech-scene2">Wait...</span>`;
+  const fourthSpeech = `<span class="fourth-speech-scene2">you'll never get \n the job...</span>`;
+  const fifthSpeech = `<span class="fifth-speech-scene2">What..?</span>`;
 
   const [mainImage, setMainImage] = useState(false);
   const [mainImage2, setMainImage2] = useState(false);
@@ -110,6 +111,9 @@ export const Scene2 = () => {
                 })
                 .typeString(thirdSpeech)
                 .pauseFor(2500)
+                .deleteChars(10)
+                .typeString(fourthSpeech)
+                .pauseFor(2500)
                 .callFunction(() => {
                   setMainImage(!mainImage);
                 })
@@ -119,7 +123,7 @@ export const Scene2 = () => {
                   setMainImage3(!mainImage3);
                   setText(text);
                 })
-                .typeString(fourthSpeech)
+                .typeString(fifthSpeech)
                 .callFunction(() => {
                   setButtons(!buttons);
                 });
