@@ -14,7 +14,7 @@ export const Scene3 = () => {
 
   const firstSpeech = `<span class="first-speech-scene3">oh sorry, \n I forgot to introduce \n myself...</span>`;
   const secondSpeech = `<span class="second-speech-scene3">
-  I'm the guy who \n wants to destroy \n your website \n for no reason</span>`;
+  I'm the guy who \n want to destroy \n your website \n for no reason</span>`;
   const thirdSpeech = `<span class="third-speech-scene3">YES... \n FOR NO \n REASON!</span>`;
 
   const [background, setBackground] = useState(false);
