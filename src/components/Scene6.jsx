@@ -1,48 +1,164 @@
-import React, { useEffect, useRef } from "react";
-import { TweenMax, Power3 } from "gsap";
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { TweenMax, Power3, TimelineLite } from "gsap";
 import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
 import "../css/scene6.css";
 
 export const Scene6 = () => {
   let imageRef = useRef(null);
+  let nextSceneRef = useRef(null);
+  let backSceneRef = useRef(null);
 
-  const laptopMessages = `<span class="messages-scene6">te estoy hackeando chabal \n que pasa que pasa</span>`;
+  const firstSpeech = `<span class="first-speech-scene6">almost done...</span>`;
+  const secondSpeech = `<span class="second-speech-scene6">Wait! Wait!</span>`;
+  const thirdSpeech = `<span class="third-speech-scene6">Look over there... \n It's a... </span>`;
+  const fourthSpeech = `<span class="fourth-speech-scene6">Very hackable \n supercomputer...</span>`;
+  const fifthSpeech = `<span class="fifth-speech-scene6">Did you really \n think i would \n believe that?</span>`;
+  const sixthSpeech = `<span class="sixth-speech-scene6">oh... \n it started raining</span>`;
+
+  const [text, setText] = useState(false);
+  const [text2, setText2] = useState(false);
+  const [mainImage2, setMainImage2] = useState(false);
+  const [mainImage3, setMainImage3] = useState(false);
+  const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
-    TweenMax.staggerTo(imageRef, 1.5, {
+    TweenMax.staggerTo(imageRef, 0.9, {
       opacity: 1,
-      y: -600,
+      x: 0,
       ease: Power3.easeInOut,
-      delay: 0.3,
+      delay: 5,
     });
+
+    TweenMax.fromTo(
+      [nextSceneRef, backSceneRef],
+      1,
+      {
+        delay: 2,
+        opacity: 0,
+      },
+      {
+        delay: 1.2,
+        opacity: 1,
+      }
+    );
+
+    let tl = new TimelineLite();
+    tl.to(imageRef, 0, { x: -1000 });
   }, []);
 
   return (
     <div className="container bg-scene6">
       <div>
-        <img
-          ref={(el) => {
-            imageRef = el;
-          }}
-          className="main-image img-scene6"
-          alt="me"
-        />
+        <img className="main-image img-scene6" alt="bad guy" />
       </div>
 
-      <Delay wait={1500}>
-        <div className="text txt-scene6">
+      <Delay wait={1400}>
+        <div
+          className={text ? "toggle-text txt-scene6-chg" : "text txt-scene6"}
+        >
           <Typewriter
             options={{
-              delay: 50,
+              delay: 70,
               cursor: "",
             }}
             onInit={(typewriter) => {
-              typewriter.typeString(laptopMessages).start();
+              typewriter
+                .typeString(firstSpeech)
+                .pauseFor(2000)
+                .callFunction(() => {
+                  setText(!text);
+                })
+                .start()
+                .deleteAll();
             }}
           />
         </div>
       </Delay>
+
+      <div
+        className="frame"
+        ref={(el) => {
+          imageRef = el;
+        }}
+      >
+        <img
+          className={mainImage2 ? "img2-scene6-chg" : "main-image img2-scene6"}
+          alt="me"
+        />
+        <img
+          className={mainImage3 ? "main-image img3-scene6" : "img3-scene6-chg"}
+          alt="me"
+        />
+      </div>
+
+      <Delay wait={6500}>
+        <div
+          className={text2 ? "toggle-text txt2-scene6-chg" : "text txt2-scene6"}
+        >
+          <Typewriter
+            options={{
+              delay: 50,
+              deleteSpeed: 10,
+              cursor: "",
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(secondSpeech)
+                .pauseFor(2500)
+                .deleteChars(15)
+                .typeString(thirdSpeech)
+                .pauseFor(2500)
+                .deleteChars(32)
+                .typeString(fourthSpeech)
+                .pauseFor(2500)
+                .deleteChars(45)
+                .callFunction(() => {
+                  setText2(!text2);
+                  setText(!text);
+                })
+                .typeString(fifthSpeech)
+                .pauseFor(2500)
+                .deleteChars(50)
+                .callFunction(() => {
+                  setText(text);
+                  setMainImage2(!mainImage2);
+                  setMainImage3(!mainImage3);
+                  setText2(text2);
+                })
+                .typeString(sixthSpeech)
+                .callFunction(() => {
+                  setButtons(!buttons);
+                })
+                .start();
+            }}
+          />
+        </div>
+      </Delay>
+
+      <div>
+        <Link to="/scene5">
+          <button
+            ref={(el) => {
+              backSceneRef = el;
+            }}
+            className={buttons ? "back-scene" : "back-scene-changed"}
+          >
+            Back
+          </button>
+        </Link>
+        <Link to="/scene7">
+          <button
+            ref={(el) => {
+              nextSceneRef = el;
+            }}
+            className={buttons ? "next-scene" : "next-scene-changed"}
+          >
+            Next
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
