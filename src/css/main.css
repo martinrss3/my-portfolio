@@ -110,7 +110,7 @@
 }
 
 .next-scene {
-  z-index: 15;
+  z-index: 10000;
   margin: 1em 1em;
   padding: 0.1em 1em;
   text-align: center;
@@ -156,7 +156,7 @@
 }
 
 .back-scene {
-  z-index: 15;
+  z-index: 10000;
   margin: 1em 6.5em;
   padding: 0.1em 1em;
   text-align: center;
@@ -291,6 +291,21 @@
 
   .txt2-scene4 {
     left: -20px;
+  }
+
+  /* Scene 5 */
+  .img-scene5 {
+    width: 100vw;
+    height: 300px;
+    left: -5px;
+    top: 800px;
+  }
+
+  .txt-scene5 {
+    margin: 0 auto;
+    top: 200px;
+    left: -50px;
+    width: 260px;
   }
 
   /* Scene 6 */
@@ -446,6 +461,21 @@
     height: 250px;
   }
 
+  /* Scene 5 */
+  .img-scene5 {
+    width: 430px;
+    height: 400px;
+    left: -5px;
+    top: 825px;
+  }
+
+  .txt-scene5 {
+    top: 200px;
+    left: 30px;
+    width: 350px;
+    height: 280px;
+  }
+
   /* Scene 6 */
   .img-scene6 {
     max-height: 90vh;
@@ -593,6 +623,19 @@
     height: 250px;
   }
 
+  /* Scene 5 */
+  .img-scene5 {
+    width: 600px;
+    left: -15px;
+    top: 825px;
+  }
+
+  .txt-scene5 {
+    top: 200px;
+    left: 30px;
+    width: 480px;
+  }
+
   /* Scene 6 */
   .img-scene6 {
     max-height: 90vh;
@@ -720,6 +763,19 @@
     top: 15px;
     width: 350px;
     height: 250px;
+  }
+
+  /* Scene 5 */
+  .img-scene5 {
+    width: 700px;
+    left: 15px;
+    top: 850px;
+  }
+
+  .txt-scene5 {
+    top: 250px;
+    left: 50px;
+    width: 600px;
   }
 
   /* Scene 6 */
@@ -854,6 +910,19 @@
     top: 40px;
     width: 450px;
     height: 350px;
+  }
+
+  /* Scene 5 */
+  .img-scene5 {
+    width: 700px;
+    left: 80px;
+    top: 850px;
+  }
+
+  .txt-scene5 {
+    top: 225px;
+    left: 110px;
+    width: 600px;
   }
 
   /* Scene 6 */
@@ -1006,6 +1075,20 @@
     height: 550px;
   }
 
+  /* Scene 5 */
+  .img-scene5 {
+    width: 100vw;
+    left: 40px;
+    top: 70vh;
+  }
+
+  .txt-scene5 {
+    top: 25vh;
+    left: 20vw;
+    width: 600px;
+    height: 500px;
+  }
+
   /* Scene 6 */
   .img-scene6 {
     max-height: 100vh;
@@ -1122,7 +1205,7 @@
 
   /* Scene 4 */
   .img-scene4 {
-    max-height: 50vh;
+    max-height: 52vh;
     left: -500px;
   }
 
@@ -1147,12 +1230,17 @@
   }
 
   /* Scene 5 */
+  .img-scene5 {
+    width: 100vw;
+    left: 50px;
+    top: 650px;
+  }
+
   .txt-scene5 {
-    background-image: url("../images/badGuy/laptop.png");
-    top: 100px;
-    left: 325px;
-    width: 650px;
-    height: 550px;
+    top: 10vh;
+    left: 28vw;
+    width: 600px;
+    height: 500px;
   }
 
   /* Scene 6 */
@@ -1258,6 +1346,20 @@
     top: 0;
     width: 300px;
     height: 200px;
+  }
+
+  /* Scene 5 */
+  .img-scene5 {
+    width: 100vw;
+    left: 50px;
+    top: 650px;
+  }
+
+  .txt-scene5 {
+    top: 60px;
+    left: 210px;
+    width: 350px;
+    height: 250px;
   }
 
   /* Scene 6 */
