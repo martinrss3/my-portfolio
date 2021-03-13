@@ -24,7 +24,7 @@
 }
 
 .txt-scene6 {
-  background-image: url("../images/speechBubbles/speech-bubble1-flip-vert.png");
+  background-image: url("../images/speechBubbles/speech-bubble1-flip.png");
   z-index: 5;
 }
 
@@ -43,7 +43,7 @@
   position: absolute;
   border: 8px solid black;
   box-shadow: 6px 7px 2px rgba(0, 0, 0, 0.658);
-  /* animation: animate-bg 25s linear infinite; */
+  animation: animate-bg 25s linear 5;
 }
 
 @keyframes animate-bg {
@@ -59,7 +59,7 @@
 .second-speech-scene6,
 .third-speech-scene6,
 .fourth-speech-scene6,
-.fifth-speech-scene6 {
+.sixth-speech-scene6 {
   position: relative;
 }
 
@@ -71,13 +71,33 @@
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   .first-speech-scene6 {
-    top: 90px;
+    top: 25px;
     left: -5px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .second-speech-scene6 {
-    top: -10px;
+    top: 15px;
+    font-size: 1.5rem;
+  }
+
+  .third-speech-scene6 {
+    top: 10px;
+  }
+
+  .fourth-speech-scene6 {
+    top: 10px;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 40px;
+    left: 60px;
+    font-size: 1.1rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: 5px;
   }
 
   .frame {
@@ -90,13 +110,32 @@
 /* Super Extra small devices (phones, between 400px and 499px) */
 @media only screen and (min-width: 400px) and (max-width: 499px) {
   .first-speech-scene6 {
-    top: 80px;
+    top: 5px;
     left: -7px;
   }
 
   .second-speech-scene6 {
-    top: -30px;
-    font-size: 1.4rem;
+    top: 10px;
+    font-size: 1.7rem;
+  }
+
+  .third-speech-scene6 {
+    top: 0;
+  }
+
+  .fourth-speech-scene6 {
+    top: 0;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 35px;
+    left: 60px;
+    font-size: 1.1rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: -5px;
   }
 
   .frame {
@@ -109,14 +148,33 @@
 /* Extra small devices (phones, 500px and up) */
 @media only screen and (min-width: 500px) {
   .first-speech-scene6 {
-    top: 140px;
+    top: 30px;
     left: -10px;
     font-size: 2rem;
   }
 
   .second-speech-scene6 {
-    top: -30px;
-    font-size: 1.4rem;
+    top: 5px;
+    font-size: 2rem;
+  }
+
+  .third-speech-scene6 {
+    top: 0;
+  }
+
+  .fourth-speech-scene6 {
+    top: 0;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 60px;
+    left: 125px;
+    font-size: 1.5rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: -5px;
   }
 
   .frame {
@@ -129,14 +187,33 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .first-speech-scene6 {
-    top: 185px;
+    top: 55px;
     left: -10px;
     font-size: 2.5rem;
   }
 
   .second-speech-scene6 {
-    top: -20px;
-    font-size: 1.4rem;
+    top: 15px;
+    font-size: 2.3rem;
+  }
+
+  .third-speech-scene6 {
+    top: 15px;
+  }
+
+  .fourth-speech-scene6 {
+    top: 10px;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 80px;
+    left: 170px;
+    font-size: 1.8rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: 5px;
   }
 
   .frame {
@@ -149,23 +226,69 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .first-speech-scene6 {
+    top: 55px;
+  }
+
   .second-speech-scene6 {
-    top: -30px;
-    font-size: 1.3rem;
+    top: 15px;
+    font-size: 2.4rem;
+  }
+
+  .third-speech-scene6 {
+    top: 10px;
+    font-size: 1.6rem;
+  }
+
+  .fourth-speech-scene6 {
+    top: 0;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 80px;
+    left: 230px;
+    font-size: 1.8rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: 0;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .first-speech-scene6 {
-    top: 230px;
+    top: 85px;
     left: -18px;
-    font-size: 3.3rem;
+    font-size: 3.1rem;
   }
 
   .second-speech-scene6 {
-    top: 15px;
+    top: 60px;
+    font-size: 3rem;
+  }
+
+  .third-speech-scene6 {
+    top: 55px;
     font-size: 2rem;
+  }
+
+  .fourth-speech-scene6 {
+    top: 50px;
+    font-size: 2.2rem;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 100px;
+    left: 325px;
+    font-size: 2.5rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: 45px;
+    font-size: 2.3rem;
   }
 
   .frame {
@@ -179,19 +302,34 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .first-speech-scene6 {
-    top: 220px;
+    top: 75px;
     left: -20px;
     font-size: 3rem;
   }
 
   .second-speech-scene6 {
-    top: -20px;
-    font-size: 1.5rem;
+    top: 30px;
+    font-size: 2.9rem;
+  }
+
+  .third-speech-scene6 {
+    top: 30px;
+  }
+
+  .fourth-speech-scene6 {
+    top: 20px;
+    font-size: 2.2rem;
   }
 
   .fifth-speech-scene6 {
-    top: 380px;
-    left: -80px;
+    position: fixed;
+    top: 110px;
+    right: 80px;
+    font-size: 2.2rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: 15px;
   }
 
   .frame {
@@ -202,17 +340,49 @@
   }
 }
 
+/* Extra large devices (large laptops and desktops, 1300px and up) */
+@media only screen and (min-width: 1300px) {
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 110px;
+    left: 565px;
+    font-size: 2.2rem;
+    max-width: 400px;
+  }
+}
+
 /* Iphone 6/7/8 Plus Landscape */
 @media only screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
   .first-speech-scene6 {
-    top: 90px;
+    top: 10px;
     left: -10px;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .second-speech-scene6 {
-    top: -40px;
-    font-size: 1rem;
+    top: -5px;
+    font-size: 2rem;
+  }
+
+  .third-speech-scene6 {
+    top: -10px;
+    font-size: 1.2rem;;
+  }
+
+  .fourth-speech-scene6 {
+    top: -10px;
+    font-size: 1.4rem;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 35px;
+    right: -350px;
+    font-size: 1.3rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: -15px;
   }
 
   .frame {
