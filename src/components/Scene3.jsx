@@ -12,8 +12,10 @@ export const Scene3 = () => {
   let nextSceneRef = useRef(null);
   let backSceneRef = useRef(null);
 
-  const firstSpeech = `<span class="first-speech-scene3">hahahaha \n you will never \n get the job... \n i will...</span>`;
-  const secondSpeech = `<span class="second-speech-scene3">BREAK \n YOUR \n CODE!</span>`;
+  const firstSpeech = `<span class="first-speech-scene3">oh sorry, \n I forgot to introduce \n myself...</span>`;
+  const secondSpeech = `<span class="second-speech-scene3">
+  I'm the guy who \n wants to destroy \n your website \n for no reason</span>`;
+  const thirdSpeech = `<span class="third-speech-scene3">YES... \n FOR NO \n REASON!</span>`;
 
   const [background, setBackground] = useState(false);
   const [mainImage, setMainImage] = useState(false);
@@ -82,12 +84,15 @@ export const Scene3 = () => {
             }}
             onInit={(typewriter) => {
               typewriter
+                .typeString(secondSpeech)
+                .pauseFor(2500)
+                .deleteChars(65)
                 .callFunction(() => {
                   setBackground(!background);
                   setMainImage(!mainImage);
                   setText(!text);
                 })
-                .typeString(secondSpeech)
+                .typeString(thirdSpeech)
                 .callFunction(() => {
                   setButtons(!buttons);
                 });
