@@ -1170,6 +1170,15 @@
     height: 400px;
   }
 
+  /* Scene 6 */
+  .txt-scene6 {
+    background-image: url("../images/badGuy/laptop.png");
+    top: 100px;
+    left: 325px;
+    width: 650px;
+    height: 550px;
+  }
+
   /* Scene 7 & 8 */
   .img-scene7,
   .img-scene8,
