@@ -72,6 +72,7 @@ export const Scene1 = () => {
               delay: 50,
               deleteSpeed: 10,
               pauseFor: 1500,
+              cursor: "",
             }}
             onInit={(typewriter) => {
               typewriter
