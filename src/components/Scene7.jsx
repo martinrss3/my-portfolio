@@ -6,14 +6,15 @@ import "../css/scene7.css";
 
 export const Scene7 = () => {
   let nextSceneRef = useRef(null);
+  let backSceneRef = useRef(null);
 
-  const firstSpeech = `<span class="first-speech-scene7">I was so close..!!</span>`;
+  const firstSpeech = `<span class="first-speech-scene7">I hate the rain!</span>`;
 
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
     TweenMax.fromTo(
-      nextSceneRef,
+      [nextSceneRef, backSceneRef],
       1,
       {
         delay: 2,
@@ -50,6 +51,16 @@ export const Scene7 = () => {
       </div>
 
       <div>
+        <Link to="/scene6">
+          <button
+            ref={(el) => {
+              backSceneRef = el;
+            }}
+            className={buttons ? "back-scene" : "back-scene-changed"}
+          >
+            Back
+          </button>
+        </Link>
         <Link to="/scene8">
           <button
             ref={(el) => {

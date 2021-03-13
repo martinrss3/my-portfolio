@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { TweenMax, Power3, TimelineLite } from "gsap";
+import { TweenMax, Power3 } from "gsap";
 import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
 import "../css/scene5.css";
@@ -10,18 +10,17 @@ export const Scene5 = () => {
   let nextSceneRef = useRef(null);
   let backSceneRef = useRef(null);
 
-  const firstSpeech = `<span class="first-speech-scene5">this will be \n very easy...</span>`;
-  const secondSpeech = `<span class="second-speech-scene5">this guy \n is trying to \n break the code... \n We must stop him!</span>`;
+  const laptopMessages = `<span class="messages-scene5">
+  I AM A HACKER \n I'm breaking everything right now \n destruction chaos cataclysm \n blah blah blah \n blow up everything? Y / N xD</span>`;
 
-  const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
-    TweenMax.staggerTo(imageRef, 0.9, {
+    TweenMax.staggerTo(imageRef, 1.5, {
       opacity: 1,
-      x: 0,
+      y: -600,
       ease: Power3.easeInOut,
-      delay: 5,
+      delay: 0.3,
     });
 
     TweenMax.fromTo(
@@ -36,50 +35,22 @@ export const Scene5 = () => {
         opacity: 1,
       }
     );
-
-    let tl = new TimelineLite();
-    tl.to(imageRef, 0, { x: -1000 });
   }, []);
 
   return (
     <div className="container bg-scene5">
       <div>
-        <img className="main-image img-scene5" alt="bad guy" />
+        <img
+          ref={(el) => {
+            imageRef = el;
+          }}
+          className="main-image img-scene5"
+          alt="me"
+        />
       </div>
 
-      <Delay wait={1400}>
-        <div
-          className={text ? "toggle-text txt-scene5-chg" : "text txt-scene5"}
-        >
-          <Typewriter
-            options={{
-              delay: 70,
-              cursor: "",
-            }}
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(firstSpeech)
-                .start()
-                .pauseFor(1700)
-                .callFunction(() => {
-                  setText(!text);
-                });
-            }}
-          />
-        </div>
-      </Delay>
-
-      <div
-        className="frame"
-        ref={(el) => {
-          imageRef = el;
-        }}
-      >
-        <img className="main-image img2-scene5" alt="me" />
-      </div>
-
-      <Delay wait={6300}>
-        <div className="text txt2-scene5">
+      <Delay wait={1500}>
+        <div className="text txt-scene5">
           <Typewriter
             options={{
               delay: 50,
@@ -87,7 +58,7 @@ export const Scene5 = () => {
             }}
             onInit={(typewriter) => {
               typewriter
-                .typeString(secondSpeech)
+                .typeString(laptopMessages)
                 .callFunction(() => {
                   setButtons(!buttons);
                 })
