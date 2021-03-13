@@ -19,6 +19,7 @@ export const Scene6 = () => {
 
   const [text, setText] = useState(false);
   const [text2, setText2] = useState(false);
+  const [frame, setFrame] = useState(false);
   const [mainImage2, setMainImage2] = useState(false);
   const [mainImage3, setMainImage3] = useState(false);
   const [buttons, setButtons] = useState(false);
@@ -78,7 +79,7 @@ export const Scene6 = () => {
       </Delay>
 
       <div
-        className="frame"
+        className={frame ? "frame-chg" : "frame"}
         ref={(el) => {
           imageRef = el;
         }}
@@ -116,6 +117,7 @@ export const Scene6 = () => {
                 .deleteChars(45)
                 .callFunction(() => {
                   setText2(!text2);
+                  setFrame(!frame);
                   setText(!text);
                 })
                 .typeString(fifthSpeech)
@@ -126,6 +128,7 @@ export const Scene6 = () => {
                   setMainImage2(!mainImage2);
                   setMainImage3(!mainImage3);
                   setText2(text2);
+                  setFrame(frame);
                 })
                 .typeString(sixthSpeech)
                 .callFunction(() => {
