@@ -2,10 +2,6 @@
   background-image: url("../images/backgrounds/bg-scene3.jpg");
 }
 
-.bg-scene3-toggle {
-  background-image: url("../images/backgrounds/bg-scene3a.jpg");
-}
-
 .img-scene3 {
   content: url("../images/badGuy/21.png");
 }
