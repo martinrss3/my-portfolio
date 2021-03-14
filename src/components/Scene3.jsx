@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
-import ReactHowler from "react-howler";
 import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
-import BreakClassicMachine from "../audio/break-classic-machine.mp3";
 import "../css/scene3.css";
 
 export const Scene3 = () => {
@@ -53,7 +51,6 @@ export const Scene3 = () => {
         background ? "container bg-scene3-toggle" : "container bg-scene3"
       }
     >
-      <ReactHowler src={BreakClassicMachine} playing={false} loop={true} />
 
       <div>
         <img
