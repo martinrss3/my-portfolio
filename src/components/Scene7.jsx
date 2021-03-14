@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax } from "gsap";
 import Typewriter from "typewriter-effect";
+import Bg from "../images/backgrounds/bg-scene7.jpg";
 import "../css/scene7.css";
 
 export const Scene7 = () => {
@@ -29,6 +30,12 @@ export const Scene7 = () => {
 
   return (
     <div className="container bg-scene7">
+      <div className="bg">
+        <img src={Bg} alt="bg" />
+      </div>
+
+      <div className="rain"></div>
+
       <div>
         <img className="main-image img-scene7" alt="bad guy" />
       </div>
