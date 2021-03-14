@@ -7,8 +7,6 @@ import "../css/scene5.css";
 
 export const Scene5 = () => {
   let imageRef = useRef(null);
-  let nextSceneRef = useRef(null);
-  let backSceneRef = useRef(null);
 
   const laptopMessages = `<span class="messages-scene5">
   I AM A HACKER \n I'm breaking everything right now \n destruction chaos cataclysm \n blah blah blah \n blow up everything? Y / N xD</span>`;
@@ -22,19 +20,6 @@ export const Scene5 = () => {
       ease: Power3.easeInOut,
       delay: 0.3,
     });
-
-    TweenMax.fromTo(
-      [nextSceneRef, backSceneRef],
-      1,
-      {
-        delay: 2,
-        opacity: 0,
-      },
-      {
-        delay: 1.2,
-        opacity: 1,
-      }
-    );
   }, []);
 
   return (
@@ -71,22 +56,12 @@ export const Scene5 = () => {
 
       <div>
         <Link to="/scene4">
-          <button
-            ref={(el) => {
-              backSceneRef = el;
-            }}
-            className={buttons ? "back-scene" : "back-scene-changed"}
-          >
+          <button className={buttons ? "back-scene" : "back-scene-changed"}>
             Back
           </button>
         </Link>
         <Link to="/scene6">
-          <button
-            ref={(el) => {
-              nextSceneRef = el;
-            }}
-            className={buttons ? "next-scene" : "next-scene-changed"}
-          >
+          <button className={buttons ? "next-scene" : "next-scene-changed"}>
             Next
           </button>
         </Link>

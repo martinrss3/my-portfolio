@@ -7,7 +7,6 @@ import "../css/scene8.css";
 
 export const Scene8 = () => {
   let imageRef = useRef(null);
-  let nextSceneRef = useRef(null);
 
   const firstSpeech = `<span class="first-speech-scene8">i can't believe \n that worked</span>`;
   const secondSpeech = `<span class="second-speech-scene8">Anyway... \n you can keep \n browsing my web</span>`;
@@ -24,19 +23,6 @@ export const Scene8 = () => {
       delay: 0.3,
     });
 
-    TweenMax.fromTo(
-      nextSceneRef,
-      1,
-      {
-        delay: 2,
-        opacity: 0,
-      },
-      {
-        delay: 1.2,
-        opacity: 1,
-      }
-    );
-
     let tl = new TimelineLite();
     tl.to(imageRef, 0, { x: 700 });
   }, []);
@@ -48,6 +34,7 @@ export const Scene8 = () => {
           ref={(el) => {
             imageRef = el;
           }}
+          scene2
           className={
             image ? "toggle-main-image img-scene8-chg" : "main-image img-scene8"
           }
@@ -96,10 +83,9 @@ export const Scene8 = () => {
       <div>
         <Link to="/about">
           <button
-            ref={(el) => {
-              nextSceneRef = el;
-            }}
-            className={buttons ? "next-scene nxt-btn-scene8" : "next-scene-changed"}
+            className={
+              buttons ? "next-scene nxt-btn-scene8" : "next-scene-changed"
+            }
           >
             About Me
           </button>

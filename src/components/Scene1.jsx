@@ -7,7 +7,6 @@ import "../css/scene1.css";
 
 export const Scene1 = () => {
   let imageRef = useRef(null);
-  let nextSceneRef = useRef(null);
 
   const firstSpeech = `Hi! My name is <el>Martín</el> \n and I am a \n Full Stack \n Developer...`;
   const secondSpeech = "I am looking \n for my first job \n as a developer!";
@@ -24,26 +23,12 @@ export const Scene1 = () => {
       delay: 0.3,
     });
 
-    TweenMax.fromTo(
-      nextSceneRef,
-      1,
-      {
-        delay: 2,
-        opacity: 0,
-      },
-      {
-        delay: 1.2,
-        opacity: 1,
-      }
-    );
-
     let tl = new TimelineLite();
     tl.to(imageRef, 0, { x: 700 });
   }, []);
 
   return (
     <div className="container bg-scene1">
-
       <div>
         <img
           ref={(el) => {
@@ -88,12 +73,7 @@ export const Scene1 = () => {
 
       <div>
         <Link to="/scene2">
-          <button
-            ref={(el) => {
-              nextSceneRef = el;
-            }}
-            className={nextButton ? "next-scene" : "next-scene-changed"}
-          >
+          <button className={nextButton ? "next-scene" : "next-scene-changed"}>
             Next
           </button>
         </Link>
