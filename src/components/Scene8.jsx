@@ -9,15 +9,12 @@ export const Scene8 = () => {
   let imageRef = useRef(null);
   let nextSceneRef = useRef(null);
 
-  const firstSpeech = `<span class="first-speech-scene8">Yeahh!!! \n Thanks for \n helping me..!!</span>`;
-  const secondSpeech = `<span class="second-speech-scene8">Luckily \n I had \n a backup...</span>`;
-  const thirdSpeech = `<span class="third-speech-scene8">Anyway... \n you can keep \n browsing my web</span>`;
+  const firstSpeech = `<span class="first-speech-scene8">i can't believe \n that worked</span>`;
+  const secondSpeech = `<span class="second-speech-scene8">Anyway... \n you can keep \n browsing my web</span>`;
 
   const [image, setImage] = useState(false);
   const [image2, setImage2] = useState(false);
-  const [image3, setImage3] = useState(false);
   const [buttons, setButtons] = useState(false);
-  const [text, setText] = useState(false);
 
   useEffect(() => {
     TweenMax.staggerTo(imageRef, 0.9, {
@@ -69,21 +66,8 @@ export const Scene8 = () => {
         />
       </div>
 
-      <div>
-        <img
-          className={
-            image3
-              ? "main-image img3-scene8"
-              : "toggle-main-image img3-scene8-chg"
-          }
-          alt="me"
-        />
-      </div>
-
       <Delay wait={1200}>
-        <div
-          className={text ? "toggle-text txt-scene8-chg" : "text txt-scene8"}
-        >
+        <div className="text txt-scene8">
           <Typewriter
             options={{
               delay: 50,
@@ -98,16 +82,8 @@ export const Scene8 = () => {
                 .callFunction(() => {
                   setImage(!image);
                   setImage2(!image2);
-                  setText(!text);
                 })
                 .typeString(secondSpeech)
-                .pauseFor(2000)
-                .deleteChars(30)
-                .callFunction(() => {
-                  setImage2(image2);
-                  setImage3(!image3);
-                })
-                .typeString(thirdSpeech)
                 .callFunction(() => {
                   setButtons(!buttons);
                 })

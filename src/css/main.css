@@ -350,30 +350,20 @@
   /* Scene 8 */
   .img-scene8 {
     max-height: 80vh;
-    left: -150px;
+    left: -10px;
+    bottom: 80px;
   }
 
   .img2-scene8 {
-    left: -30px;
+    left: -150px;
     max-height: 80vh;
-  }
-
-  .img3-scene8 {
-    left: -70px;
-    max-height: 80vh;
+    bottom: 80px;
   }
 
   .txt-scene8 {
-    top: 50px;
+    top: 0;
     width: 300px;
     height: 200px;
-  }
-
-  .txt-scene8-chg {
-    top: 0;
-    left: -50px;
-    width: 325px;
-    height: 225px;
   }
 }
 
@@ -531,30 +521,20 @@
 
   /* Scene 8 */
   .img-scene8 {
-    left: -150px;
-  }
-
-  .txt-scene8 {
-    top: 60px;
-    width: 350px;
-    height: 250px;
+    bottom: 80px;
+    left: 0;
   }
 
   .img2-scene8 {
-    left: -30px;
+    bottom: 80px;
+    left: -180px;
     max-height: 80vh;
   }
 
-  .txt-scene8-chg {
-    top: 50px;
-    left: -50px;
+  .txt-scene8 {
+    top: 0;
     width: 350px;
     height: 250px;
-  }
-
-  .img3-scene8 {
-    left: -70px;
-    max-height: 80vh;
   }
 }
 
@@ -707,27 +687,22 @@
 
   /* Scene 8 */
   .img-scene8 {
-    left: -150px;
+    max-height: 80vh;
+    bottom: 80px;
+    left: 0;
   }
 
-  .txt-scene8 {
-    top: 20px;
-    right: -40px;
-    width: 375px;
-    height: 275px;
-  }
-
-  .img2-scene8,
-  .img3-scene8 {
-    left: 50px;
+  .img2-scene8 {
+    bottom: 80px;
+    left: -200px;
     max-height: 80vh;
   }
 
-  .txt-scene8-chg {
+  .txt-scene8 {
     top: 0;
-    left: -50px;
-    width: 450px;
-    height: 350px;
+    right: -40px;
+    width: 425px;
+    height: 325px;
   }
 }
 
@@ -863,32 +838,23 @@
   }
 
   /* Scene 8 */
-  .txt-scene8 {
-    top: 20px;
-    right: -40px;
-    width: 375px;
-    height: 275px;
-  }
-
   .img-scene8 {
-    left: -100px;
+    max-height: 90vh;
+    left: 75px;
+    bottom: 0;
   }
 
   .img2-scene8 {
-    left: 60px;
-    max-height: 80vh;
+    left: -100px;
+    bottom: 0;
+    max-height: 90vh;
   }
 
-  .txt-scene8-chg {
+  .txt-scene8 {
     top: 0;
-    left: 40px;
-    width: 450px;
-    height: 350px;
-  }
-
-  .img3-scene8 {
-    left: 80px;
-    max-height: 80vh;
+    right: -40px;
+    width: 425px;
+    height: 325px;
   }
 }
 
@@ -1023,24 +989,17 @@
 
   /* Scene 8 */
   .img-scene8 {
+    left: 75px;
+    max-height: 90vh;
+  }
+
+  .img2-scene8 {
     left: -150px;
+    max-height: 90vh;
   }
 
   .txt-scene8 {
     top: 0;
-    width: 450px;
-    height: 350px;
-  }
-
-  .img2-scene8,
-  .img3-scene8 {
-    left: 60px;
-    max-height: 80vh;
-  }
-
-  .txt-scene8-chg {
-    top: 0;
-    left: 40px;
     width: 450px;
     height: 350px;
   }
@@ -1197,28 +1156,21 @@
   }
 
   /* Scene 8 */
+  .img-scene8 {
+    left: 0;
+    max-height: 100vh;
+  }
+
+  .img2-scene8 {
+    left: -150px;
+    max-height: 100vh;
+  }
+
   .txt-scene8 {
     top: 0;
-    left: 450px;
+    right: -50px;
     width: 600px;
     height: 500px;
-  }
-
-  .img-scene8 {
-    left: -450px;
-  }
-
-  .img2-scene8,
-  .img3-scene8 {
-    left: 60px;
-    max-height: 80vh;
-  }
-
-  .txt-scene8-chg {
-    top: 0;
-    left: 40px;
-    width: 650px;
-    height: 550px;
   }
 }
 
@@ -1362,15 +1314,17 @@
   }
 
   /* Scene 8 */
-  .img-scene8,
-  .img2-scene8,
-  .img3-scene8 {
-    left: -150px;
+  .img-scene8 {
+    left: 200px;
+  }
+
+  .img2-scene8 {
+    left: 0;
   }
 
   .txt-scene8 {
     top: 0;
-    left: 650px;
+    right: 0;
     width: 600px;
     height: 500px;
   }
@@ -1489,29 +1443,19 @@
   }
 
   /* Scene 8 */
-  .img-scene8,
-  .img2-scene8,
-  .img3-scene8 {
-    right: -150px;
+  .img-scene8 {
+    max-height: 100vh;
+    left: 200px;
+  }
+
+  .img2-scene8 {
+    left: 0;
+    max-height: 100vh;
   }
 
   .txt-scene8 {
-    top: 10px;
-    left: 370px;
-    width: 350px;
-    height: 250px;
-  }
-
-  .txt2-scene8 {
-    top: 10px;
-    left: 370px;
-    width: 350px;
-    height: 250px;
-  }
-
-  .txt-scene8-chg {
     top: 0;
-    left: 150px;
+    left: 370px;
     width: 350px;
     height: 250px;
   }
