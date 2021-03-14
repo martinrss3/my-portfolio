@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
-import ReactHowler from "react-howler";
 import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
-import BreakBooty from "../audio/break-booty.mp3";
 import "../css/scene2.css";
 
 export const Scene2 = () => {
@@ -51,7 +49,6 @@ export const Scene2 = () => {
 
   return (
     <div className="container bg-scene2">
-      <ReactHowler src={BreakBooty} playing={false} loop={true} />
 
       <div>
         <img

@@ -3,7 +3,7 @@
   width: 100%;
   height: 100vh;
   background-size: cover;
-  animation: asdfasdf 5s linear infinite;
+  animation: color-change 5s linear infinite;
 }
 .rain {
   content: "";
@@ -15,7 +15,7 @@
   height: 100vh;
   animation: rain 0.2s linear infinite;
 }
-@keyframes asdfasdf {
+@keyframes color-change {
   0%,
   100% {
     filter: hue-rotate(0deg);
@@ -45,6 +45,7 @@
 .first-speech-scene7 {
   position: relative;
   text-shadow: 2px 2px 6px #ff0000;
+  animation: color-change 5s linear infinite;
 }
 
 /* Ultra Super Extra small devices (phones, 399px and down) */

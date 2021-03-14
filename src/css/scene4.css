@@ -61,6 +61,7 @@
 
 .second-speech-scene4 {
   text-shadow: 2px 2px 6px #ff0000;
+  animation: color-change 5s linear infinite;
 }
 
 /* Ultra Super Extra small devices (phones, 399px and down) */
