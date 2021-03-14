@@ -47,6 +47,7 @@ export const Scene5 = () => {
           className="main-image img-scene5"
           alt="me"
         />
+        <span className="base"></span>
       </div>
 
       <Delay wait={1500}>
