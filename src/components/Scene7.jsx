@@ -29,8 +29,8 @@ export const Scene7 = () => {
   }, []);
 
   return (
-    <div className="container bg-scene7">
-      <div className="bg">
+    <div className="container">
+      <div className="bg-scene7">
         <img src={Bg} alt="bg" />
       </div>
 
