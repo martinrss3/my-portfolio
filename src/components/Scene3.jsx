@@ -7,8 +7,6 @@ import "../css/scene3.css";
 
 export const Scene3 = () => {
   let imageRef = useRef(null);
-  let nextSceneRef = useRef(null);
-  let backSceneRef = useRef(null);
 
   const firstSpeech = `<span class="first-speech-scene3">oh sorry, \n I forgot to introduce \n myself...</span>`;
   const secondSpeech = `<span class="second-speech-scene3">
@@ -26,19 +24,6 @@ export const Scene3 = () => {
       ease: Power3.easeInOut,
       delay: 0.3,
     });
-
-    TweenMax.fromTo(
-      [nextSceneRef, backSceneRef],
-      1,
-      {
-        delay: 2,
-        opacity: 0,
-      },
-      {
-        delay: 1.2,
-        opacity: 1,
-      }
-    );
 
     let tl = new TimelineLite();
     tl.to(imageRef, 0, { x: 700 });
@@ -93,22 +78,12 @@ export const Scene3 = () => {
 
       <div>
         <Link to="/scene2">
-          <button
-            ref={(el) => {
-              backSceneRef = el;
-            }}
-            className={buttons ? "back-scene" : "back-scene-changed"}
-          >
+          <button className={buttons ? "back-scene" : "back-scene-changed"}>
             Back
           </button>
         </Link>
         <Link to="/scene4">
-          <button
-            ref={(el) => {
-              nextSceneRef = el;
-            }}
-            className={buttons ? "next-scene" : "next-scene-changed"}
-          >
+          <button className={buttons ? "next-scene" : "next-scene-changed"}>
             Next
           </button>
         </Link>
