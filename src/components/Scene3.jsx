@@ -15,7 +15,6 @@ export const Scene3 = () => {
   I'm the guy who \n want to destroy \n your website \n for no reason</span>`;
   const thirdSpeech = `<span class="third-speech-scene3">YES... \n FOR NO \n REASON!</span>`;
 
-  const [background, setBackground] = useState(false);
   const [mainImage, setMainImage] = useState(false);
   const [text, setText] = useState(false);
   const [buttons, setButtons] = useState(false);
@@ -46,12 +45,7 @@ export const Scene3 = () => {
   }, []);
 
   return (
-    <div
-      className={
-        background ? "container bg-scene3-toggle" : "container bg-scene3"
-      }
-    >
-
+    <div className="container bg-scene3">
       <div>
         <img
           ref={(el) => {
@@ -85,7 +79,6 @@ export const Scene3 = () => {
                 .pauseFor(2500)
                 .deleteChars(65)
                 .callFunction(() => {
-                  setBackground(!background);
                   setMainImage(!mainImage);
                   setText(!text);
                 })
