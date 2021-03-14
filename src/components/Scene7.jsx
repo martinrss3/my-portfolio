@@ -9,7 +9,8 @@ export const Scene7 = () => {
   let nextSceneRef = useRef(null);
   let backSceneRef = useRef(null);
 
-  const firstSpeech = `<span class="first-speech-scene7">I hate the rain!</span>`;
+  const firstSpeech = `<span class="first-speech-scene7">I hate rain!</span>`;
+  const secondSpeech = `<span class="second-speech-scene7">I'd better \n go home...</span>`;
 
   const [buttons, setButtons] = useState(false);
 
@@ -43,12 +44,16 @@ export const Scene7 = () => {
       <div className="text txt-scene7">
         <Typewriter
           options={{
-            delay: 75,
+            delay: 50,
+            deleteSpeed: 10,
             cursor: "",
           }}
           onInit={(typewriter) => {
             typewriter
               .typeString(firstSpeech)
+              .pauseFor(2500)
+              .deleteChars(15)
+              .typeString(secondSpeech)
               .callFunction(() => {
                 setButtons(!buttons);
               })
