@@ -4,10 +4,19 @@
   background: linear-gradient(to right, #ec2f4b, #009fff);
 }
 
+.img-contact {
+  content: url("../images/me/glitch-01.gif");
+  height: 100vh;
+  opacity: 0.1;
+}
+
+.title-contact {
+  font-family: "Poppins", sans-serif;
+}
+
 form {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
   width: 75%;
   height: 450px;
   padding: 30px;

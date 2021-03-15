@@ -370,6 +370,17 @@
     font-size: 1.4rem;
     width: 150px;
   }
+
+  /* Contact */
+  .img-contact {
+    height: 60vh;
+    left: -100px;
+    bottom: 80px;
+  }
+
+  .title-contact {
+    padding: 1em;
+  }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
@@ -546,6 +557,11 @@
     font-size: 1.4rem;
     width: 150px;
   }
+
+  /* Contact */
+  .title-contact {
+    padding: 1em;
+  }
 }
 
 /* Extra small devices (phones, 500px and up) */
@@ -720,6 +736,16 @@
     width: 180px;
     height: 60px;
   }
+
+  /* Contact */
+  .img-contact {
+    height: 80vh;
+    left: -200px;
+  }
+
+  .title-contact {
+    padding: 1em;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -878,6 +904,15 @@
     width: 220px;
     height: 70px;
   }
+
+  /* Contact */
+  .img-contact {
+    left: -100px;
+  }
+
+  .title-contact {
+    padding: 1em;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1024,6 +1059,15 @@
     top: 0;
     width: 450px;
     height: 350px;
+  }
+
+  /* Contact */
+  .img-contact {
+    left: -50px;
+  }
+
+  .title-contact {
+    padding: 1.5em;
   }
 }
 
@@ -1194,6 +1238,15 @@
     width: 600px;
     height: 500px;
   }
+
+  /* Contact */
+  .img-contact {
+    left: 50px;
+  }
+
+  .title-contact {
+    padding: 1.5em;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1350,6 +1403,15 @@
     width: 600px;
     height: 500px;
   }
+
+  /* Contact */
+  .img-contact {
+    left: 50px;
+  }
+
+  .title-contact {
+    padding: 1.5em;
+  }
 }
 
 /* Iphone 6/7/8 Plus Landscape */
@@ -1486,5 +1548,14 @@
     font-size: 1.4rem;
     width: 185px;
     height: 50px;
+  }
+
+  /* Contact */
+  .img-contact {
+    left: 150px;
+  }
+
+  .title-contact {
+    padding: 0.5em;
   }
 }
