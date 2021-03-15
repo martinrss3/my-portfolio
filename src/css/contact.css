@@ -105,7 +105,7 @@ textarea:focus {
   box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
   overflow: hidden;
 }
-.send-btn{
+.send-btn {
   border: none;
   font-family: Dekko, cursive;
   font-size: 2rem;
@@ -117,7 +117,7 @@ textarea:focus {
   color: #000;
   background: #fff;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   font-weight: 700;
   position: relative;
   outline: none;
@@ -131,48 +131,10 @@ textarea:focus {
   box-shadow: 3px 3px 5px rgb(27, 27, 27);
 }
 
-.btn:hover {
-  background: #fff;
-  outline: none;
-  box-shadow: 0 4px #cecece;
-  top: 2px;
-}
-
-.btn:active {
-  background: #fff;
-  outline: none;
-  box-shadow: 0 0 #cecece;
-  top: 6px;
-}
-
-.flat {
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  outline: none;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.flat:before {
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  line-height: 3;
-  font-size: 140%;
-  width: 60px;
-}
-
-.flat {
-  width: 960px !important;
-  height: 48px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  background: url(http://www.jordancundiff.com/wp-content/uploads/2014/03/icon-dropdown.png)
-    no-repeat right;
+.send-btn:hover {
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 0.3s infinite alternate;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1035px) {
