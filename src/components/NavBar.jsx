@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { TweenMax, Power3 } from "gsap";
 import ReactHowler from "react-howler";
 import DjGriffin from "../audio/djgriffin.mp3";
@@ -39,7 +40,7 @@ export const NavBar = () => {
       <ReactHowler src={DjGriffin} playing={music} loop={true} />
       <ul className="navbar-nav">
         <li className="logo">
-          <a href="/" className="nav-link">
+          <Link to="/" className="nav-link">
             <span className="link-text logo-text">Home</span>
             <svg
               aria-hidden="true"
@@ -64,11 +65,11 @@ export const NavBar = () => {
                 ></path>
               </g>
             </svg>
-          </a>
+          </Link>
         </li>
 
         <li className="nav-item">
-          <a href="/about" className="nav-link">
+          <Link to="/" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -95,12 +96,12 @@ export const NavBar = () => {
                 ></path>
               </g>
             </svg>
-            <span className="link-text">About Me</span>
-          </a>
+            <span className="link-text">Story</span>
+          </Link>
         </li>
 
         <li className="nav-item">
-          <a href="/" className="nav-link">
+          <Link to="/about" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -127,12 +128,12 @@ export const NavBar = () => {
                 ></path>
               </g>
             </svg>
-            <span className="link-text">Story</span>
-          </a>
+            <span className="link-text">About Me</span>
+          </Link>
         </li>
 
         <li className="nav-item">
-          <a href="/contact" className="nav-link">
+          <Link to="/contact" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -160,11 +161,11 @@ export const NavBar = () => {
               </g>
             </svg>
             <span className="link-text">Contact Me</span>
-          </a>
+          </Link>
         </li>
 
         <li className="nav-item" onClick={music ? handlePause : handlePlay}>
-          <a className="nav-link" onClick={handleMusicIcon} href="#music">
+          <Link className="nav-link" onClick={handleMusicIcon}>
             <svg
               width="28"
               height="28"
@@ -194,7 +195,7 @@ export const NavBar = () => {
               ></path>
             </svg>
             <span className="link-text">Play Music</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
