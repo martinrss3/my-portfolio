@@ -165,7 +165,7 @@ export const NavBar = () => {
         </li>
 
         <li className="nav-item" onClick={music ? handlePause : handlePlay}>
-          <Link className="nav-link" onClick={handleMusicIcon}>
+          <span className="nav-link" onClick={handleMusicIcon}>
             <svg
               width="28"
               height="28"
@@ -195,7 +195,7 @@ export const NavBar = () => {
               ></path>
             </svg>
             <span className="link-text">Play Music</span>
-          </Link>
+          </span>
         </li>
       </ul>
     </nav>

@@ -29,10 +29,6 @@ export const Contact = () => {
   return (
     <div className="container contact">
       <div>
-        <img className="main-image img-contact" alt="me" />
-      </div>
-
-      <div>
         <h2 className="title-contact">Feel free to contact me</h2>
         <form
           action="/?page_id=143#wpcf7-f156-p143-o1"
