@@ -84,6 +84,10 @@
   transition: var(--transition-speed);
 }
 
+.fa-primary-chg {
+  display: none;
+}
+
 .logo {
   font-weight: bold;
   text-transform: uppercase;
@@ -131,6 +135,10 @@
 
   .nav-link {
     justify-content: center;
+  }
+
+  .nav-link:hover {
+    background: none;
   }
 
   main {

@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { TweenMax, Power3 } from "gsap";
+import ReactHowler from "react-howler";
+import DjGriffin from "../audio/djgriffin.mp3";
 import "../css/navbar.css";
 
 export const NavBar = () => {
@@ -8,9 +10,20 @@ export const NavBar = () => {
   let shuttleRef = useRef(null);
   let soundRef = useRef(null);
 
-  // const [toggleSound, setToggleSound] = useState(false);
+  const [music, setMusic] = useState(false);
+  const [musicIcon, setMusicIcon] = useState(false);
 
-  // var bool = bool ? false : true;
+  const handlePlay = () => {
+    setMusic(true);
+  };
+
+  const handlePause = () => {
+    setMusic(false);
+  };
+
+  const handleMusicIcon = () => {
+    setMusicIcon(!musicIcon);
+  };
 
   useEffect(() => {
     TweenMax.staggerFrom(
@@ -23,6 +36,7 @@ export const NavBar = () => {
 
   return (
     <nav className="navbar">
+      <ReactHowler src={DjGriffin} playing={music} loop={true} />
       <ul className="navbar-nav">
         <li className="logo">
           <a href="/" className="nav-link">
@@ -149,12 +163,8 @@ export const NavBar = () => {
           </a>
         </li>
 
-        <li className="nav-item">
-          <a
-            className="nav-link"
-            // onClick={() => setToggleSound(window.Howler.mute((bool = !bool)))}
-            href="#home"
-          >
+        <li className="nav-item" onClick={music ? handlePause : handlePlay}>
+          <a className="nav-link" onClick={handleMusicIcon} href="#music">
             <svg
               width="28"
               height="28"
@@ -169,22 +179,18 @@ export const NavBar = () => {
                 className="svg-inline--fa fa-secondary"
               ></path>
               <path
-                d="
-            M14.3025 3.69751
-            C15.7086 5.10397 16.4984 7.01128 16.4984 9.00001
-            C16.4984 10.9887 15.7086 12.8961 14.3025 14.3025
-          "
+                d="M14.3025 3.69751
+                    C15.7086 5.10397 16.4984 7.01128 16.4984 9.00001
+                    C16.4984 10.9887 15.7086 12.8961 14.3025 14.3025"
                 style={{ opacity: 1, transitionDelay: "150ms" }}
-                className="fa-primary"
+                className={musicIcon ? "fa-primary" : "fa-primary-chg"}
               ></path>
               <path
-                d="
-            M11.655 6.34501
-            C12.358 7.04824 12.753 8.00189 12.753 8.99626
-            C12.753 9.99063 12.358 10.9443 11.655 11.6475
-          "
+                d="M11.655 6.34501
+                C12.358 7.04824 12.753 8.00189 12.753 8.99626
+                C12.753 9.99063 12.358 10.9443 11.655 11.6475"
                 style={{ opacity: 1, transitionDelay: "0ms" }}
-                className="fa-primary"
+                className={musicIcon ? "fa-primary" : "fa-primary-chg"}
               ></path>
             </svg>
             <span className="link-text">Play Music</span>
