@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/about.css";
-import bg from "../images/parallax/99.jpg";
+import bg from "../images/parallax/bg-about.jpg";
 import moon from "../images/parallax/moon.png";
 import cloud1 from "../images/parallax/cloud1.png";
 import cloud2 from "../images/parallax/cloud2.png";
