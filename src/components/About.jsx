@@ -10,6 +10,8 @@ import star from "../images/parallax/star.png";
 import me from "../images/me/25.png";
 import grass from "../images/parallax/grass.png";
 
+import { Contact } from "./Contact";
+
 export const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -75,9 +77,9 @@ export const About = () => {
         <img src={me} id="me" alt="me" />
         <img src={grass} id="grass" alt="grass" />
       </section>
-      <div className="sec">
-        <div className="content">
-          <h2>My name is Martin Russo and i'm hungry.</h2>
+      <div className="row">
+        <div className="first column">
+          <h2>ABOUT ME</h2>
           <p>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -91,22 +93,14 @@ export const About = () => {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
             amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur.
-            <br />
-            <br />
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            ut labore et dolore magna aliqua.
           </p>
+        </div>
+        <br />
+        <br />
+        <div className="second column">
+          <h2>FEEL FREE TO CONTACT ME</h2>
+          <Contact />
         </div>
       </div>
     </div>

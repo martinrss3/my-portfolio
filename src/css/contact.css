@@ -1,42 +1,18 @@
-.contact {
-  background: #009fff;
-  background: -webkit-linear-gradient(to right, #ec2f4b, #009fff);
-  background: linear-gradient(to right, #ec2f4b, #009fff);
-}
-
-.title-contact {
-  font-family: Paloseco, sans-serif;
-}
-
 form {
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  height: 450px;
-  padding: 30px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  overflow: hidden;
+  padding-bottom: 80px;
 }
 
 textarea {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(7, 109, 182, 0.219);
   width: 100%;
-  height: 110px;
+  /* height: 110px; */
   border: none;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   display: block;
   font-family: Paloseco, sans-serif;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #fff;
   padding-left: 15px;
   padding-right: 20px;
@@ -48,20 +24,18 @@ textarea {
 .nameinput,
 .emailinput {
   width: 100%;
-  height: 48px;
+  height: 47px;
   border: none;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   display: block;
   font-family: Paloseco, sans-serif;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #fff;
   padding-left: 15px;
   padding-right: 20px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -70,18 +44,19 @@ input[type="submit"] {
 }
 
 input.nameinput {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(7, 109, 182, 0.219);
   padding-left: 15px;
 }
 
 input.emailinput {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(7, 109, 182, 0.219);
   padding-left: 15px;
 }
 
 input.message {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(7, 109, 182, 0.219);
   padding-left: 15px;
+  margin-top: 20px;
 }
 
 ::-webkit-input-placeholder {
@@ -100,38 +75,21 @@ input.message {
   color: #fff;
 }
 
-input:focus,
-textarea:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
-  overflow: hidden;
-}
 .send-btn {
   border: none;
-  font-family: Dekko, cursive;
-  font-size: 2rem;
+  font-family: Paloseco, sans-serif;
+  font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 0.2rem;
-  width: 150px;
-  height: 60px;
+  letter-spacing: 0.1em;
+  width: 100px;
+  height: 45px;
   color: #000;
   background: #fff;
-  cursor: pointer;
   display: block;
-  font-weight: 700;
   position: relative;
   outline: none;
   border-radius: 5px;
-  float: right;
-  margin-right: 6px;
-  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
-    #fff;
-  background-size: 25px, 100%;
-  border: 0.4rem solid #000;
-  box-shadow: 3px 3px 5px rgb(27, 27, 27);
 }
 
 .send-btn:hover {
@@ -140,101 +98,11 @@ textarea:focus {
   animation: bounce 0.3s infinite alternate;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1035px) {
-  h1 {
-    font-size: 80px;
-  }
-  form {
-    width: 736px !important;
-  }
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Subject.flat
-    > select,
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Subject.flat {
-    width: 731px !important;
-  }
+/* Ultra Super Extra small devices (phones, 399px and down) */
+@media only screen and (max-width: 399px) {
   .nameinput,
   .emailinput,
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Message
-    > textarea {
-    width: 666px !important;
-  }
-}
-
-@media only screen and (max-width: 804px) {
-  h1 {
-    font-size: 50px;
-  }
-  form {
-    width: 450px !important;
-  }
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Subject.flat
-    > select,
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Subject.flat {
-    width: 445px !important;
-  }
-  .nameinput,
-  .emailinput,
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Message
-    > textarea {
-    width: 380px !important;
-  }
-}
-
-@media only screen and (max-width: 517px) {
-  h1 {
-    font-size: 30px;
-  }
-  form {
-    width: 320px !important;
-  }
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Subject.flat
-    > select,
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Subject.flat {
-    width: 290px !important;
-  }
-  .nameinput,
-  .emailinput,
-  #wpcf7-f156-p143-o1\20
-    formwrap
-    > form
-    > p
-    > span.wpcf7-form-control-wrap.Message
-    > textarea {
-    width: 260px !important;
-  }
-  .btn {
-    width: 110px;
+  textarea {
+    font-size: 1rem;
   }
 }
