@@ -1,7 +1,3 @@
-form {
-  padding-bottom: 80px;
-}
-
 textarea {
   background: rgba(7, 109, 182, 0.219);
   width: 100%;
@@ -98,11 +94,24 @@ input.message {
   animation: bounce 0.3s infinite alternate;
 }
 
-/* Ultra Super Extra small devices (phones, 399px and down) */
-@media only screen and (max-width: 399px) {
+/* Small screens */
+@media only screen and (max-width: 599px) {
+  form {
+    padding-bottom: 80px;
+  }
+
   .nameinput,
   .emailinput,
   textarea {
     font-size: 1rem;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  form {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 20px;
   }
 }
