@@ -41,7 +41,7 @@ export const NavBar = () => {
       <ul className="navbar-nav">
         <li className="logo">
           <Link to="/" className="nav-link">
-            <span className="link-text logo-text">Home</span>
+            <span className="link-text logo-text">HOME</span>
             <svg
               aria-hidden="true"
               focusable="false"
@@ -96,7 +96,7 @@ export const NavBar = () => {
                 ></path>
               </g>
             </svg>
-            <span className="link-text">Story</span>
+            <span className="link-text">STORY</span>
           </Link>
         </li>
 
@@ -128,7 +128,7 @@ export const NavBar = () => {
                 ></path>
               </g>
             </svg>
-            <span className="link-text">About Me</span>
+            <span className="link-text">ABOUT ME</span>
           </Link>
         </li>
 
@@ -160,7 +160,7 @@ export const NavBar = () => {
                 ></path>
               </g>
             </svg>
-            <span className="link-text">Contact Me</span>
+            <span className="link-text">CONTACT ME</span>
           </Link>
         </li>
 
@@ -194,7 +194,7 @@ export const NavBar = () => {
                 className={musicIcon ? "fa-primary" : "fa-primary-chg"}
               ></path>
             </svg>
-            <span className="link-text">Play Music</span>
+            <span className="link-text">PLAY MUSIC</span>
           </span>
         </li>
       </ul>

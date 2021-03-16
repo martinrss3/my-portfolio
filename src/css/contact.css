@@ -5,7 +5,7 @@
 }
 
 .title-contact {
-  font-family: "Poppins", sans-serif;
+  font-family: Paloseco, sans-serif;
 }
 
 form {
@@ -35,7 +35,7 @@ textarea {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   display: block;
-  font-family: Dekko, sans-serif;
+  font-family: Paloseco, sans-serif;
   font-size: 18px;
   color: #fff;
   padding-left: 15px;
@@ -57,7 +57,7 @@ textarea {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   display: block;
-  font-family: Dekko, sans-serif;
+  font-family: Paloseco, sans-serif;
   font-size: 18px;
   color: #fff;
   padding-left: 15px;

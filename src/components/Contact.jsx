@@ -29,7 +29,7 @@ export const Contact = () => {
   return (
     <div className="container contact">
       <div>
-        <h2 className="title-contact">Feel free to contact me</h2>
+        <h2 className="title-contact">FEEL FREE TO CONTACT ME</h2>
         <form
           action="/?page_id=143#wpcf7-f156-p143-o1"
           className="wpcf7-form"
