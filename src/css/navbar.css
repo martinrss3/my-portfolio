@@ -13,6 +13,7 @@
     rgb(88, 88, 88);
   background-size: 25px, 100%;
   font-family: Paloseco, sans-serif;
+  letter-spacing: 0.1em;
   box-shadow: 6px 0 2px rgba(0, 0, 0, 0.35);
 }
 
@@ -72,11 +73,11 @@
 }
 
 .fa-primary {
-  color: #07c917;
+  color: #ffb703;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: #ffffff;
 }
 
 .fa-primary,
