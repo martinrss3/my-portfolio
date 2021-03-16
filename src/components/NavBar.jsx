@@ -142,7 +142,7 @@ export const NavBar = () => {
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 512"
-              className="svg-inline--fa fa-space-shuttle fa-spin fa-w-20 fa-5x"
+              className="svg-inline--fa fa-space-shuttle fa-w-20 fa-5x"
               ref={(el) => {
                 shuttleRef = el;
               }}
