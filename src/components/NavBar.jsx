@@ -133,7 +133,7 @@ export const NavBar = () => {
         </li>
 
         <li className="nav-item">
-          <Link to="/projects" className="nav-link">
+          <Link to="/cv" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -160,7 +160,7 @@ export const NavBar = () => {
                 ></path>
               </g>
             </svg>
-            <span className="link-text">PROJECTS</span>
+            <span className="link-text">CV</span>
           </Link>
         </li>
 
