@@ -97,7 +97,9 @@ input.message {
 /* Small screens */
 @media only screen and (max-width: 599px) {
   form {
-    padding-bottom: 80px;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 100px;
   }
 
   .nameinput,
