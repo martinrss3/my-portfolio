@@ -9,7 +9,7 @@ export const Scene2 = () => {
   let imageRef = useRef(null);
 
   const firstSpeech = `<span class="first-speech-scene2">I love \n coding \n and make music</span>`;
-  const secondSpeech = `<span class="second-speech-scene2">You can contact me \n in the menu section</span>`;
+  const secondSpeech = `<span class="second-speech-scene2">You can contact me \n in the "alien" section</span>`;
   const thirdSpeech = `<span class="third-speech-scene2">Wait...</span>`;
   const fourthSpeech = `<span class="fourth-speech-scene2">you'll never get \n the job...</span>`;
   const fifthSpeech = `<span class="fifth-speech-scene2">What..?</span>`;

@@ -3,7 +3,7 @@ import { TweenMax } from "gsap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { About } from "./components/About";
-import { Contact } from "./components/Contact";
+import { Projects } from "./components/Projects";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
 import { Scene3 } from "./components/Scene3";
@@ -54,8 +54,8 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/contact">
-            <Contact />
+          <Route exact path="/projects">
+            <Projects />
           </Route>
         </Switch>
       </div>

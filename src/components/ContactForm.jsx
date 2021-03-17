@@ -2,7 +2,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 import "../css/contact.css";
 
-export const Contact = () => {
+export const ContactForm = () => {
   function sendEmail(e) {
     e.preventDefault();
 

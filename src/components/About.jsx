@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ContactForm } from "./ContactForm";
 import "../css/about.css";
 import bg from "../images/parallax/bg-about.jpg";
 import moon from "../images/parallax/moon.png";
@@ -9,8 +10,6 @@ import cloud2 from "../images/parallax/cloud2.png";
 import star from "../images/parallax/star.png";
 import me from "../images/me/25.png";
 import grass from "../images/parallax/grass.png";
-
-import { Contact } from "./Contact";
 
 export const About = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -80,7 +79,7 @@ export const About = () => {
       <div className="row">
         <div className="first column">
           <h2>ABOUT ME</h2>
-          <p>
+          <p className="about-text">
             <br />
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -100,7 +99,7 @@ export const About = () => {
         <br />
         <div className="second column">
           <h2>FEEL FREE TO CONTACT ME</h2>
-          <Contact />
+          <ContactForm />
         </div>
       </div>
     </div>
