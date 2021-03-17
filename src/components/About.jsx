@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ContactForm } from "./ContactForm";
+import { Contact } from "./Contact";
 import "../css/about.css";
 import bg from "../images/parallax/bg-about.jpg";
 import moon from "../images/parallax/moon.png";
@@ -99,7 +99,7 @@ export const About = () => {
         <br />
         <div className="second column">
           <h2>FEEL FREE TO CONTACT ME</h2>
-          <ContactForm />
+          <Contact />
         </div>
       </div>
     </div>
