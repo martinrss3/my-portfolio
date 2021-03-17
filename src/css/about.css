@@ -34,7 +34,7 @@ h2 {
   color: #fff;
 }
 
-p {
+.about-text {
   font-size: 1.2rem;
   color: #fff;
   text-align: center;
@@ -144,7 +144,7 @@ p {
     padding-bottom: 10px;
   }
 
-  p {
+  .about-text {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -186,7 +186,7 @@ p {
     padding-bottom: 10px;
   }
 
-  p {
+  .about-text {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -228,7 +228,7 @@ p {
     padding-bottom: 10px;
   }
 
-  p {
+  .about-text {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -271,7 +271,7 @@ p {
     padding-bottom: 10px;
   }
 
-  p {
+  .about-text {
     margin-left: 100px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -311,7 +311,7 @@ p {
     font-size: 2rem;
   }
 
-  p {
+  .about-text {
     margin-left: 100px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -328,7 +328,7 @@ p {
     font-size: 2rem;
   }
 
-  p {
+  .about-text {
     margin-left: 100px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -355,7 +355,7 @@ p {
     font-size: 2rem;
   }
 
-  p {
+  .about-text {
     margin-left: 120px;
     margin-right: 40px;
     margin-bottom: 20px;
