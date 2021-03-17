@@ -1,3 +1,44 @@
-.img-random {
+.bg-cv {
+  background-color: greenyellow;
+}
+
+.img-cv-guy {
   content: url("../images/badGuy/25.png");
+}
+
+.cv {
+  z-index: 100;
+  content: url("../images/cv.jpg");
+  position: absolute;
+  top: 180px;
+  right: 300px;
+  transform: rotate(-15deg) scale(0.3);
+  -webkit-transform: rotate(-15deg) scale(0.3);
+  -ms-transform: rotate(-15deg) scale(0.3);
+}
+
+.txt-cv {
+  background-image: url("../images/speechBubbles/speech-bubble1-flip.png");
+}
+
+.first-speech-cv,
+.second-speech-cv {
+  position: relative;
+  text-shadow: 2px 2px 6px #ff0000;
+  animation: color-change 5s linear infinite;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .first-speech-cv {
+    font-size: 2.8rem;
+    left: -5px;
+    top: 5px;
+  }
+
+  .second-speech-cv {
+    font-size: 2.5rem;
+    left: -15px;
+    top: -15px;
+  }
 }
