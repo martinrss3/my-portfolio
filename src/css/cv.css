@@ -1,17 +1,25 @@
 .bg-cv {
-  background-color: greenyellow;
+  background-image: url("../images/parallax/bg-about.jpg");
 }
 
 .img-cv-guy {
   content: url("../images/badGuy/25.png");
 }
 
+.img-cv-me {
+  content: url("../images/me/07.png");
+}
+
+.img-cv-me-chg {
+  display: none;
+}
+
 .cv {
   z-index: 100;
   content: url("../images/cv.jpg");
   position: absolute;
-  top: 180px;
-  right: 300px;
+  top: 300px;
+  right: 100px;
   transform: rotate(-15deg) scale(0.3);
   -webkit-transform: rotate(-15deg) scale(0.3);
   -ms-transform: rotate(-15deg) scale(0.3);
@@ -21,11 +29,20 @@
   background-image: url("../images/speechBubbles/speech-bubble1-flip.png");
 }
 
+.txt-cv-chg {
+  background-image: url("../images/speechBubbles/speech-bubble1.png");
+}
+
 .first-speech-cv,
-.second-speech-cv {
+.second-speech-cv,
+.fourth-speech-cv {
   position: relative;
   text-shadow: 2px 2px 6px #ff0000;
   animation: color-change 5s linear infinite;
+}
+
+.third-speech-cv {
+  position: relative;
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -40,5 +57,16 @@
     font-size: 2.5rem;
     left: -15px;
     top: -15px;
+  }
+
+  .third-speech-cv {
+    font-size: 2rem;
+    left: -5px;
+    top: 5px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 5rem;
+    top: 10px;
   }
 }

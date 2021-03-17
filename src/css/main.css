@@ -1418,9 +1418,22 @@
     left: 600px;
   }
 
+  .img-cv-me {
+    z-index: 100;
+    height: 40vh;
+    left: -650px;
+  }
+
   .txt-cv {
     top: 50px;
     left: 250px;
+  }
+
+  .txt-cv-chg {
+    top: 470px;
+    left: 300px;
+    width: 450px;
+    height: 350px;
   }
 }
 
