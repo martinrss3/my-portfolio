@@ -1,5 +1,5 @@
 .bg-cv {
-  background-image: url("../images/parallax/bg-about.jpg");
+  background-image: url("../images/backgrounds/bg-about.jpg");
 }
 
 .img-cv-guy {
@@ -9,7 +9,7 @@
 
 .cv {
   z-index: 20;
-  content: url("../images/cv.jpg");
+  content: url("../images/cv2021.jpg");
   position: absolute;
   top: 0;
   bottom: 0;
