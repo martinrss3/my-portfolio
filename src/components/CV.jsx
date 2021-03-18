@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { TweenLite, Power2 } from "gsap";
+import { TweenLite, Power3 } from "gsap";
 import Typewriter from "typewriter-effect";
 import Delay from "react-delay";
 import "../css/cv.css";
@@ -17,13 +17,16 @@ export const CV = () => {
 
   useEffect(() => {
     TweenLite.to(imageRef, 1, {
-      rotation: 720,
+      rotation: 360,
       scale: 1,
-      ease: Power2.easeInOut,
+      ease: Power3.easeInOut,
       delay: 16,
-      top: "5vh",
-      left: "20vw",
-      height: "90vh",
+      position: "absolute",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      margin: "auto",
     });
   }, []);
 

@@ -17,9 +17,7 @@
 .cv {
   z-index: 100;
   content: url("../images/cv.jpg");
-  position: absolute;
-  top: 300px;
-  right: 100px;
+  position: fixed;
   transform: rotate(-15deg) scale(0.3);
   -webkit-transform: rotate(-15deg) scale(0.3);
   -ms-transform: rotate(-15deg) scale(0.3);
@@ -45,28 +43,249 @@
   position: relative;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Ultra Super Extra small devices (phones, 399px and down) */
+@media only screen and (max-width: 399px) {
+  .cv {
+    width: 40vh;
+    right: -50px;
+    bottom: 5px;
+  }
+
   .first-speech-cv {
-    font-size: 2.8rem;
+    font-size: 1.7rem;
     left: -5px;
-    top: 5px;
   }
 
   .second-speech-cv {
-    font-size: 2.5rem;
-    left: -15px;
-    top: -15px;
+    font-size: 1.2rem;
+    left: -5px;
+    top: -5px;
   }
 
   .third-speech-cv {
-    font-size: 2rem;
-    left: -5px;
+    font-size: 1.3rem;
     top: 5px;
   }
 
   .fourth-speech-cv {
-    font-size: 5rem;
+    font-size: 2.5rem;
+    top: 7px;
+  }
+}
+
+/* Super Extra small devices (phones, between 400px and 499px) */
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .cv {
+    width: 35vh;
+    right: -50px;
+    top: 375px;
+  }
+
+  .first-speech-cv {
+    font-size: 1.8rem;
+    top: -10px;
+    left: -10px;
+  }
+
+  .second-speech-cv {
+    font-size: 1.4rem;
+    top: -20px;
+    left: -5px;
+  }
+
+  .third-speech-cv {
+    font-size: 1.3rem;
+    top: -20px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 2.5rem;
+    top: 7px;
+  }
+}
+
+/* Extra small devices (phones, 500px and up) */
+@media only screen and (min-width: 500px) {
+  .cv {
+    width: 50vh;
+    right: -10px;
+    top: 300px;
+  }
+
+  .first-speech-cv {
+    font-size: 1.8rem;
+    top: -10px;
+    left: -10px;
+  }
+
+  .second-speech-cv {
+    font-size: 1.4rem;
+    top: -20px;
+    left: -5px;
+  }
+
+  .third-speech-cv {
+    font-size: 1.3rem;
+    top: -15px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 2.5rem;
+    top: 7px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .cv {
+    width: 50vh;
+    right: -50px;
+    top: 375px;
+  }
+
+  .first-speech-cv {
+    font-size: 1.8rem;
+    top: -10px;
+    left: -10px;
+  }
+
+  .second-speech-cv {
+    font-size: 1.4rem;
+    top: -20px;
+    left: -5px;
+  }
+
+  .third-speech-cv {
+    font-size: 1.3rem;
+    top: -25px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 2.5rem;
+    top: 7px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cv {
+    width: 50vh;
+    right: -100px;
+    top: 450px;
+  }
+
+  .first-speech-cv {
+    font-size: 2rem;
     top: 10px;
+    left: -10px;
+  }
+
+  .second-speech-cv {
+    font-size: 1.6rem;
+    top: -10px;
+    left: -10px;
+  }
+
+  .third-speech-cv {
+    font-size: 1.3rem;
+    top: -25px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 3rem;
+    top: 15px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cv {
+    width: 50vh;
+    right: 70px;
+    top: 375px;
+  }
+
+  .first-speech-cv {
+    font-size: 2rem;
+    top: 10px;
+    left: -10px;
+  }
+
+  .second-speech-cv {
+    font-size: 1.6rem;
+    top: -10px;
+    left: -10px;
+  }
+
+  .third-speech-cv {
+    font-size: 1.3rem;
+    top: -25px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 3rem;
+    top: 15px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .cv {
+    width: 60vh;
+    right: 100px;
+    top: 300px;
+  }
+
+  .first-speech-cv {
+    font-size: 2.2rem;
+    top: 20px;
+    left: -10px;
+  }
+
+  .second-speech-cv {
+    font-size: 1.8rem;
+    top: 0;
+    left: -10px;
+  }
+
+  .third-speech-cv {
+    font-size: 1.5rem;
+    top: -35px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 4.2rem;
+    top: 25px;
+  }
+}
+
+/* Iphone 6/7/8 Plus Landscape */
+@media only screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+  .cv {
+    width: 60vh;
+    right: 50px;
+    top: 150px;
+  }
+
+  .first-speech-cv {
+    font-size: 2rem;
+    top: -15px;
+    left: -10px;
+  }
+
+  .second-speech-cv {
+    font-size: 1.5rem;
+    top: -20px;
+    left: -10px;
+  }
+
+  .third-speech-cv {
+    font-size: 1.3rem;
+    top: -20px;
+  }
+
+  .fourth-speech-cv {
+    font-size: 3rem;
+    top: -10px;
   }
 }
