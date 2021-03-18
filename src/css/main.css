@@ -392,17 +392,6 @@
     top: 0;
     left: -30px;
   }
-
-  .img-cv-me {
-    bottom: 80px;
-    height: 40vh;
-    left: -200px;
-  }
-
-  .txt-cv-chg {
-    top: 250px;
-    left: 70px;;
-  }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
@@ -597,19 +586,6 @@
     left: -30px;
     width: 350px;
     height: 250px;
-  }
-
-  .img-cv-me {
-    bottom: 80px;
-    height: 40vh;
-    left: -250px;
-  }
-
-  .txt-cv-chg {
-    width: 300px;
-    height: 200px;
-    top: 350px;
-    left: 50px;
   }
 }
 
@@ -809,19 +785,6 @@
     width: 350px;
     height: 250px;
   }
-
-  .img-cv-me {
-    bottom: 80px;
-    height: 40vh;
-    left: -250px;
-  }
-
-  .txt-cv-chg {
-    width: 300px;
-    height: 200px;
-    top: 275px;
-    left: 150px;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1003,19 +966,6 @@
     width: 350px;
     height: 250px;
   }
-
-  .img-cv-me {
-    height: 40vh;
-    bottom: 0;
-    left: -250px;
-  }
-
-  .txt-cv-chg {
-    width: 300px;
-    height: 200px;
-    top: 375px;
-    left: 150px;
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1185,19 +1135,6 @@
     left: 175px;
     width: 400px;
     height: 300px;
-  }
-
-  .img-cv-me {
-    height: 40vh;
-    bottom: 0;
-    left: -300px;
-  }
-
-  .txt-cv-chg {
-    width: 300px;
-    height: 200px;
-    top: 550px;
-    left: 225px;
   }
 }
 
@@ -1391,19 +1328,6 @@
     width: 400px;
     height: 300px;
   }
-
-  .img-cv-me {
-    height: 40vh;
-    bottom: 0;
-    left: -475px;
-  }
-
-  .txt-cv-chg {
-    width: 300px;
-    height: 200px;
-    top: 375px;
-    left: 225px;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1582,19 +1506,6 @@
     width: 500px;
     height: 400px;
   }
-
-  .img-cv-me {
-    height: 40vh;
-    bottom: 0;
-    left: -650px;
-  }
-
-  .txt-cv-chg {
-    width: 350px;
-    height: 250px;
-    top: 425px;
-    left: 350px;
-  }
 }
 
 /* Iphone 6/7/8 Plus Landscape */
@@ -1753,18 +1664,5 @@
     left: 200px;
     width: 325px;
     height: 225px;
-  }
-
-  .img-cv-me {
-    height: 50vh;
-    bottom: 0;
-    left: -275px;
-  }
-
-  .txt-cv-chg {
-    width: 300px;
-    height: 200px;
-    top: 150px;
-    left: 225px;
   }
 }
