@@ -38,6 +38,7 @@ h2 {
   font-size: 1.2rem;
   color: #fff;
   text-align: center;
+  white-space: pre-line;
 }
 
 #bg {
@@ -99,6 +100,37 @@ h2 {
   transform: scale(1);
 }
 
+.lang-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.en-btn {
+  content: url("../images/languages/united-kingdom.png");
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+
+.en-btn:hover {
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 0.3s infinite alternate;
+}
+
+.es-btn {
+  content: url("../images/languages/spain.png");
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+
+.es-btn:hover {
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 0.3s infinite alternate;
+}
+
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   #moon {
@@ -149,6 +181,13 @@ h2 {
     margin-right: 20px;
     margin-bottom: 20px;
   }
+
+  .lang-icons {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
+  }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
@@ -191,6 +230,13 @@ h2 {
     margin-right: 20px;
     margin-bottom: 20px;
   }
+
+  .lang-icons {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
+  }
 }
 
 /* Extra small devices (phones, 500px and up) */
@@ -232,6 +278,13 @@ h2 {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
+  }
+
+  .lang-icons {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
   }
 }
 
@@ -276,6 +329,13 @@ h2 {
     margin-right: 20px;
     margin-bottom: 20px;
   }
+
+  .lang-icons {
+    margin-left: 25vw;
+    margin-right: 15vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -316,6 +376,13 @@ h2 {
     margin-right: 20px;
     margin-bottom: 20px;
     font-size: 1.5rem;
+  }
+
+  .lang-icons {
+    margin-left: 23vw;
+    margin-right: 15vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
   }
 }
 
@@ -360,6 +427,13 @@ h2 {
     margin-right: 40px;
     margin-bottom: 20px;
     font-size: 1.5rem;
+  }
+
+  .lang-icons {
+    margin-left: 35vw;
+    margin-right: 30vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 import { Contact } from "./Contact";
 import "../css/about.css";
 import bg from "../images/backgrounds/bg-about.jpg";
@@ -12,6 +13,8 @@ import me from "../images/me/25.png";
 import grass from "../images/parallax/grass.png";
 
 export const About = () => {
+  const [t, i18n] = useTranslation("about");
+
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -78,25 +81,25 @@ export const About = () => {
       </section>
       <div className="row">
         <div className="first column">
-          <h2>ABOUT ME</h2>
-          <p className="about-text">
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-            <br />
-            <br />
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua.
-          </p>
+          <h2>{t("title.about-me")}</h2>
+          <p className="about-text">{t("body.p")}</p>
+        </div>
+
+        <div className="lang-icons">
+          <img
+            className="en-btn"
+            onClick={() => i18n.changeLanguage("en")}
+            alt="united-kingdom"
+          />
+          <img
+            className="es-btn"
+            onClick={() => i18n.changeLanguage("es")}
+            alt="spain"
+          />
         </div>
         <br />
         <br />
+
         <div className="second column">
           <h2>FEEL FREE TO CONTACT ME</h2>
           <Contact />
