@@ -29,7 +29,7 @@ export const Scene5 = () => {
           ref={(el) => {
             imageRef = el;
           }}
-          className="main-image img-scene5"
+          className="img-scene5"
           alt="me"
         />
         <span className="base"></span>
