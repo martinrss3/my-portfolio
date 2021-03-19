@@ -226,20 +226,21 @@
 
   /* Scene 2 */
   .img-scene2 {
-    left: -10vw;
+    left: 5vw;
     bottom: 80px;
-    height: 80vh;
+    height: 70vh;
   }
 
   .img2-scene2 {
     right: -10vw;
     bottom: 80px;
-    height: 80vh;
+    height: 70vh;
   }
 
   .img3-scene2 {
-    left: -60vw;
-    height: 90vh;
+    left: -30vw;
+    bottom: 80px;
+    height: 70vh;
   }
 
   .txt-scene2 {
@@ -254,6 +255,7 @@
     left: -10vw;
     width: 350px;
     height: 250px;
+    line-height: 23px;
   }
 
   /* Scene 3 */
@@ -429,17 +431,28 @@
 
   /* Scene 2 */
   .img-scene2 {
-    left: -100px;
+    left: -10vw;
+    bottom: 80px;
     height: 80vh;
   }
 
   .img2-scene2 {
-    right: -250px;
+    right: -20vw;
+    bottom: 80px;
+    height: 80vh;
   }
 
   .img3-scene2 {
-    left: -300px;
+    left: -40vw;
+    bottom: 80px;
     height: 80vh;
+  }
+
+  .txt-scene2 {
+    right: -5vw;
+    width: 325px;
+    height: 225px;
+    line-height: 15px;
   }
 
   .txt-scene2-chg {
@@ -623,22 +636,35 @@
 
   /* Scene 2 */
   .img-scene2 {
-    right: 1vw;
+    height: 90vh;
+    bottom: 80px;
+    left: -15vw;
   }
 
   .img2-scene2 {
+    height: 90vh;
+    bottom: 80px;
     left: 100px;
   }
 
   .img3-scene2 {
+    height: 90vh;
+    bottom: 80px;
     right: 120px;
   }
 
+  .txt-scene2 {
+    right: -5vw;
+    width: 375px;
+    height: 275px;
+    line-height: 22px;
+  }
+
   .txt-scene2-chg {
-    top: -20px;
-    left: -10vw;
-    width: 400px;
-    height: 300px;
+    top: 0;
+    left: -5vw;
+    width: 450px;
+    height: 350px;
   }
 
   /* Scene 3 */
@@ -819,19 +845,36 @@
   }
 
   /* Scene 2 */
+  .img-scene2 {
+    height: 90vh;
+    bottom: 0;
+    left: 0;
+  }
+
   .img2-scene2 {
-    left: 200px;
+    height: 90vh;
+    bottom: 0;
+    left: 25vw;
   }
 
   .img3-scene2 {
-    right: 150px;
+    height: 90vh;
+    bottom: 0;
+    left: -15vw;
+  }
+
+  .txt-scene2 {
+    right: -5vw;
+    width: 400px;
+    height: 300px;
+    line-height: 22px;
   }
 
   .txt-scene2-chg {
-    top: -20px;
-    left: 50px;
-    width: 400px;
-    height: 300px;
+    left: 5vw;
+    width: 450px;
+    height: 350px;
+    line-height: 35px;
   }
 
   /* Scene 3 */
@@ -1008,16 +1051,35 @@
 
   /* Scene 2 */
   .img-scene2 {
-    right: -25px;
+    height: 90vh;
+    bottom: 0;
+    left: 0;
+  }
+
+  .img2-scene2 {
+    height: 90vh;
+    bottom: 0;
+    left: 25vw;
   }
 
   .img3-scene2 {
-    right: 150px;
+    height: 90vh;
+    bottom: 0;
+    left: -5vw;
+  }
+
+  .txt-scene2 {
+    right: -5vw;
+    width: 450px;
+    height: 350px;
+    line-height: 30px;
   }
 
   .txt-scene2-chg {
-    width: 550px;
-    height: 450px;
+    left: 10vw;
+    width: 500px;
+    height: 400px;
+    line-height: 35px;
   }
 
   /* Scene 3 */
@@ -1189,27 +1251,35 @@
 
   /* Scene 2 */
   .img-scene2 {
-    left: 0;
+    height: 90vh;
+    bottom: 0;
+    left: 20vw;
   }
 
   .img2-scene2 {
-    right: -25vw;
+    height: 90vh;
+    bottom: 0;
+    left: 40vw;
   }
 
   .img3-scene2 {
-    left: 0;
+    height: 90vh;
+    bottom: 0;
+    left: 15vw;
   }
 
   .txt-scene2 {
-    right: 2vw;
-    width: 550px;
+    right: 15vw;
+    width: 450px;
     height: 350px;
+    line-height: 30px;
   }
 
   .txt-scene2-chg {
     left: 20vw;
     width: 450px;
     height: 350px;
+    line-height: 35px;
   }
 
   /* Scene 3 */
@@ -1398,20 +1468,36 @@
   }
 
   /* Scene 2 */
+  .img-scene2 {
+    height: 100vh;
+    bottom: 0;
+    left: 25vw;
+  }
+
   .img2-scene2 {
-    left: 200px;
+    height: 100vh;
+    bottom: 0;
+    left: 40vw;
   }
 
   .img3-scene2 {
-    left: -150px;
+    height: 100vh;
+    bottom: 0;
+    left: 12vw;
   }
 
   .txt-scene2 {
-    right: 100px;
+    left: 50vw;
+    width: 475px;
+    height: 375px;
+    line-height: 30px;
   }
 
   .txt-scene2-chg {
-    left: 150px;
+    left: 30vw;
+    width: 475px;
+    height: 375px;
+    line-height: 35px;
   }
 
   /* Scene 3 */
@@ -1580,20 +1666,36 @@
 
   /* Scene 2 */
   .img-scene2 {
-    left: 0;
+    height: 90vh;
+    bottom: 0;
+    left: 35vw;
   }
 
   .img2-scene2 {
-    right: 0;
+    height: 90vh;
+    bottom: 0;
+    left: 45vw;
   }
 
   .img3-scene2 {
-    left: 0;
+    height: 90vh;
+    bottom: 0;
+    left: 20vw;
   }
 
-  /* Scene 2 */
-  .img-scene3-chg {
-    left: 0;
+  .txt-scene2 {
+    right: 15vw;
+    width: 300px;
+    height: 200px;
+    line-height: 17px;
+  }
+
+  .txt-scene2-chg {
+    left: 25vw;
+    top: -5vh;
+    width: 325px;
+    height: 225px;
+    line-height: 20px;
   }
 
   .txt-scene3 {

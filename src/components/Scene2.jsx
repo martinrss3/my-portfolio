@@ -98,11 +98,11 @@ export const Scene2 = () => {
                 .callFunction(() => {
                   setMainImage(!mainImage);
                 })
-                .deleteChars(45)
+                .deleteChars(33)
                 .callFunction(() => {
+                  setText(text);
                   setMainImage2(mainImage2);
                   setMainImage3(!mainImage3);
-                  setText(text);
                 })
                 .typeString(fifthSpeech)
                 .callFunction(() => {
