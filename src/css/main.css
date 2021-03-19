@@ -205,7 +205,7 @@
   }
 
   .img-scene1-chg {
-    left: -20vw;
+    left: -10vw;
     bottom: 80px;
     height: 80vh;
   }
@@ -226,11 +226,27 @@
 
   /* Scene 2 */
   .img-scene2 {
-    right: -150px;
+    left: -10vw;
+    bottom: 80px;
+    height: 80vh;
   }
 
   .img2-scene2 {
-    right: -250px;
+    right: -10vw;
+    bottom: 80px;
+    height: 80vh;
+  }
+
+  .img3-scene2 {
+    left: -60vw;
+    height: 90vh;
+  }
+
+  .txt-scene2 {
+    right: -10vw;
+    width: 300px;
+    height: 200px;
+    line-height: 12px;
   }
 
   .txt-scene2-chg {
@@ -238,11 +254,6 @@
     left: -10vw;
     width: 350px;
     height: 250px;
-  }
-
-  .img3-scene2 {
-    left: -250px;
-    height: 90vh;
   }
 
   /* Scene 3 */

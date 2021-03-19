@@ -96,6 +96,19 @@ el {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .first-speech-scene1 {
+    top: 10px;
+    font-size: 1.9rem;
+  }
+
+  .second-speech-scene1 {
+    top: 15px;
+    font-size: 2.2rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .first-speech-scene1 {
     top: 25px;
     font-size: 2rem;
   }
@@ -105,6 +118,7 @@ el {
     font-size: 2.2rem;
   }
 }
+
 
 /* Iphone 6/7/8 Plus Landscape */
 @media only screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
