@@ -16,7 +16,7 @@ export const Scene5 = () => {
   useEffect(() => {
     TweenMax.staggerTo(imageRef, 1.5, {
       opacity: 1,
-      y: -600,
+      y: -100,
       ease: Power3.easeInOut,
       delay: 0.3,
     });

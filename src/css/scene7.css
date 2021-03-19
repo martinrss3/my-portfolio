@@ -52,12 +52,12 @@
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   .first-speech-scene7 {
-    top: 15px;
-    font-size: 1.3rem;
+    top: 37px;
+    font-size: 1.5rem;
   }
 
   .second-speech-scene7 {
-    top: 4px;
+    top: 25px;
     font-size: 1.3rem;
   }
 

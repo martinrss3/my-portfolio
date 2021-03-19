@@ -38,8 +38,9 @@
   }
 
   .first-speech-cv {
-    font-size: 1.7rem;
+    top: 25px;
     left: -5px;
+    font-size: 1.5rem;
   }
 }
 

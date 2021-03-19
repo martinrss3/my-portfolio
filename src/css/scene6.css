@@ -72,39 +72,42 @@
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   .first-speech-scene6 {
-    top: 25px;
-    left: -5px;
+    top: 47px;
+    left: 0;
     font-size: 1.5rem;
   }
 
   .second-speech-scene6 {
-    top: 15px;
+    top: 30px;
     font-size: 1.5rem;
   }
 
   .third-speech-scene6 {
-    top: 10px;
+    top: 27px;
+    font-size: 0.9rem;
   }
 
   .fourth-speech-scene6 {
-    top: 10px;
+    top: 25px;
+    font-size: 0.9rem;
   }
 
   .fifth-speech-scene6 {
-    position: fixed;
-    top: 40px;
-    left: 60px;
+    position: relative;
+    top: 35px;
+    left: 57px;
     font-size: 1.1rem;
   }
 
   .sixth-speech-scene6 {
-    top: 5px;
+    top: 20px;
+    font-size: 1rem;
   }
 
   .frame {
-    width: 250px;
-    height: 150px;
-    bottom: 150px;
+    width: 65vw;
+    height: 25vh;
+    bottom: 20vh;
   }
 }
 
