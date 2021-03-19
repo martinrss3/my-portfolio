@@ -67,12 +67,14 @@
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   .first-speech-scene4 {
-    top: 20px;
+    top: 35px;
+    font-size: 0.8rem;
   }
 
   .second-speech-scene4 {
-    top: 15px;
-    font-size: 1.5rem;
+    top: 35px;
+    left: -5px;
+    font-size: 1.4rem;
   }
 }
 

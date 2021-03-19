@@ -51,7 +51,6 @@ export const CV = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString(firstSpeech)
-
                 .start();
             }}
           />
