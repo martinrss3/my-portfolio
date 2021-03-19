@@ -8,8 +8,8 @@ import "../css/scene1.css";
 export const Scene1 = () => {
   let imageRef = useRef(null);
 
-  const firstSpeech = `Hi! My name is <el>Martín</el> \n and I am a \n Full Stack \n Developer...`;
-  const secondSpeech = "I am looking \n for my first job \n as a developer!";
+  const firstSpeech = `<span class="first-speech-scene1">Hi! My name is <el>Martín</el> \n and I am a \n Full Stack \n Developer...</span>`;
+  const secondSpeech = `<span class="second-speech-scene1">I am looking \n for my first job \n as a developer!</span>`;
 
   const [mainImage, setMainImage] = useState(false);
   const [text, setText] = useState(false);
