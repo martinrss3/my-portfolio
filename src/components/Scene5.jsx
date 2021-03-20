@@ -14,7 +14,7 @@ export const Scene5 = () => {
   const [buttons, setButtons] = useState(false);
 
   useEffect(() => {
-    TweenMax.staggerTo(imageRef, 1.5, {
+    TweenMax.staggerTo(imageRef, 1, {
       opacity: 1,
       y: -100,
       ease: Power3.easeInOut,
@@ -35,7 +35,7 @@ export const Scene5 = () => {
         <span className="base"></span>
       </div>
 
-      <Delay wait={1500}>
+      <Delay wait={1200}>
         <div className="text txt-scene5">
           <Typewriter
             options={{
