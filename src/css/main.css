@@ -630,12 +630,12 @@
   .img-cv-guy {
     height: 80vh;
     bottom: 80px;
-    left: 100px;
+    right: -20vw;
   }
 
   .txt-cv {
-    top: 10px;
-    left: -30px;
+    top: 0;
+    left: -10vw;
     width: 350px;
     height: 250px;
   }
