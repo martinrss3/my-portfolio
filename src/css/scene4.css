@@ -81,12 +81,12 @@
 /* Super Extra small devices (phones, between 400px and 499px) */
 @media only screen and (min-width: 400px) and (max-width: 499px) {
   .first-speech-scene4 {
-    top: 10px;
-    font-size: 1.3rem;
+    top: 55px;
+    font-size: 1.2rem;
   }
 
   .second-speech-scene4 {
-    top: 5px;
+    top: 50px;
     font-size: 2rem;
   }
 }

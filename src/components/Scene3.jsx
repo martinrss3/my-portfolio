@@ -61,7 +61,7 @@ export const Scene3 = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString(secondSpeech)
-                .pauseFor(2500)
+                .pauseFor(2000)
                 .deleteChars(65)
                 .callFunction(() => {
                   setMainImage(!mainImage);
