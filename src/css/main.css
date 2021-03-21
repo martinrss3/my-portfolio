@@ -859,12 +859,12 @@
   .img-cv-guy {
     height: 80vh;
     bottom: 80px;
-    left: 120px;
+    right: -15vw;
   }
 
   .txt-cv {
-    top: 10px;
-    left: -30px;
+    top: 2vh;
+    left: -5vw;
     width: 350px;
     height: 250px;
   }
