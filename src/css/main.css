@@ -647,179 +647,196 @@
   .img-scene1 {
     height: 85vh;
     bottom: 80px;
-    left: 0;
+    left: -5vw;
   }
 
   .img-scene1-chg {
     height: 85vh;
     bottom: 80px;
-    left: -10vw;
+    left: -15vw;
   }
 
   .txt-scene1 {
     right: -5vw;
     width: 400px;
     height: 300px;
-    line-height: 23px;
   }
 
   .txt-scene1-chg {
     right: -5vw;
     width: 400px;
     height: 300px;
-    line-height: 23px;
   }
 
   /* Scene 2 */
   .img-scene2 {
-    height: 90vh;
+    height: 80vh;
     bottom: 80px;
-    left: -15vw;
+    left: -5vw;
   }
 
   .img2-scene2 {
-    height: 90vh;
+    height: 85vh;
     bottom: 80px;
-    left: 100px;
+    right: -10vw;
   }
 
   .img3-scene2 {
-    height: 90vh;
+    height: 80vh;
     bottom: 80px;
-    right: 120px;
+    left: -25vw;
   }
 
   .txt-scene2 {
+    top: 0;
     right: -5vw;
     width: 375px;
     height: 275px;
-    line-height: 22px;
   }
 
   .txt-scene2-chg {
     top: 0;
     left: -5vw;
-    width: 450px;
-    height: 350px;
+    width: 400px;
+    height: 300px;
   }
 
   /* Scene 3 */
   .img-scene3 {
-    left: -60px;
+    height: 85vh;
+    bottom: 80px;
+    left: -5vw;
+  }
+
+  .img-scene3-chg {
+    height: 85vh;
+    bottom: 80px;
+    left: 0;
   }
 
   .txt-scene3 {
-    top: 15px;
-    width: 475px;
-    height: 375px;
+    top: 4vh;
+    right: -5vw;
+    width: 375px;
+    height: 275px;
   }
 
   .txt-scene3-chg {
+    top: 0;
+    right: -10vw;
     width: 475px;
     height: 375px;
   }
 
   /* Scene 4 */
   .img-scene4 {
-    max-height: 50vh;
-    left: -90px;
+    height: 40vh;
+    bottom: 80px;
+    left: 0;
   }
 
   .img2-scene4 {
-    max-height: 70vh;
-    bottom: 230px;
-    left: 180px;
+    height: 70vh;
+    bottom: 30vh;
+    right: 0;
   }
 
   .txt-scene4 {
-    top: 40vh;
-    width: 350px;
-    height: 250px;
-    left: 150px;
+    bottom: 30vh;
+    left: 13vh;
+    width: 325px;
+    height: 225px;
   }
 
   .txt2-scene4 {
-    left: 0;
-    top: 15px;
-    width: 350px;
-    height: 250px;
+    right: 25vh;
+    top: 2vh;
+    width: 325px;
+    height: 225px;
   }
 
   /* Scene 5 */
   .img-scene5 {
-    width: 600px;
-    left: -15px;
-    top: 825px;
+    width: 100vw;
+    height: 300px;
+    left: 0;
+    bottom: 15vh;
   }
 
   .txt-scene5 {
-    top: 200px;
-    left: 30px;
-    width: 480px;
+    top: 15vh;
+    right: 0;
+    left: 0;
+    width: 80vw;
+    height: 52vh;
+    line-height: 30px;
   }
 
   /* Scene 6 */
   .img-scene6 {
-    max-height: 90vh;
+    height: 85vh;
     bottom: 80px;
-    right: -150px;
+    right: -15vw;
   }
 
   .img2-scene6 {
-    max-height: 40vh;
-    left: -40px;
+    height: 35vh;
+    bottom: 0;
+    left: -5vw;
   }
 
   .img3-scene6 {
-    max-height: 40vh;
-    left: -150px;
+    height: 35vh;
+    bottom: 0;
+    left: -9vw;
   }
 
   .txt-scene6 {
-    top: 0;
-    left: 0;
-    width: 420px;
-    height: 320px;
+    top: 2vh;
+    left: -5vw;
+    width: 375px;
+    height: 275px;
   }
 
   .txt2-scene6 {
-    bottom: 250px;
-    left: 125px;
-    width: 360px;
-    height: 260px;
+    bottom: 27vh;
+    left: 20vw;
+    width: 325px;
+    height: 225px;
   }
 
   /* Scene 7 */
   .img-scene7 {
-    max-height: 90vh;
+    height: 85vh;
     bottom: 80px;
-    left: 0;
+    left: 5vw;
   }
 
   .txt-scene7 {
-    top: 0;
-    right: -15px;
-    width: 400px;
+    top: 2vh;
+    right: -5vw;
+    width: 375px;
+    height: 275px;
   }
 
   /* Scene 8 */
   .img-scene8 {
-    max-height: 80vh;
+    height: 80vh;
     bottom: 80px;
     left: 0;
   }
 
   .img2-scene8 {
+    height: 80vh;
     bottom: 80px;
-    left: -200px;
-    max-height: 80vh;
+    left: -35vw;
   }
 
   .txt-scene8 {
-    top: 0;
-    right: -40px;
-    width: 425px;
-    height: 325px;
+    top: 1vh;
+    right: -5vw;
+    width: 400px;
+    height: 300px;
   }
 
   .nxt-btn-scene8 {

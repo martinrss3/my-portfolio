@@ -57,13 +57,13 @@ el {
 /* Extra small devices (phones, 500px and up) */
 @media only screen and (min-width: 500px) {
   .first-speech-scene1 {
-    top: -30px;
-    font-size: 1.3rem;
+    top: 50px;
+    font-size: 1.4rem;
   }
 
   .second-speech-scene1 {
-    top: -20px;
-    font-size: 1.3rem;
+    top: 45px;
+    font-size: 1.7rem;
   }
 }
 
