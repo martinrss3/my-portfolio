@@ -67,17 +67,18 @@
 /* Extra small devices (phones, 500px and up) */
 @media only screen and (min-width: 500px) {
   .first-speech-scene3 {
-    top: 20px;
-    font-size: 1.6rem;
+    top: 47px;
+    font-size: 1.3rem;
   }
 
   .second-speech-scene3 {
-    top: -10px;
+    top: 12px;
+    font-size: 1.3rem;
   }
 
   .third-speech-scene3 {
-    top: 15px;
-    left: -5px;;
+    top: 65px;
+    left: -10px;;
     font-size: 2.5rem;
   }
 }
