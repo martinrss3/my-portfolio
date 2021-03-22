@@ -17,7 +17,7 @@
   animation: rain 0.2s linear infinite;
 }
 
-@keyframes color-change {
+/* @keyframes color-change {
   0%,
   100% {
     filter: hue-rotate(0deg);
@@ -34,7 +34,7 @@
   100% {
     background-position: 20% 100%;
   }
-}
+} */
 
 .img-scene7 {
   content: url("../images/badGuy/26.png");
@@ -120,12 +120,12 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .first-speech-scene7 {
-    top: 85px;
-    font-size: 2.5rem;
+    top: 115px;
+    font-size: 3rem;
   }
 
   .second-speech-scene7 {
-    top: 50px;
+    top: 85px;
     font-size: 3rem;
   }
 }

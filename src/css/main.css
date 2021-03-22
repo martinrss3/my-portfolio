@@ -1338,6 +1338,7 @@
 @media only screen and (min-width: 992px) {
   /* Scene 1 */
   .img-scene1 {
+    height: 95vh;
     right: 0;
     left: 0;
     bottom: 0;
@@ -1345,6 +1346,7 @@
   }
 
   .img-scene1-chg {
+    height: 95vh;
     right: 0;
     left: 0;
     bottom: 0;
@@ -1353,20 +1355,21 @@
 
   .txt-scene1 {
     right: 7vw;
+    top: 1vh;
     width: 500px;
     height: 400px;
-    line-height: 30px;
   }
 
   .txt-scene1-chg {
     right: 7vw;
+    top: 1vh;
     width: 500px;
     height: 400px;
-    line-height: 30px;
   }
 
   /* Scene 2 */
   .img-scene2 {
+    height: 95vh;
     right: 0;
     left: 0;
     bottom: 0;
@@ -1374,161 +1377,182 @@
   }
 
   .img2-scene2 {
-    right: 0;
+    height: 95vh;
+    right: -15vw;
     left: 0;
     bottom: 0;
     margin: 0 auto;
   }
 
   .img3-scene2 {
+    height: 95vh;
     right: 0;
-    left: -20vw;
+    left: -30vw;
     bottom: 0;
     margin: 0 auto;
   }
 
   .txt-scene2 {
-    right: 15vw;
-    width: 400px;
-    height: 300px;
-    line-height: 27px;
+    right: 10vw;
+    top: 1vh;
+    width: 500px;
+    height: 400px;
   }
 
   .txt-scene2-chg {
-    left: 20vw;
-    width: 400px;
-    height: 300px;
-    line-height: 35px;
+    left: 15vw;
+    top: -5vh;
+    width: 475px;
+    height: 375px;
   }
 
   /* Scene 3 */
   .img-scene3 {
+    height: 95vh;
+    right: 0;
     left: 0;
-  }
-
-  .txt-scene3 {
-    right: 2vw;
-    width: 550px;
-    height: 350px;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .img-scene3-chg {
+    height: 95vh;
+    right: 0;
     left: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
+  .txt-scene3 {
+    right: 1vw;
+    top: 2vh;
+    width: 500px;
+    height: 400px;
   }
 
   .txt-scene3-chg {
-    right: 5vw;
-    width: 550px;
-    height: 450px;
+    right: 2vw;
+    top: -1vh;
+    width: 600px;
+    height: 500px;
   }
 
   /* Scene 4 */
   .img-scene4 {
-    max-height: 50vh;
-    left: -30vw;
+    height: 50vh;
+    bottom: 0;
+    left: 10vw;
   }
 
   .img2-scene4 {
-    max-height: 70vh;
-    top: 2vh;
-    right: -50vw;
+    height: 70vh;
+    bottom: 30vh;
+    right: 5vw;
   }
 
   .txt-scene4 {
-    top: 40vh;
+    bottom: 23vh;
+    left: 25vw;
     width: 400px;
     height: 300px;
-    left: 30vw;
   }
 
   .txt2-scene4 {
-    left: 40vw;
-    top: 0;
+    right: 25vw;
+    top: 1vh;
     width: 400px;
     height: 300px;
   }
 
   /* Scene 5 */
   .img-scene5 {
-    position: absolute;
-    top: 105vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    left: 7vw;
+    bottom: -20vh;
   }
 
   .txt-scene5 {
-    position: absolute;
     top: 10vh;
-    left: 0;
-    bottom: 0;
     right: 0;
-    margin: 0 auto;
-    width: 600px;
-    height: 500px;
+    left: 10vw;
+    width: 80vw;
+    height: 60vh;
+    line-height: 35px;
   }
 
   /* Scene 6 */
   .img-scene6 {
-    bottom: 0;
+    height: 95vh;
     right: 0;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .img2-scene6 {
-    max-height: 45vh;
-    left: -40px;
+    height: 40vh;
+    left: 0;
+    bottom: 0;
   }
 
   .img3-scene6 {
-    max-height: 45vh;
-    left: -40px;
+    height: 40vh;
+    bottom: 0;
+    left: 0;
   }
 
   .txt-scene6 {
-    top: 0;
-    left: 150px;
+    top: 1vh;
+    right: 20vw;
     width: 600px;
     height: 500px;
   }
 
   .txt2-scene6 {
-    bottom: 450px;
-    left: 375px;
-    width: 550px;
-    height: 450px;
+    bottom: 20vh;
+    left: 23vw;
+    width: 475px;
+    height: 375px;
   }
 
   /* Scene 7 */
   .img-scene7 {
-    max-height: 100vh;
+    height: 95vh;
+    right: 0;
+    left: 0;
     bottom: 0;
-    left: -50px;
+    margin: 0 auto;
   }
 
   .txt-scene7 {
-    top: 0;
-    right: -50px;
-    width: 600px;
-    height: 500px;
+    top: 1vh;
+    right: 1vw;
+    width: 550px;
+    height: 450px;
   }
 
   /* Scene 8 */
   .img-scene8 {
-    left: 0;
-    max-height: 100vh;
+    height: 95vh;
+    right: 0;
+    left: 15vw;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .img2-scene8 {
-    left: -150px;
-    max-height: 100vh;
+    height: 95vh;
+    right: 0;
+    left: -15vw;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .txt-scene8 {
-    top: 0;
-    right: -50px;
-    width: 600px;
-    height: 500px;
+    top: 1vh;
+    right: 1vw;
+    width: 550px;
+    height: 450px;
   }
 
   /* Contact */
@@ -1542,16 +1566,18 @@
 
   /* CV */
   .img-cv-guy {
-    height: 90vh;
+    height: 95vh;
+    right: 0;
+    left: 30vw;
     bottom: 0;
-    left: 475px;
+    margin: 0 auto;
   }
 
   .txt-cv {
-    top: 10px;
-    left: 275px;
-    width: 400px;
-    height: 300px;
+    top: 1vh;
+    left: 10vw;
+    width: 500px;
+    height: 400px;
   }
 }
 

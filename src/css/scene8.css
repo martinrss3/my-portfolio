@@ -96,13 +96,13 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .first-speech-scene8 {
-    top: 65px;
+    top: 95px;
     font-size: 2.5rem;
   }
 
   .second-speech-scene8 {
-    top: 40px;
-    font-size: 2.5rem;
+    top: 75px;
+    font-size: 2.2rem;
   }
 }
 

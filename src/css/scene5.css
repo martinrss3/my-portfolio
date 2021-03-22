@@ -125,8 +125,18 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .messages-scene5 {
-    top: 40px;
-    font-size: 1.4rem;
+    top: 30px;
+    font-size: 2.5vh;
+  }
+
+  .base {
+    height: 20vh;
+  }
+
+  .base::before {
+    bottom: 20vh;
+    width: 100%;
+    height: 50px;
   }
 }
 
