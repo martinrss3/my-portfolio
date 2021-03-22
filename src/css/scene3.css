@@ -103,8 +103,19 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .first-speech-scene3 {
+    top: 75px;
+    font-size: 1.7rem;
+  }
+
   .second-speech-scene3 {
-    top: -15px;
+    top: 40px;
+    font-size: 1.7rem;
+  }
+
+  .third-speech-scene3 {
+    top: 95px;
+    font-size: 3rem;
   }
 }
 

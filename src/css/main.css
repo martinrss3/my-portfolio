@@ -1100,15 +1100,19 @@
 @media only screen and (min-width: 768px) {
   /* Scene 1 */
   .img-scene1 {
-    height: 100vh;
-    bottom: 0;
+    height: 90vh;
+    right: 0;
     left: 0;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .img-scene1-chg {
-    height: 100vh;
+    height: 90vh;
+    right: 0;
+    left: 0;
     bottom: 0;
-    left: -10vw;
+    margin: 0 auto;
   }
 
   .txt-scene1 {
@@ -1126,146 +1130,182 @@
   /* Scene 2 */
   .img-scene2 {
     height: 90vh;
-    bottom: 0;
+    right: 0;
     left: 0;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .img2-scene2 {
-    height: 90vh;
+    height: 100vh;
+    right: -20vw;
+    left: 0;
     bottom: 0;
-    left: 25vw;
+    margin: 0 auto;
   }
 
   .img3-scene2 {
     height: 90vh;
+    right: 0;
+    left: -20vw;
     bottom: 0;
-    left: -5vw;
+    margin: 0 auto;
   }
 
   .txt-scene2 {
     right: -5vw;
     width: 450px;
     height: 350px;
-    line-height: 30px;
   }
 
   .txt-scene2-chg {
     left: 10vw;
-    width: 500px;
-    height: 400px;
-    line-height: 35px;
+    width: 525px;
+    height: 425px;
   }
 
   /* Scene 3 */
+  .img-scene3 {
+    height: 100vh;
+    right: 0;
+    left: -15vw;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
+  .img-scene3-chg {
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
   .txt-scene3 {
+    top: 0;
+    right: -5vw;
     width: 500px;
     height: 400px;
   }
 
   .txt-scene3-chg {
-    right: -70px;
-    width: 550px;
-    height: 450px;
+    top: 0;
+    right: -10vw;
+    width: 650px;
+    height: 500px;
   }
 
   /* Scene 4 */
   .img-scene4 {
-    max-height: 50vh;
-    left: -40px;
+    height: 45vh;
+    left: 10vw;
   }
 
   .img2-scene4 {
-    max-height: 70vh;
-    bottom: 230px;
-    left: 320px;
+    height: 70vh;
+    bottom: 30vh;
+    right: 0;
   }
 
   .txt-scene4 {
-    top: 40vh;
+    bottom: 20vh;
+    left: 25vh;
     width: 450px;
     height: 350px;
-    left: 230px;
   }
 
   .txt2-scene4 {
-    left: 80px;
-    top: 40px;
+    top: 1vh;
+    right: 30vw;
     width: 450px;
     height: 350px;
   }
 
   /* Scene 5 */
   .img-scene5 {
-    width: 700px;
-    left: 80px;
-    top: 850px;
+    width: 100vw;
+    height: 60vh;
+    left: 7vw;
+    bottom: 5vh;
   }
 
   .txt-scene5 {
-    top: 225px;
-    left: 110px;
-    width: 600px;
+    top: 17vh;
+    right: 0;
+    left: 10vw;
+    width: 80vw;
+    height: 52vh;
+    line-height: 35px;
   }
 
   /* Scene 6 */
   .img-scene6 {
-    max-height: 100vh;
+    height: 95vh;
     bottom: 0;
-    right: -150px;
+    right: -15vw;
   }
 
   .img2-scene6 {
-    max-height: 30vh;
-    left: -40px;
+    height: 35vh;
+    bottom: 0;
+    left: 0;
   }
 
   .img3-scene6 {
-    max-height: 30vh;
-    left: -60px;
+    height: 35vh;
+    bottom: 0;
+    left: -7vw;
   }
 
   .txt-scene6 {
     top: 0;
-    left: 80px;
+    left: 5vw;
     width: 500px;
     height: 400px;
   }
 
   .txt2-scene6 {
-    bottom: 250px;
-    left: 250px;
+    bottom: 25vh;
+    left: 30vw;
     width: 400px;
     height: 300px;
   }
 
   /* Scene 7 */
   .img-scene7 {
-    max-height: 90vh;
+    height: 95vh;
     bottom: 0;
-    left: 50px;
+    left: 5vw;
   }
 
   .txt-scene7 {
     top: 0;
-    right: -50px;
-    width: 450px;
+    right: -5vw;
+    width: 500px;
+    height: 400px;
   }
 
   /* Scene 8 */
   .img-scene8 {
-    left: 75px;
-    max-height: 90vh;
+    height: 90vh;
+    right: 0;
+    left: 5vw;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .img2-scene8 {
-    left: -150px;
-    max-height: 90vh;
+    height: 90vh;
+    right: 0;
+    left: -30vw;
+    bottom: 0;
+    margin: 0 auto;
   }
 
   .txt-scene8 {
     top: 0;
-    width: 450px;
-    height: 350px;
+    width: 500px;
+    height: 400px;
   }
 
   /* Contact */
@@ -1280,15 +1320,17 @@
   /* CV */
   .img-cv-guy {
     height: 90vh;
+    right: -40vw;
+    left: 0;
     bottom: 0;
-    left: 350px;
+    margin: 0 auto;
   }
 
   .txt-cv {
-    top: 10px;
-    left: 175px;
-    width: 400px;
-    height: 300px;
+    top: 1vh;
+    left: 5vw;
+    width: 500px;
+    height: 400px;
   }
 }
 
