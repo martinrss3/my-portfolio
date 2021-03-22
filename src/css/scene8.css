@@ -70,8 +70,13 @@
 /* Extra small devices (phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .first-speech-scene8 {
-    top: 10px;
+    top: 55px;
     font-size: 1.8rem;
+  }
+
+  .second-speech-scene8 {
+    top: 40px;
+    font-size: 1.7rem;
   }
 }
 

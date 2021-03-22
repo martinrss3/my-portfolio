@@ -52,7 +52,7 @@ export const Scene6 = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString(firstSpeech)
-                .pauseFor(2000)
+                .pauseFor(2500)
                 .callFunction(() => {
                   setText(!text);
                 })
