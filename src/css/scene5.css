@@ -143,16 +143,18 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .messages-scene5 {
-    top: 20px;
-    font-size: 1.4rem;
+    top: 30px;
+    font-size: 2.5vh;
   }
 
   .base {
-    height: 0;
+    height: 20vh;
   }
 
   .base::before {
-    height: 0;
+    bottom: 20vh;
+    width: 100%;
+    height: 50px;
   }
 }
 

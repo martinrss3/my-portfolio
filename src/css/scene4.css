@@ -149,12 +149,12 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .first-speech-scene4 {
-    top: 25px;
+    top: 90px;
     font-size: 1.7rem;
   }
 
   .second-speech-scene4 {
-    top: 20px;
+    top: 80px;
     font-size: 2.6rem;
   }
 }

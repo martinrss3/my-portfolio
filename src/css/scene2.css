@@ -232,30 +232,30 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .first-speech-scene2 {
-    top: -10px;
+    top: 55px;
     font-size: 2rem;
   }
 
   .second-speech-scene2 {
-    top: 0;
+    top: 85px;
     font-size: 1.8rem;
   }
 
   .third-speech-scene2 {
-    top: 25px;
+    top: 90px;
     left: -15px;
     font-size: 4.5rem;
   }
 
   .fourth-speech-scene2 {
-    top: 10px;
+    top: 100px;
     left: -20px;
     font-size: 2rem;
   }
 
   .fifth-speech-scene2 {
-    top: 15px;
-    font-size: 3.9rem;
+    top: 70px;
+    font-size: 4.5rem;
   }
 }
 
