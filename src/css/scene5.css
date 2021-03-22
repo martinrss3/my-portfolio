@@ -89,18 +89,16 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .messages-scene5 {
-    top: -25px;
+    top: 80px;
     font-size: 0.9rem;
   }
 
   .base {
-    background-color: black;
-    height: 160px;
+    height: 20vh;
   }
 
   .base::before {
-    background: linear-gradient(to top, black, transparent);
-    bottom: 160px;
+    bottom: 20vh;
     width: 100%;
     height: 50px;
   }
