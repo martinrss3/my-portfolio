@@ -86,13 +86,13 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .cv {
-    width: 50vh;
+    width: 60vh;
   }
 
   .first-speech-cv {
-    font-size: 2rem;
-    top: 10px;
+    top: 70px;
     left: -10px;
+    font-size: 3rem;
   }
 }
 

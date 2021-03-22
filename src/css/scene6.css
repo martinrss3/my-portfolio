@@ -239,32 +239,42 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .first-speech-scene6 {
-    top: 55px;
+    top: 105px;
+    font-size: 2.4rem;
   }
 
   .second-speech-scene6 {
-    top: 15px;
+    top: 65px;
     font-size: 2.4rem;
   }
 
   .third-speech-scene6 {
-    top: 10px;
+    top: 65px;
     font-size: 1.6rem;
   }
 
   .fourth-speech-scene6 {
-    top: 0;
+    top: 60px;
+    font-size: 1.6rem;
   }
 
   .fifth-speech-scene6 {
-    position: fixed;
-    top: 80px;
-    left: 230px;
-    font-size: 1.8rem;
+    position: relative;
+    top: 75px;
+    left: 180px;
+    font-size: 2rem;
   }
 
   .sixth-speech-scene6 {
-    top: 0;
+    top: 55px;
+    font-size: 1.6rem;
+  }
+
+  .frame {
+    width: 57vw;
+    height: 30vh;
+    bottom: 10vh;
+    left: 10vw;
   }
 }
 
