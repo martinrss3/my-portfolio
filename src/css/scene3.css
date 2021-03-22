@@ -122,16 +122,19 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .first-speech-scene3 {
-    top: 0;
+    top: 80px;
     font-size: 1.7rem;
   }
 
   .second-speech-scene3 {
-    top: -40px;
+    top: 37px;
+    font-size: 1.7rem;
   }
 
   .third-speech-scene3 {
+    top: 110px;
     left: -15px;
+    font-size: 2.7rem;
   }
 }
 
