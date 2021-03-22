@@ -109,13 +109,13 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .first-speech-scene8 {
-    top: 50px;
-    font-size: 2.5rem;
+    top: 75px;
+    font-size: 2.3rem;
   }
 
   .second-speech-scene8 {
-    top: 25px;
-    font-size: 2.5rem;
+    top: 50px;
+    font-size: 2rem;
   }
 }
 
