@@ -17,7 +17,7 @@
   animation: rain 0.2s linear infinite;
 }
 
-/* @keyframes color-change {
+@keyframes color-change {
   0%,
   100% {
     filter: hue-rotate(0deg);
@@ -27,7 +27,7 @@
   }
 }
 
-@keyframes rain {
+/* @keyframes rain {
   0% {
     background-position: 0 0;
   }
@@ -120,13 +120,13 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .first-speech-scene7 {
-    top: 115px;
-    font-size: 3rem;
+    top: 90px;
+    font-size: 2.5rem;
   }
 
   .second-speech-scene7 {
-    top: 85px;
-    font-size: 3rem;
+    top: 70px;
+    font-size: 2.5rem;
   }
 }
 
