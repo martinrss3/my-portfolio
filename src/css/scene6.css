@@ -46,14 +46,14 @@
   animation: animate-bg 25s linear 5;
 }
 
-/* @keyframes animate-bg {
+@keyframes animate-bg {
   0% {
     background-position: right 0px top 10px;
   }
   40% {
     background-position: right 800px top 10px;
   }
-} */
+}
 
 .first-speech-scene6,
 .second-speech-scene6,
@@ -345,9 +345,52 @@
   }
 
   .fifth-speech-scene6 {
-    position: relative;
+    position: fixed;
     top: 80px;
-    left: 590px;
+    right: 45px;
+    font-size: 1.9rem;
+  }
+
+  .sixth-speech-scene6 {
+    top: 45px;
+    font-size: 1.7rem;
+  }
+
+  .frame {
+    width: 525px;
+    height: 340px;
+    bottom: 10vh;
+    left: 80px;
+  }
+}
+
+/* Super Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1600px) {
+  .first-speech-scene6 {
+    top: 120px;
+    left: -10px;
+    font-size: 2.5rem;
+  }
+
+  .second-speech-scene6 {
+    top: 60px;
+    font-size: 2.5rem;
+  }
+
+  .third-speech-scene6 {
+    top: 55px;
+    font-size: 1.5rem;
+  }
+
+  .fourth-speech-scene6 {
+    top: 50px;
+    font-size: 1.7rem;
+  }
+
+  .fifth-speech-scene6 {
+    position: fixed;
+    top: 105px;
+    right: -10vw;
     font-size: 2rem;
   }
 
@@ -357,21 +400,10 @@
   }
 
   .frame {
-    width: 40vw;
-    height: 40vh;
+    width: 525px;
+    height: 340px;
     bottom: 10vh;
-    left: 5vw;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1300px and up) */
-@media only screen and (min-width: 1300px) {
-  .fifth-speech-scene6 {
-    position: fixed;
-    top: 110px;
-    left: 565px;
-    font-size: 2.2rem;
-    max-width: 400px;
+    left: 80px;
   }
 }
 
