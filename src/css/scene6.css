@@ -281,41 +281,41 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .first-speech-scene6 {
-    top: 135px;
-    left: -18px;
-    font-size: 3.1rem;
+    top: 75px;
+    left: -10px;
+    font-size: 2rem;
   }
 
   .second-speech-scene6 {
-    top: 90px;
-    font-size: 3rem;
+    top: 45px;
+    font-size: 2.3rem;
   }
 
   .third-speech-scene6 {
-    top: 85px;
-    font-size: 2rem;
+    top: 45px;
+    font-size: 1.3rem;
   }
 
   .fourth-speech-scene6 {
-    top: 80px;
-    font-size: 2rem;
+    top: 45px;
+    font-size: 1.3rem;
   }
 
   .fifth-speech-scene6 {
-    position: relative;
-    top: 110px;
-    left: 300px;
-    font-size: 2.5rem;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    font-size: 1.5rem;
   }
 
   .sixth-speech-scene6 {
-    top: 70px;
-    font-size: 2.1rem;
+    top: 45px;
+    font-size: 1.3rem;
   }
 
   .frame {
-    width: 40vw;
-    height: 35vh;
+    width: 35vw;
+    height: 37vh;
     bottom: 10vh;
     left: 10vw;
   }
