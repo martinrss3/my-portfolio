@@ -1393,7 +1393,7 @@
   }
 
   .txt-scene2 {
-    right: 14vw;
+    right: 10vw;
     top: 1vh;
     width: 450px;
     height: 350px;
@@ -1441,7 +1441,7 @@
   .img-scene4 {
     height: 50vh;
     bottom: 0;
-    left: 15vw;
+    left: 12vw;
   }
 
   .img2-scene4 {
@@ -1484,7 +1484,7 @@
   /* Scene 6 */
   .img-scene6 {
     height: 95vh;
-    right: 0;
+    right: -5vw;
     bottom: 0;
     margin: 0 auto;
   }
@@ -1498,19 +1498,19 @@
   .img3-scene6 {
     height: 40vh;
     bottom: 0;
-    left: -2vw;
+    left: -30px;
   }
 
   .txt-scene6 {
     top: 2vh;
-    right: -15vw;
+    right: -13vw;
     width: 400px;
     height: 300px;
   }
 
   .txt2-scene6 {
-    bottom: 23vh;
-    left: 20vw;
+    bottom: 24vh;
+    left: 22vw;
     width: 325px;
     height: 225px;
   }

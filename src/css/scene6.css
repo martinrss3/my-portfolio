@@ -309,15 +309,15 @@
   }
 
   .sixth-speech-scene6 {
-    top: 45px;
+    top: 40px;
     font-size: 1.3rem;
   }
 
   .frame {
-    width: 35vw;
-    height: 37vh;
+    width: 400px;
+    height: 275px;
     bottom: 10vh;
-    left: 10vw;
+    left: 80px;
   }
 }
 
