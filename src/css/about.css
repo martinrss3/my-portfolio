@@ -20,7 +20,7 @@ section {
 section::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   height: 100px;
   background: linear-gradient(to top, black, transparent);
@@ -359,7 +359,7 @@ h2 {
   }
 
   #me {
-    top: 90vh;
+    top: 100vh;
     width: 80vh;
     margin-left: 80px;
   }
