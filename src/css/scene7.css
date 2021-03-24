@@ -94,12 +94,12 @@
 /* Extra small devices (phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .first-speech-scene7 {
-    top: 70px;
+    top: 90px;
     font-size: 2.5rem;
   }
 
   .second-speech-scene7 {
-    top: 52px;
+    top: 70px;
     font-size: 2rem;
   }
 }
