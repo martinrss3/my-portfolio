@@ -309,17 +309,17 @@
   /* Scene 5 */
   .img-scene5 {
     width: 100vw;
-    height: 300px;
+    height: 40vh;
     left: 0;
-    bottom: 10px;
+    bottom: 15vh;
   }
 
   .txt-scene5 {
-    top: 15vh;
+    top: 23vh;
     right: 0;
     left: 0;
-    width: 100vw;
-    height: 52vh;
+    width: 325px;
+    height: 225px;
   }
 
   /* Scene 6 */
@@ -535,18 +535,18 @@
   /* Scene 5 */
   .img-scene5 {
     width: 100vw;
-    height: 300px;
+    height: 40vh;
     left: 0;
-    bottom: 10vh;
+    bottom: 15vh;
   }
 
   .txt-scene5 {
-    top: 15vh;
+    top: 23vh;
     right: 0;
     left: 0;
-    width: 100vw;
-    height: 52vh;
-    line-height: 30px;
+    width: 350px;
+    height: 250px;
+    line-height: 25px;
   }
 
   /* Scene 6 */
@@ -988,15 +988,15 @@
     width: 100vw;
     height: 50vh;
     left: 7vw;
-    bottom: 10vh;
+    bottom: 7vh;
   }
 
   .txt-scene5 {
     top: 17vh;
     right: 0;
     left: 10vw;
-    width: 80vw;
-    height: 52vh;
+    width: 525px;
+    height: 425px;;
     line-height: 40px;
   }
 
@@ -1468,19 +1468,19 @@
   /* Scene 5 */
   .img-scene5 {
     width: 80vw;
-    height: 100vh;
+    height: 60%;
     left: 13vw;
-    bottom: -25vh;
+    bottom: 1vh;
   }
 
   .txt-scene5 {
-    top: 10vh;
+    top: 25vh;
     right: 0;
     left: 0;
-    width: 80vw;
-    height: 60vh;
-    line-height: 35px;
-  }
+    width: 700px;
+    height: 600px;
+    line-height: 50px;
+ }
 
   /* Scene 6 */
   .img-scene6 {

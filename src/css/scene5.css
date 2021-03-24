@@ -35,7 +35,7 @@
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {   
   .messages-scene5 {
-    top: 7vh;
+    top: 20px;
     font-size: 0.7rem;
   }
 
@@ -53,8 +53,8 @@
 /* Super Extra small devices (phones, between 400px and 499px) */
 @media only screen and (min-width: 400px) and (max-width: 499px) {
   .messages-scene5 {
-    top: 7vh;
-    font-size: 1rem;
+    top: 1vh;
+    font-size: 0.7rem;
   }
 
   .base {
@@ -89,8 +89,8 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .messages-scene5 {
-    top: 120px;
-    font-size: 1.2rem;
+    top: 40px;
+    font-size: 1rem;
   }
 
   .base {
@@ -125,8 +125,8 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .messages-scene5 {
-    top: 30px;
-    font-size: 2.5vh;
+    top: 70px;
+    font-size: 1.7rem;
   }
 
   .base {
