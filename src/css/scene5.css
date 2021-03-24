@@ -35,8 +35,8 @@
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   .messages-scene5 {
-    top: 20px;
-    font-size: 0.7rem;
+    top: 15px;
+    font-size: 0.6rem;
   }
 
   .base {
@@ -141,7 +141,7 @@
 }
 
 /* IPad Pro */
-@media only screen and (min-width: 992px) and (min-height: 1366px) {
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
   .messages-scene5 {
     top: 70px;
     font-size: 1.3rem;
