@@ -996,7 +996,7 @@
     right: 0;
     left: 10vw;
     width: 525px;
-    height: 425px;;
+    height: 425px;
     line-height: 40px;
   }
 
@@ -1468,19 +1468,19 @@
   /* Scene 5 */
   .img-scene5 {
     width: 80vw;
-    height: 60%;
+    height: 90vh;
     left: 13vw;
-    bottom: 1vh;
+    bottom: -17vh;
   }
 
   .txt-scene5 {
-    top: 25vh;
+    top: 10vh;
     right: 0;
     left: 0;
-    width: 700px;
-    height: 600px;
-    line-height: 50px;
- }
+    width: 550px;
+    height: 450px;
+    line-height: 35px;
+  }
 
   /* Scene 6 */
   .img-scene6 {
@@ -1579,6 +1579,26 @@
     left: 20vw;
     width: 450px;
     height: 350px;
+  }
+}
+
+/* IPad Pro */
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+  /* Scene 5 */
+  .img-scene5 {
+    width: 90vw;
+    height: 60vh;
+    left: 9vw;
+    bottom: 8vh;
+  }
+
+  .txt-scene5 {
+    top: 25vh;
+    right: 0;
+    left: 0;
+    width: 600px;
+    height: 500px;
+    line-height: 35px;
   }
 }
 
