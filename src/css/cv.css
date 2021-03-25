@@ -1,148 +1,27 @@
-.bg-cv {
-  background-image: url("../images/backgrounds/bg-about.jpg");
-}
-
-.img-cv-guy {
-  z-index: 10;
-  content: url("../images/badGuy/25.png");
-}
-
-.cv {
-  z-index: 20;
-  content: url("../images/cv2021.jpg");
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  transform: rotate(-15deg) scale(0);
-  -webkit-transform: rotate(-15deg) scale(0);
-  -ms-transform: rotate(-15deg) scale(0);
-}
-
-.txt-cv {
-  background-image: url("../images/speechBubbles/speech-bubble1-flip.png");
-}
-
-.first-speech-cv {
-  position: relative;
-  text-shadow: 2px 2px 6px #ff0000;
-  animation: color-change 5s linear infinite;
-}
-
-/* Ultra Super Extra small devices (phones, 399px and down) */
-@media only screen and (max-width: 399px) {
-  .cv {
-    width: 40vh;
-  }
-
-  .first-speech-cv {
-    top: 25px;
-    left: -5px;
-    font-size: 1.5rem;
+/* Small screens */
+@media only screen and (max-width: 599px) {
+  .cv-container {
+    background-image: url("../images/cv2021.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    bottom: 30px;
   }
 }
 
-/* Super Extra small devices (phones, between 400px and 499px) */
-@media only screen and (min-width: 400px) and (max-width: 499px) {
-  .cv {
-    width: 40vh;
-  }
-
-  .first-speech-cv {
-    top: 37px;
-    left: -10px;
-    font-size: 2rem;
-  }
-}
-
-/* Extra small devices (phones, 500px and up) */
-@media only screen and (min-width: 500px) {
-  .cv {
-    width: 50vh;
-  }
-
-  .first-speech-cv {
-    top: 35px;
-    left: -10px;
-    font-size: 2.2rem;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Large screens */
 @media only screen and (min-width: 600px) {
-  .cv {
-    width: 50vh;
-  }
-
-  .first-speech-cv {
-    top: 65px;
-    left: -10px;
-    font-size: 2.7rem;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .cv {
-    width: 60vh;
-  }
-
-  .first-speech-cv {
-    top: 70px;
-    left: -10px;
-    font-size: 3rem;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .cv {
-    width: 50vw;
-  }
-
-  .first-speech-cv {
-    top: 65px;
-    font-size: 2.5rem;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .cv {
-    width: 60vh;
-  }
-
-  .first-speech-cv {
-    top: 60px;
-    left: -10px;
-    font-size: 3rem;
-  }
-}
-
-/* Super Extra large devices (large laptops and desktops, 1600px and up) */
-@media only screen and (min-width: 1600px) {
-  .cv {
-    width: 60vh;
-  }
-
-  .first-speech-cv {
-    top: 90px;
-    left: -10px;
-    font-size: 3rem;
-  }
-}
-
-/* Iphone 6/7/8 Plus Landscape */
-@media only screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
-  .cv {
-    width: 60vh;
-  }
-
-  .first-speech-cv {
-    font-size: 2rem;
-    top: -15px;
-    left: -10px;
+  .cv-container {
+    content: url("../images/cv2021.jpg");
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    overflow: hidden;
   }
 }
