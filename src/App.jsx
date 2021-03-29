@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { TweenMax } from "gsap";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { About } from "./components/About";
@@ -15,52 +14,44 @@ import { Scene8 } from "./components/Scene8";
 
 import "../src/css/main.css";
 
-function App() {
-  let app = useRef(null);
-
-  useEffect(() => {
-    TweenMax.to(app, 0, { css: { visibility: "visible" } });
-  }, []);
-
+const App = () => {
   return (
     <Router>
-      <div className="app" ref={(el) => (app = el)}>
-        <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <Scene1 />
-          </Route>
-          <Route exact path="/scene2">
-            <Scene2 />
-          </Route>
-          <Route exact path="/scene3">
-            <Scene3 />
-          </Route>
-          <Route exact path="/scene4">
-            <Scene4 />
-          </Route>
-          <Route exact path="/scene5">
-            <Scene5 />
-          </Route>
-          <Route exact path="/scene6">
-            <Scene6 />
-          </Route>
-          <Route exact path="/scene7">
-            <Scene7 />
-          </Route>
-          <Route exact path="/scene8">
-            <Scene8 />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/cv">
-            <CV />
-          </Route>
-        </Switch>
-      </div>
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <Scene1 />
+        </Route>
+        <Route exact path="/scene2">
+          <Scene2 />
+        </Route>
+        <Route exact path="/scene3">
+          <Scene3 />
+        </Route>
+        <Route exact path="/scene4">
+          <Scene4 />
+        </Route>
+        <Route exact path="/scene5">
+          <Scene5 />
+        </Route>
+        <Route exact path="/scene6">
+          <Scene6 />
+        </Route>
+        <Route exact path="/scene7">
+          <Scene7 />
+        </Route>
+        <Route exact path="/scene8">
+          <Scene8 />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/cv">
+          <CV />
+        </Route>
+      </Switch>
     </Router>
   );
-}
+};
 
 export default App;
