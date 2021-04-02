@@ -1,16 +1,11 @@
 import React from "react";
-import Loader from "react-loader-spinner";
+import BoredHand from "../images/bored-hand.gif";
+import "../css/loading.css";
 
 const Loading = () => {
   return (
-    <div>
-      <Loader
-        type="Puff"
-        color="rgb(0, 153, 255)"
-        height={100}
-        width={100}
-        timeout={10000}
-      />
+    <div className="loader-wrapper">
+      <img className="loader" src={BoredHand} alt="Bored Hand Loading" />
     </div>
   );
 };
