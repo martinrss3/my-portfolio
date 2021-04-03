@@ -10,9 +10,13 @@
   height: 100%;
   -webkit-clip-path: polygon(0 43%, 100% 58%, 100% 100%, 0 100%);
   clip-path: polygon(0 43%, 100% 58%, 100% 100%, 0 100%);
+  -webkit-animation-name: fadeInOpacity;
   animation-name: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
 }
 
@@ -28,9 +32,13 @@
   height: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 55%, 0 40%);
   clip-path: polygon(0 0, 100% 0%, 100% 55%, 0 40%);
+  -webkit-animation-name: fadeInOpacity;
   animation-name: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
 }
 
@@ -61,6 +69,7 @@
 
 .second-speech-scene4 {
   text-shadow: 2px 2px 6px #ff0000;
+  -webkit-animation: color-change 5s linear infinite;
   animation: color-change 5s linear infinite;
 }
 

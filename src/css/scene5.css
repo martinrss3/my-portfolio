@@ -18,6 +18,7 @@
 .base::before {
   content: "";
   position: absolute;
+  background: -webkit-linear-gradient(bottom, black, transparent);
   background: linear-gradient(to top, black, transparent);
 }
 
