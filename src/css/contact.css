@@ -3,8 +3,6 @@ textarea {
   width: 100%;
   /* height: 110px; */
   border: none;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
   display: block;
   font-family: Paloseco, sans-serif;
@@ -22,8 +20,6 @@ textarea {
   width: 100%;
   height: 47px;
   border: none;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
   display: block;
   font-family: Paloseco, sans-serif;
@@ -90,7 +86,6 @@ input.message {
 
 .send-btn:hover {
   -webkit-animation: bounce 0.3s infinite alternate;
-  -moz-animation: bounce 0.3s infinite alternate;
   animation: bounce 0.3s infinite alternate;
 }
 

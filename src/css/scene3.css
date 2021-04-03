@@ -23,6 +23,7 @@
 .third-speech-scene3 {
   position: relative;
   text-shadow: 2px 2px 6px #ff0000;
+  -webkit-animation: color-change 5s linear infinite;
   animation: color-change 5s linear infinite;
 }
 
@@ -78,7 +79,7 @@
 
   .third-speech-scene3 {
     top: 65px;
-    left: -10px;;
+    left: -10px;
     font-size: 2.5rem;
   }
 }

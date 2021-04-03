@@ -12,6 +12,7 @@
 
 el {
   color: green;
+  -webkit-animation: color-change 5s linear infinite;
   animation: color-change 5s linear infinite;
 }
 
@@ -36,7 +37,7 @@ el {
   }
 
   .second-speech-scene1 {
-    top: 25px;    
+    top: 25px;
     font-size: 1.2rem;
   }
 }

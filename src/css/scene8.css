@@ -4,6 +4,7 @@
 
 .img-scene8 {
   content: url("../images/me/15.png");
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
