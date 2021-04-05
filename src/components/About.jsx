@@ -20,7 +20,7 @@ export const About = () => {
   useEffect(() => {
     gsap.to("#moon", {
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
       },
       x: 1000,
       y: 300,
@@ -29,21 +29,21 @@ export const About = () => {
 
     gsap.to("#cloud1", {
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
       },
       x: -400,
     });
 
     gsap.to("#cloud2", {
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
       },
       x: 300,
     });
 
     gsap.to("#star", {
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
       },
       x: -3500,
       y: 3000,
@@ -52,7 +52,7 @@ export const About = () => {
 
     gsap.to("#me", {
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
       },
       x: 0,
       y: -1300,
@@ -61,7 +61,7 @@ export const About = () => {
 
     gsap.to("#grass", {
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
       },
       y: 0,
       scale: 1.2,
@@ -70,7 +70,7 @@ export const About = () => {
 
   return (
     <div className="wrapper">
-      <section>
+      <section className="about-header">
         <img src={bg} id="bg" alt="bg" />
         <img src={moon} id="moon" alt="moon" />
         <img src={cloud1} id="cloud1" alt="cloud" />

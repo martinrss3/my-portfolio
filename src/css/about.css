@@ -7,7 +7,7 @@
   background: black;
 }
 
-section {
+.about-header {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -23,7 +23,7 @@ section {
   align-items: center;
 }
 
-section::before {
+.about-header::before {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -178,7 +178,7 @@ h2 {
     margin-left: 0;
   }
 
-  section {
+  .about-header {
     height: 70vh;
   }
 
@@ -231,7 +231,7 @@ h2 {
     margin-left: 0;
   }
 
-  section {
+  .about-header {
     height: 70vh;
   }
 
@@ -280,7 +280,7 @@ h2 {
     margin-left: 0;
   }
 
-  section {
+  .about-header {
     height: 70vh;
   }
 
@@ -329,7 +329,7 @@ h2 {
     margin-left: 0;
   }
 
-  section {
+  .about-header {
     height: 70vh;
   }
 
@@ -403,7 +403,7 @@ h2 {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  section::before {
+  .about-header::before {
     bottom: -5px;
   }
 
@@ -437,7 +437,7 @@ h2 {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  section::before {
+  .about-header::before {
     bottom: -5px;
   }
 

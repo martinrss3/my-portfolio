@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Loading from "./components/Loading";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Loading } from "./components/Loading";
 import { NavBar } from "./components/NavBar";
-import { About } from "./components/About";
-import { CV } from "./components/CV";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
 import { Scene3 } from "./components/Scene3";
@@ -12,6 +10,9 @@ import { Scene5 } from "./components/Scene5";
 import { Scene6 } from "./components/Scene6";
 import { Scene7 } from "./components/Scene7";
 import { Scene8 } from "./components/Scene8";
+import { About } from "./components/About";
+import { Projects } from "./components/Projects";
+import { CV } from "./components/CV";
 
 import "../src/css/main.css";
 
@@ -58,6 +59,9 @@ const App = () => {
             </Route>
             <Route exact path="/about">
               <About />
+            </Route>
+            <Route exact path="/projects">
+              <Projects />
             </Route>
             <Route exact path="/cv">
               <CV />
