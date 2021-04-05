@@ -7,149 +7,81 @@ export const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    let container = document.querySelector(".portfolio");
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        pin: true,
-        scrub: 1,
-        trigger: container,
-        end: () =>
-          container.scrollWidth -
-          document.documentElement.clientWidth +
-          container.offsetWidth,
-      },
-      invalidateOnRefresh: true,
-      defaults: { ease: "none", duration: 1 },
-    });
+    const sections = gsap.utils.toArray("section");
+    const lastIndex = sections.length - 1;
 
-    tl.to(".parallax", { x: 300 })
-      .to(
-        ".panel",
-        {
-          x: () =>
-            -(container.scrollWidth - document.documentElement.clientWidth),
-        },
-        0
-      )
-      .from(
-        ".secondAn",
-        {
-          opacity: 0,
-          scale: 0.25,
-          duration: 0.2,
-          stagger: {
-            amount: 0.8,
-          },
-        },
-        0
-      );
+    sections.forEach((section, i) => {
+      section._bg = section.querySelector(".bg-project");
+      section._h1 = section.querySelector("h1");
 
-    gsap.from(".firstAn", {
-      duration: 1,
-      opacity: 0,
-      scale: 0.25,
-      scrollTrigger: {
-        trigger: container,
-        start: "top 90%",
-        end: "bottom 10%",
-        toggleActions: "play none none reverse",
-      },
+      // Give the backgrounds some random images
+      section._bg.style.backgroundImage = `url(https://picsum.photos/${
+        window.innerWidth
+      }/${window.innerHeight * 2}?random=${i})`;
+
+      // Create a standalone ST instance, and use the progress value (0 - 1) to tween the timeline's progress
+      ScrollTrigger.create({
+        trigger: section,
+        start: () => (i === 0 ? "top top" : "top bottom"), // The FIRST section will use a different start value than the rest
+        end: () => (i === lastIndex ? "top top" : "bottom top"), // The LAST section will use a different start value than the rest
+        onRefresh: (self) => {
+          // onRefresh (so it gets reset upon resize), create a timeline that moves the h1 + bg vertically
+          section._tl = gsap
+            .timeline({
+              paused: true,
+              defaults: { ease: "none", overwrite: "auto" },
+            })
+            .fromTo(
+              section._h1,
+              { y: () => (i === 0 ? 0 : (window.innerHeight / 2) * 1.5) },
+              {
+                y: () =>
+                  i === lastIndex ? 0 : (-window.innerHeight / 2) * 1.5,
+              },
+              0
+            )
+            .fromTo(
+              section._bg,
+              { y: () => (i === 0 ? -window.innerHeight / 2 : 0) },
+              {
+                y: () =>
+                  i === lastIndex
+                    ? -window.innerHeight / 2
+                    : -window.innerHeight,
+              },
+              0
+            )
+            .progress(self.progress); //use progress to position the timeline correctly
+        },
+        onUpdate: (self) => {
+          gsap.to(section._tl, { duration: 0.75, progress: self.progress });
+        },
+      });
     });
   }, []);
 
   return (
     <React.Fragment>
-      <div className="spacer-lg">
-        <h1>LARGE SPACER</h1>
-        <h2>Scroll Down</h2>
-      </div>
-
-      <section className="section portfolio">
-        <h2 className="portfolio_title parallax">Portfolio</h2>
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img firstAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item1"
-            />
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img firstAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item2"
-            />
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img secondAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item3"
-            />
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img secondAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item4"
-            />
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img secondAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item5"
-            />
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img secondAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item6"
-            />
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img secondAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item7"
-            />
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel_item">
-            <img
-              className="panel_img secondAn"
-              src="https://via.placeholder.com/800x600.jpg"
-              alt="item8"
-            />
-          </div>
-        </div>
+      <section className="project-item">
+        <div className="bg-project"></div>
+        <h1 className="project-text">Drumkit App</h1>
       </section>
-
-      <div className="spacer margin">
-        <h1>The End</h1>
-      </div>
+      <section className="project-item">
+        <div className="bg-project"></div>
+        <h1 className="project-text">Chat App</h1>
+      </section>
+      <section className="project-item">
+        <div className="bg-project"></div>
+        <h1 className="project-text">Expense Tracker App</h1>
+      </section>
+      <section className="project-item">
+        <div className="bg-project"></div>
+        <h1 className="project-text">Movie Search App</h1>
+      </section>
+      <section className="project-item">
+        <div className="bg-project"></div>
+        <h1 className="project-text">Image Search App</h1>
+      </section>
     </React.Fragment>
   );
 };
