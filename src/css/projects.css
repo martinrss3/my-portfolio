@@ -1,28 +1,80 @@
-.project-item {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.bg-project {
+#guy {
   position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 10000;
   width: 100%;
-  height: 200%;
-  z-index: -1;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  margin-left: 80px;
 }
 
-.project-text {
-  color: white;
-  text-shadow: 1px 1px 3px black;
-  z-index: 1;
-  font-size: 3em;
-  font-weight: 400;
+/* Ultra Super Extra small devices (phones, 399px and down) */
+@media only screen and (max-width: 399px) {
+  #guy {
+    top: 0;
+    width: 200vh;
+    margin-left: 0;
+  }
+}
+
+/* Super Extra small devices (phones, between 400px and 499px) */
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  #guy {
+    top: 0;
+    width: 200vh;
+    margin-left: 0;
+  }
+}
+
+/* Extra small devices (phones, 500px and up) */
+@media only screen and (min-width: 500px) {
+  #guy {
+    top: 45vh;
+    width: 130vh;
+    margin-left: 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #guy {
+    top: 25vh;
+    width: 150vh;
+    margin-left: 5em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #guy {
+    top: 50vh;
+    width: 120vh;
+    margin-left: 5em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #guy {
+    top: -10vh;
+    width: 230vh;
+    margin-left: 5em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #guy {
+    top: -10vh;
+    width: 230vh;
+    margin-left: 5em;
+  }
+}
+
+/* Iphone 6/7/8 Plus Landscape */
+@media only screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+  #guy {
+    top: 50vh;
+    width: 230vh;
+    margin-left: 0;
+  }
 }
