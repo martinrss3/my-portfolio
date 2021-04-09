@@ -79,8 +79,9 @@ export const About = () => {
         <img src={me} id="me" alt="me" />
         <img src={grass} id="grass" alt="grass" />
       </section>
-      <div className="row">
-        <div className="first column">
+
+      <section>
+        <div>
           <h2>{t("title.about-me")}</h2>
           <p className="about-text">{t("body.p")}</p>
         </div>
@@ -97,14 +98,14 @@ export const About = () => {
             alt="spain"
           />
         </div>
-        <br />
-        <br />
+      </section>
+      <br />
+      <br />
 
-        <div className="second column">
-          <h2>FEEL FREE TO CONTACT ME</h2>
-          <Contact />
-        </div>
-      </div>
+      <section>
+        <h2>FEEL FREE TO CONTACT ME</h2>
+        <Contact />
+      </section>
     </div>
   );
 };
