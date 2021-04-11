@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Contact } from "./Contact";
+import { TimelineLite, Back } from "gsap";
 import "../css/projects.css";
 import bg from "../images/backgrounds/bg-scene7.jpg";
 import moon from "../images/parallax/moon.png";
@@ -63,6 +63,50 @@ export const Projects = () => {
       y: 0,
       scale: 1.2,
     });
+
+    var slides = document.querySelectorAll(".slide"),
+      tl = new TimelineLite({ paused: true });
+    for (var i = 0; i < slides.length; i++) {
+      var D = document.createElement("div");
+      D.className = "Dot";
+      D.id = "Dot" + i;
+      D.addEventListener("click", function () {
+        tl.seek(this.id).pause();
+      });
+      document.getElementById("Dots").appendChild(D);
+      if (i !== 0) {
+        tl.addPause("Dot" + i);
+      }
+      if (i !== slides.length - 1) {
+        tl.to(slides[i], 0.5, { scale: 0.8, ease: Back.easeOut })
+          .to(slides[i], 0.7, { xPercent: -100, rotationY: 80 }, "L" + i)
+          .from(slides[i + 1], 0.7, { xPercent: 100, rotationY: -80 }, "L" + i)
+          .to(
+            "#Dot" + i,
+            0.7,
+            { backgroundColor: "rgba(255,255,255,0.2)" },
+            "L" + i
+          )
+          .from(slides[i + 1], 0.5, { scale: 0.8, ease: Back.easeIn });
+      }
+    }
+    function GO(e) {
+      var SD = isNaN(e) ? e.wheelDelta || -e.detail : e;
+      if (SD < 0) {
+        tl.play();
+      } else {
+        tl.reverse();
+      }
+    }
+
+    document.addEventListener("mousewheel", GO);
+    document.addEventListener("DOMMouseScroll", GO);
+    document.getElementById("nextBtn").addEventListener("click", function () {
+      GO(-1);
+    });
+    document.getElementById("prevtBtn").addEventListener("click", function () {
+      GO(1);
+    });
   }, []);
 
   return (
@@ -77,17 +121,31 @@ export const Projects = () => {
         <img src={grass} id="grass" alt="grass" />
       </section>
 
-      <section>
+      <section class="project-title">
         <h2>MY PROJECTS</h2>
-        <Contact />
       </section>
-      <section>
-        <h2>FEEL FREE TO CONTACT ME</h2>
-        <Contact />
-      </section>
-      <section>
-        <h2>FEEL FREE TO CONTACT ME</h2>
-        <Contact />
+
+      <section className="project-container">
+        <div className="box slide">
+          <span>Full Screen Slider (linear) #1</span>
+        </div>
+        <div className="box slide">
+          <span>GSAP Timeline</span>
+        </div>
+        <div className="box slide">
+          <span>Responsive</span>
+        </div>
+        <div className="box slide">
+          <span>Super Simple</span>
+        </div>
+        <div className="box slide">
+          <span>What else you want ! ;)</span>
+        </div>
+        <div id="navig">
+          <div id="prevtBtn" class="fa fa-chevron-circle-left"></div>
+          <div id="nextBtn" class="fa fa-chevron-circle-right"></div>
+        </div>
+        <div id="Dots"></div>
       </section>
     </div>
   );
