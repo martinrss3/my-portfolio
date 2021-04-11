@@ -60,26 +60,19 @@ h2 {
 }
 
 #moon {
+  position: absolute;
   z-index: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
-  width: 80vw;
-  position: absolute;
-  top: 1vh;
 }
 
 #cloud1 {
   position: absolute;
-  left: 0;
-  top: 1vh;
   z-index: 2;
 }
 
 #cloud2 {
   position: absolute;
-  right: 0;
-  top: 1vh;
-  max-width: 800px;
   z-index: 0;
 }
 
@@ -95,12 +88,9 @@ h2 {
 
 #me {
   position: absolute;
-  top: 110%;
   z-index: 10000;
-  width: 100%;
   -webkit-transform: scale(0);
   transform: scale(0);
-  margin-left: 80px;
 }
 
 #grass {
@@ -147,22 +137,26 @@ h2 {
 
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
+  .about-header {
+    height: 90vh;
+  }
+
   #moon {
-    width: 120vh;
-    left: -80px;
-    top: 100px;
+    width: 250vw;
+    left: -20vw;
+    top: 5vh;
   }
 
   #cloud1 {
+    width: 60vw;
+    top: 30vh;
     left: 0;
-    top: 220px;
-    width: 200px;
   }
 
   #cloud2 {
+    width: 60vw;
+    top: 15vh;
     right: 0;
-    top: 150px;
-    width: 200px;
   }
 
   #star {
@@ -172,22 +166,17 @@ h2 {
     transform: scale(2);
   }
 
+  #grass {
+    width: 180vw;
+  }
+
   #me {
-    top: 90vh;
-    width: 130vh;
-    margin-left: 0;
-  }
-
-  .about-header {
-    height: 70vh;
-  }
-
-  .first {
-    margin-top: 15px;
+    width: 280vw;
+    top: 100vh;
   }
 
   h2 {
-    margin: 10px;
+    margin: 30px;
     padding-bottom: 10px;
   }
 
@@ -207,36 +196,46 @@ h2 {
 
 /* Super Extra small devices (phones, between 400px and 499px) */
 @media only screen and (min-width: 400px) and (max-width: 499px) {
+  .about-header {
+    height: 90vh;
+  }
+
   #moon {
-    width: 130vh;
-    left: -80px;
-    top: 80px;
+    width: 250vw;
+    left: -20vw;
+    top: 20vh;
   }
 
   #cloud1 {
+    width: 60vw;
+    top: 35vh;
     left: 0;
-    top: 220px;
-    width: 230px;
   }
 
   #cloud2 {
+    width: 70vw;
+    top: 20vh;
     right: 0;
-    top: 150px;
-    width: 230px;
+  }
+
+  #star {
+    right: -600px;
+    top: -200px;
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+
+  #grass {
+    width: 180vw;
   }
 
   #me {
+    width: 250vw;
     top: 100vh;
-    width: 110vh;
-    margin-left: 0;
-  }
-
-  .about-header {
-    height: 70vh;
   }
 
   h2 {
-    margin: 10px;
+    margin: 40px;
     padding-bottom: 10px;
   }
 
@@ -256,43 +255,55 @@ h2 {
 
 /* Extra small devices (phones, 500px and up) */
 @media only screen and (min-width: 500px) {
+  .about-header {
+    height: 90vh;
+  }
+
   #moon {
-    width: 150vh;
-    left: -80px;
-    top: 80px;
+    width: 250vw;
+    left: -20vw;
+    top: 20vh;
   }
 
   #cloud1 {
-    left: 25px;
-    top: 220px;
-    width: 230px;
+    width: 60vw;
+    top: 35vh;
+    left: 0;
   }
 
   #cloud2 {
-    right: 25px;
-    top: 150px;
-    width: 230px;
+    width: 70vw;
+    top: 20vh;
+    right: 0;
+  }
+
+  #star {
+    right: -600px;
+    top: -200px;
+    -webkit-transform: scale(2);
+    transform: scale(2);
   }
 
   #me {
+    width: 250vw;
     top: 100vh;
-    width: 110vh;
-    margin-left: 0;
   }
 
-  .about-header {
-    height: 70vh;
+  #grass {
+    width: 180vw;
   }
 
   h2 {
-    margin: 10px;
+    margin: 40px;
     padding-bottom: 10px;
+    font-size: 2rem;
   }
 
   .about-text {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
+    font-size: 1.5rem;
   }
 
   .lang-icons {
@@ -305,37 +316,37 @@ h2 {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .about-header {
+    height: 100vh;
+  }
+
   #moon {
-    width: 150vh;
-    left: 0;
-    top: 80px;
+    width: 250vw;
+    left: -10vw;
+    top: 20vh;
   }
 
   #cloud1 {
-    left: 200px;
-    top: 220px;
-    width: 230px;
+    width: 60vw;
+    top: 35vh;
+    left: 15vw;
   }
 
   #cloud2 {
-    right: 125px;
-    top: 150px;
-    width: 230px;
+    width: 80vw;
+    top: 20vh;
+    right: 0;
   }
 
   #me {
-    top: 20vh;
-    width: 190vh;
-    margin-left: 0;
-  }
-
-  .about-header {
-    height: 70vh;
+    top: 110vh;
+    width: 170vw;
+    margin-left: 5em;
   }
 
   h2 {
-    margin: 10px;
-    margin-left: 80px;
+    margin: 50px;
+    margin-left: 3em;
     padding-bottom: 10px;
   }
 
@@ -353,37 +364,92 @@ h2 {
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 720px) and (min-height: 1280px) {
+  .about-header {
+    height: 100vh;
+  }
+
   #moon {
-    width: 200vh;
-    left: -50px;
-    top: -80px;
+    width: 250vw;
+    left: -10vw;
+    top: 20vh;
   }
 
   #cloud1 {
-    left: 250px;
-    top: 100px;
-    width: 50vh;
+    width: 60vw;
+    top: 35vh;
+    left: 10vw;
   }
 
   #cloud2 {
-    right: 200px;
-    top: 50px;
-    width: 50vh;
+    width: 80vw;
+    top: 20vh;
+    right: 0;
   }
 
   #me {
+    width: 170vw;
     top: 100vh;
-    width: 80vh;
-    margin-left: 80px;
+    margin-left: 5em;
   }
 
   h2 {
-    margin: 10px;
+    margin: 50px;
     margin-left: 80px;
     padding-bottom: 10px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .lang-icons {
+    margin-left: 25vw;
+    margin-right: 15vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .about-header {
+    height: 100vh;
+  }
+
+  #moon {
+    width: 250vw;
+    left: -10vw;
+    top: 20vh;
+  }
+
+  #cloud1 {
+    width: 60vw;
+    top: 35vh;
+    left: 10vw;
+  }
+
+  #cloud2 {
+    width: 80vw;
+    top: 20vh;
+    right: 0;
+  }
+
+  #me {
+    width: 170vw;
+    top: 100vh;
+    margin-left: 5em;
+  }
+
+  h2 {
+    margin: 50px;
+    margin-left: 80px;
+    padding-bottom: 10px;
+    font-size: 2.5rem;
   }
 
   .about-text {
@@ -403,25 +469,42 @@ h2 {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .about-header::before {
-    bottom: -5px;
+  #moon {
+    width: 150vw;
+    left: 0;
+    top: 5vh;
+  }
+
+  #cloud1 {
+    width: 45vw;
+    top: 20vh;
+    left: 10vw;
+  }
+
+  #cloud2 {
+    width: 50vw;
+    top: 15vh;
+    right: 10vw;
   }
 
   #me {
-    top: 100vh;
-    width: 150vh;
-    margin-left: 80px;
+    width: 100vw;
+    top: 110vh;
+    margin-left: 5em;
+  }
+
+  #grass {
+    width: 120vw;
   }
 
   h2 {
-    margin: 10px;
-    margin-left: 80px;
+    margin: 50px;
+    margin-left: 4em;
     padding-bottom: 10px;
     font-size: 2rem;
   }
 
   .about-text {
-    margin-left: 120px;
     margin-right: 40px;
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -437,61 +520,39 @@ h2 {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .about-header::before {
-    bottom: -5px;
-  }
-
-  #me {
-    top: 100vh;
-    width: 150vh;
-    margin-left: 80px;
-  }
-
   h2 {
-    margin: 10px;
-    margin-left: 80px;
-    padding-bottom: 10px;
-    font-size: 2rem;
+    margin-left: 2em;
+    font-size: 3rem;
   }
 
   .about-text {
-    margin-left: 120px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-
-  .lang-icons {
-    margin-left: 35vw;
-    margin-right: 30vw;
-    margin-top: 6vh;
-    margin-bottom: 5vh;
+    font-size: 2rem;
   }
 }
 
 /* Iphone 6/7/8 Plus Landscape */
 @media only screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
   #moon {
-    width: 150vh;
+    width: 150vw;
     left: 5vw;
     top: 0;
   }
 
   #cloud1 {
-    left: 100px;
-    top: 20px;
-    width: 230px;
+    width: 50vw;
+    left: 10vw;
+    top: 5vh;
   }
 
   #cloud2 {
-    right: 125px;
-    top: 50px;
-    width: 230px;
+    width: 50vw;
+    right: 0;
+    top: 5vh;
   }
 
   #me {
+    width: 150vw;
     top: 50vh;
-    width: 230vh;
-    margin-left: 0;
+    margin-left: 5em;
   }
 }
