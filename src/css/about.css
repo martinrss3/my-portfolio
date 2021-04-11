@@ -138,7 +138,7 @@ h2 {
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   .about-header {
-    height: 90vh;
+    height: 80vh;
   }
 
   #moon {
@@ -197,7 +197,7 @@ h2 {
 /* Super Extra small devices (phones, between 400px and 499px) */
 @media only screen and (min-width: 400px) and (max-width: 499px) {
   .about-header {
-    height: 90vh;
+    height: 85vh;
   }
 
   #moon {

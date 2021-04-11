@@ -20,7 +20,7 @@ export const About = () => {
   useEffect(() => {
     gsap.to("#moon", {
       scrollTrigger: {
-        scrub: 1,
+        scrub: true,
       },
       x: 1000,
       y: 300,
@@ -29,21 +29,21 @@ export const About = () => {
 
     gsap.to("#cloud1", {
       scrollTrigger: {
-        scrub: 1,
+        scrub: true,
       },
       x: -400,
     });
 
     gsap.to("#cloud2", {
       scrollTrigger: {
-        scrub: 1,
+        scrub: true,
       },
       x: 300,
     });
 
     gsap.to("#star", {
       scrollTrigger: {
-        scrub: 1,
+        scrub: true,
       },
       x: -3500,
       y: 3000,
@@ -52,7 +52,7 @@ export const About = () => {
 
     gsap.to("#me", {
       scrollTrigger: {
-        scrub: 1,
+        scrub: true,
       },
       x: 0,
       y: -1300,
@@ -61,7 +61,7 @@ export const About = () => {
 
     gsap.to("#grass", {
       scrollTrigger: {
-        scrub: 1,
+        scrub: true,
       },
       y: 0,
       scale: 1.2,
