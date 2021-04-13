@@ -1,0 +1,101 @@
+h4 {
+  font-weight: 600;
+  font-size: 25px;
+  color: #666;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.0001em;
+}
+
+.project-link {
+  font-weight: 600;
+  color: #3f3f3f;
+  letter-spacing: 0.001em;
+}
+
+p.top-titles {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.small-title {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 2.3;
+  text-transform: uppercase;
+}
+
+.project-link {
+  text-decoration: none;
+  border-bottom: 2px solid #b00f24;
+  padding: 5px 0;
+  font-size: 1rem;
+}
+
+.sec {
+  height: 70vh;
+  width: 95vw;
+}
+
+.d-grid {
+  display: grid;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: 1 / span 12;
+}
+
+.project-info {
+  background: #fff;
+  padding: 20px 20px 30px;
+}
+
+.project-left .project-info {
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 1;
+}
+
+.project-left .box {
+  grid-column: 3 / span 5;
+  grid-row: 1 / span 3;
+  width: 100%;
+}
+
+.project-right .project-info {
+  grid-column: 7 / span 3;
+  grid-row: 2 / span 1;
+}
+
+.project-right .box {
+  grid-column: 8 / span 5;
+  grid-row: 1 / span 3;
+  width: 100%;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+}

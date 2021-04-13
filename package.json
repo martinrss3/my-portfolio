@@ -10,6 +10,7 @@
     "font-awesome": "^4.7.0",
     "gsap": "^3.5.1",
     "i18next": "^19.9.2",
+    "jquery": "^3.6.0",
     "react": "^16.13.1",
     "react-delay": "^0.1.0",
     "react-dom": "^16.13.1",
@@ -17,6 +18,8 @@
     "react-i18next": "^11.8.10",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "typewriter-effect": "^2.17.0"
   },
   "scripts": {
