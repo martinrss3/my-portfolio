@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.project-left {
+  margin-left: 1em;
+}
+
 .project-right .box {
   grid-column: 8 / span 5;
   grid-row: 1 / span 3;
@@ -54,7 +58,7 @@
   left: 0;
   top: 0;
   background: black;
-  width: 100%;
+  width: 150%;
   height: 100%;
 }
 
@@ -140,33 +144,191 @@ h4 {
     left: 0;
     top: 0;
     background: black;
-    width: 100%;
+    width: 200%;
     height: 100vh;
   }
 
   .project-info {
     background: #fff;
     padding: 20px 20px 20px;
-    height: 27vh;
+    height: 127px;
     position: relative;
     top: 14px;
   }
 
   .small-title {
-    font-size: 5px;
+    font-size: 6px;
+    line-height: 1.5;
+    margin-top: -5px;
   }
 
   h4 {
-    font-size: 15px;
-    padding-top: 7px; 
+    font-size: 14px;
+    padding-top: 7px;
     padding-bottom: 7px;
   }
 
   .project-link {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
-/* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .small-title {
+    font-size: 9px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .project-link {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 719px) {
+  .sec {
+    height: 50vh;
+    width: 100vw;
+  }
+
+  .grid-12 {
+    grid-column: 1 / 12;
+    margin-left: 3em;
+  }
+
+  .project-left .box {
+    grid-column: 3 / 12;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+
+  .project-right .box {
+    grid-column: 3 / 12;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+
+  .project-left .project-info {
+    grid-column: 2 / span 5;
+    grid-row: 1 / 1;
+  }
+
+  .project-right .project-info {
+    grid-column: 2 / span 5;
+    grid-row: 1 / 1;
+  }
+
+  .project-img {
+    width: 100%;
+  }
+
+  .overlay {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+    width: 200%;
+    height: 100vh;
+  }
+
+  .project-info {
+    background: #fff;
+    padding: 20px 20px 20px;
+    height: 250px;
+    position: relative;
+    top: 14px;
+  }
+
+  .small-title {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 27px;
+    padding-top: 7px;
+    margin-bottom: 25px;
+  }
+
+  .project-link {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 720px) and (min-height: 1280px) {
+  .sec {
+    height: 50vh;
+    width: 100vw;
+  }
+
+  .grid-12 {
+    grid-column: 1 / 12;
+    margin-left: 3em;
+  }
+
+  .project-left .box {
+    grid-column: 3 / 12;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+
+  .project-right .box {
+    grid-column: 3 / 12;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+
+  .project-left .project-info {
+    grid-column: 2 / span 5;
+    grid-row: 1 / 1;
+  }
+
+  .project-right .project-info {
+    grid-column: 2 / span 5;
+    grid-row: 1 / 1;
+  }
+
+  .project-img {
+    width: 100%;
+  }
+
+  .overlay {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+    width: 200%;
+    height: 100vh;
+  }
+
+  .project-info {
+    background: #fff;
+    padding: 20px 20px 20px;
+    height: 260px;
+    position: relative;
+    top: 14px;
+  }
+
+  .small-title {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 30px;
+    padding-top: 7px;
+    margin-bottom: 20px;
+  }
+
+  .project-link {
+    font-size: 20px;
+  }
 }

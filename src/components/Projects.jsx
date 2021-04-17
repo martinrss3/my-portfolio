@@ -80,7 +80,6 @@ export const Projects = () => {
       <section>
         <div className="d-grid">
           <h2>MY PROJECTS</h2>
-          <p className="about-text">Scroll down</p>
         </div>
       </section>
 

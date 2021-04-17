@@ -8,16 +8,16 @@
 /* Ultra Super Extra small devices (phones, 399px and down) */
 @media only screen and (max-width: 399px) {
   #guy {
-    width: 180vw;
-    top: 150vh;
+    width: 280vw;
+    top: 100vh;
   }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
 @media only screen and (min-width: 400px) and (max-width: 499px) {
   #guy {
-    width: 150vw;
-    top: 150vh;
+    width: 250vw;
+    top: 100vh;
   }
 }
 
