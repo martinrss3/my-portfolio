@@ -8,7 +8,7 @@ import "../css/navbar.css";
 export const NavBar = () => {
   let catRef = useRef(null);
   let alienRef = useRef(null);
-  let shuttleRef = useRef(null);
+  // let shuttleRef = useRef(null);
   let soundRef = useRef(null);
 
   const [music, setMusic] = useState(false);
@@ -28,7 +28,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     TweenMax.staggerFrom(
-      [catRef, alienRef, shuttleRef, soundRef],
+      [catRef, alienRef, soundRef],
       0.8,
       { opacity: 0, x: 40, ease: Power3.easeOut },
       0.2
@@ -132,7 +132,7 @@ export const NavBar = () => {
           </Link>
         </li>
 
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link to="/projects" className="nav-link">
             <svg
               aria-hidden="true"
@@ -162,7 +162,7 @@ export const NavBar = () => {
             </svg>
             <span className="link-text">PROJECTS</span>
           </Link>
-        </li>
+        </li> */}
 
         <li className="nav-item" onClick={music ? handlePause : handlePlay}>
           <span className="nav-link" onClick={handleMusicIcon}>
