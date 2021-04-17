@@ -24,7 +24,7 @@ export const ProjectsDetails = () => {
         .fromTo(
           picOverlay,
           2,
-          { skewX: 30, scale: 1.5 },
+          { skewX: 30, scale: 5 },
           {
             skewX: 0,
             xPercent: 100,
