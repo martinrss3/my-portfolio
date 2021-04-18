@@ -29,7 +29,7 @@ export const ProjectsDetails = () => {
       animateIn
         .fromTo(
           picOverlay,
-          2,
+          1,
           { skewX: 30, scale: 5 },
           {
             skewX: 0,
@@ -40,12 +40,12 @@ export const ProjectsDetails = () => {
         )
         .from(
           projectInfo,
-          1,
+          0.5,
           {
             scaleY: 0,
             transformOrigin: "bottom left",
           },
-          "-=1.5"
+          "-=0.5"
         )
         .from(
           smallTitle,
