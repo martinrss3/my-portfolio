@@ -3,6 +3,12 @@ import gsap, { TimelineMax, Power4 } from "gsap";
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import $ from "jquery";
+import DrumkitImg from "../images/projects/drumkit.png";
+import ChatImg from "../images/projects/chat.png";
+import ImageSearchImg from "../images/projects/image-search.png";
+import MoviesSearchImg from "../images/projects/movies-search.png";
+import ExpenseTrackerImg from "../images/projects/expense-tracker.png";
+import TravelWebImg from "../images/projects/travel-website.png";
 import "../css/projectsdetails.css";
 
 export const ProjectsDetails = () => {
@@ -81,18 +87,19 @@ export const ProjectsDetails = () => {
       <section className="sec">
         <div className="grid-12 project project-left">
           <div className="box">
-            <img
-              className="project-img"
-              src="https://source.unsplash.com/71vAb1FXB6g"
-              alt=""
-            />
+            <img className="project-img" src={DrumkitImg} alt="drumkit" />
             <div className="overlay"></div>
           </div>
           <div className="project-info">
-            <p className="small-title">Identity // Website // Print</p>
-            <h4>This is the first project</h4>
-            <a className="project-link" href="link-to-project">
-              See case study
+            <p className="small-title">JavaScript</p>
+            <h4>Drumkit App</h4>
+            <a
+              className="project-link"
+              href="https://gracious-lalande-e27e97.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try it!
             </a>
           </div>
         </div>
@@ -101,18 +108,19 @@ export const ProjectsDetails = () => {
       <section className="sec">
         <div className="grid-12 project project-right">
           <div className="box">
-            <img
-              className="project-img"
-              src="https://source.unsplash.com/71vAb1FXB6g"
-              alt=""
-            />
+            <img className="project-img" src={ChatImg} alt="chat" />
             <div className="overlay"></div>
           </div>
           <div className="project-info">
-            <p className="small-title">Identity // Website // Print</p>
-            <h4>This is the first project</h4>
-            <a className="project-link" href="link-to-project">
-              See case study
+            <p className="small-title">React // Socket.io // Express</p>
+            <h4>Chat App</h4>
+            <a
+              className="project-link"
+              href="https://wonderful-minsky-570e8f.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try it!
             </a>
           </div>
         </div>
@@ -123,16 +131,21 @@ export const ProjectsDetails = () => {
           <div className="box">
             <img
               className="project-img"
-              src="https://source.unsplash.com/71vAb1FXB6g"
-              alt=""
+              src={ImageSearchImg}
+              alt="img search"
             />
             <div className="overlay"></div>
           </div>
           <div className="project-info">
-            <p className="small-title">Identity // Website // Print</p>
-            <h4>This is the first project</h4>
-            <a className="project-link" href="link-to-project">
-              See case study
+            <p className="small-title">React // Pixabay API</p>
+            <h4>Image Search App</h4>
+            <a
+              className="project-link"
+              href="https://fervent-mcnulty-3c7f9a.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try It!
             </a>
           </div>
         </div>
@@ -143,16 +156,21 @@ export const ProjectsDetails = () => {
           <div className="box">
             <img
               className="project-img"
-              src="https://source.unsplash.com/71vAb1FXB6g"
-              alt=""
+              src={MoviesSearchImg}
+              alt="movies search"
             />
             <div className="overlay"></div>
           </div>
           <div className="project-info">
-            <p className="small-title">Identity // Website // Print</p>
-            <h4>This is the first project</h4>
-            <a className="project-link" href="link-to-project">
-              See case study
+            <p className="small-title">React // The Movie Database API</p>
+            <h4>Movies Search App</h4>
+            <a
+              className="project-link"
+              href="https://admiring-meitner-5ca2e7.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try It!
             </a>
           </div>
         </div>
@@ -161,18 +179,19 @@ export const ProjectsDetails = () => {
       <section className="sec">
         <div className="grid-12 project project-left">
           <div className="box">
-            <img
-              className="project-img"
-              src="https://source.unsplash.com/71vAb1FXB6g"
-              alt=""
-            />
+            <img className="project-img" src={ExpenseTrackerImg} alt="" />
             <div className="overlay"></div>
           </div>
           <div className="project-info">
-            <p className="small-title">Identity // Website // Print</p>
-            <h4>This is the first project</h4>
-            <a className="project-link" href="link-to-project">
-              See case study
+            <p className="small-title">React</p>
+            <h4>Expense Tracker App</h4>
+            <a
+              className="project-link"
+              href="https://vigorous-curie-c5bbb2.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try It!
             </a>
           </div>
         </div>
@@ -181,18 +200,19 @@ export const ProjectsDetails = () => {
       <section className="sec">
         <div className="grid-12 project project-right">
           <div className="box">
-            <img
-              className="project-img"
-              src="https://source.unsplash.com/71vAb1FXB6g"
-              alt=""
-            />
+            <img className="project-img" src={TravelWebImg} alt="" />
             <div className="overlay"></div>
           </div>
           <div className="project-info">
-            <p className="small-title">Identity // Website // Print</p>
-            <h4>This is the first project</h4>
-            <a className="project-link" href="link-to-project">
-              See case study
+            <p className="small-title">React</p>
+            <h4>Travel Website</h4>
+            <a
+              className="project-link"
+              href="https://hardcore-brahmagupta-8a26ed.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try it!
             </a>
           </div>
         </div>
