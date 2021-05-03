@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollDown } from "./ScrollDown";
 import { useTranslation } from "react-i18next";
 import { Contact } from "./Contact";
 import "../css/about.css";
@@ -79,6 +80,8 @@ export const About = () => {
         <img src={me} id="me" alt="me" />
         <img src={grass} id="grass" alt="grass" />
       </section>
+
+      <ScrollDown />
 
       <section>
         <div>
