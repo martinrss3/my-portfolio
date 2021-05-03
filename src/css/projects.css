@@ -11,6 +11,10 @@
     width: 280vw;
     top: 100vh;
   }
+
+  .project-title {
+    margin-top: 30%;
+  }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
@@ -19,6 +23,10 @@
     width: 250vw;
     top: 100vh;
   }
+
+  .project-title {
+    margin-top: 25%;
+  }
 }
 
 /* Extra small devices (phones, 500px and up) */
@@ -26,6 +34,10 @@
   #guy {
     width: 160vw;
     top: 130vh;
+  }
+
+  .project-title {
+    margin-top: 20%;
   }
 }
 
