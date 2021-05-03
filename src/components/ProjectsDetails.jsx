@@ -3,6 +3,7 @@ import gsap, { TimelineMax, Power4 } from "gsap";
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import $ from "jquery";
+import SimpsonsImg from "../images/projects/simpsons.png"
 import DrumkitImg from "../images/projects/drumkit.png";
 import ChatImg from "../images/projects/chat.png";
 import ImageSearchImg from "../images/projects/image-search.png";
@@ -84,6 +85,27 @@ export const ProjectsDetails = () => {
 
   return (
     <React.Fragment>
+      <section className="sec">
+        <div className="grid-12 project project-right">
+          <div className="box">
+            <img className="project-img" src={SimpsonsImg} alt="chat" />
+            <div className="overlay"></div>
+          </div>
+          <div className="project-info">
+            <p className="small-title">React // GSAP // The Simpsons Quote API</p>
+            <h4>Simpsons Quotes Finder</h4>
+            <a
+              className="project-link"
+              href="https://lucid-almeida-257e11.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try it!
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="sec">
         <div className="grid-12 project project-left">
           <div className="box">
