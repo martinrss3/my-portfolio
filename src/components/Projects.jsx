@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollDown } from "./ScrollDown";
 import { ProjectsDetails } from "./ProjectsDetails";
 import "../css/projects.css";
 import bg from "../images/backgrounds/bg-scene7.jpg";
@@ -77,9 +78,11 @@ export const Projects = () => {
         <img src={grass} id="grass" alt="grass" />
       </section>
 
+      <ScrollDown />
+
       <section>
         <div className="d-grid">
-          <h2>MY PROJECTS</h2>
+          <h2 className="project-title">MY PROJECTS</h2>
         </div>
       </section>
 
