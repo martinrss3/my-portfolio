@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { TweenMax, Power3 } from "gsap";
 import ReactHowler from "react-howler";
 import DjGriffin from "../audio/djgriffin.mp3";
+import Github from "../images/icons/github.png";
+import Linkedin from "../images/icons/linkedin.png";
 import "../css/navbar.css";
 
 export const NavBar = () => {
@@ -196,6 +198,45 @@ export const NavBar = () => {
             </svg>
             <span className="link-text">PLAY MUSIC</span>
           </span>
+        </li>
+
+        <li className="nav-item social github-li">
+          <a
+            className="nav-link"
+            href="https://github.com/martinrss3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Github}
+              className="github"
+              style={{ width: "2.2em", margin: "0 1rem" }}
+              alt="github"
+            />
+            <span className="link-text">GITHUB</span>
+          </a>
+        </li>
+
+        <li className="nav-item social">
+          <a
+            className="nav-link"
+            href="https://www.linkedin.com/in/martin-russo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Linkedin}
+              className="linkedin"
+              style={{
+                width: "2.2em",
+                margin: "0 1rem",
+                WebkitFilter: "invert(100%)",
+                filter: "invert(100%)",
+              }}
+              alt="linkedin"
+            />
+            <span className="link-text">LINKEDIN</span>
+          </a>
         </li>
       </ul>
     </nav>
