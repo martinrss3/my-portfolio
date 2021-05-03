@@ -12,6 +12,8 @@ export const NavBar = () => {
   let alienRef = useRef(null);
   let shuttleRef = useRef(null);
   let soundRef = useRef(null);
+  let github = useRef(null);
+  let linkedin = useRef(null);
 
   const [music, setMusic] = useState(false);
   const [musicIcon, setMusicIcon] = useState(false);
@@ -30,7 +32,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     TweenMax.staggerFrom(
-      [catRef, alienRef, shuttleRef, soundRef],
+      [catRef, alienRef, shuttleRef, soundRef, github, linkedin],
       0.8,
       { opacity: 0, x: 40, ease: Power3.easeOut },
       0.2
@@ -212,6 +214,9 @@ export const NavBar = () => {
               className="github"
               style={{ width: "2.2em", margin: "0 1rem" }}
               alt="github"
+              ref={(el) => {
+                github = el;
+              }}
             />
             <span className="link-text">GITHUB</span>
           </a>
@@ -234,6 +239,9 @@ export const NavBar = () => {
                 filter: "invert(100%)",
               }}
               alt="linkedin"
+              ref={(el) => {
+                linkedin = el;
+              }}
             />
             <span className="link-text">LINKEDIN</span>
           </a>
