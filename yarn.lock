@@ -1073,7 +1073,7 @@
     "core-js-pure" "^3.0.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.13.6", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.13.10", "@babel/runtime@^7.13.6", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   "integrity" "sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.13.10.tgz"
   "version" "7.13.10"
@@ -3718,6 +3718,11 @@
   "integrity" "sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak="
   "resolved" "https://registry.npmjs.org/depd/-/depd-1.1.2.tgz"
   "version" "1.1.2"
+
+"dequal@^2.0.2":
+  "integrity" "sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug=="
+  "resolved" "https://registry.npmjs.org/dequal/-/dequal-2.0.2.tgz"
+  "version" "2.0.2"
 
 "des.js@^1.0.0":
   "integrity" "sha512-Q0I4pfFrv2VPd34/vfLrFOoRmlYj3OV50i7fskps1jZWK1kApMWWT9G6RRUeYedLcBDIhnSDaUvJMb3AhUlaEA=="
@@ -8818,6 +8823,14 @@
     "raf" "^3.4.1"
     "regenerator-runtime" "^0.13.3"
     "whatwg-fetch" "^3.0.0"
+
+"react-cool-form@^0.1.0":
+  "integrity" "sha512-eyPT3d3jd0Ye3G3m5gLbSPzW4R6ZEj+uSDvSQ+VOa3bUg/T5SD7TewAQq+Us/K3r5/mNzcM+n9U6TY9Ca295dA=="
+  "resolved" "https://registry.npmjs.org/react-cool-form/-/react-cool-form-0.1.0.tgz"
+  "version" "0.1.0"
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "dequal" "^2.0.2"
 
 "react-delay@^0.1.0":
   "integrity" "sha512-GGIyrQEsiYqTH8zUEWL2kEueSHcyHJJDeoXVC5y7R1lU1zs/BfiQsG2Lb2/yHjNASAjOBvqUCi/+JTmfLvnIcg=="
