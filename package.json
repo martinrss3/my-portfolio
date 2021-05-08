@@ -12,6 +12,7 @@
     "i18next": "^19.9.2",
     "jquery": "^3.6.0",
     "react": "^16.13.1",
+    "react-cool-form": "^0.1.0",
     "react-delay": "^0.1.0",
     "react-dom": "^16.13.1",
     "react-howler": "^5.0.0",

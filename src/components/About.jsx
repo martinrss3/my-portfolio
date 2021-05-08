@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollDown } from "./ScrollDown";
 import { useTranslation } from "react-i18next";
-import { Contact } from "./Contact";
+import { Form } from "./Form";
 import "../css/about.css";
 import bg from "../images/backgrounds/bg-about.jpg";
 import moon from "../images/parallax/moon.png";
@@ -102,13 +102,8 @@ export const About = () => {
           />
         </div>
       </section>
-      <br />
-      <br />
 
-      <section>
-        <h2>FEEL FREE TO CONTACT ME</h2>
-        <Contact />
-      </section>
+      <Form />
     </div>
   );
 };

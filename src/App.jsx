@@ -12,6 +12,7 @@ import { Scene7 } from "./components/Scene7";
 import { Scene8 } from "./components/Scene8";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
+import { Form } from "./components/Form";
 
 import "../src/css/main.css";
 
@@ -61,6 +62,9 @@ const App = () => {
             </Route>
             <Route exact path="/projects">
               <Projects />
+            </Route>
+            <Route exact path="/form">
+              <Form />
             </Route>
           </Switch>
         </Router>
