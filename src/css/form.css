@@ -266,7 +266,7 @@ textarea.input {
 }
 
 @media (max-width: 599px) {
-  .container {
+  .form-container {
     padding: 1.5rem;
   }
 
@@ -289,7 +289,7 @@ textarea.input {
     padding: 1.7rem 1.6rem;
   }
 
-  .text,
+  .text-form,
   .information,
   .social-media p {
     font-size: 0.8rem;
@@ -347,7 +347,7 @@ textarea.input {
     right: 50%;
   }
 
-  .text {
+  .text-form {
     margin: 1rem 0 1.5rem 0;
   }
 
