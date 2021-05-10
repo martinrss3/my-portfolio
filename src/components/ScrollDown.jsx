@@ -7,11 +7,11 @@ export const ScrollDown = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    gsap.to(".scrolldown", {
+    gsap.to(".scrolldown-wrapper", {
       scrollTrigger: {
         scrub: true,
       },
-      opacity: 0,
+      opacity: -1,
     });
   }, []);
 
@@ -22,7 +22,9 @@ export const ScrollDown = () => {
           <circle className="scrolldown-p1" cx="5" cy="15" r="2" />
           <circle className="scrolldown-p2" cx="5" cy="15" r="2" />
         </svg>
+        
       </div>
+      <p className="scrolldown-text">Scroll down</p>
     </div>
   );
 };
