@@ -3,7 +3,7 @@ import gsap, { TimelineMax, Power4 } from "gsap";
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import $ from "jquery";
-import SimpsonsImg from "../images/projects/simpsons.png"
+import SimpsonsImg from "../images/projects/simpsons.png";
 import DrumkitImg from "../images/projects/drumkit.png";
 import ChatImg from "../images/projects/chat.png";
 import ImageSearchImg from "../images/projects/image-search.png";
@@ -77,6 +77,8 @@ export const ProjectsDetails = () => {
 
       new ScrollMagic.Scene({
         triggerElement: this,
+        triggerHook: "onEnter",
+        offset: 100,
       })
         .setTween(animateIn)
         .addTo(controller);
@@ -92,7 +94,9 @@ export const ProjectsDetails = () => {
             <div className="overlay"></div>
           </div>
           <div className="project-info">
-            <p className="small-title">React // GSAP // The Simpsons Quote API</p>
+            <p className="small-title">
+              React // GSAP // The Simpsons Quote API
+            </p>
             <h4>Simpsons Quotes Finder</h4>
             <a
               className="project-link"
