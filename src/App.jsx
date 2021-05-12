@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Loading } from "./components/Loading";
+import PreCacheImg from "react-precache-img";
+import { imgArr } from "./components/Images";
 import { NavBar } from "./components/NavBar";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
@@ -28,7 +30,7 @@ const App = () => {
   return (
     <React.Fragment>
       {isLoading === true ? (
-        <Loading />
+        ((<PreCacheImg images={imgArr} />), (<Loading />))
       ) : (
         <Router>
           <NavBar />
