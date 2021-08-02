@@ -94,6 +94,13 @@ export const Form = () => {
               >
                 <i className="fa fa-linkedin"></i>
               </a>
+              <a
+                href="https://codepen.io/martinrss3"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-codepen"></i>
+              </a>
             </div>
           </div>
         </div>
