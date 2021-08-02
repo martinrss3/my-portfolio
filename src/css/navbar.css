@@ -144,6 +144,10 @@
   bottom: 1rem;
 }
 
+.codepen-li {
+  margin-bottom: 9rem;
+}
+
 .github-li {
   margin-bottom: 4.5rem;
 }

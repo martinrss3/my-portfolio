@@ -12,6 +12,7 @@ export const NavBar = () => {
   let alienRef = useRef(null);
   let shuttleRef = useRef(null);
   let soundRef = useRef(null);
+  let codepen = useRef(null);
   let github = useRef(null);
   let linkedin = useRef(null);
 
@@ -32,7 +33,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     TweenMax.staggerFrom(
-      [catRef, alienRef, shuttleRef, soundRef, github, linkedin],
+      [catRef, alienRef, shuttleRef, soundRef, codepen, github, linkedin],
       0.8,
       { opacity: 0, x: 40, ease: Power3.easeOut },
       0.2
@@ -200,6 +201,44 @@ export const NavBar = () => {
             </svg>
             <span className="link-text">PLAY MUSIC</span>
           </span>
+        </li>
+
+        <li className="nav-item social codepen-li">
+          <a
+            className="nav-link"
+            href="https://codepen.io/martinrss3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+              fill="#FFF"
+              fillOpacity="0.9"
+              stroke="#FFF"
+              strokeWidth="6"
+              ref={(el) => {
+                codepen = el;
+              }}
+            >
+              <path
+                d="M466 18h-32v32h32a32 32 0 0132 32v384a32 32 0 01-32 32H82a32 32 0 01-32-32V82a32 32 0 0132-32h192V18H82a64 64 0 00-64 64v384a64 64 0 0064 64h384a64 64 0 0064-64V82a64 64 0 00-64-64z"
+                transform="translate(-18 -18)"
+              />
+              <path d="M370 18h32v32h-32z" transform="translate(-18 -18)" />
+              <path d="M306 18h32v32h-32z" transform="translate(-18 -18)" />
+              <path
+                d="M98 209.31v113.38l176 114.38 176-114.38V209.31L274 94.93zm32 38.18L158.48 266 130 284.51zm144 151.44L143.36 314l44.48-28.91 86.16 56 86.16-56L404.64 314 274 398.93zM217.2 266l56.8-36.93L330.8 266 274 302.93zM418 284.51L389.52 266 418 247.49zm-57.84-37.6l-86.16-56-86.16 56L143.36 218 274 133.07 404.64 218l-44.48 28.91z"
+                transform="translate(-18 -18)"
+              />
+            </svg>
+
+            <span className="link-text">CODEPEN</span>
+          </a>
         </li>
 
         <li className="nav-item social github-li">
