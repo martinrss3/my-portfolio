@@ -1,6 +1,6 @@
 .sec {
-  height: 60vh;
   width: 95vw;
+  margin-bottom: 5em;
 }
 
 .grid-12 {
@@ -18,9 +18,8 @@
 }
 
 .project-left .box {
-  grid-column: 3 / span 5;
+  grid-column: 3 / span 9;
   grid-row: 1 / span 3;
-  width: 100%;
 }
 
 .project-left {
@@ -49,7 +48,7 @@
 }
 
 .project-img {
-  width: 100%;
+  width: 70vw;
 }
 
 .overlay {
@@ -102,10 +101,14 @@ h4 {
   font-size: 1rem;
 }
 
+.end {
+  width: 95vw;
+  padding-bottom: 5em;
+}
+
 /* Small screens */
 @media only screen and (max-width: 599px) {
   .sec {
-    height: 50vh;
     width: 100vw;
   }
 
@@ -190,7 +193,6 @@ h4 {
 
 @media only screen and (min-width: 600px) and (max-width: 719px) {
   .sec {
-    height: 50vh;
     width: 100vw;
   }
 
@@ -263,7 +265,6 @@ h4 {
 
 @media only screen and (min-width: 720px) and (min-height: 1280px) {
   .sec {
-    height: 50vh;
     width: 100vw;
   }
 

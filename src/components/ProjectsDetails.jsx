@@ -3,6 +3,7 @@ import gsap, { TimelineMax, Power4 } from "gsap";
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import $ from "jquery";
+import CodepenImg from "../images/projects/codepen.png";
 import SimpsonsImg from "../images/projects/simpsons.png";
 import DrumkitImg from "../images/projects/drumkit.png";
 import ChatImg from "../images/projects/chat.png";
@@ -19,7 +20,6 @@ export const ProjectsDetails = () => {
     ScrollMagicPluginGsap(ScrollMagic, gsap);
 
     $(".project").each(function () {
-      var picOverlay = $(this).find(".overlay");
       var projectInfo = $(this).find(".project-info");
       var smallTitle = $(this).find(".small-title");
       var projectLink = $(this).find(".project-link");
@@ -28,17 +28,6 @@ export const ProjectsDetails = () => {
       var animateIn = new TimelineMax();
 
       animateIn
-        .fromTo(
-          picOverlay,
-          1,
-          { skewX: 30, scale: 5 },
-          {
-            skewX: 0,
-            xPercent: 100,
-            transformOrigin: "0% 100%",
-            ease: Power4.easeOut,
-          }
-        )
         .from(
           projectInfo,
           0.5,
@@ -88,10 +77,29 @@ export const ProjectsDetails = () => {
   return (
     <React.Fragment>
       <section className="sec">
-        <div className="grid-12 project project-right">
+        <div className="grid-12 project project-left">
           <div className="box">
-            <img className="project-img" src={SimpsonsImg} alt="chat" />
-            <div className="overlay"></div>
+            <img className="project-img cdpn" src={CodepenImg} alt="codepen" />
+          </div>
+          <div className="project-info">
+            <p className="small-title">CSS // SVG // GSAP</p>
+            <h4>CODEPEN</h4>
+            <a
+              className="project-link"
+              href="https://codepen.io/martinrss3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try it!
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="grid-12 project project-left">
+          <div className="box">
+            <img className="project-img" src={SimpsonsImg} alt="simpsons" />
           </div>
           <div className="project-info">
             <p className="small-title">
@@ -114,7 +122,6 @@ export const ProjectsDetails = () => {
         <div className="grid-12 project project-left">
           <div className="box">
             <img className="project-img" src={DrumkitImg} alt="drumkit" />
-            <div className="overlay"></div>
           </div>
           <div className="project-info">
             <p className="small-title">JavaScript</p>
@@ -132,10 +139,9 @@ export const ProjectsDetails = () => {
       </section>
 
       <section className="sec">
-        <div className="grid-12 project project-right">
+        <div className="grid-12 project project-left">
           <div className="box">
             <img className="project-img" src={ChatImg} alt="chat" />
-            <div className="overlay"></div>
           </div>
           <div className="project-info">
             <p className="small-title">React // Socket.io // Express</p>
@@ -160,7 +166,6 @@ export const ProjectsDetails = () => {
               src={ImageSearchImg}
               alt="img search"
             />
-            <div className="overlay"></div>
           </div>
           <div className="project-info">
             <p className="small-title">React // Pixabay API</p>
@@ -178,14 +183,13 @@ export const ProjectsDetails = () => {
       </section>
 
       <section className="sec">
-        <div className="grid-12 project project-right">
+        <div className="grid-12 project project-left">
           <div className="box">
             <img
               className="project-img"
               src={MoviesSearchImg}
               alt="movies search"
             />
-            <div className="overlay"></div>
           </div>
           <div className="project-info">
             <p className="small-title">React // The Movie Database API</p>
@@ -206,7 +210,6 @@ export const ProjectsDetails = () => {
         <div className="grid-12 project project-left">
           <div className="box">
             <img className="project-img" src={ExpenseTrackerImg} alt="" />
-            <div className="overlay"></div>
           </div>
           <div className="project-info">
             <p className="small-title">React</p>
@@ -223,11 +226,10 @@ export const ProjectsDetails = () => {
         </div>
       </section>
 
-      <section className="sec">
-        <div className="grid-12 project project-right">
+      <section className="end">
+        <div className="grid-12 project project-left">
           <div className="box">
             <img className="project-img" src={TravelWebImg} alt="" />
-            <div className="overlay"></div>
           </div>
           <div className="project-info">
             <p className="small-title">React</p>
