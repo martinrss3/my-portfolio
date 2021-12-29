@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Loading } from "./components/Loading";
 import { NavBar } from "./components/NavBar";
@@ -13,7 +13,7 @@ import { Scene8 } from "./components/Scene8";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Form } from "./components/Form";
-
+import { Landing } from "./components/Landing/Landing";
 import "../src/css/main.css";
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 3000);
   });
 
   return (
@@ -34,6 +34,9 @@ const App = () => {
           <NavBar />
           <Switch>
             <Route exact path="/">
+              <Landing />
+            </Route>
+            <Route exact path="/scene1">
               <Scene1 />
             </Route>
             <Route exact path="/scene2">
