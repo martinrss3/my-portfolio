@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { TweenMax, Power3 } from "gsap";
 import ReactHowler from "react-howler";
-import DjGriffin from "../audio/djgriffin.mp3";
+import Chopin from "../audio/chopin.webm";
 import Github from "../images/icons/github.png";
 import Linkedin from "../images/icons/linkedin.png";
 import "../css/navbar.css";
@@ -42,7 +42,7 @@ export const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <ReactHowler src={DjGriffin} playing={music} loop={true} />
+      <ReactHowler src={Chopin} playing={music} loop={true} />
       <ul className="navbar-nav">
         <li className="logo">
           <Link to="/" className="nav-link">
@@ -74,7 +74,7 @@ export const NavBar = () => {
         </li>
 
         <li className="nav-item">
-          <Link to="/" className="nav-link">
+          <Link to="/scene1" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
