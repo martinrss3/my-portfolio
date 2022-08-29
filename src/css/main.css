@@ -415,19 +415,6 @@
   .title-contact {
     padding: 1em;
   }
-
-  /* CV */
-  .img-cv-guy {
-    height: 80vh;
-    bottom: 80px;
-    left: 15vw;
-  }
-  .txt-cv {
-    top: 0;
-    left: -10vw;
-    width: 275px;
-    height: 175px;
-  }
 }
 
 /* Super Extra small devices (phones, between 400px and 499px) */
@@ -636,20 +623,6 @@
   /* Contact */
   .title-contact {
     padding: 1em;
-  }
-
-  /* CV */
-  .img-cv-guy {
-    height: 80vh;
-    bottom: 80px;
-    right: -20vw;
-  }
-
-  .txt-cv {
-    top: 0;
-    left: -10vw;
-    width: 350px;
-    height: 250px;
   }
 }
 
@@ -866,20 +839,6 @@
   .title-contact {
     padding: 1em;
   }
-
-  /* CV */
-  .img-cv-guy {
-    height: 80vh;
-    bottom: 80px;
-    right: -15vw;
-  }
-
-  .txt-cv {
-    top: 2vh;
-    left: -5vw;
-    width: 350px;
-    height: 250px;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1092,20 +1051,6 @@
 
   .title-contact {
     padding: 1em;
-  }
-
-  /* CV */
-  .img-cv-guy {
-    height: 90vh;
-    bottom: 0;
-    right: -30vw;
-  }
-
-  .txt-cv {
-    top: 1vh;
-    left: 8vw;
-    width: 450px;
-    height: 350px;
   }
 }
 
@@ -1328,22 +1273,6 @@
 
   .title-contact {
     padding: 1.5em;
-  }
-
-  /* CV */
-  .img-cv-guy {
-    height: 90vh;
-    right: -40vw;
-    left: 0;
-    bottom: 0;
-    margin: 0 auto;
-  }
-
-  .txt-cv {
-    top: 1vh;
-    left: 5vw;
-    width: 500px;
-    height: 400px;
   }
 }
 
@@ -1575,22 +1504,6 @@
 
   .title-contact {
     padding: 1.5em;
-  }
-
-  /* CV */
-  .img-cv-guy {
-    height: 95vh;
-    right: 0;
-    left: 30vw;
-    bottom: 0;
-    margin: 0 auto;
-  }
-
-  .txt-cv {
-    top: 1vh;
-    left: 20vw;
-    width: 450px;
-    height: 350px;
   }
 }
 
@@ -1847,22 +1760,6 @@
   .title-contact {
     padding: 1.5em;
   }
-
-  /* CV */
-  .img-cv-guy {
-    height: 95vh;
-    right: -20vw;
-    left: 0;
-    bottom: 0;
-    margin: 0 auto;
-  }
-
-  .txt-cv {
-    top: 1vh;
-    left: 20vw;
-    width: 475px;
-    height: 375px;
-  }
 }
 
 /* Super Extra large devices (large laptops and desktops, 1600px and up) */
@@ -2098,22 +1995,6 @@
   .title-contact {
     padding: 1.5em;
   }
-
-  /* CV */
-  .img-cv-guy {
-    height: 95vh;
-    right: -20vw;
-    left: 0;
-    bottom: 0;
-    margin: 0 auto;
-  }
-
-  .txt-cv {
-    top: 1vh;
-    left: 25vw;
-    width: 550px;
-    height: 450px;
-  }
 }
 
 /* Iphone 6/7/8 Plus Landscape */
@@ -2304,18 +2185,5 @@
 
   .title-contact {
     padding: 0.5em;
-  }
-
-  /* CV */
-  .img-cv-guy {
-    height: 100vh;
-    bottom: 0;
-    left: 400px;
-  }
-
-  .txt-cv {
-    left: 200px;
-    width: 325px;
-    height: 225px;
   }
 }

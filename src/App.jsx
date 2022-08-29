@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Loading } from "./components/Loading";
 import { NavBar } from "./components/NavBar";
 import { Scene1 } from "./components/Scene1";
@@ -13,7 +13,7 @@ import { Scene8 } from "./components/Scene8";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Form } from "./components/Form";
-import { Landing } from "./components/Landing/Landing";
+import Landing from "./components/Landing/Landing";
 import "../src/css/main.css";
 
 const App = () => {
@@ -26,53 +26,29 @@ const App = () => {
   });
 
   return (
-    <React.Fragment>
-      {isLoading === true ? (
+    <>
+      {isLoading ? (
         <Loading />
       ) : (
         <Router>
           <NavBar />
-          <Switch>
-            <Route exact path="/">
-              <Landing />
-            </Route>
-            <Route exact path="/scene1">
-              <Scene1 />
-            </Route>
-            <Route exact path="/scene2">
-              <Scene2 />
-            </Route>
-            <Route exact path="/scene3">
-              <Scene3 />
-            </Route>
-            <Route exact path="/scene4">
-              <Scene4 />
-            </Route>
-            <Route exact path="/scene5">
-              <Scene5 />
-            </Route>
-            <Route exact path="/scene6">
-              <Scene6 />
-            </Route>
-            <Route exact path="/scene7">
-              <Scene7 />
-            </Route>
-            <Route exact path="/scene8">
-              <Scene8 />
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-            <Route exact path="/projects">
-              <Projects />
-            </Route>
-            <Route exact path="/form">
-              <Form />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<Landing />} />
+            <Route exact path="/scene1" element={<Scene1 />} />
+            <Route exact path="/scene2" element={<Scene2 />} />
+            <Route exact path="/scene3" element={<Scene3 />} />
+            <Route exact path="/scene4" element={<Scene4 />} />
+            <Route exact path="/scene5" element={<Scene5 />} />
+            <Route exact path="/scene6" element={<Scene6 />} />
+            <Route exact path="/scene7" element={<Scene7 />} />
+            <Route exact path="/scene8" element={<Scene8 />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/projects" element={<Projects />} />
+            <Route exact path="/form" element={<Form />} />
+          </Routes>
         </Router>
       )}
-    </React.Fragment>
+    </>
   );
 };
 

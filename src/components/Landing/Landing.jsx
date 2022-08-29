@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Landing.module.scss";
 import CherryBlossom from "./../../video/cherry-blossom.webm";
 
-export const Landing = () => {
+const Landing = () => {
   return (
     <div className={styles.wrapper}>
       <video
@@ -15,3 +15,5 @@ export const Landing = () => {
     </div>
   );
 };
+
+export default Landing;
