@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Loading } from "./components/Loading";
+
 import { NavBar } from "./components/NavBar";
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
@@ -14,40 +13,29 @@ import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Form } from "./components/Form";
 import Landing from "./components/Landing/Landing";
+
 import "../src/css/main.css";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  });
-
   return (
     <>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <Router>
-          <NavBar />
-          <Routes>
-            <Route exact path="/" element={<Landing />} />
-            <Route exact path="/scene1" element={<Scene1 />} />
-            <Route exact path="/scene2" element={<Scene2 />} />
-            <Route exact path="/scene3" element={<Scene3 />} />
-            <Route exact path="/scene4" element={<Scene4 />} />
-            <Route exact path="/scene5" element={<Scene5 />} />
-            <Route exact path="/scene6" element={<Scene6 />} />
-            <Route exact path="/scene7" element={<Scene7 />} />
-            <Route exact path="/scene8" element={<Scene8 />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/projects" element={<Projects />} />
-            <Route exact path="/form" element={<Form />} />
-          </Routes>
-        </Router>
-      )}
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/scene1" element={<Scene1 />} />
+          <Route exact path="/scene2" element={<Scene2 />} />
+          <Route exact path="/scene3" element={<Scene3 />} />
+          <Route exact path="/scene4" element={<Scene4 />} />
+          <Route exact path="/scene5" element={<Scene5 />} />
+          <Route exact path="/scene6" element={<Scene6 />} />
+          <Route exact path="/scene7" element={<Scene7 />} />
+          <Route exact path="/scene8" element={<Scene8 />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/form" element={<Form />} />
+        </Routes>
+      </Router>
     </>
   );
 };
