@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { NavBar } from "./components/NavBar";
+/* import { NavBar } from "./components/NavBar"; */
 import { Scene1 } from "./components/Scene1";
 import { Scene2 } from "./components/Scene2";
 import { Scene3 } from "./components/Scene3";
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path="/scene1" element={<Scene1 />} />
