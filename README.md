@@ -1,11 +1,14 @@
-### This is my comic style portfolio build with React, GSAP & CSS 
+# Comic-style portfolio
 
-You can run the app with npm install & npm start. Open http://localhost:3000 to view it in the browser.
+An experimental personal portfolio built with React, GSAP, and CSS.
 
-Demo: http://martinrusso.com.ar
+A motion-driven exploration of a comic-book visual language for the web.
 
-Preview:
+## Run locally
 
-<img width="70%" src="./src/demo/demo1.png">
-<img width="70%" src="./src/demo/demo2.png">
-<img width="70%" src="./src/demo/demo3.png">
+```bash
+yarn
+yarn start
+```
+
+Open [localhost:3000](http://localhost:3000) in your browser.
